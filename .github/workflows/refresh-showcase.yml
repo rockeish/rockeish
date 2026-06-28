@@ -1,0 +1,40 @@
+name: Refresh Showcase
+
+# Runs weekly to keep the portfolio section current.
+# Trigger manually via workflow_dispatch for an on-demand refresh.
+# Note: requires the SHOWCASE_TOKEN secret for GitHub API enrichment (stars,
+# last-push dates). The script runs cleanly without it — enrichment is skipped.
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Every Monday at 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate showcase
+        env:
+          SHOWCASE_TOKEN: ${{ secrets.SHOWCASE_TOKEN }}
+        run: node scripts/generate-showcase.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet && echo "No changes to commit." || \
+            git commit -m "chore: refresh showcase [skip ci]"
+          git push

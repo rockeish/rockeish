@@ -1,0 +1,28 @@
+[
+  {
+    "name": "ParentPod",
+    "repo": "parentpod",
+    "description": "Baby and co-parenting tracker — shared timeline for feeds, naps, meds, and handoffs",
+    "stack": ["React", "Vite", "Capacitor", "Firebase"],
+    "url": "https://parentpodapp.com"
+  },
+  {
+    "name": "Longevity",
+    "repo": "longevity",
+    "description": "Sobriety and health companion — habit tracking with daily check-ins",
+    "stack": ["Next.js", "React", "Capacitor", "Firebase"]
+  },
+  {
+    "name": "Beyond Volatility",
+    "repo": null,
+    "description": "Public hub and blog — energy, engineering, and building in the open",
+    "stack": ["WordPress"],
+    "url": "https://beyondvolatility.com"
+  },
+  {
+    "name": "Compliance OS",
+    "repo": "compliance",
+    "description": "NERC/SOC2/ISO compliance platform for energy operators",
+    "stack": ["React", "Firebase"]
+  }
+]
