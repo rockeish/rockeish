@@ -18,7 +18,7 @@ The full portfolio lives at **[beyondvolatility.com](https://beyondvolatility.co
 | **[Beyond Volatility](https://beyondvolatility.com)** | Public hub and blog — energy, engineering, and building in the open | WordPress |
 | **Compliance OS** | NERC/SOC2/ISO compliance platform for energy operators | React · Firebase |
 
-*Last refreshed: 2026-06-28*
+*Last refreshed: 2026-06-29*
 <!-- SHOWCASE:END -->
 
 ---
