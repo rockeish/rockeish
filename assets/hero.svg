@@ -1,0 +1,23 @@
+<svg width="900" height="244" viewBox="0 0 900 244" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rock — headline metrics">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="899" height="243" rx="18" fill="#0b1220" stroke="#243149"/>
+  <text x="44" y="66" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="800" fill="#e6edf3">Rock</text>
+  <rect x="46" y="78" width="64" height="5" rx="2.5" fill="url(#accent)"/>
+  <text x="44" y="106" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15.5" fill="#e6edf3">Reliability &amp; systems engineer · full-stack builder</text>
+  <text x="44" y="130" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#8b97a8">One engineer · a self-built agent-automation platform · a portfolio in production</text>
+  <line x1="44" y1="152" x2="856" y2="152" stroke="#243149"/>
+  <text x="44" y="198" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="url(#accent)">9</text>
+  <text x="44" y="219" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" fill="#8b97a8">repositories</text>
+  <text x="206.4" y="198" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="url(#accent)">5.9K</text>
+  <text x="206.4" y="219" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" fill="#8b97a8">commits</text>
+  <text x="368.8" y="198" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="url(#accent)">678K</text>
+  <text x="368.8" y="219" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" fill="#8b97a8">lines of code</text>
+  <text x="531.2" y="198" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="url(#accent)">4</text>
+  <text x="531.2" y="219" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" fill="#8b97a8">apps in production</text>
+  <text x="693.6" y="198" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="url(#accent)">1</text>
+  <text x="693.6" y="219" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" fill="#8b97a8">engineer</text>
+</svg>

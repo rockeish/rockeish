@@ -2,205 +2,216 @@
 /**
  * generate-showcase.mjs
  *
- * Regenerates the auto-managed block between the SHOWCASE markers in README.md
- * from a single data source (data/projects.json). Everything outside the markers
- * is curated narrative and is left untouched.
+ * Regenerates the visual assets and the auto-managed README block from one data
+ * source (data/projects.json). Everything is derived — edit the data, not the
+ * rendered output.
  *
- * The block it emits:
- *   1. Portfolio        — projects grouped by category, with stack + platforms
- *   2. By the numbers   — a metrics snapshot (repos, commits, source, platforms)
- *   3. Engineering system — the release-gate commands + standards-as-code inventory
+ * Produces:
+ *   assets/hero.svg          — name + headline metrics (the "numbers first" banner)
+ *   assets/architecture.svg  — the ecosystem pipeline (clients → apps → back ends → delivery)
+ *   assets/commits.svg       — commits-per-repository bar chart
+ *   README.md                — portfolio + platform block, between the SHOWCASE markers
  *
- * Optional enrichment: when SHOWCASE_TOKEN or GITHUB_TOKEN is set, each project
- * with a non-null `repo` is looked up via the GitHub REST API for its last-push
- * date. Enrichment is silently skipped on any missing token / null repo / non-200
- * response (e.g. a private repo the token can't see), so the script always produces
- * a valid page.
+ * SVGs are self-contained (own dark background, system fonts) so they render
+ * identically on GitHub light/dark and anywhere else. The script is idempotent.
  *
- * The script is idempotent: a run with unchanged data produces no file change.
- *
- * Usage:
- *   node scripts/generate-showcase.mjs
- *   SHOWCASE_TOKEN=ghp_... node scripts/generate-showcase.mjs
+ * Usage: node scripts/generate-showcase.mjs
  */
 
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-import { get } from 'https';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 
-const GITHUB_TOKEN = process.env.SHOWCASE_TOKEN || process.env.GITHUB_TOKEN || '';
-const GITHUB_USER = 'rockeish';
-
-const START_MARKER = '<!-- SHOWCASE:START -->';
-const END_MARKER = '<!-- SHOWCASE:END -->';
-
-// ---------------------------------------------------------------------------
-// Data
-// ---------------------------------------------------------------------------
-
-/** @typedef {{ name: string, category: string, status: string, blurb: string,
- *   stack: string[], platforms?: string[], url?: string, repo: string|null,
- *   highlights?: string[], pushedAt?: string|null }} Project */
-
 const data = JSON.parse(readFileSync(join(ROOT, 'data', 'projects.json'), 'utf8'));
 
 // ---------------------------------------------------------------------------
-// GitHub enrichment (optional, gracefully skipped)
+// Design tokens
 // ---------------------------------------------------------------------------
 
-/**
- * Fetch JSON from a URL, resolving to null on any error or non-200 response.
- * @param {string} url
- * @returns {Promise<object|null>}
- */
-function fetchJSON(url) {
-  return new Promise((resolve) => {
-    const options = {
-      headers: {
-        'User-Agent': 'rockeish-showcase-generator/2.0',
-        Accept: 'application/vnd.github.v3+json',
-        ...(GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {}),
-      },
-    };
-    get(url, options, (res) => {
-      let body = '';
-      res.on('data', (chunk) => (body += chunk));
-      res.on('end', () => {
-        if (res.statusCode !== 200) return resolve(null);
-        try {
-          resolve(JSON.parse(body));
-        } catch {
-          resolve(null);
-        }
-      });
-    }).on('error', () => resolve(null));
+const C = {
+  bg: '#0b1220',
+  panel: '#131d33',
+  chip: '#1b2942',
+  text: '#e6edf3',
+  muted: '#8b97a8',
+  line: '#243149',
+  a1: '#38bdf8',
+  a2: '#818cf8',
+};
+const FONT = "ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+/** Wrap inner markup in an SVG doc with a rounded dark background + accent gradient. */
+function svgDoc(w, h, inner, label) {
+  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(label)}">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="${C.a1}"/><stop offset="1" stop-color="${C.a2}"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="${w - 1}" height="${h - 1}" rx="18" fill="${C.bg}" stroke="${C.line}"/>
+  ${inner}
+</svg>`;
+}
+
+const compact = (n) =>
+  n >= 1000 ? (n / 1000 >= 100 ? Math.round(n / 1000) : (n / 1000).toFixed(1).replace(/\.0$/, '')) + 'K' : String(n);
+
+// ---------------------------------------------------------------------------
+// hero.svg
+// ---------------------------------------------------------------------------
+
+function heroSvg(d) {
+  const m = d.metrics;
+  const stats = [
+    [String(m.repos), 'repositories'],
+    [compact(m.commits), 'commits'],
+    [compact(m.linesOfSource), 'lines of code'],
+    [String(m.appsInProduction), 'apps in production'],
+    [String(m.engineers), 'engineer'],
+  ];
+  const W = 900;
+  const x0 = 44;
+  const cell = (W - x0 - 44) / stats.length;
+  const statMarkup = stats
+    .map(([n, l], i) => {
+      const x = x0 + i * cell;
+      return `<text x="${x}" y="198" font-family="${FONT}" font-size="30" font-weight="700" fill="url(#accent)">${esc(n)}</text>
+  <text x="${x}" y="219" font-family="${FONT}" font-size="12.5" fill="${C.muted}">${esc(l)}</text>`;
+    })
+    .join('\n  ');
+
+  const inner = `<text x="${x0}" y="66" font-family="${FONT}" font-size="44" font-weight="800" fill="${C.text}">${esc(d.profile.name)}</text>
+  <rect x="${x0 + 2}" y="78" width="64" height="5" rx="2.5" fill="url(#accent)"/>
+  <text x="${x0}" y="106" font-family="${FONT}" font-size="15.5" fill="${C.text}">${esc(d.profile.role)}</text>
+  <text x="${x0}" y="130" font-family="${FONT}" font-size="14" fill="${C.muted}">One engineer · a self-built agent-automation platform · a portfolio in production</text>
+  <line x1="${x0}" y1="152" x2="${W - x0}" y2="152" stroke="${C.line}"/>
+  ${statMarkup}`;
+  return svgDoc(W, 244, inner, `${d.profile.name} — headline metrics`);
+}
+
+// ---------------------------------------------------------------------------
+// architecture.svg — 4-panel pipeline
+// ---------------------------------------------------------------------------
+
+function architectureSvg(d) {
+  const a = d.architecture;
+  const cols = [
+    ['CLIENTS', a.clients],
+    ['APPS', a.apps],
+    ['BACK ENDS', a.backends],
+    ['DELIVERY', a.delivery],
+  ];
+  const W = 900;
+  const H = 300;
+  const panelW = 186;
+  const gap = 34;
+  const top = 56;
+  const panelH = 224;
+  const chipH = 30;
+  const chipGap = 8;
+  const mid = top + panelH / 2;
+
+  let markup = `<text x="24" y="34" font-family="${FONT}" font-size="14" fill="${C.muted}">Ecosystem — full-stack across two back ends, three delivery targets, and native mobile</text>`;
+
+  cols.forEach(([title, items], ci) => {
+    const px = 24 + ci * (panelW + gap);
+    markup += `\n  <rect x="${px}" y="${top}" width="${panelW}" height="${panelH}" rx="12" fill="${C.panel}" stroke="${C.line}"/>`;
+    markup += `\n  <text x="${px + 14}" y="${top + 26}" font-family="${FONT}" font-size="12" font-weight="700" letter-spacing="1.5" fill="url(#accent)">${esc(title)}</text>`;
+    items.forEach((label, j) => {
+      const cy = top + 40 + j * (chipH + chipGap);
+      markup += `\n  <rect x="${px + 12}" y="${cy}" width="${panelW - 24}" height="${chipH}" rx="8" fill="${C.chip}"/>`;
+      markup += `\n  <text x="${px + panelW / 2}" y="${cy + 20}" font-family="${FONT}" font-size="11.5" fill="${C.text}" text-anchor="middle">${esc(label)}</text>`;
+    });
+    if (ci < cols.length - 1) {
+      const ax = px + panelW + gap / 2;
+      markup += `\n  <path d="M ${ax - 6} ${mid - 7} L ${ax + 6} ${mid} L ${ax - 6} ${mid + 7} Z" fill="${C.muted}"/>`;
+    }
   });
-}
-
-/**
- * Return a copy of the project annotated with its last-push date, or the
- * original when enrichment is unavailable.
- * @param {Project} project
- * @returns {Promise<Project>}
- */
-async function enrichProject(project) {
-  if (!GITHUB_TOKEN || !project.repo) return project;
-  const info = await fetchJSON(`https://api.github.com/repos/${GITHUB_USER}/${project.repo}`);
-  if (!info) return project;
-  return {
-    ...project,
-    pushedAt: typeof info.pushed_at === 'string' ? info.pushed_at.slice(0, 10) : null,
-  };
+  return svgDoc(W, H, markup, 'Ecosystem architecture');
 }
 
 // ---------------------------------------------------------------------------
-// Rendering helpers
+// commits.svg — horizontal bar chart
 // ---------------------------------------------------------------------------
 
-/** Format an ISO date (YYYY-MM-DD) as "Mon YYYY". */
-function fmtMonth(iso) {
-  return new Date(iso + 'T00:00:00Z').toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    timeZone: 'UTC',
+function commitsSvg(d) {
+  const rows = d.metrics.commitsByRepo;
+  const W = 900;
+  const top = 58;
+  const rowH = 26;
+  const rowGap = 6;
+  const labelX = 158;
+  const barX = 168;
+  const barMax = 640;
+  const max = Math.max(...rows.map((r) => r.commits));
+  const H = top + rows.length * (rowH + rowGap) + 16;
+
+  let markup = `<text x="24" y="34" font-family="${FONT}" font-size="14" fill="${C.muted}">Commits per repository</text>
+  <text x="${W - 24}" y="34" font-family="${FONT}" font-size="13" fill="${C.muted}" text-anchor="end">~${compact(d.metrics.commits)} total · single author</text>`;
+
+  rows.forEach((r, i) => {
+    const y = top + i * (rowH + rowGap);
+    const bw = Math.max(4, Math.round((r.commits / max) * barMax));
+    markup += `\n  <text x="${labelX}" y="${y + 15}" font-family="${FONT}" font-size="12.5" fill="${C.text}" text-anchor="end">${esc(r.label)}</text>`;
+    markup += `\n  <rect x="${barX}" y="${y + 2}" width="${bw}" height="18" rx="4" fill="url(#accent)"/>`;
+    markup += `\n  <text x="${barX + bw + 8}" y="${y + 15}" font-family="${FONT}" font-size="11.5" fill="${C.muted}">${r.commits.toLocaleString('en-US')}</text>`;
   });
+  return svgDoc(W, H, markup, 'Commits per repository');
 }
 
-/** Compact number, e.g. 678000 -> "678K", 5900 -> "5.9K". */
-function compact(n) {
-  if (n >= 1000) {
-    const k = n / 1000;
-    return (k >= 100 ? Math.round(k) : k.toFixed(1).replace(/\.0$/, '')) + 'K';
-  }
-  return String(n);
-}
+// ---------------------------------------------------------------------------
+// README showcase block (between the markers)
+// ---------------------------------------------------------------------------
 
-/** Render the grouped portfolio, preserving the category order of first appearance. */
 function renderPortfolio(projects) {
   const order = [];
-  const byCategory = new Map();
+  const byCat = new Map();
   for (const p of projects) {
-    if (!byCategory.has(p.category)) {
-      byCategory.set(p.category, []);
+    if (!byCat.has(p.category)) {
+      byCat.set(p.category, []);
       order.push(p.category);
     }
-    byCategory.get(p.category).push(p);
+    byCat.get(p.category).push(p);
   }
-
-  const sections = order.map((category) => {
-    const rows = byCategory.get(category).map((p) => {
-      const title = p.url ? `**[${p.name}](${p.url})**` : `**${p.name}**`;
-      const updated = p.pushedAt ? ` · updated ${fmtMonth(p.pushedAt)}` : '';
-      const meta = `\`${p.status}\`${updated}`;
-      const platforms = p.platforms?.length ? ` — ${p.platforms.join(' / ')}` : '';
-      const highlights = (p.highlights || []).map((h) => `  - ${h}`).join('\n');
-      return [
-        `#### ${title} — ${meta}`,
-        `${p.blurb}`,
-        '',
-        `**Stack:** ${p.stack.join(' · ')}${platforms}`,
-        highlights ? '\n' + highlights : '',
-      ].join('\n');
-    });
-    return `### ${category}\n\n${rows.join('\n\n')}`;
-  });
-
-  return sections.join('\n\n');
+  return order
+    .map((cat) => {
+      const cards = byCat.get(cat)
+        .map((p) => {
+          const title = p.url ? `[${p.name}](${p.url})` : p.name;
+          const platforms = p.platforms?.length ? ` · ${p.platforms.join(' / ')}` : '';
+          const hi = (p.highlights || []).map((h) => `- ${h}`).join('\n');
+          return `#### ${title} — \`${p.status}\`\n${p.blurb}  \n<sub>**${p.stack.join(' · ')}**${platforms}</sub>\n\n${hi}`;
+        })
+        .join('\n\n');
+      return `### ${cat}\n\n${cards}`;
+    })
+    .join('\n\n');
 }
 
-/** Render the metrics snapshot as a compact table. */
-function renderMetrics(m) {
-  const langs = m.languageMix.map((l) => l.name).join(' · ');
-  const rows = [
-    ['Repositories', `${m.repos} product repos + a shared engineering library`],
-    ['Commits', `~${compact(m.commits)} across the portfolio`],
-    ['Source', `~${compact(m.linesOfSource)} lines of tracked code (${compact(m.trackedFiles)} files)`],
-    ['In production', `${m.appsInProduction} apps live; ParentPod shipped to ${m.mobilePlatforms.join(' + ')}`],
-    ['Back ends', m.backends.join(' · ')],
-    ['Languages', langs],
-  ];
-  return [
-    '| | |',
-    '|---|---|',
-    ...rows.map(([k, v]) => `| **${k}** | ${v} |`),
-    '',
-    `<sub>Snapshot as of ${fmtMonth(m.asOf)}. App repositories are private; metrics are aggregated from them.</sub>`,
-  ].join('\n');
-}
-
-/** Render the engineering-platform inventory. */
 function renderPlatform(p) {
   const cmds = p.commands.map((c) => `| \`/${c.name}\` | ${c.does} |`).join('\n');
   const standards = p.standards.map((s) => `\`${s}\``).join(' · ');
   return [
-    `${p.summary}`,
-    '',
-    '**Release-gate commands** (one library, every repo):',
+    p.summary,
     '',
     '| Command | What it does |',
     '|---|---|',
     cmds,
     '',
-    `**Standards-as-code:** ${standards} — plus ${p.skillsCount} reusable skills.`,
-    '',
-    ...p.practices.map((pr) => `- ${pr}`),
+    `**Standards-as-code:** ${standards} — symlinked into every repo *and* every agent's context, plus ${p.skillsCount} reusable skills.`,
   ].join('\n');
 }
 
-/** Build the full markdown that goes between the SHOWCASE markers. */
 function buildShowcase(d) {
   return [
     '## Portfolio',
     '',
     renderPortfolio(d.projects),
-    '',
-    '## By the numbers',
-    '',
-    renderMetrics(d.metrics),
     '',
     '## The engineering system behind it',
     '',
@@ -208,55 +219,30 @@ function buildShowcase(d) {
   ].join('\n');
 }
 
-// ---------------------------------------------------------------------------
-// README update
-// ---------------------------------------------------------------------------
-
-/**
- * Replace the SHOWCASE block in README.md.
- * @param {string} body
- * @returns {boolean} true if a change was written
- */
 function updateReadme(body) {
   const readmePath = join(ROOT, 'README.md');
   const original = readFileSync(readmePath, 'utf8');
-
-  const startIdx = original.indexOf(START_MARKER);
-  const endIdx = original.indexOf(END_MARKER);
-  if (startIdx === -1 || endIdx === -1) {
-    throw new Error(`SHOWCASE markers not found in README.md. Add ${START_MARKER} and ${END_MARKER}.`);
-  }
-
-  const before = original.slice(0, startIdx + START_MARKER.length);
-  const after = original.slice(endIdx);
-  const updated = `${before}\n\n${body}\n\n${after}`;
-
+  const S = '<!-- SHOWCASE:START -->';
+  const E = '<!-- SHOWCASE:END -->';
+  const s = original.indexOf(S);
+  const e = original.indexOf(E);
+  if (s === -1 || e === -1) throw new Error(`SHOWCASE markers not found in README.md.`);
+  const updated = `${original.slice(0, s + S.length)}\n\n${body}\n\n${original.slice(e)}`;
   if (updated === original) {
-    console.log('README.md already up to date — no changes written.');
-    return false;
+    console.log('README.md already up to date.');
+    return;
   }
   writeFileSync(readmePath, updated, 'utf8');
-  console.log('README.md updated successfully.');
-  return true;
+  console.log('README.md updated.');
 }
 
 // ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
 
-async function main() {
-  console.log(
-    GITHUB_TOKEN
-      ? 'GitHub token detected — per-repo push dates will be enriched.'
-      : 'No GitHub token — skipping enrichment (set SHOWCASE_TOKEN to enable).'
-  );
-
-  const enriched = await Promise.all(data.projects.map(enrichProject));
-  const showcase = buildShowcase({ ...data, projects: enriched });
-  updateReadme(showcase);
-}
-
-main().catch((err) => {
-  console.error('generate-showcase failed:', err.message);
-  process.exit(1);
-});
+mkdirSync(join(ROOT, 'assets'), { recursive: true });
+writeFileSync(join(ROOT, 'assets', 'hero.svg'), heroSvg(data));
+writeFileSync(join(ROOT, 'assets', 'architecture.svg'), architectureSvg(data));
+writeFileSync(join(ROOT, 'assets', 'commits.svg'), commitsSvg(data));
+console.log('assets/hero.svg, assets/architecture.svg, assets/commits.svg written.');
+updateReadme(buildShowcase(data));

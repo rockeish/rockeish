@@ -1,8 +1,9 @@
 {
-  "_comment": "Single source of truth for the auto-generated portfolio + metrics block in README.md. Edit this file (and the generator), not the rendered README. Public-safe only: no secrets, private URLs, revenue, or internal strategy.",
+  "_comment": "Single source of truth for the auto-generated README + SVG infographics. Edit this file and the generator, not the rendered output. Public-safe only: no surname, employer name, secrets, private URLs, revenue, or internal strategy.",
   "profile": {
-    "name": "Rock McKenzie",
+    "name": "Rock",
     "role": "Reliability & systems engineer · full-stack builder",
+    "employer": "a large energy company",
     "location": "Chicago",
     "hub": "https://beyondvolatility.com"
   },
@@ -13,62 +14,64 @@
     "trackedFiles": 3564,
     "linesOfSource": 678000,
     "appsInProduction": 4,
+    "engineers": 1,
     "mobilePlatforms": ["iOS", "Android"],
     "backends": ["Firebase", "Supabase (Postgres + pgvector)"],
-    "languageMix": [
-      { "name": "TypeScript / React", "note": "primary" },
-      { "name": "JavaScript / Node", "note": "APIs + tooling" },
-      { "name": "SQL (Postgres)", "note": "Supabase + row-level security" },
-      { "name": "PHP", "note": "WordPress hub" }
+    "commitsByRepo": [
+      { "label": "ParentPod", "commits": 2229 },
+      { "label": "RealInvestorX", "commits": 934 },
+      { "label": "Longevity", "commits": 809 },
+      { "label": "Apex", "commits": 797 },
+      { "label": "Compliance OS", "commits": 552 },
+      { "label": "Beyond Volatility", "commits": 422 },
+      { "label": "ParentPod site", "commits": 154 },
+      { "label": "Family Goals", "commits": 45 }
     ]
   },
+  "architecture": {
+    "clients": ["Web · React / Next.js", "Mobile · iOS + Android"],
+    "apps": ["ParentPod", "Longevity", "RealInvestorX", "Apex", "Compliance OS"],
+    "backends": ["Firebase / Firestore", "Supabase + pgvector"],
+    "delivery": ["Vercel", "Firebase Hosting", "App Store · Google Play"]
+  },
   "platform": {
-    "summary": "A standards-as-code engineering library plus an AI-agent orchestration layer that turns intent into reviewed, tested, deployed changes across every repo.",
+    "summary": "A standards-as-code library plus an agent-orchestration layer turns intent into reviewed, tested, deployed changes across every repo — including parallel fan-out and an adversarial review pass before merge.",
     "commands": [
-      { "name": "ship", "does": "release gate — version bump, build, test, deploy, auto-merge, doc-freshness check" },
-      { "name": "sync", "does": "pull/rebase main, auto-resolve mechanical conflicts" },
+      { "name": "ship", "does": "release gate — version, build, test, deploy, auto-merge, doc-freshness" },
+      { "name": "sync", "does": "rebase main, auto-resolve mechanical conflicts" },
       { "name": "audit", "does": "security, dependency, dead-code, a11y & perf sweep" },
-      { "name": "new-project", "does": "scaffold a repo with standards, CI, secrets, and a context primer" },
-      { "name": "update-brain", "does": "maintain the knowledge base — ingest sessions, prune, reconcile the task hub" },
-      { "name": "improve", "does": "fold a sharper prompt back into the matching skill so it compounds" }
+      { "name": "new-project", "does": "scaffold a repo with standards, CI, secrets, context primer" },
+      { "name": "update-brain", "does": "maintain the knowledge base and reconcile the task hub" },
+      { "name": "improve", "does": "fold a sharper prompt back into a skill so it compounds" }
     ],
     "standards": ["architecture", "coding-standards", "typescript", "react", "security", "git-workflow", "startup"],
-    "skillsCount": 8,
-    "practices": [
-      "Standards-as-code: one library, symlinked into every repo and every agent's context",
-      "Multi-agent workflows: fan-out implementation, adversarial review, verify before merge",
-      "Secrets from a single source (Doppler) — never committed, never printed",
-      "branch → PR → CI green → auto-merge → deploy, CLI-first to keep it cheap",
-      "Automated doc-freshness gates block a release on stale README / changelog / version"
-    ]
+    "skillsCount": 8
   },
   "projects": [
     {
       "name": "ParentPod",
       "category": "Consumer",
       "status": "Flagship · live",
-      "blurb": "Coordination layer for co-parents and caregivers — one shared, real-time timeline for feeds, naps, meds, and handoffs, with role-scoped caregiver access.",
+      "blurb": "Coordination layer for co-parents — one real-time shared timeline for feeds, naps, meds, and handoffs, with role-scoped caregiver access.",
       "stack": ["TypeScript", "React", "Vite", "Capacitor", "Firebase"],
       "platforms": ["iOS", "Android", "Web"],
       "url": "https://parentpodapp.com",
       "repo": "parentpod",
       "highlights": [
-        "Published on the App Store and Google Play; web on Vercel",
-        "Offline-first Capacitor app; Firestore security rules enforce multi-caregiver access server-side",
-        "Native in-app purchases via RevenueCat, with a live growth/analytics dashboard"
+        "Live on the App Store and Google Play; offline-first Capacitor build",
+        "Firestore rules enforce multi-caregiver access server-side; native IAP via RevenueCat"
       ]
     },
     {
       "name": "Longevity",
       "category": "Consumer",
       "status": "Active",
-      "blurb": "Recovery & wellness companion — habit streaks, daily check-ins, and relapse-prevention tooling, with money-saved and trigger-pattern views.",
+      "blurb": "Habit & wellness companion — streaks, daily check-ins, and progress insights.",
       "stack": ["TypeScript", "Next.js", "React", "Capacitor", "Firebase"],
       "platforms": ["Web", "iOS", "Android"],
       "repo": "longevity",
       "highlights": [
-        "Next.js + Capacitor; accessible Radix UI; Sentry-instrumented",
-        "Firestore back end with hardened security headers and CSP"
+        "Next.js + Capacitor; accessible Radix UI; Sentry-instrumented, hardened CSP"
       ]
     },
     {
@@ -80,9 +83,8 @@
       "platforms": ["Web"],
       "repo": "realinvestorx",
       "highlights": [
-        "Turborepo monorepo — React client + Express API + shared packages",
-        "Supabase Postgres with pgvector for semantic deal search",
-        "Auth hardening in progress: HttpOnly-cookie session cutover off client-side token storage"
+        "Turborepo monorepo; Supabase Postgres + pgvector for semantic deal search",
+        "In-flight: HttpOnly-cookie session cutover off client-side token storage"
       ]
     },
     {
@@ -94,28 +96,26 @@
       "platforms": ["Web"],
       "repo": "apex",
       "highlights": [
-        "React + Vite SPA on Supabase (Postgres + row-level security)",
-        "Spreadsheet-style importer with copy-paste ingestion"
+        "React + Vite on Supabase (Postgres + row-level security); spreadsheet-style importer"
       ]
     },
     {
       "name": "Compliance OS",
       "category": "Platform",
       "status": "Maintained",
-      "blurb": "Controls & audit-evidence platform — map policies to controls to evidence, with review workflows and audit-ready exports.",
+      "blurb": "Controls & audit-evidence platform — map policies to controls to evidence, with review workflows.",
       "stack": ["TypeScript", "React", "Firebase"],
       "platforms": ["Web"],
       "repo": "compliance",
       "highlights": [
-        "Full-stack evidence management with rich-text authoring (TipTap)",
-        "Firebase back end; role-based review workflows"
+        "Full-stack evidence management with rich-text authoring; role-based review workflows"
       ]
     },
     {
       "name": "Beyond Volatility",
       "category": "Platform",
       "status": "Live",
-      "blurb": "Public hub and blog — the front door to the portfolio and long-form writing on energy, engineering, and building in the open.",
+      "blurb": "Public hub and blog — the front door to the portfolio and long-form writing.",
       "stack": ["WordPress", "PHP"],
       "platforms": ["Web"],
       "url": "https://beyondvolatility.com",
