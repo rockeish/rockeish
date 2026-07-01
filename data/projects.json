@@ -5,14 +5,15 @@
     "role": "Reliability & systems engineer · full-stack builder",
     "employer": "a large energy company",
     "location": "Chicago",
-    "hub": "https://beyondvolatility.com"
+    "hub": "https://beyondvolatility.com",
+    "linkedin": "https://www.linkedin.com/in/rockeish-mckenzie-p-e-8b83212a/"
   },
   "metrics": {
     "asOf": "2026-07-01",
     "repos": 9,
     "commits": 5900,
     "trackedFiles": 3564,
-    "linesOfSource": 678000,
+    "linesOfSource": 681000,
     "appsInProduction": 4,
     "engineers": 1,
     "mobilePlatforms": ["iOS", "Android"],
@@ -26,16 +27,35 @@
       { "label": "Beyond Volatility", "commits": 422 },
       { "label": "ParentPod site", "commits": 154 },
       { "label": "Family Goals", "commits": 45 }
+    ],
+    "languages": [
+      { "name": "TypeScript", "lines": 309852 },
+      { "name": "JavaScript", "lines": 237463 },
+      { "name": "CSS", "lines": 96437 },
+      { "name": "PHP", "lines": 17663 },
+      { "name": "SQL", "lines": 14838 },
+      { "name": "Other", "lines": 5171 }
     ]
   },
+  "currently": [
+    "Scaling **ParentPod** — live on iOS & Android; running growth experiments against fixed survival checkpoints.",
+    "**Longevity** on deck — a privacy-first wellness companion, hardening for launch.",
+    "Evolving the **agent-automation platform** — parallel fan-out, an adversarial review pass, and doc-freshness gates."
+  ],
   "architecture": {
     "clients": ["Web · React / Next.js", "Mobile · iOS + Android"],
     "apps": ["ParentPod", "Longevity", "RealInvestorX", "Apex", "Compliance OS"],
     "backends": ["Firebase / Firestore", "Supabase + pgvector"],
     "delivery": ["Vercel", "Firebase Hosting", "App Store · Google Play"]
   },
+  "pipeline": [
+    { "phase": "PLAN", "detail": "Intent → a scoped PLAN.md, bounded by standards-as-code loaded into every agent" },
+    { "phase": "BUILD", "detail": "Agents fan out in parallel, test-first, each in an isolated worktree" },
+    { "phase": "VERIFY", "detail": "Adversarial review pass + tests + typecheck + lint + security & doc-freshness gates" },
+    { "phase": "SHIP", "detail": "Auto-merge on green → deploy → health check → docs and changelog updated" }
+  ],
   "platform": {
-    "summary": "A standards-as-code library plus an agent-orchestration layer turns intent into reviewed, tested, deployed changes across every repo — including parallel fan-out and an adversarial review pass before merge.",
+    "summary": "A standards-as-code library plus an agent-orchestration layer turns intent into reviewed, tested, deployed changes across every repo — parallel fan-out, an adversarial review pass, and a doc-freshness gate before merge.",
     "commands": [
       { "name": "ship", "does": "release gate — version, build, test, deploy, auto-merge, doc-freshness" },
       { "name": "sync", "does": "rebase main, auto-resolve mechanical conflicts" },
@@ -47,28 +67,57 @@
     "standards": ["architecture", "coding-standards", "typescript", "react", "security", "git-workflow", "startup"],
     "skillsCount": 8
   },
+  "practices": [
+    "**TypeScript strict** everywhere; Zod validates every external boundary; impossible states made unrepresentable.",
+    "**Test the behavior and the failure path** — a bugfix starts with a failing test that reproduces it.",
+    "**Secrets only from Doppler** — never in code or git history; only public keys ship in client bundles.",
+    "**AuthZ server-side** on every privileged path — enforced in Firestore rules / Supabase RLS, not just app code.",
+    "**Tiered CI** (active / dabble / parked) keeps Actions minutes low; CLI-first deploys through the release gate.",
+    "**Conflicts never handed back** — mechanical ones auto-resolved, real ones resolved and proven green with tests.",
+    "**Accessibility & cross-platform** — semantic markup, keyboard paths, and Capacitor guards for native builds."
+  ],
+  "stack": {
+    "Languages": ["TypeScript", "JavaScript", "PHP", "SQL", "Python", "Bash"],
+    "Frontend": ["React", "Next.js", "Vite", "Tailwind CSS", "Radix UI", "Capacitor"],
+    "Backend": ["Node.js", "Express", "Firebase", "Supabase", "PostgreSQL", "pgvector"],
+    "Infra & delivery": ["Vercel", "Firebase Hosting", "GitHub Actions", "Turborepo", "Cloudflare"],
+    "Quality & tooling": ["Zod", "Sentry", "RevenueCat", "Doppler", "ESLint", "Prettier"],
+    "AI & automation": ["Claude Code", "Standards-as-code", "Custom agents & skills"]
+  },
   "projects": [
     {
       "name": "ParentPod",
       "category": "Consumer",
       "status": "Flagship · live",
-      "blurb": "Coordination layer for co-parents — one real-time shared timeline for feeds, naps, meds, and handoffs, with role-scoped caregiver access.",
+      "tagline": "The village operating system for modern parenting teams.",
+      "blurb": "One real-time timeline for co-parents, grandparents, and nannies — log feeds, sleep, diapers, meds, and growth by voice, with AI insights, without adding to the mental load.",
       "stack": ["TypeScript", "React", "Vite", "Capacitor", "Firebase"],
       "platforms": ["iOS", "Android", "Web"],
       "url": "https://parentpodapp.com",
+      "links": {
+        "appStore": "https://apps.apple.com/app/parentpod/id6759841193",
+        "googlePlay": "https://play.google.com/store/apps/details?id=com.parentpod.app"
+      },
       "repo": "parentpod",
       "highlights": [
         "Live on the App Store and Google Play; offline-first Capacitor build",
         "Firestore rules enforce multi-caregiver access server-side; native IAP via RevenueCat"
-      ]
+      ],
+      "deepdive": {
+        "Problem": "Caring for a baby is a team sport, but the tools assume one logged-in parent — state fragments across people and devices.",
+        "Architecture": "React + Vite in a Capacitor shell (one codebase → iOS, Android, Web). Firestore for real-time multi-caregiver sync; security rules enforce role-scoped access server-side; RevenueCat for cross-platform subscriptions; voice logging and AI insight summaries.",
+        "Engineering": "Offline-first with optimistic writes and conflict-safe merges; the same automated release gate ships web (Vercel) and native (App Store / Play) from one push."
+      }
     },
     {
       "name": "Longevity",
       "category": "Consumer",
-      "status": "Active",
-      "blurb": "Habit & wellness companion — streaks, daily check-ins, and progress insights.",
+      "status": "On deck",
+      "tagline": "Privacy-first wellness, across ten dimensions.",
+      "blurb": "A habit and wellness companion — streaks, daily check-ins, and progress insights across ten dimensions of health.",
       "stack": ["TypeScript", "Next.js", "React", "Capacitor", "Firebase"],
       "platforms": ["Web", "iOS", "Android"],
+      "url": "https://longevity.beyondvolatility.com/",
       "repo": "longevity",
       "highlights": [
         "Next.js + Capacitor; accessible Radix UI; Sentry-instrumented, hardened CSP"
@@ -78,9 +127,11 @@
       "name": "RealInvestorX",
       "category": "Data & analysis",
       "status": "Active",
-      "blurb": "Real-estate deal-analysis workspace — underwrite, compare, and semantically search deals.",
+      "tagline": "Institutional-grade real-estate deal analysis.",
+      "blurb": "Underwrite, compare, and semantically search property deals in a Turborepo monorepo backed by Postgres + pgvector.",
       "stack": ["TypeScript", "React", "Express", "Turborepo", "Supabase"],
       "platforms": ["Web"],
+      "url": "https://realestate.beyondvolatility.com/",
       "repo": "realinvestorx",
       "highlights": [
         "Turborepo monorepo; Supabase Postgres + pgvector for semantic deal search",
@@ -91,21 +142,25 @@
       "name": "Apex",
       "category": "Data & analysis",
       "status": "Maintained",
-      "blurb": "Personal-finance tracker — import, categorize, and chart cash flow and net worth.",
+      "tagline": "Personal-finance & FIRE planning.",
+      "blurb": "Import, categorize, and chart cash flow and net worth — with Monte Carlo retirement simulations.",
       "stack": ["TypeScript", "React", "Vite", "Supabase"],
       "platforms": ["Web"],
+      "url": "https://personalfinance.beyondvolatility.com/",
       "repo": "apex",
       "highlights": [
-        "React + Vite on Supabase (Postgres + row-level security); spreadsheet-style importer"
+        "React + Vite on Supabase (Postgres + row-level security); spreadsheet-style importer + Monte Carlo engine"
       ]
     },
     {
       "name": "Compliance OS",
       "category": "Platform",
       "status": "Maintained",
-      "blurb": "Controls & audit-evidence platform — map policies to controls to evidence, with review workflows.",
+      "tagline": "Controls & audit-evidence platform.",
+      "blurb": "Map policies to controls to evidence, with AI-assisted mapping and role-based review workflows.",
       "stack": ["TypeScript", "React", "Firebase"],
       "platforms": ["Web"],
+      "url": "https://compliance.beyondvolatility.com/",
       "repo": "compliance",
       "highlights": [
         "Full-stack evidence management with rich-text authoring; role-based review workflows"
@@ -115,14 +170,25 @@
       "name": "Beyond Volatility",
       "category": "Platform",
       "status": "Live",
-      "blurb": "Public hub and blog — the front door to the portfolio and long-form writing.",
+      "tagline": "The hub — the front door to the portfolio.",
+      "blurb": "Public hub and blog that indexes every product, plus a suite of free interactive financial and lifestyle tools.",
       "stack": ["WordPress", "PHP"],
       "platforms": ["Web"],
       "url": "https://beyondvolatility.com",
       "repo": null,
       "highlights": [
-        "Custom child theme; the canonical public index of every product"
+        "Custom child theme; the canonical public index of every product, with 15+ interactive calculators"
       ]
     }
-  ]
+  ],
+  "connect": {
+    "linkedin": "https://www.linkedin.com/in/rockeish-mckenzie-p-e-8b83212a/",
+    "hub": "https://beyondvolatility.com",
+    "flagship": "https://parentpodapp.com",
+    "socials": [
+      { "label": "Instagram", "url": "https://www.instagram.com/parentpodapp/" },
+      { "label": "TikTok", "url": "https://www.tiktok.com/@parentpodapp" },
+      { "label": "X", "url": "https://x.com/ParentingP0fn9" }
+    ]
+  }
 }
