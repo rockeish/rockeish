@@ -16,7 +16,7 @@ By day, reliability compliance at a large energy company — 12 years keeping th
 
 <br>
 
-<img src="assets/architecture.svg" alt="Ecosystem architecture — clients to apps to back ends to delivery, across Firebase and Supabase, shipping to Vercel, Firebase Hosting, and the app stores." width="100%">
+<p align="center"><img src="assets/architecture.svg" alt="Ecosystem architecture — clients to apps to back ends to delivery, across Firebase and Supabase, shipping to Vercel, Firebase Hosting, and the app stores." width="680"></p>
 
 <br>
 

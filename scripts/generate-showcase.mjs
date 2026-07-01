@@ -68,30 +68,30 @@ const compact = (n) =>
 function heroSvg(d) {
   const m = d.metrics;
   const stats = [
-    [String(m.repos), 'repositories'],
+    [String(m.repos), 'repos'],
     [compact(m.commits), 'commits'],
-    [compact(m.linesOfSource), 'lines of code'],
-    [String(m.appsInProduction), 'apps in production'],
+    [compact(m.linesOfSource), 'lines'],
+    [String(m.appsInProduction), 'live apps'],
     [String(m.engineers), 'engineer'],
   ];
-  const W = 900;
-  const x0 = 44;
-  const cell = (W - x0 - 44) / stats.length;
+  const W = 720;
+  const x0 = 40;
+  const cell = (W - x0 - 40) / stats.length;
   const statMarkup = stats
     .map(([n, l], i) => {
       const x = x0 + i * cell;
-      return `<text x="${x}" y="198" font-family="${FONT}" font-size="30" font-weight="700" fill="url(#accent)">${esc(n)}</text>
-  <text x="${x}" y="219" font-family="${FONT}" font-size="12.5" fill="${C.muted}">${esc(l)}</text>`;
+      return `<text x="${x}" y="230" font-family="${FONT}" font-size="34" font-weight="700" fill="url(#accent)">${esc(n)}</text>
+  <text x="${x}" y="254" font-family="${FONT}" font-size="16" fill="${C.muted}">${esc(l)}</text>`;
     })
     .join('\n  ');
 
-  const inner = `<text x="${x0}" y="66" font-family="${FONT}" font-size="44" font-weight="800" fill="${C.text}">${esc(d.profile.name)}</text>
-  <rect x="${x0 + 2}" y="78" width="64" height="5" rx="2.5" fill="url(#accent)"/>
-  <text x="${x0}" y="106" font-family="${FONT}" font-size="15.5" fill="${C.text}">${esc(d.profile.role)}</text>
-  <text x="${x0}" y="130" font-family="${FONT}" font-size="14" fill="${C.muted}">One engineer · a self-built agent-automation platform · a portfolio in production</text>
-  <line x1="${x0}" y1="152" x2="${W - x0}" y2="152" stroke="${C.line}"/>
+  const inner = `<text x="${x0}" y="76" font-family="${FONT}" font-size="48" font-weight="800" fill="${C.text}">${esc(d.profile.name)}</text>
+  <rect x="${x0 + 2}" y="90" width="72" height="6" rx="3" fill="url(#accent)"/>
+  <text x="${x0}" y="128" font-family="${FONT}" font-size="20" fill="${C.text}">${esc(d.profile.role)}</text>
+  <text x="${x0}" y="158" font-family="${FONT}" font-size="16" fill="${C.muted}">One engineer · a self-built agent platform · a portfolio in production</text>
+  <line x1="${x0}" y1="186" x2="${W - x0}" y2="186" stroke="${C.line}"/>
   ${statMarkup}`;
-  return svgDoc(W, 244, inner, `${d.profile.name} — headline metrics`);
+  return svgDoc(W, 274, inner, `${d.profile.name} — headline metrics`);
 }
 
 // ---------------------------------------------------------------------------
@@ -100,39 +100,43 @@ function heroSvg(d) {
 
 function architectureSvg(d) {
   const a = d.architecture;
-  const cols = [
+  const stages = [
     ['CLIENTS', a.clients],
     ['APPS', a.apps],
     ['BACK ENDS', a.backends],
     ['DELIVERY', a.delivery],
   ];
-  const W = 900;
-  const H = 300;
-  const panelW = 186;
-  const gap = 34;
-  const top = 56;
-  const panelH = 224;
-  const chipH = 30;
-  const chipGap = 8;
-  const mid = top + panelH / 2;
+  const W = 720;
+  const mx = 32;
+  const innerW = W - 2 * mx;
+  const cols = 2;
+  const colGap = 14;
+  const chipW = (innerW - (cols - 1) * colGap) / cols;
+  const chipH = 44;
+  const rowGap = 10;
+  const headH = 40;
+  const arrowH = 30;
 
-  let markup = `<text x="24" y="34" font-family="${FONT}" font-size="14" fill="${C.muted}">Ecosystem — full-stack across two back ends, three delivery targets, and native mobile</text>`;
+  let y = 66;
+  let markup = `<text x="${mx}" y="40" font-family="${FONT}" font-size="16" fill="${C.muted}">Ecosystem — clients → apps → back ends → delivery</text>`;
 
-  cols.forEach(([title, items], ci) => {
-    const px = 24 + ci * (panelW + gap);
-    markup += `\n  <rect x="${px}" y="${top}" width="${panelW}" height="${panelH}" rx="12" fill="${C.panel}" stroke="${C.line}"/>`;
-    markup += `\n  <text x="${px + 14}" y="${top + 26}" font-family="${FONT}" font-size="12" font-weight="700" letter-spacing="1.5" fill="url(#accent)">${esc(title)}</text>`;
-    items.forEach((label, j) => {
-      const cy = top + 40 + j * (chipH + chipGap);
-      markup += `\n  <rect x="${px + 12}" y="${cy}" width="${panelW - 24}" height="${chipH}" rx="8" fill="${C.chip}"/>`;
-      markup += `\n  <text x="${px + panelW / 2}" y="${cy + 20}" font-family="${FONT}" font-size="11.5" fill="${C.text}" text-anchor="middle">${esc(label)}</text>`;
+  stages.forEach(([title, items], si) => {
+    markup += `\n  <text x="${mx}" y="${y + 24}" font-family="${FONT}" font-size="19" font-weight="700" letter-spacing="1.5" fill="url(#accent)">${esc(title)}</text>`;
+    y += headH;
+    items.forEach((label, i) => {
+      const cx = mx + (i % cols) * (chipW + colGap);
+      const cy = y + Math.floor(i / cols) * (chipH + rowGap);
+      markup += `\n  <rect x="${cx}" y="${cy}" width="${chipW}" height="${chipH}" rx="10" fill="${C.chip}"/>`;
+      markup += `\n  <text x="${cx + 18}" y="${cy + chipH / 2 + 6}" font-family="${FONT}" font-size="18" fill="${C.text}">${esc(label)}</text>`;
     });
-    if (ci < cols.length - 1) {
-      const ax = px + panelW + gap / 2;
-      markup += `\n  <path d="M ${ax - 6} ${mid - 7} L ${ax + 6} ${mid} L ${ax - 6} ${mid + 7} Z" fill="${C.muted}"/>`;
+    y += Math.ceil(items.length / cols) * (chipH + rowGap) - rowGap;
+    if (si < stages.length - 1) {
+      y += 8;
+      markup += `\n  <path d="M ${W / 2 - 9} ${y} L ${W / 2 + 9} ${y} L ${W / 2} ${y + 13} Z" fill="${C.muted}"/>`;
+      y += arrowH;
     }
   });
-  return svgDoc(W, H, markup, 'Ecosystem architecture');
+  return svgDoc(W, y + 26, markup, 'Ecosystem architecture');
 }
 
 // ---------------------------------------------------------------------------
@@ -141,25 +145,25 @@ function architectureSvg(d) {
 
 function commitsSvg(d) {
   const rows = d.metrics.commitsByRepo;
-  const W = 900;
-  const top = 58;
-  const rowH = 26;
-  const rowGap = 6;
-  const labelX = 158;
-  const barX = 168;
-  const barMax = 640;
+  const W = 720;
+  const top = 68;
+  const rowH = 30;
+  const rowGap = 9;
+  const labelX = 172;
+  const barX = 182;
+  const barMax = 452;
   const max = Math.max(...rows.map((r) => r.commits));
-  const H = top + rows.length * (rowH + rowGap) + 16;
+  const H = top + rows.length * (rowH + rowGap) + 18;
 
-  let markup = `<text x="24" y="34" font-family="${FONT}" font-size="14" fill="${C.muted}">Commits per repository</text>
-  <text x="${W - 24}" y="34" font-family="${FONT}" font-size="13" fill="${C.muted}" text-anchor="end">~${compact(d.metrics.commits)} total · single author</text>`;
+  let markup = `<text x="28" y="42" font-family="${FONT}" font-size="17" fill="${C.muted}">Commits per repository</text>
+  <text x="${W - 28}" y="42" font-family="${FONT}" font-size="15" fill="${C.muted}" text-anchor="end">~${compact(d.metrics.commits)} total · single author</text>`;
 
   rows.forEach((r, i) => {
     const y = top + i * (rowH + rowGap);
-    const bw = Math.max(4, Math.round((r.commits / max) * barMax));
-    markup += `\n  <text x="${labelX}" y="${y + 15}" font-family="${FONT}" font-size="12.5" fill="${C.text}" text-anchor="end">${esc(r.label)}</text>`;
-    markup += `\n  <rect x="${barX}" y="${y + 2}" width="${bw}" height="18" rx="4" fill="url(#accent)"/>`;
-    markup += `\n  <text x="${barX + bw + 8}" y="${y + 15}" font-family="${FONT}" font-size="11.5" fill="${C.muted}">${r.commits.toLocaleString('en-US')}</text>`;
+    const bw = Math.max(5, Math.round((r.commits / max) * barMax));
+    markup += `\n  <text x="${labelX}" y="${y + 21}" font-family="${FONT}" font-size="16" fill="${C.text}" text-anchor="end">${esc(r.label)}</text>`;
+    markup += `\n  <rect x="${barX}" y="${y + 5}" width="${bw}" height="22" rx="5" fill="url(#accent)"/>`;
+    markup += `\n  <text x="${barX + bw + 10}" y="${y + 21}" font-family="${FONT}" font-size="15" fill="${C.muted}">${r.commits.toLocaleString('en-US')}</text>`;
   });
   return svgDoc(W, H, markup, 'Commits per repository');
 }

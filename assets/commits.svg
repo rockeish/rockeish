@@ -1,34 +1,34 @@
-<svg width="900" height="330" viewBox="0 0 900 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Commits per repository">
+<svg width="720" height="398" viewBox="0 0 720 398" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Commits per repository">
   <defs>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#818cf8"/>
     </linearGradient>
   </defs>
-  <rect x="0.5" y="0.5" width="899" height="329" rx="18" fill="#0b1220" stroke="#243149"/>
-  <text x="24" y="34" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#8b97a8">Commits per repository</text>
-  <text x="876" y="34" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#8b97a8" text-anchor="end">~5.9K total · single author</text>
-  <text x="158" y="73" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3" text-anchor="end">ParentPod</text>
-  <rect x="168" y="60" width="640" height="18" rx="4" fill="url(#accent)"/>
-  <text x="816" y="73" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b97a8">2,229</text>
-  <text x="158" y="105" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3" text-anchor="end">RealInvestorX</text>
-  <rect x="168" y="92" width="268" height="18" rx="4" fill="url(#accent)"/>
-  <text x="444" y="105" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b97a8">934</text>
-  <text x="158" y="137" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3" text-anchor="end">Longevity</text>
-  <rect x="168" y="124" width="232" height="18" rx="4" fill="url(#accent)"/>
-  <text x="408" y="137" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b97a8">809</text>
-  <text x="158" y="169" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3" text-anchor="end">Apex</text>
-  <rect x="168" y="156" width="229" height="18" rx="4" fill="url(#accent)"/>
-  <text x="405" y="169" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b97a8">797</text>
-  <text x="158" y="201" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3" text-anchor="end">Compliance OS</text>
-  <rect x="168" y="188" width="158" height="18" rx="4" fill="url(#accent)"/>
-  <text x="334" y="201" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b97a8">552</text>
-  <text x="158" y="233" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3" text-anchor="end">Beyond Volatility</text>
-  <rect x="168" y="220" width="121" height="18" rx="4" fill="url(#accent)"/>
-  <text x="297" y="233" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b97a8">422</text>
-  <text x="158" y="265" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3" text-anchor="end">ParentPod site</text>
-  <rect x="168" y="252" width="44" height="18" rx="4" fill="url(#accent)"/>
-  <text x="220" y="265" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b97a8">154</text>
-  <text x="158" y="297" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3" text-anchor="end">Family Goals</text>
-  <rect x="168" y="284" width="13" height="18" rx="4" fill="url(#accent)"/>
-  <text x="189" y="297" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b97a8">45</text>
+  <rect x="0.5" y="0.5" width="719" height="397" rx="18" fill="#0b1220" stroke="#243149"/>
+  <text x="28" y="42" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" fill="#8b97a8">Commits per repository</text>
+  <text x="692" y="42" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8" text-anchor="end">~5.9K total · single author</text>
+  <text x="172" y="89" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">ParentPod</text>
+  <rect x="182" y="73" width="452" height="22" rx="5" fill="url(#accent)"/>
+  <text x="644" y="89" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">2,229</text>
+  <text x="172" y="128" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">RealInvestorX</text>
+  <rect x="182" y="112" width="189" height="22" rx="5" fill="url(#accent)"/>
+  <text x="381" y="128" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">934</text>
+  <text x="172" y="167" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">Longevity</text>
+  <rect x="182" y="151" width="164" height="22" rx="5" fill="url(#accent)"/>
+  <text x="356" y="167" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">809</text>
+  <text x="172" y="206" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">Apex</text>
+  <rect x="182" y="190" width="162" height="22" rx="5" fill="url(#accent)"/>
+  <text x="354" y="206" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">797</text>
+  <text x="172" y="245" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">Compliance OS</text>
+  <rect x="182" y="229" width="112" height="22" rx="5" fill="url(#accent)"/>
+  <text x="304" y="245" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">552</text>
+  <text x="172" y="284" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">Beyond Volatility</text>
+  <rect x="182" y="268" width="86" height="22" rx="5" fill="url(#accent)"/>
+  <text x="278" y="284" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">422</text>
+  <text x="172" y="323" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">ParentPod site</text>
+  <rect x="182" y="307" width="31" height="22" rx="5" fill="url(#accent)"/>
+  <text x="223" y="323" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">154</text>
+  <text x="172" y="362" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">Family Goals</text>
+  <rect x="182" y="346" width="9" height="22" rx="5" fill="url(#accent)"/>
+  <text x="201" y="362" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">45</text>
 </svg>

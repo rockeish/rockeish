@@ -1,44 +1,40 @@
-<svg width="900" height="300" viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ecosystem architecture">
+<svg width="720" height="704" viewBox="0 0 720 704" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ecosystem architecture">
   <defs>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#818cf8"/>
     </linearGradient>
   </defs>
-  <rect x="0.5" y="0.5" width="899" height="299" rx="18" fill="#0b1220" stroke="#243149"/>
-  <text x="24" y="34" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#8b97a8">Ecosystem — full-stack across two back ends, three delivery targets, and native mobile</text>
-  <rect x="24" y="56" width="186" height="224" rx="12" fill="#131d33" stroke="#243149"/>
-  <text x="38" y="82" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="url(#accent)">CLIENTS</text>
-  <rect x="36" y="96" width="162" height="30" rx="8" fill="#1b2942"/>
-  <text x="117" y="116" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle">Web · React / Next.js</text>
-  <rect x="36" y="134" width="162" height="30" rx="8" fill="#1b2942"/>
-  <text x="117" y="154" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle">Mobile · iOS + Android</text>
-  <path d="M 221 161 L 233 168 L 221 175 Z" fill="#8b97a8"/>
-  <rect x="244" y="56" width="186" height="224" rx="12" fill="#131d33" stroke="#243149"/>
-  <text x="258" y="82" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="url(#accent)">APPS</text>
-  <rect x="256" y="96" width="162" height="30" rx="8" fill="#1b2942"/>
-  <text x="337" y="116" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle">ParentPod</text>
-  <rect x="256" y="134" width="162" height="30" rx="8" fill="#1b2942"/>
-  <text x="337" y="154" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle">Longevity</text>
-  <rect x="256" y="172" width="162" height="30" rx="8" fill="#1b2942"/>
-  <text x="337" y="192" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle">RealInvestorX</text>
-  <rect x="256" y="210" width="162" height="30" rx="8" fill="#1b2942"/>
-  <text x="337" y="230" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle">Apex</text>
-  <rect x="256" y="248" width="162" height="30" rx="8" fill="#1b2942"/>
-  <text x="337" y="268" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle">Compliance OS</text>
-  <path d="M 441 161 L 453 168 L 441 175 Z" fill="#8b97a8"/>
-  <rect x="464" y="56" width="186" height="224" rx="12" fill="#131d33" stroke="#243149"/>
-  <text x="478" y="82" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="url(#accent)">BACK ENDS</text>
-  <rect x="476" y="96" width="162" height="30" rx="8" fill="#1b2942"/>
-  <text x="557" y="116" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle">Firebase / Firestore</text>
-  <rect x="476" y="134" width="162" height="30" rx="8" fill="#1b2942"/>
-  <text x="557" y="154" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle">Supabase + pgvector</text>
-  <path d="M 661 161 L 673 168 L 661 175 Z" fill="#8b97a8"/>
-  <rect x="684" y="56" width="186" height="224" rx="12" fill="#131d33" stroke="#243149"/>
-  <text x="698" y="82" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="url(#accent)">DELIVERY</text>
-  <rect x="696" y="96" width="162" height="30" rx="8" fill="#1b2942"/>
-  <text x="777" y="116" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle">Vercel</text>
-  <rect x="696" y="134" width="162" height="30" rx="8" fill="#1b2942"/>
-  <text x="777" y="154" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle">Firebase Hosting</text>
-  <rect x="696" y="172" width="162" height="30" rx="8" fill="#1b2942"/>
-  <text x="777" y="192" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle">App Store · Google Play</text>
+  <rect x="0.5" y="0.5" width="719" height="703" rx="18" fill="#0b1220" stroke="#243149"/>
+  <text x="32" y="40" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#8b97a8">Ecosystem — clients → apps → back ends → delivery</text>
+  <text x="32" y="90" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5" fill="url(#accent)">CLIENTS</text>
+  <rect x="32" y="106" width="321" height="44" rx="10" fill="#1b2942"/>
+  <text x="50" y="134" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#e6edf3">Web · React / Next.js</text>
+  <rect x="367" y="106" width="321" height="44" rx="10" fill="#1b2942"/>
+  <text x="385" y="134" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#e6edf3">Mobile · iOS + Android</text>
+  <path d="M 351 158 L 369 158 L 360 171 Z" fill="#8b97a8"/>
+  <text x="32" y="212" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5" fill="url(#accent)">APPS</text>
+  <rect x="32" y="228" width="321" height="44" rx="10" fill="#1b2942"/>
+  <text x="50" y="256" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#e6edf3">ParentPod</text>
+  <rect x="367" y="228" width="321" height="44" rx="10" fill="#1b2942"/>
+  <text x="385" y="256" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#e6edf3">Longevity</text>
+  <rect x="32" y="282" width="321" height="44" rx="10" fill="#1b2942"/>
+  <text x="50" y="310" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#e6edf3">RealInvestorX</text>
+  <rect x="367" y="282" width="321" height="44" rx="10" fill="#1b2942"/>
+  <text x="385" y="310" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#e6edf3">Apex</text>
+  <rect x="32" y="336" width="321" height="44" rx="10" fill="#1b2942"/>
+  <text x="50" y="364" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#e6edf3">Compliance OS</text>
+  <path d="M 351 388 L 369 388 L 360 401 Z" fill="#8b97a8"/>
+  <text x="32" y="442" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5" fill="url(#accent)">BACK ENDS</text>
+  <rect x="32" y="458" width="321" height="44" rx="10" fill="#1b2942"/>
+  <text x="50" y="486" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#e6edf3">Firebase / Firestore</text>
+  <rect x="367" y="458" width="321" height="44" rx="10" fill="#1b2942"/>
+  <text x="385" y="486" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#e6edf3">Supabase + pgvector</text>
+  <path d="M 351 510 L 369 510 L 360 523 Z" fill="#8b97a8"/>
+  <text x="32" y="564" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="1.5" fill="url(#accent)">DELIVERY</text>
+  <rect x="32" y="580" width="321" height="44" rx="10" fill="#1b2942"/>
+  <text x="50" y="608" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#e6edf3">Vercel</text>
+  <rect x="367" y="580" width="321" height="44" rx="10" fill="#1b2942"/>
+  <text x="385" y="608" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#e6edf3">Firebase Hosting</text>
+  <rect x="32" y="634" width="321" height="44" rx="10" fill="#1b2942"/>
+  <text x="50" y="662" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#e6edf3">App Store · Google Play</text>
 </svg>
