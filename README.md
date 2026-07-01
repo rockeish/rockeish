@@ -1,4 +1,7 @@
-<img src="assets/hero.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 9 repositories, 5.9K commits, 681K lines of source, 4 apps in production, 1 engineer." width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 9 repositories, 5.9K commits, 681K lines of source, 4 apps in production, 1 engineer." width="100%">
+</picture>
 
 <p align="center">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
@@ -23,6 +26,8 @@
   &nbsp;·&nbsp;
   <a href="#by-the-numbers">By the numbers</a>
   &nbsp;·&nbsp;
+  <a href="#recently-shipped">Recently shipped</a>
+  &nbsp;·&nbsp;
   <a href="#selected-work">Selected work</a>
   &nbsp;·&nbsp;
   <a href="#engineering-practices">Practices</a>
@@ -44,15 +49,17 @@ By day, reliability compliance at a large energy company — 12 years keeping th
 
 9 repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery — all resting on the automation platform.
 
-<p align="center">
-  <img src="assets/ecosystem.svg" alt="Ecosystem map — Beyond Volatility hub, products, Firebase and Supabase back ends, Vercel / Firebase Hosting / app-store delivery, all on a shared agent-automation platform." width="680">
-</p>
+<p align="center"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/ecosystem.dark.svg">
+  <img src="assets/ecosystem.light.svg" alt="Ecosystem map — Beyond Volatility hub, products, Firebase and Supabase back ends, Vercel / Firebase Hosting / app-store delivery, all on a shared agent-automation platform." width="680">
+</picture></p>
 
 ## How I ship
 
-<p align="center">
-  <img src="assets/pipeline.svg" alt="Ship pipeline — plan (scoped by standards-as-code), build (parallel agents, test-first), verify (adversarial review, tests, security and doc-freshness gates), ship (auto-merge, deploy, docs updated)." width="680">
-</p>
+<p align="center"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/pipeline.dark.svg">
+  <img src="assets/pipeline.light.svg" alt="Ship pipeline — plan (scoped by standards-as-code), build (parallel agents, test-first), verify (adversarial review, tests, security and doc-freshness gates), ship (auto-merge, deploy, docs updated)." width="680">
+</picture></p>
 
 A standards-as-code library plus an agent-orchestration layer turns intent into reviewed, tested, deployed changes across every repo — parallel fan-out, an adversarial review pass, and a doc-freshness gate before merge.
 
@@ -71,9 +78,27 @@ A standards-as-code library plus an agent-orchestration layer turns intent into 
 
 <sub>Real figures, aggregated across every repository — public *and* private. No third-party stat widgets; these are computed from the actual git history and source tree, then drawn from data.</sub>
 
-<img src="assets/commits.svg" alt="Commits per repository — ParentPod 2,229; RealInvestorX 934; Longevity 809; Apex 797; Compliance OS 552; Beyond Volatility 422; and more. ~5,900 total, single author." width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,229; RealInvestorX 934; Longevity 809; Apex 797; Compliance OS 552; Beyond Volatility 422; and more. ~5,900 total, single author." width="100%">
+</picture>
 
-<img src="assets/languages.svg" alt="Language mix across 681K lines of tracked source — TypeScript 45.5%, JavaScript 34.8%, CSS 14.2%, PHP 2.6%, SQL 2.2%, other 0.8%." width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
+  <img src="assets/languages.light.svg" alt="Language mix across 681K lines of tracked source — TypeScript 45.5%, JavaScript 34.8%, CSS 14.2%, PHP 2.6%, SQL 2.2%, other 0.8%." width="100%">
+</picture>
+
+## Recently shipped
+
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Jul 1, 2026. Regenerated from git, not hand-edited.</sub>
+
+| Product | Latest | Commits · 90d |
+|---|---|---|
+| **ParentPod** | `v2.62.10` | 509 |
+| **Longevity** | `v1.1.36` | 253 |
+| **RealInvestorX** | `v5.15.13` | 167 |
+| **Apex** | — | 92 |
+| **Compliance OS** | `v3.4.6` | 41 |
 
 ## Selected work
 
@@ -143,4 +168,4 @@ A standards-as-code library plus an agent-orchestration layer turns intent into 
 
 ---
 
-<sub>App repositories are private — this work ships to production, not public forks. This entire page — copy, tables, and every SVG — is generated from one data file (<a href="data/projects.json">data/projects.json</a>) by <a href="scripts/generate-showcase.mjs"><code>generate-showcase.mjs</code></a> and refreshed on a schedule by GitHub Actions. Full portfolio → <b><a href="https://beyondvolatility.com">beyondvolatility.com</a></b>.</sub>
+<sub>App repositories are private — this work ships to production, not public forks. This entire page — copy, tables, and every SVG (light + dark) — is generated from data (<a href="data/projects.json">projects.json</a> + <a href="data/activity.json">activity.json</a>) by <a href="scripts/generate-showcase.mjs"><code>generate-showcase.mjs</code></a> and refreshed on a schedule by GitHub Actions. Full portfolio → <b><a href="https://beyondvolatility.com">beyondvolatility.com</a></b>.</sub>

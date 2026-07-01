@@ -2,8 +2,10 @@ name: Refresh Showcase
 
 # Runs weekly to keep the portfolio section current.
 # Trigger manually via workflow_dispatch for an on-demand refresh.
-# Note: requires the SHOWCASE_TOKEN secret for GitHub API enrichment (stars,
-# last-push dates). The script runs cleanly without it — enrichment is skipped.
+# With the SHOWCASE_TOKEN secret set (a PAT with read access to the repos), the
+# "Collect activity" step self-updates the Recently shipped section from the
+# GitHub API. Without it, that step no-ops and the committed activity.json is
+# reused — everything else still regenerates.
 
 on:
   schedule:
@@ -25,6 +27,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Collect activity
+        env:
+          SHOWCASE_TOKEN: ${{ secrets.SHOWCASE_TOKEN }}
+        run: node scripts/collect-activity.mjs
+
       - name: Generate showcase
         env:
           SHOWCASE_TOKEN: ${{ secrets.SHOWCASE_TOKEN }}
@@ -34,7 +41,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add README.md data/activity.json assets
           git diff --staged --quiet && echo "No changes to commit." || \
             git commit -m "chore: refresh showcase [skip ci]"
           git push

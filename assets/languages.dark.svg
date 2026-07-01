@@ -12,7 +12,7 @@
   <rect x="561.3" y="62" width="94.0" height="34"  fill="#38bdf8"/>
   <rect x="655.3" y="62" width="17.2" height="34"  fill="#818cf8"/>
   <rect x="672.5" y="62" width="14.5" height="34"  fill="#22c55e"/>
-  <rect x="687.0" y="62" width="5.0" height="34" rx="6" fill="#64748b"/>
+  <rect x="687.0" y="62" width="5.0" height="34" rx="6" fill="#94a3b8"/>
   <rect x="28" y="117" width="13" height="13" rx="3" fill="#3178c6"/>
   <text x="48" y="128" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#e6edf3">TypeScript <tspan fill="#8b97a8">45.5%</tspan></text>
   <rect x="249.33333333333334" y="117" width="13" height="13" rx="3" fill="#e6c84f"/>
@@ -23,6 +23,6 @@
   <text x="48" y="156" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#e6edf3">PHP <tspan fill="#8b97a8">2.6%</tspan></text>
   <rect x="249.33333333333334" y="145" width="13" height="13" rx="3" fill="#22c55e"/>
   <text x="269.33333333333337" y="156" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#e6edf3">SQL <tspan fill="#8b97a8">2.2%</tspan></text>
-  <rect x="470.6666666666667" y="145" width="13" height="13" rx="3" fill="#64748b"/>
+  <rect x="470.6666666666667" y="145" width="13" height="13" rx="3" fill="#94a3b8"/>
   <text x="490.6666666666667" y="156" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#e6edf3">Other <tspan fill="#8b97a8">0.8%</tspan></text>
 </svg>

@@ -1,0 +1,42 @@
+{
+  "asOf": "2026-07-01",
+  "window": "90d",
+  "repos": [
+    {
+      "name": "ParentPod",
+      "lastShipped": "2026-06-30",
+      "recent": 509,
+      "version": "v2.62.10"
+    },
+    {
+      "name": "Longevity",
+      "lastShipped": "2026-06-30",
+      "recent": 253,
+      "version": "v1.1.36"
+    },
+    {
+      "name": "RealInvestorX",
+      "lastShipped": "2026-06-30",
+      "recent": 167,
+      "version": "v5.15.13"
+    },
+    {
+      "name": "Apex",
+      "lastShipped": "2026-06-30",
+      "recent": 92,
+      "version": "v0.0.2"
+    },
+    {
+      "name": "Compliance OS",
+      "lastShipped": "2026-06-30",
+      "recent": 41,
+      "version": "v3.4.6"
+    },
+    {
+      "name": "this profile",
+      "lastShipped": "2026-07-01",
+      "recent": 9,
+      "version": null
+    }
+  ]
+}
