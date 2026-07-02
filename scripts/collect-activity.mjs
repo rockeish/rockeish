@@ -51,7 +51,7 @@ function localStats(repo) {
   }
 }
 
-async function apiStats(repo) {
+export async function apiStats(repo) {
   const headers = { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'User-Agent': 'rockeish-showcase' };
   const meta = await fetch(`https://api.github.com/repos/${OWNER}/${repo}`, { headers });
   if (!meta.ok) return null;
@@ -61,23 +61,42 @@ async function apiStats(repo) {
   const t = await fetch(`https://api.github.com/repos/${OWNER}/${repo}/tags?per_page=1`, { headers });
   if (t.ok) { const tags = await t.json(); if (tags[0]) version = tags[0].name; }
   let recent = null;
+  // GitHub stats endpoints return 202 with an EMPTY body while computing on a
+  // cold cache — only parse on 200, and never let a slow/empty body abort the run.
   const s = await fetch(`https://api.github.com/repos/${OWNER}/${repo}/stats/commit_activity`, { headers });
-  if (s.ok) { const weeks = await s.json(); if (Array.isArray(weeks)) recent = weeks.slice(-13).reduce((n, w) => n + (w.total || 0), 0); }
+  if (s.status === 200) {
+    try {
+      const weeks = await s.json();
+      if (Array.isArray(weeks)) recent = weeks.slice(-13).reduce((n, w) => n + (w.total || 0), 0);
+    } catch { /* stats not ready */ }
+  }
   return lastShipped ? { lastShipped, recent, version } : null;
 }
 
-const out = [];
-for (const target of targets) {
-  const stats = token ? await apiStats(target.repo) : localStats(target.repo);
-  if (stats && stats.lastShipped) out.push({ name: target.name, ...stats });
+async function main() {
+  const out = [];
+  for (const target of targets) {
+    // Isolate per-target failures: a transient API error on one repo must not
+    // abort the whole refresh — skip that target and keep going.
+    try {
+      const stats = token ? await apiStats(target.repo) : localStats(target.repo);
+      if (stats && stats.lastShipped) out.push({ name: target.name, ...stats });
+    } catch (err) {
+      console.warn(`collect-activity: skipping ${target.repo} — ${err?.message || err}`);
+    }
+  }
+
+  if (!out.length) {
+    console.log('collect-activity: no repos reachable — leaving existing activity.json untouched.');
+    return;
+  }
+
+  out.sort((a, b) => (b.recent || 0) - (a.recent || 0));
+  const asOf = out.reduce((max, r) => (r.lastShipped > max ? r.lastShipped : max), '0000-00-00');
+  writeFileSync(join(ROOT, 'data', 'activity.json'), JSON.stringify({ asOf, window: '90d', repos: out }, null, 2) + '\n');
+  console.log(`collect-activity: wrote ${out.length} repos (asOf ${asOf}).`);
 }
 
-if (!out.length) {
-  console.log('collect-activity: no repos reachable — leaving existing activity.json untouched.');
-  process.exit(0);
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  await main();
 }
-
-out.sort((a, b) => (b.recent || 0) - (a.recent || 0));
-const asOf = out.reduce((max, r) => (r.lastShipped > max ? r.lastShipped : max), '0000-00-00');
-writeFileSync(join(ROOT, 'data', 'activity.json'), JSON.stringify({ asOf, window: '90d', repos: out }, null, 2) + '\n');
-console.log(`collect-activity: wrote ${out.length} repos (asOf ${asOf}).`);
