@@ -46,6 +46,9 @@ const FONT = "ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helve
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+// Escape a value destined for a markdown table cell: a literal `|` would end
+// the cell and backticks would break the inline-code span.
+const mdCell = (s) => String(s).replace(/\|/g, '\\|').replace(/`/g, '');
 const compact = (n) =>
   n >= 1000 ? (n / 1000 >= 100 ? Math.round(n / 1000) : (n / 1000).toFixed(1).replace(/\.0$/, '')) + 'K' : String(n);
 const fmtDate = (s) => { const [y, m, d] = String(s).split('-').map(Number); return `${MONTHS[m - 1]} ${d}, ${y}`; };
@@ -265,11 +268,11 @@ function stackDetails(stack) {
 function commandTable(p) {
   return `| Command | What it does |\n|---|---|\n${p.commands.map((c) => `| \`/${c.name}\` | ${c.does} |`).join('\n')}`;
 }
-function recentlyShipped(act) {
+export function recentlyShipped(act) {
   if (!act?.repos?.length) return null;
   const rows = act.repos.filter((r) => r.name !== 'this profile').map((r) => {
-    const ver = r.version && !/^v?0\.0\./.test(r.version) ? `\`${r.version}\`` : '—';
-    return `| **${r.name}** | ${ver} | ${r.recent != null ? r.recent.toLocaleString('en-US') : '—'} |`;
+    const ver = r.version && !/^v?0\.0\./.test(r.version) ? `\`${mdCell(r.version)}\`` : '—';
+    return `| **${mdCell(r.name)}** | ${ver} | ${r.recent != null ? r.recent.toLocaleString('en-US') : '—'} |`;
   }).join('\n');
   return `<sub>Still shipping — latest version and commit volume over the last 90 days, as of ${fmtDate(act.asOf)}. Regenerated from git, not hand-edited.</sub>\n\n| Product | Latest | Commits · 90d |\n|---|---|---|\n${rows}`;
 }
@@ -345,15 +348,21 @@ function buildReadme(d, act) {
 // Main
 // ---------------------------------------------------------------------------
 
-mkdirSync(join(ROOT, 'assets'), { recursive: true });
-const written = [];
-for (const [name, fn] of Object.entries(SVGS)) {
-  for (const [theme, t] of Object.entries(THEMES)) {
-    const file = `${name}.${theme}.svg`;
-    writeFileSync(join(ROOT, 'assets', file), fn(data, t));
-    written.push(file);
+function main() {
+  mkdirSync(join(ROOT, 'assets'), { recursive: true });
+  const written = [];
+  for (const [name, fn] of Object.entries(SVGS)) {
+    for (const [theme, t] of Object.entries(THEMES)) {
+      const file = `${name}.${theme}.svg`;
+      writeFileSync(join(ROOT, 'assets', file), fn(data, t));
+      written.push(file);
+    }
   }
+  console.log('assets:', written.join(', '));
+  writeFileSync(join(ROOT, 'README.md'), buildReadme(data, activity));
+  console.log('README.md written.');
 }
-console.log('assets:', written.join(', '));
-writeFileSync(join(ROOT, 'README.md'), buildReadme(data, activity));
-console.log('README.md written.');
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  main();
+}
