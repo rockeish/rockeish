@@ -1,5 +1,6 @@
 {
   "_comment": "Single source of truth for the auto-generated README + SVG infographics. Edit this file and the generator, not the rendered output. Public-safe only: no surname, employer name, secrets, private URLs, revenue, or internal strategy.",
+  "_statusSource": "Project status wording (Live / Maintenance mode / On hold / etc.) tracks the portfolio priority in ~/ai/standards/architecture.md (VSC triage) — the canonical status source. Update both together; never restate the private reasoning (e.g. employer conflicts) here.",
   "profile": {
     "name": "Rock",
     "role": "Reliability & systems engineer · full-stack builder",
@@ -40,12 +41,12 @@
   },
   "currently": [
     "Scaling **ParentPod** — live on iOS & Android; running growth experiments against fixed survival checkpoints.",
-    "**Longevity** on deck — a privacy-first wellness companion, hardening for launch.",
+    "**Longevity** is live — a privacy-first wellness companion, now in daily use.",
     "Evolving the **agent-automation platform** — parallel fan-out, an adversarial review pass, and doc-freshness gates."
   ],
   "architecture": {
     "clients": ["Web · React / Next.js", "Mobile · iOS + Android"],
-    "apps": ["ParentPod", "Longevity", "RealInvestorX", "Apex", "Compliance OS"],
+    "apps": ["ParentPod", "Longevity", "RealInvestorX", "Apex", "Compliance OS", "EngiByte"],
     "backends": ["Firebase / Firestore", "Supabase + pgvector"],
     "delivery": ["Vercel", "Firebase Hosting", "App Store · Google Play"],
     "services": ["Firebase", "Supabase", "Vercel", "App stores"]
@@ -114,7 +115,7 @@
     {
       "name": "Longevity",
       "category": "Consumer",
-      "status": "On deck",
+      "status": "Live",
       "tagline": "Privacy-first wellness, across ten dimensions.",
       "blurb": "A habit and wellness companion — streaks, daily check-ins, and progress insights across ten dimensions of health.",
       "stack": ["TypeScript", "Next.js", "React", "Capacitor", "Firebase"],
@@ -128,7 +129,7 @@
     {
       "name": "RealInvestorX",
       "category": "Data & analysis",
-      "status": "Active",
+      "status": "Maintenance mode",
       "tagline": "Institutional-grade real-estate deal analysis.",
       "blurb": "Underwrite, compare, and semantically search property deals in a Turborepo monorepo backed by Postgres + pgvector.",
       "stack": ["TypeScript", "React", "Express", "Turborepo", "Supabase"],
@@ -143,7 +144,7 @@
     {
       "name": "Apex",
       "category": "Data & analysis",
-      "status": "Maintained",
+      "status": "Maintenance mode",
       "tagline": "Personal-finance & FIRE planning.",
       "blurb": "Import, categorize, and chart cash flow and net worth — with Monte Carlo retirement simulations.",
       "stack": ["TypeScript", "React", "Vite", "Supabase"],
@@ -157,7 +158,7 @@
     {
       "name": "Compliance OS",
       "category": "Platform",
-      "status": "Maintained",
+      "status": "On hold",
       "tagline": "Controls & audit-evidence platform.",
       "blurb": "Map policies to controls to evidence, with AI-assisted mapping and role-based review workflows.",
       "stack": ["TypeScript", "React", "Firebase"],
@@ -166,6 +167,21 @@
       "repo": "compliance",
       "highlights": [
         "Full-stack evidence management with rich-text authoring; role-based review workflows"
+      ]
+    },
+    {
+      "name": "EngiByte",
+      "category": "Consumer",
+      "status": "Live · revived 2026-07-11",
+      "tagline": "Scroll less. Know more.",
+      "blurb": "A swipeable, TikTok-style feed of engineering-knowledge questions — 1,140 validated questions across 12 domains, with streaks, XP, and a friend leaderboard to keep the daily habit sticky.",
+      "stack": ["TypeScript", "React Native", "Expo", "Firebase"],
+      "platforms": ["Web", "iOS", "Android"],
+      "url": "https://engi-byte.vercel.app",
+      "repo": "engibyte",
+      "highlights": [
+        "1,140 validated questions across 12 domains, with spaced repetition resurfacing missed ones",
+        "One Expo/React Native codebase → iOS, Android, and an installable PWA; anonymous Firebase auth powers the friend leaderboard"
       ]
     },
     {
