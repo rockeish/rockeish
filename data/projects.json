@@ -177,7 +177,7 @@
       "blurb": "A swipeable, TikTok-style feed of engineering-knowledge questions — 1,140 validated questions across 12 domains, with streaks, XP, and a friend leaderboard to keep the daily habit sticky.",
       "stack": ["TypeScript", "React Native", "Expo", "Firebase"],
       "platforms": ["Web", "iOS", "Android"],
-      "url": "https://engi-byte.vercel.app",
+      "url": "https://engibyte.beyondvolatility.com",
       "repo": "engibyte",
       "highlights": [
         "1,140 validated questions across 12 domains, with spaced repetition resurfacing missed ones",
