@@ -6,11 +6,12 @@
     "employer": "a large energy company",
     "location": "Chicago",
     "hub": "https://beyondvolatility.com",
+    "github": "https://github.com/rockeish",
     "linkedin": "https://www.linkedin.com/in/rockeish-mckenzie-p-e-8b83212a/"
   },
   "metrics": {
-    "asOf": "2026-07-01",
-    "repos": 9,
+    "asOf": "2026-07-11",
+    "repos": 14,
     "commits": 5900,
     "trackedFiles": 3564,
     "linesOfSource": 681000,
@@ -46,7 +47,8 @@
     "clients": ["Web · React / Next.js", "Mobile · iOS + Android"],
     "apps": ["ParentPod", "Longevity", "RealInvestorX", "Apex", "Compliance OS"],
     "backends": ["Firebase / Firestore", "Supabase + pgvector"],
-    "delivery": ["Vercel", "Firebase Hosting", "App Store · Google Play"]
+    "delivery": ["Vercel", "Firebase Hosting", "App Store · Google Play"],
+    "services": ["Firebase", "Supabase", "Vercel", "App stores"]
   },
   "pipeline": [
     { "phase": "PLAN", "detail": "Intent → a scoped PLAN.md, bounded by standards-as-code loaded into every agent" },
@@ -182,6 +184,7 @@
     }
   ],
   "connect": {
+    "github": "https://github.com/rockeish",
     "linkedin": "https://www.linkedin.com/in/rockeish-mckenzie-p-e-8b83212a/",
     "hub": "https://beyondvolatility.com",
     "flagship": "https://parentpodapp.com",

@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 9 repositories, 5.9K commits, 681K lines of source, 4 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 14 repositories, 5.9K commits, 681K lines of source, 4 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -47,7 +47,12 @@ By day, reliability compliance at a large energy company — 12 years keeping th
 
 ## The ecosystem
 
-9 repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery — all resting on the automation platform.
+14 repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery — all resting on the automation platform.
+
+<p align="center"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/orbit.dark.svg">
+  <img src="assets/orbit.light.svg" alt="Portfolio constellation — ParentPod, Longevity, RealInvestorX, Apex, Compliance OS and the Beyond Volatility hub orbiting one agent-automation platform, run by one engineer." width="680">
+</picture></p>
 
 <p align="center"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/ecosystem.dark.svg">
@@ -80,15 +85,20 @@ A standards-as-code library plus an agent-orchestration layer turns intent into 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,229; RealInvestorX 934; Longevity 809; Apex 797; Compliance OS 552; Beyond Volatility 422; and more. ~5,900 total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,229; RealInvestorX 934; Longevity 809; Apex 797; Compliance OS 552; Beyond Volatility 422; ParentPod site 154; Family Goals 45. ~5.9K total, single author." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 681K lines of tracked source — TypeScript 45.5%, JavaScript 34.8%, CSS 14.2%, PHP 2.6%, SQL 2.2%, other 0.8%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 681K lines of tracked source — TypeScript 45.5%, JavaScript 34.8%, CSS 14.2%, PHP 2.6%, SQL 2.2%, Other 0.8%." width="100%">
 </picture>
 
 ## Recently shipped
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 509 commits; Longevity 253 commits; RealInvestorX 167 commits; Apex 92 commits; Compliance OS 41 commits." width="100%">
+</picture>
 
 <sub>Still shipping — latest version and commit volume over the last 90 days, as of Jul 1, 2026. Regenerated from git, not hand-edited.</sub>
 
@@ -158,6 +168,7 @@ A standards-as-code library plus an agent-orchestration layer turns intent into 
 ## Connect
 
 <p align="center">
+  <a href="https://github.com/rockeish"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"></a>
   <a href="https://www.linkedin.com/in/rockeish-mckenzie-p-e-8b83212a/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="https://beyondvolatility.com"><img src="https://img.shields.io/badge/Portfolio-0b1220?style=flat-square&logo=safari&logoColor=white" alt="Portfolio"></a>
   <a href="https://parentpodapp.com"><img src="https://img.shields.io/badge/ParentPod-111111?style=flat-square&logo=appstore&logoColor=white" alt="ParentPod"></a>
@@ -168,4 +179,4 @@ A standards-as-code library plus an agent-orchestration layer turns intent into 
 
 ---
 
-<sub>App repositories are private — this work ships to production, not public forks. This entire page — copy, tables, and every SVG (light + dark) — is generated from data (<a href="data/projects.json">projects.json</a> + <a href="data/activity.json">activity.json</a>) by <a href="scripts/generate-showcase.mjs"><code>generate-showcase.mjs</code></a> and refreshed on a schedule by GitHub Actions. Full portfolio → <b><a href="https://beyondvolatility.com">beyondvolatility.com</a></b>.</sub>
+<sub>App repositories are private — this work ships to production, not public forks. This entire page — copy, tables, and every animated SVG (light + dark) — is generated from data (<a href="data/projects.json">projects.json</a> + <a href="data/activity.json">activity.json</a>) by <a href="scripts/generate-showcase.mjs"><code>generate-showcase.mjs</code></a> and refreshed on a schedule by GitHub Actions. Short link to this page → <b><a href="https://github.com/rockeish">github.com/rockeish</a></b> · full portfolio → <b><a href="https://beyondvolatility.com">beyondvolatility.com</a></b>.</sub>
