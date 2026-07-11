@@ -42,7 +42,7 @@ By day, reliability compliance at a large energy company — 12 years keeping th
 **Currently**
 
 - Scaling **ParentPod** — live on iOS & Android; running growth experiments against fixed survival checkpoints.
-- **Longevity** on deck — a privacy-first wellness companion, hardening for launch.
+- **Longevity** is live — a privacy-first wellness companion, now in daily use.
 - Evolving the **agent-automation platform** — parallel fan-out, an adversarial review pass, and doc-freshness gates.
 
 ## The ecosystem
@@ -51,7 +51,7 @@ By day, reliability compliance at a large energy company — 12 years keeping th
 
 <p align="center"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/orbit.dark.svg">
-  <img src="assets/orbit.light.svg" alt="Portfolio constellation — ParentPod, Longevity, RealInvestorX, Apex, Compliance OS and the Beyond Volatility hub orbiting one agent-automation platform, run by one engineer." width="680">
+  <img src="assets/orbit.light.svg" alt="Portfolio constellation — ParentPod, Longevity, RealInvestorX, Apex, Compliance OS, EngiByte and the Beyond Volatility hub orbiting one agent-automation platform, run by one engineer." width="680">
 </picture></p>
 
 <p align="center"><picture>
@@ -115,10 +115,11 @@ A standards-as-code library plus an agent-orchestration layer turns intent into 
 | Project | What it does | Stack | Live |
 |---|---|---|---|
 | **[ParentPod](https://parentpodapp.com)** <br><sub>`Flagship · live`</sub> | The village operating system for modern parenting teams. | TypeScript · React · Vite · Capacitor · Firebase | [App Store ↗](https://apps.apple.com/app/parentpod/id6759841193) · [Play ↗](https://play.google.com/store/apps/details?id=com.parentpod.app) |
-| **[Longevity](https://longevity.beyondvolatility.com/)** <br><sub>`On deck`</sub> | Privacy-first wellness, across ten dimensions. | TypeScript · Next.js · React · Capacitor · Firebase | [Live ↗](https://longevity.beyondvolatility.com/) |
-| **[RealInvestorX](https://realestate.beyondvolatility.com/)** <br><sub>`Active`</sub> | Institutional-grade real-estate deal analysis. | TypeScript · React · Express · Turborepo · Supabase | [Live ↗](https://realestate.beyondvolatility.com/) |
-| **[Apex](https://personalfinance.beyondvolatility.com/)** <br><sub>`Maintained`</sub> | Personal-finance & FIRE planning. | TypeScript · React · Vite · Supabase | [Live ↗](https://personalfinance.beyondvolatility.com/) |
-| **[Compliance OS](https://compliance.beyondvolatility.com/)** <br><sub>`Maintained`</sub> | Controls & audit-evidence platform. | TypeScript · React · Firebase | [Live ↗](https://compliance.beyondvolatility.com/) |
+| **[Longevity](https://longevity.beyondvolatility.com/)** <br><sub>`Live`</sub> | Privacy-first wellness, across ten dimensions. | TypeScript · Next.js · React · Capacitor · Firebase | [Live ↗](https://longevity.beyondvolatility.com/) |
+| **[RealInvestorX](https://realestate.beyondvolatility.com/)** <br><sub>`Maintenance mode`</sub> | Institutional-grade real-estate deal analysis. | TypeScript · React · Express · Turborepo · Supabase | [Live ↗](https://realestate.beyondvolatility.com/) |
+| **[Apex](https://personalfinance.beyondvolatility.com/)** <br><sub>`Maintenance mode`</sub> | Personal-finance & FIRE planning. | TypeScript · React · Vite · Supabase | [Live ↗](https://personalfinance.beyondvolatility.com/) |
+| **[Compliance OS](https://compliance.beyondvolatility.com/)** <br><sub>`On hold`</sub> | Controls & audit-evidence platform. | TypeScript · React · Firebase | [Live ↗](https://compliance.beyondvolatility.com/) |
+| **[EngiByte](https://engi-byte.vercel.app)** <br><sub>`Live · revived 2026-07-11`</sub> | Scroll less. Know more. | TypeScript · React Native · Expo · Firebase | [Live ↗](https://engi-byte.vercel.app) |
 | **[Beyond Volatility](https://beyondvolatility.com)** <br><sub>`Live`</sub> | The hub — the front door to the portfolio. | WordPress · PHP | [Live ↗](https://beyondvolatility.com) |
 
 <details>
