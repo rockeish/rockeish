@@ -119,7 +119,7 @@ A standards-as-code library plus an agent-orchestration layer turns intent into 
 | **[RealInvestorX](https://realestate.beyondvolatility.com/)** <br><sub>`Maintenance mode`</sub> | Institutional-grade real-estate deal analysis. | TypeScript · React · Express · Turborepo · Supabase | [Live ↗](https://realestate.beyondvolatility.com/) |
 | **[Apex](https://personalfinance.beyondvolatility.com/)** <br><sub>`Maintenance mode`</sub> | Personal-finance & FIRE planning. | TypeScript · React · Vite · Supabase | [Live ↗](https://personalfinance.beyondvolatility.com/) |
 | **[Compliance OS](https://compliance.beyondvolatility.com/)** <br><sub>`On hold`</sub> | Controls & audit-evidence platform. | TypeScript · React · Firebase | [Live ↗](https://compliance.beyondvolatility.com/) |
-| **[EngiByte](https://engi-byte.vercel.app)** <br><sub>`Live · revived 2026-07-11`</sub> | Scroll less. Know more. | TypeScript · React Native · Expo · Firebase | [Live ↗](https://engi-byte.vercel.app) |
+| **[EngiByte](https://engibyte.beyondvolatility.com)** <br><sub>`Live · revived 2026-07-11`</sub> | Scroll less. Know more. | TypeScript · React Native · Expo · Firebase | [Live ↗](https://engibyte.beyondvolatility.com) |
 | **[Beyond Volatility](https://beyondvolatility.com)** <br><sub>`Live`</sub> | The hub — the front door to the portfolio. | WordPress · PHP | [Live ↗](https://beyondvolatility.com) |
 
 <details>
