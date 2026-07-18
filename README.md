@@ -97,18 +97,19 @@ A standards-as-code library plus an agent-orchestration layer turns intent into 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 509 commits; Longevity 253 commits; RealInvestorX 167 commits; Apex 92 commits; Compliance OS 41 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod — commits; Longevity — commits; RealInvestorX — commits; Apex — commits; Compliance OS — commits; EngiByte — commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Jul 1, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Jul 18, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.10` | 509 |
-| **Longevity** | `v1.1.36` | 253 |
-| **RealInvestorX** | `v5.15.13` | 167 |
-| **Apex** | — | 92 |
-| **Compliance OS** | `v3.4.6` | 41 |
+| **ParentPod** | `v2.62.10` | — |
+| **Longevity** | `v2.0.6` | — |
+| **RealInvestorX** | `v5.20.0` | — |
+| **Apex** | — | — |
+| **Compliance OS** | `v3.5.9` | — |
+| **EngiByte** | — | — |
 
 ## Selected work
 
