@@ -100,15 +100,15 @@ A standards-as-code library plus an agent-orchestration layer turns intent into 
   <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod — commits; Longevity — commits; RealInvestorX — commits; Apex — commits; Compliance OS — commits; EngiByte — commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Jul 23, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Jul 27, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
 | **ParentPod** | `v2.62.10` | — |
-| **Longevity** | `v2.0.6` | — |
-| **RealInvestorX** | `v5.20.0` | — |
+| **Longevity** | `v2.0.24` | — |
+| **RealInvestorX** | `v5.20.3` | — |
 | **Apex** | — | — |
-| **Compliance OS** | `v3.5.9` | — |
+| **Compliance OS** | `v3.6.4` | — |
 | **EngiByte** | — | — |
 
 ## Selected work
