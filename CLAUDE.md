@@ -6,8 +6,8 @@ Public showcase / profile repo (the only PUBLIC repo). Surfaces what Rock is bui
 resume + links, without exposing the private app repos.
 
 ## How it stays fresh
-A scheduled GitHub Action aggregates summaries/stats from the other repos and regenerates the
-public page — do NOT hand-maintain content; update the generator instead.
+A stamp-guarded local schedule aggregates public-safe stats from sibling repositories and
+regenerates the public page. Do NOT hand-maintain rendered content; update the data or generator.
 
 ## Knowledge base (the brain)
 - Vault: symlink `~/knowledge/obsidian-vault` → physical `C:\Users\User\obsidian-vault` (Windows NTFS).

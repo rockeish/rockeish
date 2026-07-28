@@ -1,6 +1,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { recentlyShipped, renderAll } from './generate-showcase.mjs';
+import { readFileSync } from 'node:fs';
+import { buildReadme, fmtDate, recentlyShipped, renderAll } from './generate-showcase.mjs';
+
+const projects = JSON.parse(readFileSync(new URL('../data/projects.json', import.meta.url), 'utf8'));
+const activity = JSON.parse(readFileSync(new URL('../data/activity.json', import.meta.url), 'utf8'));
 
 // A markdown table row must have exactly 3 cells (4 pipes) so the table renders.
 function pipeCount(line) {
@@ -57,4 +61,27 @@ test('recentlyShipped strips backticks from a name to avoid breaking code spans'
   const row = md.split('\n').find((l) => l.startsWith('| **de'));
   assert.ok(row && !row.replace(/`([^`]*)`/g, '').includes('`'),
     'no unmatched backticks remain in the row');
+});
+
+test('fmtDate accepts real ISO calendar dates and rejects malformed or impossible dates', () => {
+  assert.equal(fmtDate('2026-07-27'), 'Jul 27, 2026');
+  assert.throws(() => fmtDate('2026-02-30'), /Invalid ISO date/);
+  assert.throws(() => fmtDate('07/27/2026'), /Invalid ISO date/);
+  assert.throws(() => fmtDate(undefined), /Invalid ISO date/);
+});
+
+test('generated public profile avoids stale automation claims and AI-tool promotion', () => {
+  const readme = buildReadme(projects, activity);
+  const forbidden = [
+    'agent-automation',
+    'Claude Code',
+    'parallel agents',
+    'Auto-merge',
+    "every agent's context",
+    'scheduled GitHub Action',
+  ];
+  for (const phrase of forbidden) {
+    assert.ok(!readme.includes(phrase), `generated README must not contain: ${phrase}`);
+  }
+  assert.ok(readme.includes('stamp-guarded local schedule'), 'actual refresh mechanism is disclosed');
 });

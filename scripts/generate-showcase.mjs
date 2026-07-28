@@ -4,14 +4,14 @@
  *
  * Regenerates the ENTIRE README and every visual asset from data (projects.json
  * + activity.json). Nothing on the page is hand-maintained — edit the data (or
- * this generator), never the rendered output. A scheduled GitHub Action runs
- * this to keep the public profile fresh.
+ * this generator), never the rendered output. A stamp-guarded local schedule
+ * refreshes the public profile.
  *
  * Every infographic is ANIMATED (CSS keyframes + SMIL — both render inside
  * GitHub's <img>-embedded SVGs) and ships a LIGHT and a DARK variant, swapped
  * by the reader's GitHub theme via <picture> + prefers-color-scheme:
  *   assets/hero.{light,dark}.svg        — name + headline metrics, glow field
- *   assets/orbit.{light,dark}.svg       — products orbiting the agent platform
+ *   assets/orbit.{light,dark}.svg       — products and shared infrastructure
  *   assets/ecosystem.{light,dark}.svg   — layered ecosystem map
  *   assets/pipeline.{light,dark}.svg    — ship pipeline with a live flow pulse
  *   assets/commits.{light,dark}.svg     — commits per repository (bars grow in)
@@ -56,7 +56,23 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const mdCell = (s) => String(s).replace(/\|/g, '\\|').replace(/`/g, '');
 const compact = (n) =>
   n >= 1000 ? (n / 1000 >= 100 ? Math.round(n / 1000) : (n / 1000).toFixed(1).replace(/\.0$/, '')) + 'K' : String(n);
-const fmtDate = (s) => { const [y, m, d] = String(s).split('-').map(Number); return `${MONTHS[m - 1]} ${d}, ${y}`; };
+export function fmtDate(value) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(value ?? ''));
+  if (!match) throw new Error(`Invalid ISO date: ${value}`);
+  const [, yearText, monthText, dayText] = match;
+  const year = Number(yearText);
+  const month = Number(monthText);
+  const day = Number(dayText);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  if (
+    date.getUTCFullYear() !== year
+    || date.getUTCMonth() !== month - 1
+    || date.getUTCDate() !== day
+  ) {
+    throw new Error(`Invalid ISO date: ${value}`);
+  }
+  return `${MONTHS[month - 1]} ${day}, ${year}`;
+}
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const num = (n) => n.toLocaleString('en-US');
 
@@ -129,7 +145,7 @@ function heroSvg(d, t) {
     <text x="${x}" y="254" font-family="${FONT}" font-size="16" fill="${t.muted}">${esc(l)}</text>
   </g>`;
   }).join('\n  ');
-  const inner = `<clipPath id="heroClip"><rect x="1" y="1" width="${W - 2}" height="272" rx="17"/></clipPath>
+  const inner = `<clipPath id="heroClip"><rect x="1" y="1" width="${W - 2}" height="294" rx="17"/></clipPath>
   <g clip-path="url(#heroClip)">
     <circle cx="590" cy="30" r="130" fill="${t.a1}" opacity="0.12" filter="url(#soft)" class="drift"/>
     <circle cx="180" cy="270" r="150" fill="${t.a2}" opacity="0.10" filter="url(#soft)" class="drift" style="animation-delay:-6s"/>
@@ -144,14 +160,15 @@ function heroSvg(d, t) {
     <text x="${x0}" y="128" font-family="${FONT}" font-size="20" fill="${t.text}">${esc(d.profile.role)}</text>
   </g>
   <g class="fade"${delay(0.22)}>
-    <text x="${x0}" y="158" font-family="${FONT}" font-size="16" fill="${t.muted}">One engineer · a self-built agent platform · a portfolio in production</text>
+    <text x="${x0}" y="158" font-family="${FONT}" font-size="16" fill="${t.muted}">One engineer · production systems · deliberate delivery</text>
   </g>
   <g class="fade"${delay(0.3)}>
     <text x="${W - x0}" y="76" font-family="${FONT}" font-size="16" font-weight="600" fill="${t.a1}" text-anchor="end">${esc(site)} ↗</text>
   </g>
   <g class="grow" style="transform-origin:${x0}px 186px;animation-delay:.3s"><line x1="${x0}" y1="186" x2="${W - x0}" y2="186" stroke="${t.line}"/></g>
-  ${statMarkup}`;
-  return svgDoc(W, 274, inner, `${d.profile.name} — headline metrics`, t);
+  ${statMarkup}
+  <text x="${W - x0}" y="282" font-family="${FONT}" font-size="12" fill="${t.muted}" text-anchor="end">portfolio snapshot · ${esc(fmtDate(m.asOf))}</text>`;
+  return svgDoc(W, 296, inner, `${d.profile.name} — headline metrics snapshot dated ${m.asOf}`, t);
 }
 
 function orbitSvg(d, t) {
@@ -183,7 +200,7 @@ function orbitSvg(d, t) {
     ${chips}
     </g>`;
   };
-  const inner = `<text x="32" y="36" font-family="${FONT}" font-size="16" fill="${t.muted}">The constellation — every product orbits one agent platform, run by one engineer</text>
+  const inner = `<text x="32" y="36" font-family="${FONT}" font-size="16" fill="${t.muted}">Portfolio map — deployed products and their shared infrastructure</text>
   <g transform="translate(${cx} ${cy})">
     ${ring(outerItems, 212, 80, 1, 'Beyond Volatility')}
     ${ring(innerItems, 122, 56, -1)}
@@ -194,9 +211,9 @@ function orbitSvg(d, t) {
     </circle>
     <text x="0" y="-14" font-family="${FONT}" font-size="26" font-weight="800" fill="url(#accent)" text-anchor="middle">${esc(String(d.metrics.engineers))}</text>
     <text x="0" y="8" font-family="${FONT}" font-size="14" font-weight="700" fill="${t.text}" text-anchor="middle">ENGINEER</text>
-    <text x="0" y="30" font-family="${FONT}" font-size="12.5" fill="${t.muted}" text-anchor="middle">+ agent platform</text>
+    <text x="0" y="30" font-family="${FONT}" font-size="12.5" fill="${t.muted}" text-anchor="middle">+ delivery system</text>
   </g>`;
-  return svgDoc(W, H, inner, `Portfolio constellation — ${outerItems.join(', ')} orbiting one agent-automation platform run by one engineer.`, t);
+  return svgDoc(W, H, inner, `Portfolio map — ${outerItems.join(', ')} with shared delivery infrastructure.`, t);
 }
 
 function ecosystemSvg(d, t) {
@@ -215,7 +232,7 @@ function ecosystemSvg(d, t) {
   let y = 58;
   let band = 0;
   const fadeOpen = () => `<g class="fade"${delay(0.1 + band++ * 0.16)}>`;
-  let s = `<text x="${mx}" y="34" font-family="${FONT}" font-size="16" fill="${t.muted}">One ecosystem — a shared hub and platform behind every product</text>`;
+  let s = `<text x="${mx}" y="34" font-family="${FONT}" font-size="16" fill="${t.muted}">One ecosystem — shared infrastructure and consistent release controls</text>`;
   s += fadeOpen();
   s += head(y, 'DISTRIBUTION'); y += 14;
   s += chip(mx, y, innerW, 46, 'Beyond Volatility — the public hub & front door', { center: true, fill: t.panel, stroke: t.a2, fs: 17 });
@@ -238,11 +255,11 @@ function ecosystemSvg(d, t) {
   y += Math.ceil(a.delivery.length / cols) * (ch + rg) - rg + 18;
   s += fadeOpen();
   s += `<rect x="${mx}" y="${y}" width="${innerW}" height="66" rx="12" fill="${t.panel}" stroke="url(#accent)" stroke-width="1.5"/>`;
-  s += `<text x="${mx + 20}" y="${y + 28}" font-family="${FONT}" font-size="18" font-weight="700" fill="url(#accent)">THE PLATFORM</text>`;
-  s += `<text x="${mx + 20}" y="${y + 50}" font-family="${FONT}" font-size="15" fill="${t.muted}">Agent-automation + standards-as-code — every product ships on this</text>`;
+  s += `<text x="${mx + 20}" y="${y + 28}" font-family="${FONT}" font-size="18" font-weight="700" fill="url(#accent)">DELIVERY FOUNDATION</text>`;
+  s += `<text x="${mx + 20}" y="${y + 50}" font-family="${FONT}" font-size="15" fill="${t.muted}">Shared standards, test gates, deployment checks, and operating documentation</text>`;
   s += '</g>';
   y += 88;
-  return svgDoc(W, y, s, 'Ecosystem map — hub, products, back ends, delivery, and the shared platform', t);
+  return svgDoc(W, y, s, 'Ecosystem map — hub, products, back ends, delivery, and shared release controls', t);
 }
 
 function pipelineSvg(d, t) {
@@ -380,11 +397,10 @@ const BADGE = {
   Cloudflare: ['F38020', 'cloudflare', 'white'], Zod: ['3E67B1', 'zod', 'white'],
   Sentry: ['362D59', 'sentry', 'white'], RevenueCat: ['F25A5A', '', ''],
   Doppler: ['3391FF', 'doppler', 'white'], ESLint: ['4B32C3', 'eslint', 'white'],
-  Prettier: ['F7B93E', 'prettier', 'black'], 'Claude Code': ['D97757', 'anthropic', 'white'],
+  Prettier: ['F7B93E', 'prettier', 'black'],
   PHP: ['777BB4', 'php', 'white'], SQL: ['4479A1', 'postgresql', 'white'],
   Python: ['3776AB', 'python', 'white'], Bash: ['4EAA25', 'gnubash', 'white'],
-  WordPress: ['21759B', 'wordpress', 'white'], 'Standards-as-code': ['1b2942', '', ''],
-  'Custom agents & skills': ['1b2942', '', ''],
+  WordPress: ['21759B', 'wordpress', 'white'],
 };
 function badge(name) {
   const [c, logo, lc] = BADGE[name] || ['1b2942', '', ''];
@@ -400,7 +416,7 @@ function linkBadge(label, color, logo, url, logoColor = 'white') {
 // README pieces
 // ---------------------------------------------------------------------------
 
-const HERO_BADGES = ['TypeScript', 'React', 'Next.js', 'Node.js', 'Firebase', 'Supabase', 'PostgreSQL', 'Capacitor', 'Vercel', 'GitHub Actions', 'Claude Code'];
+const HERO_BADGES = ['TypeScript', 'React', 'Next.js', 'Node.js', 'Firebase', 'Supabase', 'PostgreSQL', 'Capacitor', 'Vercel', 'GitHub Actions'];
 
 function centered(inner) { return `<p align="center">\n  ${inner}\n</p>`; }
 
@@ -464,12 +480,12 @@ function connectRow(d) {
 // README assembly
 // ---------------------------------------------------------------------------
 
-function buildReadme(d, act) {
+export function buildReadme(d, act) {
   const m = d.metrics;
   const langTotal = m.languages.reduce((n, l) => n + l.lines, 0);
   const commitsAlt = `Commits per repository — ${m.commitsByRepo.map((r) => `${r.label} ${num(r.commits)}`).join('; ')}. ~${compact(m.commits)} total, single author.`;
   const languagesAlt = `Language mix across ${compact(langTotal)} lines of tracked source — ${m.languages.map((l) => `${l.name} ${((l.lines / langTotal) * 100).toFixed(1)}%`).join(', ')}.`;
-  const orbitAlt = `Portfolio constellation — ${d.architecture.apps.join(', ')} and the Beyond Volatility hub orbiting one agent-automation platform, run by one engineer.`;
+  const orbitAlt = `Portfolio constellation — ${d.architecture.apps.join(', ')} and the Beyond Volatility hub connected through shared infrastructure, run by one engineer.`;
   const velocityRows = act?.repos?.filter((r) => r.name !== 'this profile') || [];
   const velocityAlt = `Shipping cadence over the trailing 90 days — ${velocityRows.map((r) => `${r.name} ${r.recent ?? '—'} commits`).join('; ')}.`;
 
@@ -477,22 +493,22 @@ function buildReadme(d, act) {
   const add = (nav, title, ...body) => { const b = body.filter(Boolean).join('\n\n'); if (b) S.push({ nav, title, body: b }); };
 
   add('What I build', 'What I build',
-    'By day, reliability compliance at a large energy company — 12 years keeping the power grid up. Nights and weekends, I design, build, ship, and operate every product below **solo**, on an agent-automation platform I built so the repetitive engineering happens *under review* instead of by hand. The numbers above aren\'t a team\'s output — they\'re one engineer with a lot of leverage.',
+    'By day, I lead reliability-compliance work in the energy sector. Outside that role, I design, build, ship, and operate the products below, using a review-and-test system to keep changes traceable.',
     '**Currently**\n\n' + d.currently.map((x) => `- ${x}`).join('\n'));
 
   add('Ecosystem', 'The ecosystem',
-    `${m.repos} repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery — all resting on the automation platform.`,
+    `${m.repos} repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery connected by common release controls.`,
     picture('orbit', orbitAlt, 680, true),
-    picture('ecosystem', 'Ecosystem map — Beyond Volatility hub, products, Firebase and Supabase back ends, Vercel / Firebase Hosting / app-store delivery, all on a shared agent-automation platform.', 680, true));
+    picture('ecosystem', 'Ecosystem map — Beyond Volatility hub, products, Firebase and Supabase back ends, Vercel, Firebase Hosting, app-store delivery, and shared release controls.', 680, true));
 
   add('How I ship', 'How I ship',
-    picture('pipeline', 'Ship pipeline — plan (scoped by standards-as-code), build (parallel agents, test-first), verify (adversarial review, tests, security and doc-freshness gates), ship (auto-merge, deploy, docs updated).', 680, true),
+    picture('pipeline', 'Ship pipeline — scope the change, build in isolation, run focused quality and security checks, deploy, verify, and update operating documentation.', 680, true),
     d.platform.summary,
     commandTable(d.platform),
-    `**Standards-as-code:** ${d.platform.standards.map((s) => `\`${s}\``).join(' · ')} — one library, symlinked into every repo *and* loaded into every agent's context, plus ${d.platform.skillsCount} reusable skills.`);
+    `**Shared engineering standards:** ${d.platform.standards.map((s) => `\`${s}\``).join(' · ')} — maintained centrally and applied according to each repository's stack and risk profile.`);
 
   add('By the numbers', 'By the numbers',
-    '<sub>Real figures, aggregated across every repository — public *and* private. No third-party stat widgets; these are computed from the actual git history and source tree, then drawn from data.</sub>',
+    `<sub>Portfolio snapshot dated ${fmtDate(m.asOf)}. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>`,
     picture('commits', commitsAlt, '100%'),
     picture('languages', languagesAlt, '100%'));
 
@@ -516,7 +532,7 @@ function buildReadme(d, act) {
     nav,
   ];
   const body = S.map((s) => `## ${s.title}\n\n${s.body}`);
-  const footer = `---\n\n<sub>App repositories are private — this work ships to production, not public forks. This entire page — copy, tables, and every animated SVG (light + dark) — is generated from data (<a href="data/projects.json">projects.json</a> + <a href="data/activity.json">activity.json</a>) by <a href="scripts/generate-showcase.mjs"><code>generate-showcase.mjs</code></a> and refreshed on a schedule by GitHub Actions. Short link to this page → <b><a href="${d.profile.github || 'https://github.com/rockeish'}">github.com/rockeish</a></b> · full portfolio → <b><a href="${d.profile.hub}">beyondvolatility.com</a></b>.</sub>`;
+  const footer = `---\n\n<sub>App repositories are private — this work ships to production, not public forks. This entire page — copy, tables, and every animated SVG (light + dark) — is generated from data (<a href="data/projects.json">projects.json</a> + <a href="data/activity.json">activity.json</a>) by <a href="scripts/generate-showcase.mjs"><code>generate-showcase.mjs</code></a> and refreshed by a stamp-guarded local schedule. Short link to this page → <b><a href="${d.profile.github || 'https://github.com/rockeish'}">github.com/rockeish</a></b> · full portfolio → <b><a href="${d.profile.hub}">beyondvolatility.com</a></b>.</sub>`;
 
   return [...header, ...body, footer].join('\n\n') + '\n';
 }

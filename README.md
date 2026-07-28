@@ -14,7 +14,6 @@
   <img src="https://img.shields.io/badge/Capacitor-119EFF?style=flat-square&logo=capacitor&logoColor=white" alt="Capacitor">
   <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel">
   <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions">
-  <img src="https://img.shields.io/badge/Claude%20Code-D97757?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code">
 </p>
 
 <p align="center">
@@ -37,51 +36,51 @@
 
 ## What I build
 
-By day, reliability compliance at a large energy company — 12 years keeping the power grid up. Nights and weekends, I design, build, ship, and operate every product below **solo**, on an agent-automation platform I built so the repetitive engineering happens *under review* instead of by hand. The numbers above aren't a team's output — they're one engineer with a lot of leverage.
+By day, I lead reliability-compliance work in the energy sector. Outside that role, I design, build, ship, and operate the products below, using a review-and-test system to keep changes traceable.
 
 **Currently**
 
-- Scaling **ParentPod** — live on iOS & Android; running growth experiments against fixed survival checkpoints.
-- **Longevity** is live — a privacy-first wellness companion, now in daily use.
-- Evolving the **agent-automation platform** — parallel fan-out, an adversarial review pass, and doc-freshness gates.
+- Operating **ParentPod** across web, iOS, and Android while improving the caregiver onboarding path.
+- **Longevity** is live with private check-ins, precise drink logging, and time-aware recovery trends.
+- Maintaining the shared delivery system: isolated worktrees, automated tests, security gates, deployment checks, and documentation freshness.
 
 ## The ecosystem
 
-14 repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery — all resting on the automation platform.
+14 repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery connected by common release controls.
 
 <p align="center"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/orbit.dark.svg">
-  <img src="assets/orbit.light.svg" alt="Portfolio constellation — ParentPod, Longevity, RealInvestorX, Apex, Compliance OS, EngiByte and the Beyond Volatility hub orbiting one agent-automation platform, run by one engineer." width="680">
+  <img src="assets/orbit.light.svg" alt="Portfolio constellation — ParentPod, Longevity, RealInvestorX, Apex, Compliance OS, EngiByte, TheLoop and the Beyond Volatility hub connected through shared infrastructure, run by one engineer." width="680">
 </picture></p>
 
 <p align="center"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/ecosystem.dark.svg">
-  <img src="assets/ecosystem.light.svg" alt="Ecosystem map — Beyond Volatility hub, products, Firebase and Supabase back ends, Vercel / Firebase Hosting / app-store delivery, all on a shared agent-automation platform." width="680">
+  <img src="assets/ecosystem.light.svg" alt="Ecosystem map — Beyond Volatility hub, products, Firebase and Supabase back ends, Vercel, Firebase Hosting, app-store delivery, and shared release controls." width="680">
 </picture></p>
 
 ## How I ship
 
 <p align="center"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/pipeline.dark.svg">
-  <img src="assets/pipeline.light.svg" alt="Ship pipeline — plan (scoped by standards-as-code), build (parallel agents, test-first), verify (adversarial review, tests, security and doc-freshness gates), ship (auto-merge, deploy, docs updated)." width="680">
+  <img src="assets/pipeline.light.svg" alt="Ship pipeline — scope the change, build in isolation, run focused quality and security checks, deploy, verify, and update operating documentation." width="680">
 </picture></p>
 
-A standards-as-code library plus an agent-orchestration layer turns intent into reviewed, tested, deployed changes across every repo — parallel fan-out, an adversarial review pass, and a doc-freshness gate before merge.
+Shared standards and repository-specific release gates connect each change to tests, review, deployment verification, and documentation updates.
 
 | Command | What it does |
 |---|---|
-| `/ship` | release gate — version, build, test, deploy, auto-merge, doc-freshness |
-| `/sync` | rebase main, auto-resolve mechanical conflicts |
+| `/ship` | release gate — version, build, test, deploy, verify, update docs |
+| `/sync` | rebase main and resolve mechanical conflicts with validation |
 | `/audit` | security, dependency, dead-code, a11y & perf sweep |
-| `/new-project` | scaffold a repo with standards, CI, secrets, context primer |
+| `/new-project` | scaffold a repo with baseline standards, CI, security checks, and documentation |
 | `/update-brain` | maintain the knowledge base and reconcile the task hub |
-| `/improve` | fold a sharper prompt back into a skill so it compounds |
+| `/improve` | turn repeatable workflows into maintained tooling and checks |
 
-**Standards-as-code:** `architecture` · `coding-standards` · `typescript` · `react` · `security` · `git-workflow` · `startup` — one library, symlinked into every repo *and* loaded into every agent's context, plus 8 reusable skills.
+**Shared engineering standards:** `architecture` · `coding-standards` · `typescript` · `react` · `security` · `git-workflow` · `startup` — maintained centrally and applied according to each repository's stack and risk profile.
 
 ## By the numbers
 
-<sub>Real figures, aggregated across every repository — public *and* private. No third-party stat widgets; these are computed from the actual git history and source tree, then drawn from data.</sub>
+<sub>Portfolio snapshot dated Jul 11, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
@@ -97,30 +96,32 @@ A standards-as-code library plus an agent-orchestration layer turns intent into 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod — commits; Longevity — commits; RealInvestorX — commits; Apex — commits; Compliance OS — commits; EngiByte — commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 466 commits; Longevity 334 commits; RealInvestorX 168 commits; Apex 89 commits; Compliance OS 86 commits; EngiByte 67 commits; TheLoop 50 commits." width="100%">
 </picture>
 
 <sub>Still shipping — latest version and commit volume over the last 90 days, as of Jul 27, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.10` | — |
-| **Longevity** | `v2.0.24` | — |
-| **RealInvestorX** | `v5.20.3` | — |
-| **Apex** | — | — |
-| **Compliance OS** | `v3.6.4` | — |
-| **EngiByte** | — | — |
+| **ParentPod** | `v2.62.314` | 466 |
+| **Longevity** | `v2.0.27` | 334 |
+| **RealInvestorX** | `v5.20.3` | 168 |
+| **Apex** | `v0.2.1` | 89 |
+| **Compliance OS** | `v3.6.5` | 86 |
+| **EngiByte** | `v1.2.4` | 67 |
+| **TheLoop** | `v1.1.10` | 50 |
 
 ## Selected work
 
 | Project | What it does | Stack | Live |
 |---|---|---|---|
-| **[ParentPod](https://parentpodapp.com)** <br><sub>`Flagship · live`</sub> | The village operating system for modern parenting teams. | TypeScript · React · Vite · Capacitor · Firebase | [App Store ↗](https://apps.apple.com/app/parentpod/id6759841193) · [Play ↗](https://play.google.com/store/apps/details?id=com.parentpod.app) |
-| **[Longevity](https://longevity.beyondvolatility.com/)** <br><sub>`Live`</sub> | Privacy-first wellness, across ten dimensions. | TypeScript · Next.js · React · Capacitor · Firebase | [Live ↗](https://longevity.beyondvolatility.com/) |
-| **[RealInvestorX](https://realestate.beyondvolatility.com/)** <br><sub>`Maintenance mode`</sub> | Institutional-grade real-estate deal analysis. | TypeScript · React · Express · Turborepo · Supabase | [Live ↗](https://realestate.beyondvolatility.com/) |
+| **[ParentPod](https://parentpodapp.com)** <br><sub>`Flagship · live`</sub> | A shared baby tracker for the whole care team. | TypeScript · React · Vite · Capacitor · Firebase | [App Store ↗](https://apps.apple.com/app/parentpod/id6759841193) · [Play ↗](https://play.google.com/store/apps/details?id=com.parentpod.app) |
+| **[Longevity](https://longevity.beyondvolatility.com/)** <br><sub>`Live`</sub> | Private check-ins with time-aware recovery trends. | TypeScript · Next.js · React · Capacitor · Firebase | [Live ↗](https://longevity.beyondvolatility.com/) |
+| **[RealInvestorX](https://realestate.beyondvolatility.com/)** <br><sub>`Maintenance mode`</sub> | Real-estate deal review with explicit assumptions. | TypeScript · React · Express · Turborepo · Supabase | [Live ↗](https://realestate.beyondvolatility.com/) |
 | **[Apex](https://personalfinance.beyondvolatility.com/)** <br><sub>`Maintenance mode`</sub> | Personal-finance & FIRE planning. | TypeScript · React · Vite · Supabase | [Live ↗](https://personalfinance.beyondvolatility.com/) |
-| **[Compliance OS](https://compliance.beyondvolatility.com/)** <br><sub>`On hold`</sub> | Controls & audit-evidence platform. | TypeScript · React · Firebase | [Live ↗](https://compliance.beyondvolatility.com/) |
+| **[Compliance OS](https://compliance.beyondvolatility.com/)** <br><sub>`Design-partner pilot`</sub> | Controls & audit-evidence platform. | TypeScript · React · Firebase | [Live ↗](https://compliance.beyondvolatility.com/) |
 | **[EngiByte](https://engibyte.beyondvolatility.com)** <br><sub>`Live · revived 2026-07-11`</sub> | Scroll less. Know more. | TypeScript · React Native · Expo · Firebase | [Live ↗](https://engibyte.beyondvolatility.com) |
+| **[TheLoop](https://theloop.beyondvolatility.com/)** <br><sub>`Controlled beta · live`</sub> | A private chronological feed for people you know. | TypeScript · React · Vite · Firebase | [Live ↗](https://theloop.beyondvolatility.com/) |
 | **[Beyond Volatility](https://beyondvolatility.com)** <br><sub>`Live`</sub> | The hub — the front door to the portfolio. | WordPress · PHP | [Live ↗](https://beyondvolatility.com) |
 
 <details>
@@ -128,9 +129,9 @@ A standards-as-code library plus an agent-orchestration layer turns intent into 
 
 **Problem.** Caring for a baby is a team sport, but the tools assume one logged-in parent — state fragments across people and devices.
 
-**Architecture.** React + Vite in a Capacitor shell (one codebase → iOS, Android, Web). Firestore for real-time multi-caregiver sync; security rules enforce role-scoped access server-side; RevenueCat for cross-platform subscriptions; voice logging and AI insight summaries.
+**Architecture.** React + Vite in a Capacitor shell (one codebase → iOS, Android, Web). Firestore provides real-time multi-caregiver sync; security rules enforce role-scoped access server-side; RevenueCat handles cross-platform subscriptions.
 
-**Engineering.** Offline-first with optimistic writes and conflict-safe merges; the same automated release gate ships web (Vercel) and native (App Store / Play) from one push.
+**Engineering.** Local-first activity capture reconciles through Firestore, with separate tested release paths for the web and native stores.
 
 </details>
 
@@ -152,19 +153,16 @@ A standards-as-code library plus an agent-orchestration layer turns intent into 
 **Quality & tooling**  
 <img src="https://img.shields.io/badge/Zod-3E67B1?style=flat-square&logo=zod&logoColor=white" alt="Zod"> <img src="https://img.shields.io/badge/Sentry-362D59?style=flat-square&logo=sentry&logoColor=white" alt="Sentry"> <img src="https://img.shields.io/badge/RevenueCat-F25A5A?style=flat-square" alt="RevenueCat"> <img src="https://img.shields.io/badge/Doppler-3391FF?style=flat-square&logo=doppler&logoColor=white" alt="Doppler"> <img src="https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=eslint&logoColor=white" alt="ESLint"> <img src="https://img.shields.io/badge/Prettier-F7B93E?style=flat-square&logo=prettier&logoColor=black" alt="Prettier">
 
-**AI & automation**  
-<img src="https://img.shields.io/badge/Claude%20Code-D97757?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code"> <img src="https://img.shields.io/badge/Standards--as--code-1b2942?style=flat-square" alt="Standards-as-code"> <img src="https://img.shields.io/badge/Custom%20agents%20%26%20skills-1b2942?style=flat-square" alt="Custom agents &amp; skills">
-
 </details>
 
 ## Engineering practices
 
-- **TypeScript strict** everywhere; Zod validates every external boundary; impossible states made unrepresentable.
+- **Typed contracts and boundary validation** are required for new or changed external inputs.
 - **Test the behavior and the failure path** — a bugfix starts with a failing test that reproduces it.
-- **Secrets only from Doppler** — never in code or git history; only public keys ship in client bundles.
-- **AuthZ server-side** on every privileged path — enforced in Firestore rules / Supabase RLS, not just app code.
+- **Secrets stay out of source control** — builds and deploys receive them through environment configuration or managed secret stores; only public client configuration ships.
+- **Authorization belongs server-side** — Firestore rules and Supabase RLS protect current privileged paths; known legacy gaps remain explicitly gated.
 - **Tiered CI** (active / dabble / parked) keeps Actions minutes low; CLI-first deploys through the release gate.
-- **Conflicts never handed back** — mechanical ones auto-resolved, real ones resolved and proven green with tests.
+- **Conflicts are resolved before merge** — semantic conflicts stop for review and a new validation pass.
 - **Accessibility & cross-platform** — semantic markup, keyboard paths, and Capacitor guards for native builds.
 
 ## Connect
@@ -181,4 +179,4 @@ A standards-as-code library plus an agent-orchestration layer turns intent into 
 
 ---
 
-<sub>App repositories are private — this work ships to production, not public forks. This entire page — copy, tables, and every animated SVG (light + dark) — is generated from data (<a href="data/projects.json">projects.json</a> + <a href="data/activity.json">activity.json</a>) by <a href="scripts/generate-showcase.mjs"><code>generate-showcase.mjs</code></a> and refreshed on a schedule by GitHub Actions. Short link to this page → <b><a href="https://github.com/rockeish">github.com/rockeish</a></b> · full portfolio → <b><a href="https://beyondvolatility.com">beyondvolatility.com</a></b>.</sub>
+<sub>App repositories are private — this work ships to production, not public forks. This entire page — copy, tables, and every animated SVG (light + dark) — is generated from data (<a href="data/projects.json">projects.json</a> + <a href="data/activity.json">activity.json</a>) by <a href="scripts/generate-showcase.mjs"><code>generate-showcase.mjs</code></a> and refreshed by a stamp-guarded local schedule. Short link to this page → <b><a href="https://github.com/rockeish">github.com/rockeish</a></b> · full portfolio → <b><a href="https://beyondvolatility.com">beyondvolatility.com</a></b>.</sub>
