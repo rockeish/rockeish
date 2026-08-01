@@ -96,20 +96,20 @@ Shared standards and repository-specific release gates connect each change to te
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 466 commits; Longevity 334 commits; RealInvestorX 168 commits; Apex 89 commits; Compliance OS 86 commits; EngiByte 67 commits; TheLoop 50 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod — commits; Longevity — commits; RealInvestorX — commits; Apex — commits; Compliance OS — commits; EngiByte — commits; TheLoop — commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Jul 27, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Aug 1, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.314` | 466 |
-| **Longevity** | `v2.0.27` | 334 |
-| **RealInvestorX** | `v5.20.3` | 168 |
-| **Apex** | `v0.2.1` | 89 |
-| **Compliance OS** | `v3.6.5` | 86 |
-| **EngiByte** | `v1.2.4` | 67 |
-| **TheLoop** | `v1.1.10` | 50 |
+| **ParentPod** | `v2.62.319` | — |
+| **Longevity** | `v2.0.37` | — |
+| **RealInvestorX** | `v5.20.3` | — |
+| **Apex** | `v0.2.5` | — |
+| **Compliance OS** | `v3.6.9` | — |
+| **EngiByte** | `v1.3.0` | — |
+| **TheLoop** | `v1.1.11` | — |
 
 ## Selected work
 

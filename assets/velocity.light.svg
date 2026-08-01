@@ -20,35 +20,35 @@
   </style>
   <rect x="0.5" y="0.5" width="719" height="387" rx="18" fill="#ffffff" stroke="#d1d9e0"/>
   <text x="28" y="42" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" fill="#59636e">Shipping cadence — commits over the trailing 90 days</text>
-  <text x="692" y="42" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e" text-anchor="end">as of Jul 27, 2026</text>
+  <text x="692" y="42" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e" text-anchor="end">as of Aug 1, 2026</text>
   <circle cx="30" cy="84" r="4" fill="#1a7f37" class="blink"/>
   <text x="172" y="89" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1f2328" text-anchor="end">ParentPod</text>
-  <g class="grow" style="transform-origin:182px 84px;animation-delay:0.10s"><rect x="182" y="73" width="380" height="22" rx="11" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:0.55s"><text x="572" y="89" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">466 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v2.62.314</tspan></text></g>
+  <g class="grow" style="transform-origin:182px 84px;animation-delay:0.10s"><rect x="182" y="73" width="5" height="22" rx="11" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:0.55s"><text x="197" y="89" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">— · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v2.62.319</tspan></text></g>
   <circle cx="30" cy="124" r="4" fill="#1a7f37" class="blink"/>
   <text x="172" y="129" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1f2328" text-anchor="end">Longevity</text>
-  <g class="grow" style="transform-origin:182px 124px;animation-delay:0.19s"><rect x="182" y="113" width="272" height="22" rx="11" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:0.64s"><text x="464" y="129" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">334 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v2.0.27</tspan></text></g>
+  <g class="grow" style="transform-origin:182px 124px;animation-delay:0.19s"><rect x="182" y="113" width="5" height="22" rx="11" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:0.64s"><text x="197" y="129" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">— · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v2.0.37</tspan></text></g>
   <circle cx="30" cy="164" r="4" fill="#1a7f37" class="blink"/>
   <text x="172" y="169" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1f2328" text-anchor="end">RealInvestorX</text>
-  <g class="grow" style="transform-origin:182px 164px;animation-delay:0.28s"><rect x="182" y="153" width="137" height="22" rx="11" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:0.73s"><text x="329" y="169" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">168 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v5.20.3</tspan></text></g>
+  <g class="grow" style="transform-origin:182px 164px;animation-delay:0.28s"><rect x="182" y="153" width="5" height="22" rx="11" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:0.73s"><text x="197" y="169" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">— · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v5.20.3</tspan></text></g>
   <circle cx="30" cy="204" r="4" fill="#1a7f37" class="blink"/>
   <text x="172" y="209" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1f2328" text-anchor="end">Apex</text>
-  <g class="grow" style="transform-origin:182px 204px;animation-delay:0.37s"><rect x="182" y="193" width="73" height="22" rx="11" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:0.82s"><text x="265" y="209" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">89 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v0.2.1</tspan></text></g>
+  <g class="grow" style="transform-origin:182px 204px;animation-delay:0.37s"><rect x="182" y="193" width="5" height="22" rx="11" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:0.82s"><text x="197" y="209" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">— · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v0.2.5</tspan></text></g>
   <circle cx="30" cy="244" r="4" fill="#1a7f37" class="blink"/>
   <text x="172" y="249" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1f2328" text-anchor="end">Compliance OS</text>
-  <g class="grow" style="transform-origin:182px 244px;animation-delay:0.46s"><rect x="182" y="233" width="70" height="22" rx="11" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:0.91s"><text x="262" y="249" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">86 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v3.6.5</tspan></text></g>
+  <g class="grow" style="transform-origin:182px 244px;animation-delay:0.46s"><rect x="182" y="233" width="5" height="22" rx="11" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:0.91s"><text x="197" y="249" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">— · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v3.6.9</tspan></text></g>
   <circle cx="30" cy="284" r="4" fill="#1a7f37" class="blink"/>
   <text x="172" y="289" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1f2328" text-anchor="end">EngiByte</text>
-  <g class="grow" style="transform-origin:182px 284px;animation-delay:0.55s"><rect x="182" y="273" width="55" height="22" rx="11" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:1.00s"><text x="247" y="289" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">67 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v1.2.4</tspan></text></g>
+  <g class="grow" style="transform-origin:182px 284px;animation-delay:0.55s"><rect x="182" y="273" width="5" height="22" rx="11" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:1.00s"><text x="197" y="289" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">— · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v1.3.0</tspan></text></g>
   <circle cx="30" cy="324" r="4" fill="#1a7f37" class="blink"/>
   <text x="172" y="329" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1f2328" text-anchor="end">TheLoop</text>
-  <g class="grow" style="transform-origin:182px 324px;animation-delay:0.64s"><rect x="182" y="313" width="41" height="22" rx="11" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:1.09s"><text x="233" y="329" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">50 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v1.1.10</tspan></text></g>
+  <g class="grow" style="transform-origin:182px 324px;animation-delay:0.64s"><rect x="182" y="313" width="5" height="22" rx="11" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:1.09s"><text x="197" y="329" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">— · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v1.1.11</tspan></text></g>
   <circle cx="30" cy="368" r="4" fill="#1a7f37" class="blink"/>
   <text x="42" y="373" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13.5" fill="#59636e">shipped within the last two weeks</text>
 </svg>
