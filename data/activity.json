@@ -1,18 +1,18 @@
 {
-  "asOf": "2026-08-04",
+  "asOf": "2026-08-08",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-08-04",
+      "lastShipped": "2026-08-05",
       "recent": null,
-      "version": "v2.62.339"
+      "version": "v2.62.342"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-08-03",
+      "lastShipped": "2026-08-08",
       "recent": null,
-      "version": "v2.0.37"
+      "version": "v2.0.39"
     },
     {
       "name": "RealInvestorX",
@@ -34,19 +34,19 @@
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-08-01",
+      "lastShipped": "2026-08-08",
       "recent": null,
       "version": "v1.3.0"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-08-03",
+      "lastShipped": "2026-08-05",
       "recent": null,
       "version": "v1.1.11"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-08-01",
+      "lastShipped": "2026-08-04",
       "recent": null,
       "version": null
     }
