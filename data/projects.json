@@ -132,7 +132,7 @@
       "blurb": "Import, review, and compare property cash flow and return assumptions, backed by Postgres and pgvector.",
       "stack": ["TypeScript", "React", "Express", "Turborepo", "Supabase"],
       "platforms": ["Web"],
-      "url": "https://realestate.beyondvolatility.com/",
+      "url": "https://realinvestorx.beyondvolatility.com/",
       "repo": "realinvestorx",
       "highlights": [
         "Turborepo monorepo; Supabase Postgres + pgvector for semantic deal search",
