@@ -147,7 +147,7 @@
       "blurb": "Import, categorize, and chart cash flow and net worth — with Monte Carlo retirement simulations.",
       "stack": ["TypeScript", "React", "Vite", "Supabase"],
       "platforms": ["Web"],
-      "url": "https://personalfinance.beyondvolatility.com/",
+      "url": "https://apex.beyondvolatility.com/",
       "repo": "apex",
       "highlights": [
         "React + Vite on Supabase (Postgres + row-level security); spreadsheet-style importer + Monte Carlo engine"
