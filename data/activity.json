@@ -1,28 +1,28 @@
 {
-  "asOf": "2026-08-08",
+  "asOf": "2026-08-14",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-08-05",
+      "lastShipped": "2026-08-14",
       "recent": null,
-      "version": "v2.62.342"
+      "version": "v2.62.349"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-08-08",
+      "lastShipped": "2026-08-10",
       "recent": null,
-      "version": "v2.0.39"
+      "version": "v2.0.45"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-08-01",
+      "lastShipped": "2026-08-10",
       "recent": null,
-      "version": "v5.20.4"
+      "version": "v5.20.6"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-08-01",
+      "lastShipped": "2026-08-10",
       "recent": null,
       "version": "v0.2.5"
     },
@@ -34,19 +34,19 @@
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-08-08",
+      "lastShipped": "2026-08-14",
       "recent": null,
       "version": "v1.3.0"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-08-05",
+      "lastShipped": "2026-08-10",
       "recent": null,
       "version": "v1.1.11"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-08-04",
+      "lastShipped": "2026-08-08",
       "recent": null,
       "version": null
     }

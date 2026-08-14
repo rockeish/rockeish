@@ -99,13 +99,13 @@ Shared standards and repository-specific release gates connect each change to te
   <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod — commits; Longevity — commits; RealInvestorX — commits; Apex — commits; Compliance OS — commits; EngiByte — commits; TheLoop — commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Aug 8, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Aug 14, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.342` | — |
-| **Longevity** | `v2.0.39` | — |
-| **RealInvestorX** | `v5.20.4` | — |
+| **ParentPod** | `v2.62.349` | — |
+| **Longevity** | `v2.0.45` | — |
+| **RealInvestorX** | `v5.20.6` | — |
 | **Apex** | `v0.2.5` | — |
 | **Compliance OS** | `v3.6.11` | — |
 | **EngiByte** | `v1.3.0` | — |
