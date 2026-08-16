@@ -37,6 +37,19 @@ const activity = existsSync(join(ROOT, 'data', 'activity.json'))
   ? JSON.parse(readFileSync(join(ROOT, 'data', 'activity.json'), 'utf8'))
   : null;
 
+// Computed metrics win over the declared ones.
+//
+// `projects.json` carried these as hand-typed literals and they froze at
+// 2026-07-11: the hero claimed "4 apps in production" while five were live, and
+// a commit total that predated EngiByte, JaLingo and TheLoop. The collector now
+// derives them from the repositories themselves, so the headline cannot drift
+// from reality again. Declared values remain as the fallback for anything the
+// collector cannot compute (lines of source, tracked files) and for a run with
+// no local checkouts.
+if (activity?.metrics) {
+  data.metrics = { ...data.metrics, ...activity.metrics };
+}
+
 // ---------------------------------------------------------------------------
 // Themes + helpers
 // ---------------------------------------------------------------------------

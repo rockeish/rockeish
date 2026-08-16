@@ -68,6 +68,51 @@ export function chooseVersion(tagVersion, packageVersion) {
   return tagVersion || packageVersion || null;
 }
 
+/**
+ * The headline figures the hero renders, COMPUTED rather than typed.
+ *
+ * These lived as literals in `projects.json` and froze at 2026-07-11 — five
+ * weeks in which the profile claimed "4 apps in production" while six were
+ * live, and listed commit totals that predated EngiByte, JaLingo and TheLoop
+ * entirely. The generator's own docstring says nothing on the page is
+ * hand-maintained; this makes that true of the numbers too.
+ *
+ * `appsInProduction` counts only products whose declared status says LIVE and
+ * that have a repository behind them. Maintenance-mode products are
+ * deliberately not counted, and neither is the hub site — the public profile
+ * must never overstate, so the rule stays conservative and mechanical.
+ */
+function computeMetrics(projects, asOf) {
+  const commitsByRepo = [];
+  let commits = 0;
+  for (const project of projects) {
+    const repo = project.localRepo || project.repo;
+    if (!repo) continue;
+    const base = join(homedir(), 'repos', repo);
+    try {
+      const count = Number(
+        execFileSync('git', ['-C', base, 'rev-list', '--count', 'HEAD'], { encoding: 'utf8' }).trim(),
+      );
+      if (!Number.isFinite(count) || count === 0) continue;
+      commits += count;
+      commitsByRepo.push({ label: project.name, commits: count });
+    } catch {
+      // A repo that is not checked out locally simply does not contribute.
+    }
+  }
+  if (!commitsByRepo.length) return null;
+  commitsByRepo.sort((a, b) => b.commits - a.commits);
+
+  // Requires `repo`, not `localRepo`: the hub site is a production web property
+  // but it is not an app, and it only has a local checkout. Counting it would
+  // inflate the headline, and a public profile must never overstate.
+  const appsInProduction = projects.filter(
+    (project) => /\blive\b/i.test(project.status || '') && project.repo,
+  ).length;
+
+  return { asOf, commits, commitsByRepo, appsInProduction };
+}
+
 function localStats(repo, packagePath = 'package.json') {
   const base = join(homedir(), 'repos', repo);
   const git = (args) => execFileSync('git', ['-C', base, ...args], { encoding: 'utf8' }).trim();
@@ -144,8 +189,13 @@ async function main() {
 
   out.sort((a, b) => (b.recent || 0) - (a.recent || 0));
   const asOf = out.reduce((max, r) => (r.lastShipped > max ? r.lastShipped : max), '0000-00-00');
-  writeFileSync(join(ROOT, 'data', 'activity.json'), JSON.stringify({ asOf, window: '90d', repos: out }, null, 2) + '\n');
-  console.log(`collect-activity: wrote ${out.length} repos (asOf ${asOf}).`);
+  const metrics = computeMetrics(data.projects, asOf);
+  const payload = { asOf, window: '90d', repos: out, ...(metrics ? { metrics } : {}) };
+  writeFileSync(join(ROOT, 'data', 'activity.json'), JSON.stringify(payload, null, 2) + '\n');
+  console.log(
+    `collect-activity: wrote ${out.length} repos (asOf ${asOf})` +
+      (metrics ? `, ${metrics.commits} commits, ${metrics.appsInProduction} apps live.` : '.'),
+  );
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

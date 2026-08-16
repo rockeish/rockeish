@@ -45,16 +45,59 @@
       "version": "v1.1.11"
     },
     {
-      "name": "this profile",
-      "lastShipped": "2026-08-16",
-      "recent": 28,
-      "version": null
-    },
-    {
       "name": "JaLingo",
       "lastShipped": "2026-08-16",
-      "recent": null,
+      "recent": 25,
       "version": "v0.5.0"
+    },
+    {
+      "name": "this profile",
+      "lastShipped": "2026-08-16",
+      "recent": null,
+      "version": null
     }
-  ]
+  ],
+  "metrics": {
+    "asOf": "2026-08-16",
+    "commits": 7190,
+    "commitsByRepo": [
+      {
+        "label": "ParentPod",
+        "commits": 2460
+      },
+      {
+        "label": "RealInvestorX",
+        "commits": 1017
+      },
+      {
+        "label": "Longevity",
+        "commits": 982
+      },
+      {
+        "label": "Apex",
+        "commits": 843
+      },
+      {
+        "label": "Compliance OS",
+        "commits": 614
+      },
+      {
+        "label": "TheLoop",
+        "commits": 604
+      },
+      {
+        "label": "Beyond Volatility",
+        "commits": 550
+      },
+      {
+        "label": "EngiByte",
+        "commits": 92
+      },
+      {
+        "label": "JaLingo",
+        "commits": 28
+      }
+    ],
+    "appsInProduction": 5
+  }
 }
