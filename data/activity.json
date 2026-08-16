@@ -5,50 +5,56 @@
     {
       "name": "ParentPod",
       "lastShipped": "2026-08-16",
-      "recent": null,
+      "recent": 349,
       "version": "v2.62.362"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-08-16",
-      "recent": null,
+      "recent": 306,
       "version": "v2.0.54"
     },
     {
       "name": "RealInvestorX",
       "lastShipped": "2026-08-15",
-      "recent": null,
+      "recent": 129,
       "version": "v5.20.7"
     },
     {
       "name": "Apex",
       "lastShipped": "2026-08-16",
-      "recent": null,
+      "recent": 103,
       "version": "v0.2.5"
-    },
-    {
-      "name": "Compliance OS",
-      "lastShipped": "2026-08-15",
-      "recent": null,
-      "version": "v3.6.12"
     },
     {
       "name": "EngiByte",
       "lastShipped": "2026-08-16",
-      "recent": null,
+      "recent": 84,
       "version": "v1.3.0"
+    },
+    {
+      "name": "Compliance OS",
+      "lastShipped": "2026-08-15",
+      "recent": 76,
+      "version": "v3.6.12"
     },
     {
       "name": "TheLoop",
       "lastShipped": "2026-08-15",
-      "recent": null,
+      "recent": 65,
       "version": "v1.1.11"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-08-14",
-      "recent": null,
+      "lastShipped": "2026-08-16",
+      "recent": 28,
       "version": null
+    },
+    {
+      "name": "JaLingo",
+      "lastShipped": "2026-08-16",
+      "recent": null,
+      "version": "v0.5.0"
     }
   ]
 }

@@ -96,20 +96,21 @@ Shared standards and repository-specific release gates connect each change to te
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod — commits; Longevity — commits; RealInvestorX — commits; Apex — commits; Compliance OS — commits; EngiByte — commits; TheLoop — commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 349 commits; Longevity 306 commits; RealInvestorX 129 commits; Apex 103 commits; EngiByte 84 commits; Compliance OS 76 commits; TheLoop 65 commits; JaLingo — commits." width="100%">
 </picture>
 
 <sub>Still shipping — latest version and commit volume over the last 90 days, as of Aug 16, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.362` | — |
-| **Longevity** | `v2.0.54` | — |
-| **RealInvestorX** | `v5.20.7` | — |
-| **Apex** | `v0.2.5` | — |
-| **Compliance OS** | `v3.6.12` | — |
-| **EngiByte** | `v1.3.0` | — |
-| **TheLoop** | `v1.1.11` | — |
+| **ParentPod** | `v2.62.362` | 349 |
+| **Longevity** | `v2.0.54` | 306 |
+| **RealInvestorX** | `v5.20.7` | 129 |
+| **Apex** | `v0.2.5` | 103 |
+| **EngiByte** | `v1.3.0` | 84 |
+| **Compliance OS** | `v3.6.12` | 76 |
+| **TheLoop** | `v1.1.11` | 65 |
+| **JaLingo** | `v0.5.0` | — |
 
 ## Selected work
 
@@ -121,6 +122,7 @@ Shared standards and repository-specific release gates connect each change to te
 | **[Apex](https://apex.beyondvolatility.com/)** <br><sub>`Maintenance mode`</sub> | Personal-finance & FIRE planning. | TypeScript · React · Vite · Supabase | [Live ↗](https://apex.beyondvolatility.com/) |
 | **[Compliance OS](https://compliance.beyondvolatility.com/)** <br><sub>`Design-partner pilot`</sub> | Controls & audit-evidence platform. | TypeScript · React · Firebase | [Live ↗](https://compliance.beyondvolatility.com/) |
 | **[EngiByte](https://engibyte.beyondvolatility.com)** <br><sub>`Live · revived 2026-07-11`</sub> | Scroll less. Know more. | TypeScript · React Native · Expo · Firebase | [Live ↗](https://engibyte.beyondvolatility.com) |
+| **[JaLingo](https://jalingo.beyondvolatility.com)** <br><sub>`Live · founders season`</sub> | Learn Patwa from the people who speak it. | TypeScript · Next.js · React · Firebase | [Live ↗](https://jalingo.beyondvolatility.com) |
 | **[TheLoop](https://theloop.beyondvolatility.com/)** <br><sub>`Controlled beta · live`</sub> | A private chronological feed for people you know. | TypeScript · React · Vite · Firebase | [Live ↗](https://theloop.beyondvolatility.com/) |
 | **[Beyond Volatility](https://beyondvolatility.com)** <br><sub>`Live`</sub> | The hub — the front door to the portfolio. | WordPress · PHP | [Live ↗](https://beyondvolatility.com) |
 

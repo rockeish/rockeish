@@ -18,25 +18,73 @@
     "linesOfSource": 681000,
     "appsInProduction": 4,
     "engineers": 1,
-    "mobilePlatforms": ["iOS", "Android"],
-    "backends": ["Firebase", "Supabase (Postgres + pgvector)"],
+    "mobilePlatforms": [
+      "iOS",
+      "Android"
+    ],
+    "backends": [
+      "Firebase",
+      "Supabase (Postgres + pgvector)"
+    ],
     "commitsByRepo": [
-      { "label": "ParentPod", "commits": 2229 },
-      { "label": "RealInvestorX", "commits": 934 },
-      { "label": "Longevity", "commits": 809 },
-      { "label": "Apex", "commits": 797 },
-      { "label": "Compliance OS", "commits": 552 },
-      { "label": "Beyond Volatility", "commits": 422 },
-      { "label": "ParentPod site", "commits": 154 },
-      { "label": "Family Goals", "commits": 45 }
+      {
+        "label": "ParentPod",
+        "commits": 2229
+      },
+      {
+        "label": "RealInvestorX",
+        "commits": 934
+      },
+      {
+        "label": "Longevity",
+        "commits": 809
+      },
+      {
+        "label": "Apex",
+        "commits": 797
+      },
+      {
+        "label": "Compliance OS",
+        "commits": 552
+      },
+      {
+        "label": "Beyond Volatility",
+        "commits": 422
+      },
+      {
+        "label": "ParentPod site",
+        "commits": 154
+      },
+      {
+        "label": "Family Goals",
+        "commits": 45
+      }
     ],
     "languages": [
-      { "name": "TypeScript", "lines": 309852 },
-      { "name": "JavaScript", "lines": 237463 },
-      { "name": "CSS", "lines": 96437 },
-      { "name": "PHP", "lines": 17663 },
-      { "name": "SQL", "lines": 14838 },
-      { "name": "Other", "lines": 5171 }
+      {
+        "name": "TypeScript",
+        "lines": 309852
+      },
+      {
+        "name": "JavaScript",
+        "lines": 237463
+      },
+      {
+        "name": "CSS",
+        "lines": 96437
+      },
+      {
+        "name": "PHP",
+        "lines": 17663
+      },
+      {
+        "name": "SQL",
+        "lines": 14838
+      },
+      {
+        "name": "Other",
+        "lines": 5171
+      }
     ]
   },
   "currently": [
@@ -45,29 +93,90 @@
     "Maintaining the shared delivery system: isolated worktrees, automated tests, security gates, deployment checks, and documentation freshness."
   ],
   "architecture": {
-    "clients": ["Web · React / Next.js", "Mobile · iOS + Android"],
-    "apps": ["ParentPod", "Longevity", "RealInvestorX", "Apex", "Compliance OS", "EngiByte", "TheLoop"],
-    "backends": ["Firebase / Firestore", "Supabase + pgvector"],
-    "delivery": ["Vercel", "Firebase Hosting", "App Store · Google Play"],
-    "services": ["Firebase", "Supabase", "Vercel", "App stores"]
+    "clients": [
+      "Web · React / Next.js",
+      "Mobile · iOS + Android"
+    ],
+    "apps": [
+      "ParentPod",
+      "Longevity",
+      "RealInvestorX",
+      "Apex",
+      "Compliance OS",
+      "EngiByte",
+      "TheLoop"
+    ],
+    "backends": [
+      "Firebase / Firestore",
+      "Supabase + pgvector"
+    ],
+    "delivery": [
+      "Vercel",
+      "Firebase Hosting",
+      "App Store · Google Play"
+    ],
+    "services": [
+      "Firebase",
+      "Supabase",
+      "Vercel",
+      "App stores"
+    ]
   },
   "pipeline": [
-    { "phase": "PLAN", "detail": "Intent → a scoped change plan with acceptance criteria and explicit constraints" },
-    { "phase": "BUILD", "detail": "Changes proceed in isolated worktrees with focused tests and reviewable diffs" },
-    { "phase": "VERIFY", "detail": "Tests, typecheck, lint, security checks, and targeted adversarial review" },
-    { "phase": "SHIP", "detail": "Version → deploy → health check → documentation and changelog update" }
+    {
+      "phase": "PLAN",
+      "detail": "Intent → a scoped change plan with acceptance criteria and explicit constraints"
+    },
+    {
+      "phase": "BUILD",
+      "detail": "Changes proceed in isolated worktrees with focused tests and reviewable diffs"
+    },
+    {
+      "phase": "VERIFY",
+      "detail": "Tests, typecheck, lint, security checks, and targeted adversarial review"
+    },
+    {
+      "phase": "SHIP",
+      "detail": "Version → deploy → health check → documentation and changelog update"
+    }
   ],
   "platform": {
     "summary": "Shared standards and repository-specific release gates connect each change to tests, review, deployment verification, and documentation updates.",
     "commands": [
-      { "name": "ship", "does": "release gate — version, build, test, deploy, verify, update docs" },
-      { "name": "sync", "does": "rebase main and resolve mechanical conflicts with validation" },
-      { "name": "audit", "does": "security, dependency, dead-code, a11y & perf sweep" },
-      { "name": "new-project", "does": "scaffold a repo with baseline standards, CI, security checks, and documentation" },
-      { "name": "update-brain", "does": "maintain the knowledge base and reconcile the task hub" },
-      { "name": "improve", "does": "turn repeatable workflows into maintained tooling and checks" }
+      {
+        "name": "ship",
+        "does": "release gate — version, build, test, deploy, verify, update docs"
+      },
+      {
+        "name": "sync",
+        "does": "rebase main and resolve mechanical conflicts with validation"
+      },
+      {
+        "name": "audit",
+        "does": "security, dependency, dead-code, a11y & perf sweep"
+      },
+      {
+        "name": "new-project",
+        "does": "scaffold a repo with baseline standards, CI, security checks, and documentation"
+      },
+      {
+        "name": "update-brain",
+        "does": "maintain the knowledge base and reconcile the task hub"
+      },
+      {
+        "name": "improve",
+        "does": "turn repeatable workflows into maintained tooling and checks"
+      }
     ],
-    "standards": ["architecture", "coding-standards", "typescript", "react", "security", "git-workflow", "startup"]
+    "standards": [
+      "architecture",
+      "coding-standards",
+      "typescript",
+      "react",
+      "security",
+      "git-workflow",
+      "startup"
+    ]
   },
   "practices": [
     "**Typed contracts and boundary validation** are required for new or changed external inputs.",
@@ -79,11 +188,45 @@
     "**Accessibility & cross-platform** — semantic markup, keyboard paths, and Capacitor guards for native builds."
   ],
   "stack": {
-    "Languages": ["TypeScript", "JavaScript", "PHP", "SQL", "Python", "Bash"],
-    "Frontend": ["React", "Next.js", "Vite", "Tailwind CSS", "Radix UI", "Capacitor"],
-    "Backend": ["Node.js", "Express", "Firebase", "Supabase", "PostgreSQL", "pgvector"],
-    "Infra & delivery": ["Vercel", "Firebase Hosting", "GitHub Actions", "Turborepo", "Cloudflare"],
-    "Quality & tooling": ["Zod", "Sentry", "RevenueCat", "Doppler", "ESLint", "Prettier"]
+    "Languages": [
+      "TypeScript",
+      "JavaScript",
+      "PHP",
+      "SQL",
+      "Python",
+      "Bash"
+    ],
+    "Frontend": [
+      "React",
+      "Next.js",
+      "Vite",
+      "Tailwind CSS",
+      "Radix UI",
+      "Capacitor"
+    ],
+    "Backend": [
+      "Node.js",
+      "Express",
+      "Firebase",
+      "Supabase",
+      "PostgreSQL",
+      "pgvector"
+    ],
+    "Infra & delivery": [
+      "Vercel",
+      "Firebase Hosting",
+      "GitHub Actions",
+      "Turborepo",
+      "Cloudflare"
+    ],
+    "Quality & tooling": [
+      "Zod",
+      "Sentry",
+      "RevenueCat",
+      "Doppler",
+      "ESLint",
+      "Prettier"
+    ]
   },
   "projects": [
     {
@@ -92,8 +235,18 @@
       "status": "Flagship · live",
       "tagline": "A shared baby tracker for the whole care team.",
       "blurb": "Co-parents, grandparents, and caregivers share one timeline for feeds, sleep, diapers, medicine, growth, and handoffs.",
-      "stack": ["TypeScript", "React", "Vite", "Capacitor", "Firebase"],
-      "platforms": ["iOS", "Android", "Web"],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Vite",
+        "Capacitor",
+        "Firebase"
+      ],
+      "platforms": [
+        "iOS",
+        "Android",
+        "Web"
+      ],
       "url": "https://parentpodapp.com",
       "links": {
         "appStore": "https://apps.apple.com/app/parentpod/id6759841193",
@@ -116,8 +269,18 @@
       "status": "Live",
       "tagline": "Private check-ins with time-aware recovery trends.",
       "blurb": "Log sleep, mood, cravings, and exact drink timing and amount; review hours since the last drink and longer-term patterns without judgmental streak language.",
-      "stack": ["TypeScript", "Next.js", "React", "Capacitor", "Firebase"],
-      "platforms": ["Web", "iOS", "Android"],
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "React",
+        "Capacitor",
+        "Firebase"
+      ],
+      "platforms": [
+        "Web",
+        "iOS",
+        "Android"
+      ],
       "url": "https://longevity.beyondvolatility.com/",
       "repo": "longevity",
       "highlights": [
@@ -130,8 +293,16 @@
       "status": "Maintenance mode",
       "tagline": "Real-estate deal review with explicit assumptions.",
       "blurb": "Import, review, and compare property cash flow and return assumptions, backed by Postgres and pgvector.",
-      "stack": ["TypeScript", "React", "Express", "Turborepo", "Supabase"],
-      "platforms": ["Web"],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Express",
+        "Turborepo",
+        "Supabase"
+      ],
+      "platforms": [
+        "Web"
+      ],
       "url": "https://realinvestorx.beyondvolatility.com/",
       "repo": "realinvestorx",
       "highlights": [
@@ -145,8 +316,15 @@
       "status": "Maintenance mode",
       "tagline": "Personal-finance & FIRE planning.",
       "blurb": "Import, categorize, and chart cash flow and net worth — with Monte Carlo retirement simulations.",
-      "stack": ["TypeScript", "React", "Vite", "Supabase"],
-      "platforms": ["Web"],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Vite",
+        "Supabase"
+      ],
+      "platforms": [
+        "Web"
+      ],
       "url": "https://apex.beyondvolatility.com/",
       "repo": "apex",
       "highlights": [
@@ -159,8 +337,14 @@
       "status": "Design-partner pilot",
       "tagline": "Controls & audit-evidence platform.",
       "blurb": "Map NERC requirements to controls, evidence, gaps, and role-based review workflows.",
-      "stack": ["TypeScript", "React", "Firebase"],
-      "platforms": ["Web"],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Firebase"
+      ],
+      "platforms": [
+        "Web"
+      ],
       "url": "https://compliance.beyondvolatility.com/",
       "repo": "compliance",
       "highlights": [
@@ -173,8 +357,17 @@
       "status": "Live · revived 2026-07-11",
       "tagline": "Scroll less. Know more.",
       "blurb": "Short, sourced STEM, energy, and engineering lessons with 1,994 validated questions, review practice, streaks, XP, and friend challenges.",
-      "stack": ["TypeScript", "React Native", "Expo", "Firebase"],
-      "platforms": ["Web", "iOS", "Android"],
+      "stack": [
+        "TypeScript",
+        "React Native",
+        "Expo",
+        "Firebase"
+      ],
+      "platforms": [
+        "Web",
+        "iOS",
+        "Android"
+      ],
       "url": "https://engibyte.beyondvolatility.com",
       "repo": "engibyte",
       "packagePath": "mobile/package.json",
@@ -184,15 +377,46 @@
       ]
     },
     {
+      "name": "JaLingo",
+      "category": "Consumer",
+      "status": "Live · founders season",
+      "tagline": "Learn Patwa from the people who speak it.",
+      "blurb": "A journey through all 14 Jamaican parishes that teaches Patwa alongside the history, food, and etiquette it belongs to, with pronunciation recorded and rated by Jamaican speakers.",
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "React",
+        "Firebase"
+      ],
+      "platforms": [
+        "Web",
+        "PWA"
+      ],
+      "url": "https://jalingo.beyondvolatility.com",
+      "repo": "JaLingo",
+      "highlights": [
+        "Branching conversations with real people rather than flashcards: replies change where a conversation goes, and rudeness costs standing you have to earn back",
+        "Community voice recordings qualify only after three independent reviews, an average of four out of five, and moderator review"
+      ]
+    },
+    {
       "name": "TheLoop",
       "category": "Consumer",
       "status": "Controlled beta · live",
       "tagline": "A private chronological feed for people you know.",
       "blurb": "Create a circle, share text updates in order, and message people directly without a recommendation feed.",
-      "stack": ["TypeScript", "React", "Vite", "Firebase"],
-      "platforms": ["Web", "PWA"],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Vite",
+        "Firebase"
+      ],
+      "platforms": [
+        "Web",
+        "PWA"
+      ],
       "url": "https://theloop.beyondvolatility.com/",
-      "repo": "RealKith",
+      "repo": "TheLoop",
       "localRepo": "theloop",
       "highlights": [
         "Circle-based access, chronological text posts, direct messaging, and explicit analytics consent",
@@ -205,8 +429,13 @@
       "status": "Live",
       "tagline": "The hub — the front door to the portfolio.",
       "blurb": "Public hub and blog that indexes every product, plus a suite of free interactive financial and lifestyle tools.",
-      "stack": ["WordPress", "PHP"],
-      "platforms": ["Web"],
+      "stack": [
+        "WordPress",
+        "PHP"
+      ],
+      "platforms": [
+        "Web"
+      ],
       "url": "https://beyondvolatility.com",
       "repo": null,
       "highlights": [
@@ -220,9 +449,18 @@
     "hub": "https://beyondvolatility.com",
     "flagship": "https://parentpodapp.com",
     "socials": [
-      { "label": "Instagram", "url": "https://www.instagram.com/parentpodapp/" },
-      { "label": "TikTok", "url": "https://www.tiktok.com/@parentpodapp" },
-      { "label": "X", "url": "https://x.com/ParentingP0fn9" }
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/parentpodapp/"
+      },
+      {
+        "label": "TikTok",
+        "url": "https://www.tiktok.com/@parentpodapp"
+      },
+      {
+        "label": "X",
+        "url": "https://x.com/ParentingP0fn9"
+      }
     ]
   },
   "waka": {
