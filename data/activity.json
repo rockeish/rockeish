@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-08-18",
+  "asOf": "2026-08-19",
   "window": "90d",
   "repos": [
     {
@@ -12,7 +12,7 @@
       "name": "Longevity",
       "lastShipped": "2026-08-18",
       "recent": null,
-      "version": "v2.0.56"
+      "version": "v2.0.58"
     },
     {
       "name": "RealInvestorX",
@@ -22,7 +22,7 @@
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-08-18",
+      "lastShipped": "2026-08-19",
       "recent": null,
       "version": "v0.2.5"
     },
@@ -40,7 +40,7 @@
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-08-16",
+      "lastShipped": "2026-08-19",
       "recent": null,
       "version": "v0.5.0"
     },
@@ -52,14 +52,14 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-08-16",
+      "lastShipped": "2026-08-18",
       "recent": null,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-08-18",
-    "commits": 7196,
+    "asOf": "2026-08-19",
+    "commits": 7202,
     "commitsByRepo": [
       {
         "label": "ParentPod",
@@ -71,11 +71,11 @@
       },
       {
         "label": "Longevity",
-        "commits": 986
+        "commits": 990
       },
       {
         "label": "Apex",
-        "commits": 845
+        "commits": 846
       },
       {
         "label": "Compliance OS",
@@ -95,7 +95,7 @@
       },
       {
         "label": "JaLingo",
-        "commits": 28
+        "commits": 29
       }
     ],
     "appsInProduction": 5
