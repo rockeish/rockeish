@@ -1,18 +1,18 @@
 {
-  "asOf": "2026-08-19",
+  "asOf": "2026-08-21",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-08-16",
+      "lastShipped": "2026-08-21",
       "recent": null,
-      "version": "v2.62.362"
+      "version": "v2.62.369"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-08-18",
+      "lastShipped": "2026-08-20",
       "recent": null,
-      "version": "v2.0.58"
+      "version": "v2.0.60"
     },
     {
       "name": "RealInvestorX",
@@ -34,13 +34,13 @@
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-08-16",
+      "lastShipped": "2026-08-21",
       "recent": null,
       "version": "v1.3.0"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-08-19",
+      "lastShipped": "2026-08-21",
       "recent": null,
       "version": "v0.5.0"
     },
@@ -52,18 +52,18 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-08-18",
+      "lastShipped": "2026-08-19",
       "recent": null,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-08-19",
-    "commits": 7202,
+    "asOf": "2026-08-21",
+    "commits": 7219,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2460
+        "commits": 2469
       },
       {
         "label": "RealInvestorX",
@@ -87,15 +87,15 @@
       },
       {
         "label": "Beyond Volatility",
-        "commits": 550
+        "commits": 551
       },
       {
         "label": "EngiByte",
-        "commits": 92
+        "commits": 95
       },
       {
         "label": "JaLingo",
-        "commits": 29
+        "commits": 33
       }
     ],
     "appsInProduction": 5
