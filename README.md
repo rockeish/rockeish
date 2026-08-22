@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 14 repositories, 7.2K commits, 681K lines of source, 5 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 14 repositories, 7.3K commits, 681K lines of source, 5 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -80,11 +80,11 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>Portfolio snapshot dated Aug 21, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
+<sub>Portfolio snapshot dated Aug 22, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,469; RealInvestorX 1,017; Longevity 990; Apex 846; Compliance OS 614; TheLoop 604; Beyond Volatility 551; EngiByte 95; JaLingo 33. ~7.2K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,487; RealInvestorX 1,021; Longevity 999; Apex 848; Compliance OS 619; TheLoop 611; Beyond Volatility 553; EngiByte 96; JaLingo 34. ~7.3K total, single author." width="100%">
 </picture>
 
 <picture>
@@ -99,15 +99,15 @@ Shared standards and repository-specific release gates connect each change to te
   <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod — commits; Longevity — commits; RealInvestorX — commits; Apex — commits; Compliance OS — commits; EngiByte — commits; JaLingo — commits; TheLoop — commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Aug 21, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Aug 22, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.369` | — |
-| **Longevity** | `v2.0.60` | — |
-| **RealInvestorX** | `v5.20.7` | — |
+| **ParentPod** | `v2.62.372` | — |
+| **Longevity** | `v2.0.62` | — |
+| **RealInvestorX** | `v5.20.8` | — |
 | **Apex** | `v0.2.5` | — |
-| **Compliance OS** | `v3.6.12` | — |
+| **Compliance OS** | `v3.7.0` | — |
 | **EngiByte** | `v1.3.0` | — |
 | **JaLingo** | `v0.5.0` | — |
 | **TheLoop** | `v1.1.11` | — |

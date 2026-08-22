@@ -1,101 +1,101 @@
 {
-  "asOf": "2026-08-21",
+  "asOf": "2026-08-22",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-08-21",
+      "lastShipped": "2026-08-22",
       "recent": null,
-      "version": "v2.62.369"
+      "version": "v2.62.372"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-08-20",
+      "lastShipped": "2026-08-22",
       "recent": null,
-      "version": "v2.0.60"
+      "version": "v2.0.62"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-08-15",
+      "lastShipped": "2026-08-22",
       "recent": null,
-      "version": "v5.20.7"
+      "version": "v5.20.8"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-08-19",
+      "lastShipped": "2026-08-22",
       "recent": null,
       "version": "v0.2.5"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-08-15",
+      "lastShipped": "2026-08-22",
       "recent": null,
-      "version": "v3.6.12"
+      "version": "v3.7.0"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-08-21",
+      "lastShipped": "2026-08-22",
       "recent": null,
       "version": "v1.3.0"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-08-21",
+      "lastShipped": "2026-08-22",
       "recent": null,
       "version": "v0.5.0"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-08-17",
+      "lastShipped": "2026-08-22",
       "recent": null,
       "version": "v1.1.11"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-08-19",
+      "lastShipped": "2026-08-21",
       "recent": null,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-08-21",
-    "commits": 7219,
+    "asOf": "2026-08-22",
+    "commits": 7268,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2469
+        "commits": 2487
       },
       {
         "label": "RealInvestorX",
-        "commits": 1017
+        "commits": 1021
       },
       {
         "label": "Longevity",
-        "commits": 990
+        "commits": 999
       },
       {
         "label": "Apex",
-        "commits": 846
+        "commits": 848
       },
       {
         "label": "Compliance OS",
-        "commits": 614
+        "commits": 619
       },
       {
         "label": "TheLoop",
-        "commits": 604
+        "commits": 611
       },
       {
         "label": "Beyond Volatility",
-        "commits": 551
+        "commits": 553
       },
       {
         "label": "EngiByte",
-        "commits": 95
+        "commits": 96
       },
       {
         "label": "JaLingo",
-        "commits": 33
+        "commits": 34
       }
     ],
     "appsInProduction": 5
