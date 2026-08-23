@@ -1,4 +1,4 @@
-<svg width="720" height="552" viewBox="0 0 720 552" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Portfolio map — ParentPod, Longevity, RealInvestorX, Apex, Compliance OS, EngiByte, TheLoop, Beyond Volatility with shared delivery infrastructure.">
+<svg width="720" height="552" viewBox="0 0 720 552" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Portfolio map — ParentPod, Longevity, RealInvestorX, Apex, Compliance OS, EngiByte, JaLingo, TheLoop, Beyond Volatility with shared delivery infrastructure.">
   <defs>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#0969da"/><stop offset="1" stop-color="#8250df"/>
@@ -32,43 +32,49 @@
         <text x="0" y="5" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="middle">ParentPod</text>
       </g>
     </g>
-    <g transform="rotate(-45) translate(212 0) rotate(45)">
+    <g transform="rotate(-50) translate(212 0) rotate(50)">
       <g><animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="80s" repeatCount="indefinite"/>
         <rect x="-47" y="-16" width="94" height="32" rx="16" fill="#f6f8fa" stroke="#d1d9e0"/>
         <text x="0" y="5" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="middle">Longevity</text>
       </g>
     </g>
-    <g transform="rotate(0) translate(212 0) rotate(0)">
+    <g transform="rotate(-10) translate(212 0) rotate(10)">
       <g><animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="80s" repeatCount="indefinite"/>
         <rect x="-62.5" y="-16" width="125" height="32" rx="16" fill="#f6f8fa" stroke="#d1d9e0"/>
         <text x="0" y="5" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="middle">RealInvestorX</text>
       </g>
     </g>
-    <g transform="rotate(45) translate(212 0) rotate(-45)">
+    <g transform="rotate(30) translate(212 0) rotate(-30)">
       <g><animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="80s" repeatCount="indefinite"/>
         <rect x="-28" y="-16" width="56" height="32" rx="16" fill="#f6f8fa" stroke="#d1d9e0"/>
         <text x="0" y="5" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="middle">Apex</text>
       </g>
     </g>
-    <g transform="rotate(90) translate(212 0) rotate(-90)">
+    <g transform="rotate(70) translate(212 0) rotate(-70)">
       <g><animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="80s" repeatCount="indefinite"/>
         <rect x="-62.5" y="-16" width="125" height="32" rx="16" fill="#f6f8fa" stroke="#d1d9e0"/>
         <text x="0" y="5" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="middle">Compliance OS</text>
       </g>
     </g>
-    <g transform="rotate(135) translate(212 0) rotate(-135)">
+    <g transform="rotate(110) translate(212 0) rotate(-110)">
       <g><animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="80s" repeatCount="indefinite"/>
         <rect x="-43.5" y="-16" width="87" height="32" rx="16" fill="#f6f8fa" stroke="#d1d9e0"/>
         <text x="0" y="5" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="middle">EngiByte</text>
       </g>
     </g>
-    <g transform="rotate(180) translate(212 0) rotate(-180)">
+    <g transform="rotate(150) translate(212 0) rotate(-150)">
+      <g><animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="80s" repeatCount="indefinite"/>
+        <rect x="-39.5" y="-16" width="79" height="32" rx="16" fill="#f6f8fa" stroke="#d1d9e0"/>
+        <text x="0" y="5" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="middle">JaLingo</text>
+      </g>
+    </g>
+    <g transform="rotate(190) translate(212 0) rotate(-190)">
       <g><animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="80s" repeatCount="indefinite"/>
         <rect x="-39.5" y="-16" width="79" height="32" rx="16" fill="#f6f8fa" stroke="#d1d9e0"/>
         <text x="0" y="5" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="middle">TheLoop</text>
       </g>
     </g>
-    <g transform="rotate(225) translate(212 0) rotate(-225)">
+    <g transform="rotate(230) translate(212 0) rotate(-230)">
       <g><animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="80s" repeatCount="indefinite"/>
         <rect x="-77.5" y="-16" width="155" height="32" rx="16" fill="#f6f8fa" stroke="url(#accent)" stroke-width="1.5"/>
         <text x="0" y="5" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="middle">Beyond Volatility</text>
