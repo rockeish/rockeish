@@ -1,6 +1,14 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { activityTarget, apiStats, chooseVersion } from './collect-activity.mjs';
+import {
+  activityTarget,
+  apiStats,
+  chooseRef,
+  chooseSource,
+  chooseVersion,
+  groupLanguages,
+  sourceLanguage,
+} from './collect-activity.mjs';
 
 // Helper: a fake fetch that routes by URL and lets each endpoint be scripted.
 function fakeFetch(routes) {
@@ -54,10 +62,10 @@ test('apiStats survives a 202 (empty body) from the stats endpoint', async () =>
     ['/repos/rockeish/demo', () => okJson({ pushed_at: '2026-06-30T12:00:00Z' })],
   ]);
   try {
-    const stats = await apiStats('demo'); // must NOT throw
+    const stats = await apiStats('demo', 'package.json', { retries: 1 }); // must NOT throw
     assert.equal(stats.lastShipped, '2026-06-30');
     assert.equal(stats.version, 'v1.2.3'); // tag fallback survives optional package lookup failure
-    assert.equal(stats.recent, null); // stats not ready → left null
+    assert.equal(stats.recent, null); // still not ready after the retries → honestly left null
   } finally {
     global.fetch = original;
   }
@@ -73,7 +81,7 @@ test('apiStats sums the last 13 weeks when stats are ready (200)', async () => {
     ['/repos/rockeish/demo', () => okJson({ pushed_at: '2026-06-30T12:00:00Z' })],
   ]);
   try {
-    const stats = await apiStats('demo');
+    const stats = await apiStats('demo', 'package.json', { retryDelayMs: 0 });
     // last 13 of totals 1..20 -> 8..20 = 182
     assert.equal(stats.recent, 182);
     assert.equal(stats.version, null);
@@ -91,9 +99,81 @@ test('apiStats prefers newer package metadata and supports a nested package path
     ['/repos/rockeish/demo', () => okJson({ pushed_at: '2026-06-30T12:00:00Z' })],
   ]);
   try {
-    const stats = await apiStats('demo', 'mobile/package.json');
+    const stats = await apiStats('demo', 'mobile/package.json', { retryDelayMs: 0 });
     assert.equal(stats.version, 'v1.4.0');
   } finally {
     global.fetch = original;
   }
+});
+
+test('a local checkout wins over the API even when a token is present', () => {
+  // The refresh cron exports SHOWCASE_TOKEN=$(gh auth token) on the machine
+  // that HOLDS the sibling checkouts, so a token-first rule sent every
+  // scheduled run down the API path — where /stats/commit_activity answers 202
+  // on a cold cache and leaves `recent` null. The 90-day column had been empty
+  // on the public profile ever since.
+  assert.equal(chooseSource({ hasLocalCheckout: true, hasToken: true }), 'local');
+  assert.equal(chooseSource({ hasLocalCheckout: true, hasToken: false }), 'local');
+  assert.equal(chooseSource({ hasLocalCheckout: false, hasToken: true }), 'api');
+  assert.equal(chooseSource({ hasLocalCheckout: false, hasToken: false }), 'none');
+});
+
+test('sourceLanguage counts authored source and ignores vendored, built and generated files', () => {
+  assert.equal(sourceLanguage('src/app/page.tsx'), 'TypeScript');
+  assert.equal(sourceLanguage('functions/src/index.ts'), 'TypeScript');
+  assert.equal(sourceLanguage('themes/neve-child/js/rent-vs-buy.js'), 'JavaScript');
+  assert.equal(sourceLanguage('src/styles/globals.css'), 'CSS');
+  assert.equal(sourceLanguage('supabase/migrations/001_init.sql'), 'SQL');
+  assert.equal(sourceLanguage('themes/neve-child/functions.php'), 'PHP');
+  // Not authored by this portfolio, or not source at all.
+  assert.equal(sourceLanguage('site-reference/wp-admin~js/js/updates.js'), null);
+  assert.equal(sourceLanguage('node_modules/react/index.js'), null);
+  assert.equal(sourceLanguage('dist/bundle.js'), null);
+  assert.equal(sourceLanguage('ios/App/Pods/Firebase/x.js'), null);
+  assert.equal(sourceLanguage('public/vendor/chart.min.js'), null);
+  assert.equal(sourceLanguage('package-lock.json'), null);
+  assert.equal(sourceLanguage('README.md'), null);
+});
+
+test('groupLanguages folds slivers into Other and sorts by size', () => {
+  const grouped = groupLanguages({ TypeScript: 600, JavaScript: 300, Python: 5, Bash: 5 }, 0.01);
+  assert.deepEqual(grouped, [
+    { name: 'TypeScript', lines: 600 },
+    { name: 'JavaScript', lines: 300 },
+    { name: 'Other', lines: 10 },
+  ]);
+  // Nothing below the threshold means no Other bucket at all — never an empty slice.
+  assert.deepEqual(groupLanguages({ TypeScript: 10 }, 0.01), [{ name: 'TypeScript', lines: 10 }]);
+});
+
+test('apiStats retries a 202 rather than shipping an empty 90-day column', async () => {
+  const original = global.fetch;
+  let attempts = 0;
+  const weeks = Array.from({ length: 13 }, () => ({ total: 2 }));
+  global.fetch = fakeFetch([
+    ['/repos/rockeish/demo/tags', () => okJson([])],
+    ['/repos/rockeish/demo/contents/package.json', notFound],
+    ['/stats/commit_activity', () => {
+      attempts += 1;
+      if (attempts < 3) return { ok: true, status: 202, json: async () => { throw new SyntaxError('empty'); } };
+      return okJson(weeks);
+    }],
+    ['/repos/rockeish/demo', () => okJson({ pushed_at: '2026-06-30T12:00:00Z' })],
+  ]);
+  try {
+    const stats = await apiStats('demo', 'package.json', { retries: 3, retryDelayMs: 0 });
+    assert.equal(attempts, 3);
+    assert.equal(stats.recent, 26);
+  } finally {
+    global.fetch = original;
+  }
+});
+
+test('chooseRef counts from the remote default branch, not whatever is checked out', () => {
+  assert.equal(chooseRef(['origin/main', 'origin/feature-x']), 'origin/main');
+  assert.equal(chooseRef(['origin/master']), 'origin/master');
+  assert.equal(chooseRef(['origin/main', 'origin/master']), 'origin/main');
+  // No remote to ask: HEAD is the only honest answer, not a silent zero.
+  assert.equal(chooseRef([]), 'HEAD');
+  assert.equal(chooseRef(undefined), 'HEAD');
 });

@@ -11,12 +11,12 @@
     "linkedin": "https://www.linkedin.com/in/rockeish-mckenzie-p-e-8b83212a/"
   },
   "metrics": {
-    "asOf": "2026-07-11",
+    "asOf": "2026-08-23",
     "repos": 14,
-    "commits": 5900,
-    "trackedFiles": 3564,
-    "linesOfSource": 681000,
-    "appsInProduction": 4,
+    "commits": 7334,
+    "trackedFiles": 4488,
+    "linesOfSource": 703305,
+    "appsInProduction": 5,
     "engineers": 1,
     "mobilePlatforms": [
       "iOS",
@@ -29,67 +29,72 @@
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2229
+        "commits": 2502
       },
       {
         "label": "RealInvestorX",
-        "commits": 934
+        "commits": 1032
       },
       {
         "label": "Longevity",
-        "commits": 809
+        "commits": 1013
       },
       {
         "label": "Apex",
-        "commits": 797
+        "commits": 853
       },
       {
         "label": "Compliance OS",
-        "commits": 552
+        "commits": 621
+      },
+      {
+        "label": "TheLoop",
+        "commits": 614
       },
       {
         "label": "Beyond Volatility",
-        "commits": 422
+        "commits": 554
       },
       {
-        "label": "ParentPod site",
-        "commits": 154
+        "label": "EngiByte",
+        "commits": 103
       },
       {
-        "label": "Family Goals",
-        "commits": 45
+        "label": "JaLingo",
+        "commits": 42
       }
     ],
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 309852
+        "lines": 424829
       },
       {
         "name": "JavaScript",
-        "lines": 237463
+        "lines": 209579
       },
       {
         "name": "CSS",
-        "lines": 96437
-      },
-      {
-        "name": "PHP",
-        "lines": 17663
+        "lines": 35246
       },
       {
         "name": "SQL",
-        "lines": 14838
+        "lines": 14941
+      },
+      {
+        "name": "PHP",
+        "lines": 11490
       },
       {
         "name": "Other",
-        "lines": 5171
+        "lines": 7220
       }
-    ]
+    ],
+    "_note": "Fallback only. collect-activity.mjs recomputes asOf, commits, commitsByRepo, appsInProduction, trackedFiles, linesOfSource and languages from the checkouts on every refresh and the generator prefers those. These literals are what the page shows when NO checkout is reachable, and they carry their own asOf so an old snapshot can never present itself as today's. Refresh them by copying the computed block, never by estimating."
   },
   "currently": [
     "Operating **ParentPod** across web, iOS, and Android while improving the caregiver onboarding path.",
-    "**Longevity** is live with private check-ins, precise drink logging, and time-aware recovery trends.",
+    "**Longevity** turns one short daily log into a read on today's energy, comparisons drawn from your own history, and the long view.",
     "Maintaining the shared delivery system: isolated worktrees, automated tests, security gates, deployment checks, and documentation freshness."
   ],
   "architecture": {
@@ -104,6 +109,7 @@
       "Apex",
       "Compliance OS",
       "EngiByte",
+      "JaLingo",
       "TheLoop"
     ],
     "backends": [
@@ -267,8 +273,8 @@
       "name": "Longevity",
       "category": "Consumer",
       "status": "Live",
-      "tagline": "Private check-ins with time-aware recovery trends.",
-      "blurb": "Log sleep, mood, cravings, and exact drink timing and amount; review hours since the last drink and longer-term patterns without judgmental streak language.",
+      "tagline": "See what your days are doing to your energy.",
+      "blurb": "One short daily log — sleep, movement, drinks, water, mood — turns into a plain read on today, the comparisons your own history supports, and the long view. Alcohol is one input among several, not the subject.",
       "stack": [
         "TypeScript",
         "Next.js",
@@ -284,7 +290,8 @@
       "url": "https://longevity.beyondvolatility.com/",
       "repo": "longevity",
       "highlights": [
-        "Next.js + Capacitor; precise alcohol-exposure history, correction controls, time-of-day views, and eight-week charts"
+        "Four-route spine: today's read and check-in, your own comparisons, the long view, and the facts the model consumes",
+        "Next.js + Capacitor, fully usable signed out and encrypted on device; signing in adds per-user cloud sync"
       ]
     },
     {
@@ -334,7 +341,7 @@
     {
       "name": "Compliance OS",
       "category": "Platform",
-      "status": "Design-partner pilot",
+      "status": "Parked · maintained",
       "tagline": "Controls & audit-evidence platform.",
       "blurb": "Map NERC requirements to controls, evidence, gaps, and role-based review workflows.",
       "stack": [

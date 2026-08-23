@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { buildReadme, fmtDate, recentlyShipped, renderAll } from './generate-showcase.mjs';
 
 const projects = JSON.parse(readFileSync(new URL('../data/projects.json', import.meta.url), 'utf8'));
@@ -84,4 +84,16 @@ test('generated public profile avoids stale automation claims and AI-tool promot
     assert.ok(!readme.includes(phrase), `generated README must not contain: ${phrase}`);
   }
   assert.ok(readme.includes('stamp-guarded local schedule'), 'actual refresh mechanism is disclosed');
+});
+
+test('the profile refreshes from the local schedule, not a GitHub Action', () => {
+  // The scheduled Action died with its SHOWCASE_TOKEN and was replaced on
+  // 2026-07-18 by a local cron using this machine's `gh` auth. The README says
+  // so; this asserts the repo still matches the README, so re-adding a workflow
+  // has to be a deliberate act that also updates the disclosure.
+  assert.equal(
+    existsSync(new URL('../.github/workflows', import.meta.url)),
+    false,
+    'no .github/workflows — the refresh is a local cron (~/scripts/refresh-showcase-scheduled)',
+  );
 });
