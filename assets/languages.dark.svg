@@ -20,12 +20,12 @@
   </style>
   <rect x="0.5" y="0.5" width="719" height="189" rx="18" fill="#0b1220" stroke="#243149"/>
   <text x="28" y="40" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" fill="#8b97a8">Language mix</text>
-  <text x="692" y="40" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8" text-anchor="end">703K lines of tracked source</text>
-  <g class="grow" style="transform-origin:28.0px 62px;animation-delay:0.10s"><rect x="28.0" y="62" width="401.1" height="34" rx="6" fill="#3178c6"/></g>
-  <g class="grow" style="transform-origin:429.1px 62px;animation-delay:0.64s"><rect x="429.1" y="62" width="197.9" height="34"  fill="#e6c84f"/></g>
-  <g class="grow" style="transform-origin:627.0px 62px;animation-delay:0.91s"><rect x="627.0" y="62" width="33.3" height="34"  fill="#38bdf8"/></g>
-  <g class="grow" style="transform-origin:660.2px 62px;animation-delay:0.96s"><rect x="660.2" y="62" width="14.1" height="34"  fill="#22c55e"/></g>
-  <g class="grow" style="transform-origin:674.3px 62px;animation-delay:0.98s"><rect x="674.3" y="62" width="10.8" height="34"  fill="#818cf8"/></g>
+  <text x="692" y="40" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8" text-anchor="end">708K lines of tracked source</text>
+  <g class="grow" style="transform-origin:28.0px 62px;animation-delay:0.10s"><rect x="28.0" y="62" width="401.2" height="34" rx="6" fill="#3178c6"/></g>
+  <g class="grow" style="transform-origin:429.2px 62px;animation-delay:0.64s"><rect x="429.2" y="62" width="197.8" height="34"  fill="#e6c84f"/></g>
+  <g class="grow" style="transform-origin:627.0px 62px;animation-delay:0.91s"><rect x="627.0" y="62" width="33.4" height="34"  fill="#38bdf8"/></g>
+  <g class="grow" style="transform-origin:660.4px 62px;animation-delay:0.96s"><rect x="660.4" y="62" width="14.0" height="34"  fill="#22c55e"/></g>
+  <g class="grow" style="transform-origin:674.4px 62px;animation-delay:0.98s"><rect x="674.4" y="62" width="10.9" height="34"  fill="#818cf8"/></g>
   <g class="grow" style="transform-origin:685.2px 62px;animation-delay:0.99s"><rect x="685.2" y="62" width="6.8" height="34" rx="6" fill="#94a3b8"/></g>
   <g class="fade" style="animation-delay:0.80s"><rect x="28" y="117" width="13" height="13" rx="3" fill="#3178c6"/><text x="48" y="128" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#e6edf3">TypeScript <tspan fill="#8b97a8">60.4%</tspan></text></g>
   <g class="fade" style="animation-delay:0.87s"><rect x="249.33333333333334" y="117" width="13" height="13" rx="3" fill="#e6c84f"/><text x="269.33333333333337" y="128" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#e6edf3">JavaScript <tspan fill="#8b97a8">29.8%</tspan></text></g>
