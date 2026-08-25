@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 15 repositories, 7.4K commits, 708K lines of source, 5 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 23 repositories, 7.4K commits, 711K lines of source, 5 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -46,7 +46,7 @@ By day, I lead reliability-compliance work in the energy sector. Outside that ro
 
 ## The ecosystem
 
-15 repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery connected by common release controls.
+23 repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery connected by common release controls.
 
 <p align="center"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/orbit.dark.svg">
@@ -80,37 +80,37 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>Portfolio snapshot dated Aug 23, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
+<sub>Portfolio snapshot dated Aug 24, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,506; RealInvestorX 1,035; Longevity 1,020; Apex 853; Compliance OS 625; TheLoop 615; Beyond Volatility 556; EngiByte 104; JaLingo 45. ~7.4K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,507; RealInvestorX 1,041; Longevity 1,023; Apex 854; Compliance OS 627; TheLoop 615; Beyond Volatility 556; EngiByte 105; JaLingo 48. ~7.4K total, single author." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 708K lines of tracked source — TypeScript 60.4%, JavaScript 29.8%, CSS 5.0%, SQL 2.1%, PHP 1.6%, Other 1.0%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 711K lines of tracked source — TypeScript 60.5%, JavaScript 29.7%, CSS 5.0%, SQL 2.1%, PHP 1.6%, Other 1.1%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 413 commits; Longevity 333 commits; RealInvestorX 151 commits; Apex 116 commits; EngiByte 102 commits; Compliance OS 87 commits; TheLoop 78 commits; JaLingo 45 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 414 commits; Longevity 333 commits; RealInvestorX 157 commits; Apex 117 commits; EngiByte 103 commits; Compliance OS 89 commits; TheLoop 78 commits; JaLingo 48 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Aug 23, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Aug 24, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.385` | 413 |
-| **Longevity** | `v2.0.69` | 333 |
-| **RealInvestorX** | `v5.20.12` | 151 |
-| **Apex** | `v0.2.5` | 116 |
-| **EngiByte** | `v1.3.0` | 102 |
-| **Compliance OS** | `v3.7.3` | 87 |
+| **ParentPod** | `v2.62.386` | 414 |
+| **Longevity** | `v2.0.72` | 333 |
+| **RealInvestorX** | `v5.20.12` | 157 |
+| **Apex** | `v0.2.5` | 117 |
+| **EngiByte** | `v1.3.0` | 103 |
+| **Compliance OS** | `v3.7.3` | 89 |
 | **TheLoop** | `v1.1.11` | 78 |
-| **JaLingo** | `v0.5.0` | 45 |
+| **JaLingo** | `v0.5.0` | 48 |
 
 ## Selected work
 
