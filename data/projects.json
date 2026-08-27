@@ -314,7 +314,7 @@
       "repo": "realinvestorx",
       "highlights": [
         "Turborepo monorepo; Supabase Postgres + pgvector for semantic deal search",
-        "In-flight: HttpOnly-cookie session cutover off client-side token storage"
+        "Server-mirrored HttpOnly session cookies replace client-side token storage"
       ]
     },
     {
@@ -363,7 +363,7 @@
       "category": "Consumer",
       "status": "Live · revived 2026-07-11",
       "tagline": "Scroll less. Know more.",
-      "blurb": "Short, sourced STEM, energy, and engineering lessons with 1,994 validated questions, review practice, streaks, XP, and friend challenges.",
+      "blurb": "Short, sourced STEM, energy, and engineering lessons with 2,024 validated questions, review practice, streaks, XP, and friend challenges.",
       "stack": [
         "TypeScript",
         "React Native",
@@ -379,7 +379,7 @@
       "repo": "engibyte",
       "packagePath": "mobile/package.json",
       "highlights": [
-        "1,994 validated questions and 36 courses, with spaced repetition resurfacing missed material",
+        "2,024 validated questions and 41 courses, with spaced repetition resurfacing missed material",
         "One Expo/React Native codebase → iOS, Android, and an installable PWA; onboarding-derived public handles keep private identity off leaderboards"
       ]
     },
