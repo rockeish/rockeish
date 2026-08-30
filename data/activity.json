@@ -1,23 +1,23 @@
 {
-  "asOf": "2026-08-28",
+  "asOf": "2026-08-29",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-08-28",
-      "recent": 420,
-      "version": "v2.62.405"
+      "lastShipped": "2026-08-29",
+      "recent": 416,
+      "version": "v2.62.406"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-08-28",
-      "recent": 371,
+      "lastShipped": "2026-08-29",
+      "recent": 367,
       "version": "v2.0.95"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-08-27",
-      "recent": 177,
+      "lastShipped": "2026-08-29",
+      "recent": 172,
       "version": "v5.20.23"
     },
     {
@@ -27,16 +27,16 @@
       "version": "v1.3.0"
     },
     {
-      "name": "Apex",
-      "lastShipped": "2026-08-27",
-      "recent": 112,
-      "version": "v0.2.5"
-    },
-    {
       "name": "Compliance OS",
       "lastShipped": "2026-08-27",
       "recent": 101,
       "version": "v3.7.8"
+    },
+    {
+      "name": "Apex",
+      "lastShipped": "2026-08-29",
+      "recent": 96,
+      "version": "v0.2.5"
     },
     {
       "name": "TheLoop",
@@ -52,30 +52,30 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-08-27",
-      "recent": 40,
+      "lastShipped": "2026-08-28",
+      "recent": 41,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-08-28",
-    "commits": 7580,
+    "asOf": "2026-08-29",
+    "commits": 7592,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2557
+        "commits": 2560
       },
       {
         "label": "Longevity",
-        "commits": 1082
+        "commits": 1083
       },
       {
         "label": "RealInvestorX",
-        "commits": 1068
+        "commits": 1069
       },
       {
         "label": "Apex",
-        "commits": 859
+        "commits": 860
       },
       {
         "label": "Compliance OS",
@@ -87,7 +87,7 @@
       },
       {
         "label": "Beyond Volatility",
-        "commits": 567
+        "commits": 573
       },
       {
         "label": "EngiByte",
@@ -100,20 +100,20 @@
     ],
     "appsInProduction": 5,
     "repos": 14,
-    "trackedFiles": 4735,
-    "linesOfSource": 727290,
+    "trackedFiles": 4742,
+    "linesOfSource": 729213,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 447767
+        "lines": 449137
       },
       {
         "name": "JavaScript",
-        "lines": 207865
+        "lines": 208400
       },
       {
         "name": "CSS",
-        "lines": 36730
+        "lines": 36748
       },
       {
         "name": "SQL",
