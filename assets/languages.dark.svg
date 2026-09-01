@@ -20,10 +20,10 @@
   </style>
   <rect x="0.5" y="0.5" width="719" height="189" rx="18" fill="#0b1220" stroke="#243149"/>
   <text x="28" y="40" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" fill="#8b97a8">Language mix</text>
-  <text x="692" y="40" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8" text-anchor="end">729K lines of tracked source</text>
-  <g class="grow" style="transform-origin:28.0px 62px;animation-delay:0.10s"><rect x="28.0" y="62" width="409.0" height="34" rx="6" fill="#3178c6"/></g>
-  <g class="grow" style="transform-origin:437.0px 62px;animation-delay:0.65s"><rect x="437.0" y="62" width="189.8" height="34"  fill="#e6c84f"/></g>
-  <g class="grow" style="transform-origin:626.7px 62px;animation-delay:0.91s"><rect x="626.7" y="62" width="33.5" height="34"  fill="#38bdf8"/></g>
+  <text x="692" y="40" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8" text-anchor="end">730K lines of tracked source</text>
+  <g class="grow" style="transform-origin:28.0px 62px;animation-delay:0.10s"><rect x="28.0" y="62" width="409.2" height="34" rx="6" fill="#3178c6"/></g>
+  <g class="grow" style="transform-origin:437.2px 62px;animation-delay:0.65s"><rect x="437.2" y="62" width="189.6" height="34"  fill="#e6c84f"/></g>
+  <g class="grow" style="transform-origin:626.8px 62px;animation-delay:0.91s"><rect x="626.8" y="62" width="33.4" height="34"  fill="#38bdf8"/></g>
   <g class="grow" style="transform-origin:660.2px 62px;animation-delay:0.96s"><rect x="660.2" y="62" width="13.6" height="34"  fill="#22c55e"/></g>
   <g class="grow" style="transform-origin:673.8px 62px;animation-delay:0.98s"><rect x="673.8" y="62" width="10.6" height="34"  fill="#818cf8"/></g>
   <g class="grow" style="transform-origin:684.4px 62px;animation-delay:0.99s"><rect x="684.4" y="62" width="7.6" height="34" rx="6" fill="#94a3b8"/></g>

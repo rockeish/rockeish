@@ -1,17 +1,17 @@
 {
-  "asOf": "2026-08-29",
+  "asOf": "2026-08-30",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-08-29",
-      "recent": 416,
-      "version": "v2.62.406"
+      "lastShipped": "2026-08-30",
+      "recent": 424,
+      "version": "v2.62.408"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-08-29",
-      "recent": 367,
+      "recent": 363,
       "version": "v2.0.95"
     },
     {
@@ -52,18 +52,18 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-08-28",
-      "recent": 41,
+      "lastShipped": "2026-08-30",
+      "recent": 42,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-08-29",
-    "commits": 7592,
+    "asOf": "2026-08-30",
+    "commits": 7603,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2560
+        "commits": 2571
       },
       {
         "label": "Longevity",
@@ -100,12 +100,12 @@
     ],
     "appsInProduction": 5,
     "repos": 14,
-    "trackedFiles": 4742,
-    "linesOfSource": 729213,
+    "trackedFiles": 4745,
+    "linesOfSource": 729775,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 449137
+        "lines": 449699
       },
       {
         "name": "JavaScript",
