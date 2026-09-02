@@ -1,18 +1,18 @@
 {
-  "asOf": "2026-08-30",
+  "asOf": "2026-09-02",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-08-30",
-      "recent": 424,
-      "version": "v2.62.408"
+      "lastShipped": "2026-08-31",
+      "recent": 425,
+      "version": "v2.62.412"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-08-29",
-      "recent": 363,
-      "version": "v2.0.95"
+      "lastShipped": "2026-08-31",
+      "recent": 365,
+      "version": "v2.0.96"
     },
     {
       "name": "RealInvestorX",
@@ -28,9 +28,9 @@
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-08-27",
-      "recent": 101,
-      "version": "v3.7.8"
+      "lastShipped": "2026-09-02",
+      "recent": 107,
+      "version": "v3.8.1"
     },
     {
       "name": "Apex",
@@ -40,8 +40,8 @@
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-08-27",
-      "recent": 89,
+      "lastShipped": "2026-08-31",
+      "recent": 92,
       "version": "v1.1.11"
     },
     {
@@ -52,22 +52,22 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-08-30",
-      "recent": 42,
+      "lastShipped": "2026-08-31",
+      "recent": 43,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-08-30",
-    "commits": 7603,
+    "asOf": "2026-09-02",
+    "commits": 7617,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2571
+        "commits": 2574
       },
       {
         "label": "Longevity",
-        "commits": 1083
+        "commits": 1085
       },
       {
         "label": "RealInvestorX",
@@ -79,11 +79,11 @@
       },
       {
         "label": "Compliance OS",
-        "commits": 639
+        "commits": 645
       },
       {
         "label": "TheLoop",
-        "commits": 626
+        "commits": 629
       },
       {
         "label": "Beyond Volatility",
@@ -100,16 +100,16 @@
     ],
     "appsInProduction": 5,
     "repos": 14,
-    "trackedFiles": 4745,
-    "linesOfSource": 729775,
+    "trackedFiles": 4813,
+    "linesOfSource": 740013,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 449699
+        "lines": 464128
       },
       {
         "name": "JavaScript",
-        "lines": 208400
+        "lines": 204209
       },
       {
         "name": "CSS",

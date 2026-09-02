@@ -20,15 +20,15 @@
   </style>
   <rect x="0.5" y="0.5" width="719" height="189" rx="18" fill="#0b1220" stroke="#243149"/>
   <text x="28" y="40" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" fill="#8b97a8">Language mix</text>
-  <text x="692" y="40" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8" text-anchor="end">730K lines of tracked source</text>
-  <g class="grow" style="transform-origin:28.0px 62px;animation-delay:0.10s"><rect x="28.0" y="62" width="409.2" height="34" rx="6" fill="#3178c6"/></g>
-  <g class="grow" style="transform-origin:437.2px 62px;animation-delay:0.65s"><rect x="437.2" y="62" width="189.6" height="34"  fill="#e6c84f"/></g>
-  <g class="grow" style="transform-origin:626.8px 62px;animation-delay:0.91s"><rect x="626.8" y="62" width="33.4" height="34"  fill="#38bdf8"/></g>
-  <g class="grow" style="transform-origin:660.2px 62px;animation-delay:0.96s"><rect x="660.2" y="62" width="13.6" height="34"  fill="#22c55e"/></g>
-  <g class="grow" style="transform-origin:673.8px 62px;animation-delay:0.98s"><rect x="673.8" y="62" width="10.6" height="34"  fill="#818cf8"/></g>
-  <g class="grow" style="transform-origin:684.4px 62px;animation-delay:0.99s"><rect x="684.4" y="62" width="7.6" height="34" rx="6" fill="#94a3b8"/></g>
-  <g class="fade" style="animation-delay:0.80s"><rect x="28" y="117" width="13" height="13" rx="3" fill="#3178c6"/><text x="48" y="128" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#e6edf3">TypeScript <tspan fill="#8b97a8">61.6%</tspan></text></g>
-  <g class="fade" style="animation-delay:0.87s"><rect x="249.33333333333334" y="117" width="13" height="13" rx="3" fill="#e6c84f"/><text x="269.33333333333337" y="128" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#e6edf3">JavaScript <tspan fill="#8b97a8">28.6%</tspan></text></g>
+  <text x="692" y="40" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8" text-anchor="end">740K lines of tracked source</text>
+  <g class="grow" style="transform-origin:28.0px 62px;animation-delay:0.10s"><rect x="28.0" y="62" width="416.5" height="34" rx="6" fill="#3178c6"/></g>
+  <g class="grow" style="transform-origin:444.5px 62px;animation-delay:0.66s"><rect x="444.5" y="62" width="183.2" height="34"  fill="#e6c84f"/></g>
+  <g class="grow" style="transform-origin:627.7px 62px;animation-delay:0.91s"><rect x="627.7" y="62" width="33.0" height="34"  fill="#38bdf8"/></g>
+  <g class="grow" style="transform-origin:660.7px 62px;animation-delay:0.96s"><rect x="660.7" y="62" width="13.4" height="34"  fill="#22c55e"/></g>
+  <g class="grow" style="transform-origin:674.1px 62px;animation-delay:0.98s"><rect x="674.1" y="62" width="10.5" height="34"  fill="#818cf8"/></g>
+  <g class="grow" style="transform-origin:684.5px 62px;animation-delay:0.99s"><rect x="684.5" y="62" width="7.5" height="34" rx="6" fill="#94a3b8"/></g>
+  <g class="fade" style="animation-delay:0.80s"><rect x="28" y="117" width="13" height="13" rx="3" fill="#3178c6"/><text x="48" y="128" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#e6edf3">TypeScript <tspan fill="#8b97a8">62.7%</tspan></text></g>
+  <g class="fade" style="animation-delay:0.87s"><rect x="249.33333333333334" y="117" width="13" height="13" rx="3" fill="#e6c84f"/><text x="269.33333333333337" y="128" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#e6edf3">JavaScript <tspan fill="#8b97a8">27.6%</tspan></text></g>
   <g class="fade" style="animation-delay:0.94s"><rect x="470.6666666666667" y="117" width="13" height="13" rx="3" fill="#38bdf8"/><text x="490.6666666666667" y="128" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#e6edf3">CSS <tspan fill="#8b97a8">5.0%</tspan></text></g>
   <g class="fade" style="animation-delay:1.01s"><rect x="28" y="145" width="13" height="13" rx="3" fill="#22c55e"/><text x="48" y="156" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#e6edf3">SQL <tspan fill="#8b97a8">2.0%</tspan></text></g>
   <g class="fade" style="animation-delay:1.08s"><rect x="249.33333333333334" y="145" width="13" height="13" rx="3" fill="#818cf8"/><text x="269.33333333333337" y="156" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#e6edf3">PHP <tspan fill="#8b97a8">1.6%</tspan></text></g>
