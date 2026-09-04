@@ -1,17 +1,17 @@
 {
-  "asOf": "2026-09-03",
+  "asOf": "2026-09-04",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-09-02",
-      "recent": 430,
-      "version": "v2.62.416"
+      "lastShipped": "2026-09-04",
+      "recent": 435,
+      "version": "v2.62.417"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-09-02",
-      "recent": 367,
+      "recent": 365,
       "version": "v2.0.97"
     },
     {
@@ -23,7 +23,7 @@
     {
       "name": "Compliance OS",
       "lastShipped": "2026-09-03",
-      "recent": 142,
+      "recent": 158,
       "version": "v3.11.0"
     },
     {
@@ -34,36 +34,36 @@
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-08-29",
-      "recent": 96,
+      "lastShipped": "2026-09-04",
+      "recent": 98,
       "version": "v0.2.5"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-09-03",
-      "recent": 93,
+      "lastShipped": "2026-09-04",
+      "recent": 94,
       "version": "v1.1.11"
     },
     {
       "name": "JaLingo",
       "lastShipped": "2026-09-03",
-      "recent": 67,
+      "recent": 71,
       "version": "v0.5.0"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-09-02",
-      "recent": 44,
+      "lastShipped": "2026-09-03",
+      "recent": 45,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-09-03",
-    "commits": 7670,
+    "asOf": "2026-09-04",
+    "commits": 7700,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2580
+        "commits": 2587
       },
       {
         "label": "Longevity",
@@ -75,15 +75,15 @@
       },
       {
         "label": "Apex",
-        "commits": 860
+        "commits": 862
       },
       {
         "label": "Compliance OS",
-        "commits": 680
+        "commits": 696
       },
       {
         "label": "TheLoop",
-        "commits": 630
+        "commits": 631
       },
       {
         "label": "Beyond Volatility",
@@ -95,25 +95,25 @@
       },
       {
         "label": "JaLingo",
-        "commits": 67
+        "commits": 71
       }
     ],
     "appsInProduction": 5,
     "repos": 15,
-    "trackedFiles": 5071,
-    "linesOfSource": 789926,
+    "trackedFiles": 5129,
+    "linesOfSource": 797861,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 503509
+        "lines": 509906
       },
       {
         "name": "JavaScript",
-        "lines": 213763
+        "lines": 214336
       },
       {
         "name": "CSS",
-        "lines": 37663
+        "lines": 37889
       },
       {
         "name": "SQL",
@@ -125,7 +125,7 @@
       },
       {
         "name": "Other",
-        "lines": 8325
+        "lines": 9064
       }
     ]
   }

@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 15 repositories, 7.7K commits, 790K lines of source, 5 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 15 repositories, 7.7K commits, 798K lines of source, 5 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -80,37 +80,37 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>Portfolio snapshot dated Sep 3, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
+<sub>Portfolio snapshot dated Sep 4, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,580; Longevity 1,087; RealInvestorX 1,072; Apex 860; Compliance OS 680; TheLoop 630; Beyond Volatility 577; EngiByte 117; JaLingo 67. ~7.7K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,587; Longevity 1,087; RealInvestorX 1,072; Apex 862; Compliance OS 696; TheLoop 631; Beyond Volatility 577; EngiByte 117; JaLingo 71. ~7.7K total, single author." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 790K lines of tracked source — TypeScript 63.7%, JavaScript 27.1%, CSS 4.8%, SQL 1.9%, PHP 1.5%, Other 1.1%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 798K lines of tracked source — TypeScript 63.9%, JavaScript 26.9%, CSS 4.7%, SQL 1.9%, PHP 1.5%, Other 1.1%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 430 commits; Longevity 367 commits; RealInvestorX 175 commits; Compliance OS 142 commits; EngiByte 115 commits; Apex 96 commits; TheLoop 93 commits; JaLingo 67 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 435 commits; Longevity 365 commits; RealInvestorX 175 commits; Compliance OS 158 commits; EngiByte 115 commits; Apex 98 commits; TheLoop 94 commits; JaLingo 71 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 3, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 4, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.416` | 430 |
-| **Longevity** | `v2.0.97` | 367 |
+| **ParentPod** | `v2.62.417` | 435 |
+| **Longevity** | `v2.0.97` | 365 |
 | **RealInvestorX** | `v5.20.24` | 175 |
-| **Compliance OS** | `v3.11.0` | 142 |
+| **Compliance OS** | `v3.11.0` | 158 |
 | **EngiByte** | `v1.3.0` | 115 |
-| **Apex** | `v0.2.5` | 96 |
-| **TheLoop** | `v1.1.11` | 93 |
-| **JaLingo** | `v0.5.0` | 67 |
+| **Apex** | `v0.2.5` | 98 |
+| **TheLoop** | `v1.1.11` | 94 |
+| **JaLingo** | `v0.5.0` | 71 |
 
 ## Selected work
 
