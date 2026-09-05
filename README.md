@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 15 repositories, 7.7K commits, 798K lines of source, 5 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 15 repositories, 7.8K commits, 829K lines of source, 6 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -50,7 +50,7 @@ By day, I lead reliability-compliance work in the energy sector. Outside that ro
 
 <p align="center"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/orbit.dark.svg">
-  <img src="assets/orbit.light.svg" alt="Portfolio constellation — ParentPod, Longevity, RealInvestorX, Apex, Compliance OS, EngiByte, JaLingo, TheLoop and the Beyond Volatility hub connected through shared infrastructure, run by one engineer." width="680">
+  <img src="assets/orbit.light.svg" alt="Portfolio constellation — ParentPod, Longevity, RealInvestorX, Apex, Compliance OS, Bid Spotter, EngiByte, JaLingo, TheLoop and the Beyond Volatility hub connected through shared infrastructure, run by one engineer." width="680">
 </picture></p>
 
 <p align="center"><picture>
@@ -80,37 +80,38 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>Portfolio snapshot dated Sep 4, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
+<sub>Portfolio snapshot dated Sep 5, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,587; Longevity 1,087; RealInvestorX 1,072; Apex 862; Compliance OS 696; TheLoop 631; Beyond Volatility 577; EngiByte 117; JaLingo 71. ~7.7K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,596; Longevity 1,094; RealInvestorX 1,088; Apex 866; Compliance OS 723; TheLoop 637; Beyond Volatility 580; EngiByte 125; JaLingo 73; Bid Spotter 36. ~7.8K total, single author." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 798K lines of tracked source — TypeScript 63.9%, JavaScript 26.9%, CSS 4.7%, SQL 1.9%, PHP 1.5%, Other 1.1%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 829K lines of tracked source — TypeScript 64.8%, JavaScript 26.2%, CSS 4.6%, SQL 1.8%, PHP 1.4%, Other 1.1%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 435 commits; Longevity 365 commits; RealInvestorX 175 commits; Compliance OS 158 commits; EngiByte 115 commits; Apex 98 commits; TheLoop 94 commits; JaLingo 71 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 442 commits; Longevity 372 commits; RealInvestorX 191 commits; Compliance OS 185 commits; EngiByte 123 commits; Apex 102 commits; TheLoop 100 commits; JaLingo 73 commits; Bid Spotter 23 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 4, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 5, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.417` | 435 |
-| **Longevity** | `v2.0.97` | 365 |
-| **RealInvestorX** | `v5.20.24` | 175 |
-| **Compliance OS** | `v3.11.0` | 158 |
-| **EngiByte** | `v1.3.0` | 115 |
-| **Apex** | `v0.2.5` | 98 |
-| **TheLoop** | `v1.1.11` | 94 |
-| **JaLingo** | `v0.5.0` | 71 |
+| **ParentPod** | `v2.62.425` | 442 |
+| **Longevity** | `v2.0.99` | 372 |
+| **RealInvestorX** | `v5.20.30` | 191 |
+| **Compliance OS** | `v3.11.0` | 185 |
+| **EngiByte** | `v1.3.1` | 123 |
+| **Apex** | `v0.2.6` | 102 |
+| **TheLoop** | `v1.2.0` | 100 |
+| **JaLingo** | `v0.5.0` | 73 |
+| **Bid Spotter** | `v2.0.0` | 23 |
 
 ## Selected work
 
@@ -121,6 +122,7 @@ Shared standards and repository-specific release gates connect each change to te
 | **[RealInvestorX](https://realinvestorx.beyondvolatility.com/)** <br><sub>`Maintenance mode`</sub> | Real-estate deal review with explicit assumptions. | TypeScript · React · Express · Turborepo · Supabase | [Live ↗](https://realinvestorx.beyondvolatility.com/) |
 | **[Apex](https://apex.beyondvolatility.com/)** <br><sub>`Maintenance mode`</sub> | Personal-finance & FIRE planning. | TypeScript · React · Vite · Supabase | [Live ↗](https://apex.beyondvolatility.com/) |
 | **[Compliance OS](https://compliance.beyondvolatility.com/)** <br><sub>`Parked · maintained`</sub> | Controls & audit-evidence platform. | TypeScript · React · Firebase | [Live ↗](https://compliance.beyondvolatility.com/) |
+| **[Bid Spotter](https://bidspotter.beyondvolatility.com)** <br><sub>`Live · pilot pending`</sub> | Government work you can answer, ranked daily. | TypeScript · React · Vite · Firebase | [Live ↗](https://bidspotter.beyondvolatility.com) |
 | **[EngiByte](https://engibyte.beyondvolatility.com)** <br><sub>`Live · revived 2026-07-11`</sub> | Scroll less. Know more. | TypeScript · React Native · Expo · Firebase | [Live ↗](https://engibyte.beyondvolatility.com) |
 | **[JaLingo](https://jalingo.beyondvolatility.com)** <br><sub>`Live · founders season`</sub> | Learn Patwa from the people who speak it. | TypeScript · Next.js · React · Firebase | [Live ↗](https://jalingo.beyondvolatility.com) |
 | **[TheLoop](https://theloop.beyondvolatility.com/)** <br><sub>`Controlled beta · live`</sub> | A private chronological feed for people you know. | TypeScript · React · Vite · Firebase | [Live ↗](https://theloop.beyondvolatility.com/) |

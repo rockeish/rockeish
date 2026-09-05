@@ -1,5 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { join } from 'node:path';
 import {
   activityTarget,
   apiStats,
@@ -7,6 +8,7 @@ import {
   chooseSource,
   chooseVersion,
   groupLanguages,
+  repositoryRoot,
   sourceLanguage,
 } from './collect-activity.mjs';
 
@@ -23,6 +25,14 @@ function fakeFetch(routes) {
 const okJson = (body) => ({ ok: true, status: 200, json: async () => body });
 const okText = (body) => ({ ok: true, status: 200, text: async () => body });
 const notFound = () => ({ ok: false, status: 404 });
+
+test('repositoryRoot accepts an explicit checkout inventory for mixed hosts', () => {
+  assert.equal(
+    repositoryRoot({ SHOWCASE_REPOS_ROOT: '/srv/portfolio' }, '/ignored/home'),
+    '/srv/portfolio',
+  );
+  assert.equal(repositoryRoot({}, '/home/rock'), join('/home/rock', 'repos'));
+});
 
 test('chooseVersion prefers newer package metadata over a stale release tag', () => {
   assert.equal(chooseVersion('v2.62.10', 'v2.62.310'), 'v2.62.310');

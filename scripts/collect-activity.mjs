@@ -35,6 +35,9 @@ import { homedir } from 'os';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 const data = JSON.parse(readFileSync(join(ROOT, 'data', 'projects.json'), 'utf8'));
+export const repositoryRoot = (env = process.env, home = homedir()) =>
+  env.SHOWCASE_REPOS_ROOT || join(home, 'repos');
+const REPOS_ROOT = repositoryRoot();
 
 const OWNER = 'rockeish';
 const token = process.env.SHOWCASE_TOKEN || process.env.GITHUB_TOKEN;
@@ -225,7 +228,7 @@ function computeMetrics(projects, asOf) {
   for (const project of projects) {
     const repo = project.localRepo || project.repo;
     if (!repo) continue;
-    const base = join(homedir(), 'repos', repo);
+    const base = join(REPOS_ROOT, repo);
     try {
       const count = Number(
         execFileSync('git', ['-C', base, 'rev-list', '--count', localRef(base)], {
@@ -281,8 +284,8 @@ function computeMetrics(projects, asOf) {
  */
 function countCheckouts() {
   try {
-    return readdirSync(join(homedir(), 'repos'), { withFileTypes: true })
-      .filter((entry) => entry.isDirectory() && existsSync(join(homedir(), 'repos', entry.name, '.git')))
+    return readdirSync(REPOS_ROOT, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory() && existsSync(join(REPOS_ROOT, entry.name, '.git')))
       .length;
   } catch {
     return null; // no ~/repos here — the declared figure, with its own asOf, stands
@@ -305,7 +308,7 @@ function localRef(base) {
 }
 
 function localStats(repo, packagePath = 'package.json') {
-  const base = join(homedir(), 'repos', repo);
+  const base = join(REPOS_ROOT, repo);
   const git = (args) => execFileSync('git', ['-C', base, ...args], { encoding: 'utf8' }).trim();
   try {
     const ref = localRef(base);
@@ -382,7 +385,7 @@ async function main() {
     // abort the whole refresh — skip that target and keep going.
     try {
       const source = chooseSource({
-        hasLocalCheckout: existsSync(join(homedir(), 'repos', target.localRepo, '.git')),
+        hasLocalCheckout: existsSync(join(REPOS_ROOT, target.localRepo, '.git')),
         hasToken: Boolean(token),
       });
       if (source === 'none') continue;
