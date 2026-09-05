@@ -49,7 +49,7 @@
     <text x="168" y="254" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#8b97a8">commits</text>
   </g>
   <g class="fade" style="animation-delay:0.65s">
-    <text x="296" y="230" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="url(#accent)">829K</text>
+    <text x="296" y="230" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="url(#accent)">842K</text>
     <text x="296" y="254" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#8b97a8">lines</text>
   </g>
   <g class="fade" style="animation-delay:0.75s">

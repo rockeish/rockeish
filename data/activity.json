@@ -23,8 +23,8 @@
     {
       "name": "Compliance OS",
       "lastShipped": "2026-09-05",
-      "recent": 193,
-      "version": "v3.11.0"
+      "recent": 195,
+      "version": "v3.16.9"
     },
     {
       "name": "EngiByte",
@@ -65,7 +65,7 @@
   ],
   "metrics": {
     "asOf": "2026-09-05",
-    "commits": 7839,
+    "commits": 7841,
     "commitsByRepo": [
       {
         "label": "ParentPod",
@@ -85,7 +85,7 @@
       },
       {
         "label": "Compliance OS",
-        "commits": 731
+        "commits": 733
       },
       {
         "label": "TheLoop",
@@ -110,16 +110,16 @@
     ],
     "appsInProduction": 6,
     "repos": 15,
-    "trackedFiles": 5551,
-    "linesOfSource": 828603,
+    "trackedFiles": 5590,
+    "linesOfSource": 841624,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 538111
+        "lines": 553378
       },
       {
         "name": "JavaScript",
-        "lines": 216982
+        "lines": 214736
       },
       {
         "name": "CSS",

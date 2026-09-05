@@ -307,8 +307,8 @@ function localRef(base) {
   return chooseRef(present);
 }
 
-function localStats(repo, packagePath = 'package.json') {
-  const base = join(REPOS_ROOT, repo);
+export function localStats(repo, packagePath = 'package.json', reposRoot = REPOS_ROOT) {
+  const base = join(reposRoot, repo);
   const git = (args) => execFileSync('git', ['-C', base, ...args], { encoding: 'utf8' }).trim();
   try {
     const ref = localRef(base);
@@ -319,13 +319,21 @@ function localStats(repo, packagePath = 'package.json') {
     // An untagged repo makes `describe` fail loudly on stderr every run; that
     // noise trained the refresh log to look broken when it was fine.
     try {
-      tagVersion = execFileSync('git', ['-C', base, 'describe', '--tags', '--abbrev=0'], {
+      tagVersion = execFileSync('git', ['-C', base, 'describe', '--tags', '--abbrev=0', ref], {
         encoding: 'utf8',
         stdio: ['ignore', 'pipe', 'ignore'],
       }).trim();
     } catch { /* untagged */ }
     try {
-      const packageData = JSON.parse(readFileSync(join(base, packagePath), 'utf8'));
+      // Keep version evidence on the same shipped ref as the date and commit
+      // count. A checkout can legitimately sit on an older feature branch;
+      // reading its worktree package.json made the public profile regress even
+      // while origin/main held the current release.
+      const packageJson = execFileSync('git', ['-C', base, 'show', `${ref}:${packagePath}`], {
+        encoding: 'utf8',
+        stdio: ['ignore', 'pipe', 'ignore'],
+      }).trim();
+      const packageData = JSON.parse(packageJson);
       if (packageData.version) packageVersion = `v${packageData.version}`;
     } catch { /* package metadata is optional */ }
     const version = chooseVersion(tagVersion, packageVersion);
