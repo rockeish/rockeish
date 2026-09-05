@@ -1,5 +1,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
+import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import {
   activityTarget,
   apiStats,
@@ -7,6 +11,8 @@ import {
   chooseSource,
   chooseVersion,
   groupLanguages,
+  localStats,
+  repositoryRoot,
   sourceLanguage,
 } from './collect-activity.mjs';
 
@@ -23,6 +29,14 @@ function fakeFetch(routes) {
 const okJson = (body) => ({ ok: true, status: 200, json: async () => body });
 const okText = (body) => ({ ok: true, status: 200, text: async () => body });
 const notFound = () => ({ ok: false, status: 404 });
+
+test('repositoryRoot accepts an explicit checkout inventory for mixed hosts', () => {
+  assert.equal(
+    repositoryRoot({ SHOWCASE_REPOS_ROOT: '/srv/portfolio' }, '/ignored/home'),
+    '/srv/portfolio',
+  );
+  assert.equal(repositoryRoot({}, '/home/rock'), join('/home/rock', 'repos'));
+});
 
 test('chooseVersion prefers newer package metadata over a stale release tag', () => {
   assert.equal(chooseVersion('v2.62.10', 'v2.62.310'), 'v2.62.310');
@@ -46,6 +60,41 @@ test('activityTarget maps checkout and package metadata paths independently', ()
       packagePath: 'mobile/package.json',
     },
   );
+});
+
+test('localStats reads release metadata from origin/main, not an older checked-out branch', () => {
+  const reposRoot = mkdtempSync(join(tmpdir(), 'showcase-version-ref-'));
+  const repo = join(reposRoot, 'demo');
+  const git = (args) => execFileSync('git', ['-C', repo, ...args], {
+    encoding: 'utf8',
+    stdio: ['ignore', 'pipe', 'pipe'],
+  }).trim();
+
+  try {
+    mkdirSync(repo);
+    execFileSync('git', ['init', '--initial-branch=main', repo], { stdio: 'ignore' });
+    git(['config', 'user.email', 'showcase-test@example.invalid']);
+    git(['config', 'user.name', 'Showcase Test']);
+
+    writeFileSync(join(repo, 'package.json'), '{"name":"demo","version":"3.11.0"}\n');
+    git(['add', 'package.json']);
+    git(['commit', '-m', 'old release']);
+    git(['tag', 'v3.11.0']);
+
+    writeFileSync(join(repo, 'package.json'), '{"name":"demo","version":"3.16.9"}\n');
+    git(['add', 'package.json']);
+    git(['commit', '-m', 'current release']);
+    git(['update-ref', 'refs/remotes/origin/main', 'HEAD']);
+
+    git(['switch', '--detach', 'HEAD~1']);
+    assert.equal(JSON.parse(readFileSync(join(repo, 'package.json'), 'utf8')).version, '3.11.0');
+
+    const stats = localStats('demo', 'package.json', reposRoot);
+    assert.equal(stats.version, 'v3.16.9');
+    assert.equal(stats.recent, 2);
+  } finally {
+    rmSync(reposRoot, { recursive: true, force: true });
+  }
 });
 
 test('apiStats survives a 202 (empty body) from the stats endpoint', async () => {

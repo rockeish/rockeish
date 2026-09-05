@@ -108,6 +108,7 @@
       "RealInvestorX",
       "Apex",
       "Compliance OS",
+      "Bid Spotter",
       "EngiByte",
       "JaLingo",
       "TheLoop"
@@ -356,6 +357,29 @@
       "repo": "compliance",
       "highlights": [
         "Governed NERC library with 111 standards and 694 requirements; evidence management and role-based review workflows"
+      ]
+    },
+    {
+      "name": "Bid Spotter",
+      "category": "Data & analysis",
+      "status": "Live · pilot pending",
+      "tagline": "Government work you can answer, ranked daily.",
+      "blurb": "A mobile-first shortlist of federal, grant, state and local opportunities, with deadline clarity and set-aside truth on every card.",
+      "stack": [
+        "TypeScript",
+        "React",
+        "Vite",
+        "Firebase"
+      ],
+      "platforms": [
+        "Web",
+        "PWA"
+      ],
+      "url": "https://bidspotter.beyondvolatility.com",
+      "repo": "bid-spotlight-pro",
+      "highlights": [
+        "Thirteen governed source connectors with nine live-verified and unverified providers truthfully disabled",
+        "Technically ready for a bounded pilot; product-specific demand remains unvalidated until the documented five-operator test passes"
       ]
     },
     {
