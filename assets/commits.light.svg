@@ -39,7 +39,7 @@
   <g class="fade" style="animation-delay:0.79s"><text x="343" y="206" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">866</text></g>
   <text x="172" y="245" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1f2328" text-anchor="end">Compliance OS</text>
   <g class="grow" style="transform-origin:182px 240px;animation-delay:0.42s"><rect x="182" y="229" width="128" height="22" rx="5" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:0.87s"><text x="320" y="245" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">733</text></g>
+  <g class="fade" style="animation-delay:0.87s"><text x="320" y="245" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">735</text></g>
   <text x="172" y="284" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1f2328" text-anchor="end">TheLoop</text>
   <g class="grow" style="transform-origin:182px 279px;animation-delay:0.50s"><rect x="182" y="268" width="111" height="22" rx="5" fill="url(#accent)"/></g>
   <g class="fade" style="animation-delay:0.95s"><text x="303" y="284" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">637</text></g>
@@ -54,5 +54,5 @@
   <g class="fade" style="animation-delay:1.19s"><text x="205" y="401" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">73</text></g>
   <text x="172" y="440" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1f2328" text-anchor="end">Bid Spotter</text>
   <g class="grow" style="transform-origin:182px 435px;animation-delay:0.82s"><rect x="182" y="424" width="6" height="22" rx="5" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:1.27s"><text x="198" y="440" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">36</text></g>
+  <g class="fade" style="animation-delay:1.27s"><text x="198" y="440" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">37</text></g>
 </svg>

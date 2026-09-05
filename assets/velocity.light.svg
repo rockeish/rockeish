@@ -35,8 +35,8 @@
   <g class="fade" style="animation-delay:0.73s"><text x="362" y="169" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">199 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v5.20.33</tspan></text></g>
   <circle cx="30" cy="204" r="4" fill="#1a7f37" class="blink"/>
   <text x="172" y="209" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1f2328" text-anchor="end">Compliance OS</text>
-  <g class="grow" style="transform-origin:182px 204px;animation-delay:0.37s"><rect x="182" y="193" width="167" height="22" rx="11" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:0.82s"><text x="359" y="209" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">195 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v3.16.9</tspan></text></g>
+  <g class="grow" style="transform-origin:182px 204px;animation-delay:0.37s"><rect x="182" y="193" width="169" height="22" rx="11" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:0.82s"><text x="361" y="209" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">197 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v3.16.10</tspan></text></g>
   <circle cx="30" cy="244" r="4" fill="#1a7f37" class="blink"/>
   <text x="172" y="249" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1f2328" text-anchor="end">EngiByte</text>
   <g class="grow" style="transform-origin:182px 244px;animation-delay:0.46s"><rect x="182" y="233" width="105" height="22" rx="11" fill="url(#accent)"/></g>
@@ -55,8 +55,8 @@
   <g class="fade" style="animation-delay:1.18s"><text x="254" y="369" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">73 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v0.5.0</tspan></text></g>
   <circle cx="30" cy="404" r="4" fill="#1a7f37" class="blink"/>
   <text x="172" y="409" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1f2328" text-anchor="end">Bid Spotter</text>
-  <g class="grow" style="transform-origin:182px 404px;animation-delay:0.82s"><rect x="182" y="393" width="20" height="22" rx="11" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:1.27s"><text x="212" y="409" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">23 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v2.0.0</tspan></text></g>
+  <g class="grow" style="transform-origin:182px 404px;animation-delay:0.82s"><rect x="182" y="393" width="21" height="22" rx="11" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:1.27s"><text x="213" y="409" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">24 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v2.0.0</tspan></text></g>
   <circle cx="30" cy="448" r="4" fill="#1a7f37" class="blink"/>
   <text x="42" y="453" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13.5" fill="#59636e">shipped within the last two weeks</text>
 </svg>
