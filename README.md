@@ -84,29 +84,29 @@ Shared standards and repository-specific release gates connect each change to te
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,596; Longevity 1,094; RealInvestorX 1,088; Apex 866; Compliance OS 723; TheLoop 637; Beyond Volatility 580; EngiByte 125; JaLingo 73; Bid Spotter 36. ~7.8K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,598; Longevity 1,096; RealInvestorX 1,096; Apex 866; Compliance OS 731; TheLoop 637; Beyond Volatility 581; EngiByte 125; JaLingo 73; Bid Spotter 36. ~7.8K total, single author." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 829K lines of tracked source — TypeScript 64.8%, JavaScript 26.2%, CSS 4.6%, SQL 1.8%, PHP 1.4%, Other 1.1%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 829K lines of tracked source — TypeScript 64.9%, JavaScript 26.2%, CSS 4.5%, SQL 1.8%, PHP 1.4%, Other 1.1%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 442 commits; Longevity 372 commits; RealInvestorX 191 commits; Compliance OS 185 commits; EngiByte 123 commits; Apex 102 commits; TheLoop 100 commits; JaLingo 73 commits; Bid Spotter 23 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 444 commits; Longevity 374 commits; RealInvestorX 199 commits; Compliance OS 193 commits; EngiByte 123 commits; Apex 102 commits; TheLoop 100 commits; JaLingo 73 commits; Bid Spotter 23 commits." width="100%">
 </picture>
 
 <sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 5, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.425` | 442 |
-| **Longevity** | `v2.0.99` | 372 |
-| **RealInvestorX** | `v5.20.30` | 191 |
-| **Compliance OS** | `v3.11.0` | 185 |
+| **ParentPod** | `v2.62.427` | 444 |
+| **Longevity** | `v2.0.100` | 374 |
+| **RealInvestorX** | `v5.20.33` | 199 |
+| **Compliance OS** | `v3.11.0` | 193 |
 | **EngiByte** | `v1.3.1` | 123 |
 | **Apex** | `v0.2.6` | 102 |
 | **TheLoop** | `v1.2.0` | 100 |

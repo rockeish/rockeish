@@ -5,25 +5,25 @@
     {
       "name": "ParentPod",
       "lastShipped": "2026-09-05",
-      "recent": 442,
-      "version": "v2.62.425"
+      "recent": 444,
+      "version": "v2.62.427"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-09-05",
-      "recent": 372,
-      "version": "v2.0.99"
+      "recent": 374,
+      "version": "v2.0.100"
     },
     {
       "name": "RealInvestorX",
       "lastShipped": "2026-09-05",
-      "recent": 191,
-      "version": "v5.20.30"
+      "recent": 199,
+      "version": "v5.20.33"
     },
     {
       "name": "Compliance OS",
       "lastShipped": "2026-09-05",
-      "recent": 185,
+      "recent": 193,
       "version": "v3.11.0"
     },
     {
@@ -65,19 +65,19 @@
   ],
   "metrics": {
     "asOf": "2026-09-05",
-    "commits": 7818,
+    "commits": 7839,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2596
+        "commits": 2598
       },
       {
         "label": "Longevity",
-        "commits": 1094
+        "commits": 1096
       },
       {
         "label": "RealInvestorX",
-        "commits": 1088
+        "commits": 1096
       },
       {
         "label": "Apex",
@@ -85,7 +85,7 @@
       },
       {
         "label": "Compliance OS",
-        "commits": 723
+        "commits": 731
       },
       {
         "label": "TheLoop",
@@ -93,7 +93,7 @@
       },
       {
         "label": "Beyond Volatility",
-        "commits": 580
+        "commits": 581
       },
       {
         "label": "EngiByte",
@@ -110,20 +110,20 @@
     ],
     "appsInProduction": 6,
     "repos": 15,
-    "trackedFiles": 5553,
-    "linesOfSource": 829160,
+    "trackedFiles": 5551,
+    "linesOfSource": 828603,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 537524
+        "lines": 538111
       },
       {
         "name": "JavaScript",
-        "lines": 217446
+        "lines": 216982
       },
       {
         "name": "CSS",
-        "lines": 38310
+        "lines": 37642
       },
       {
         "name": "SQL",
@@ -135,7 +135,7 @@
       },
       {
         "name": "Other",
-        "lines": 9214
+        "lines": 9202
       }
     ]
   }
