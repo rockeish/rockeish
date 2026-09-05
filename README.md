@@ -84,7 +84,7 @@ Shared standards and repository-specific release gates connect each change to te
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,598; Longevity 1,096; RealInvestorX 1,096; Apex 866; Compliance OS 733; TheLoop 637; Beyond Volatility 581; EngiByte 125; JaLingo 73; Bid Spotter 36. ~7.8K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,599; Longevity 1,096; RealInvestorX 1,096; Apex 866; Compliance OS 735; TheLoop 637; Beyond Volatility 581; EngiByte 125; JaLingo 73; Bid Spotter 37. ~7.8K total, single author." width="100%">
 </picture>
 
 <picture>
@@ -96,22 +96,22 @@ Shared standards and repository-specific release gates connect each change to te
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 444 commits; Longevity 374 commits; RealInvestorX 199 commits; Compliance OS 195 commits; EngiByte 123 commits; Apex 102 commits; TheLoop 100 commits; JaLingo 73 commits; Bid Spotter 23 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 445 commits; Longevity 374 commits; RealInvestorX 199 commits; Compliance OS 197 commits; EngiByte 123 commits; Apex 102 commits; TheLoop 100 commits; JaLingo 73 commits; Bid Spotter 24 commits." width="100%">
 </picture>
 
 <sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 5, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.427` | 444 |
+| **ParentPod** | `v2.62.427` | 445 |
 | **Longevity** | `v2.0.100` | 374 |
 | **RealInvestorX** | `v5.20.33` | 199 |
-| **Compliance OS** | `v3.16.9` | 195 |
+| **Compliance OS** | `v3.16.10` | 197 |
 | **EngiByte** | `v1.3.1` | 123 |
 | **Apex** | `v0.2.6` | 102 |
 | **TheLoop** | `v1.2.0` | 100 |
 | **JaLingo** | `v0.5.0` | 73 |
-| **Bid Spotter** | `v2.0.0` | 23 |
+| **Bid Spotter** | `v2.0.0` | 24 |
 
 ## Selected work
 

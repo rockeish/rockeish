@@ -5,7 +5,7 @@
     {
       "name": "ParentPod",
       "lastShipped": "2026-09-05",
-      "recent": 444,
+      "recent": 445,
       "version": "v2.62.427"
     },
     {
@@ -23,8 +23,8 @@
     {
       "name": "Compliance OS",
       "lastShipped": "2026-09-05",
-      "recent": 195,
-      "version": "v3.16.9"
+      "recent": 197,
+      "version": "v3.16.10"
     },
     {
       "name": "EngiByte",
@@ -52,24 +52,24 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-09-04",
-      "recent": 46,
+      "lastShipped": "2026-09-05",
+      "recent": 47,
       "version": null
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-09-04",
-      "recent": 23,
+      "lastShipped": "2026-09-05",
+      "recent": 24,
       "version": "v2.0.0"
     }
   ],
   "metrics": {
     "asOf": "2026-09-05",
-    "commits": 7841,
+    "commits": 7845,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2598
+        "commits": 2599
       },
       {
         "label": "Longevity",
@@ -85,7 +85,7 @@
       },
       {
         "label": "Compliance OS",
-        "commits": 733
+        "commits": 735
       },
       {
         "label": "TheLoop",
@@ -105,17 +105,17 @@
       },
       {
         "label": "Bid Spotter",
-        "commits": 36
+        "commits": 37
       }
     ],
     "appsInProduction": 6,
     "repos": 15,
-    "trackedFiles": 5590,
-    "linesOfSource": 841624,
+    "trackedFiles": 5592,
+    "linesOfSource": 841735,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 553378
+        "lines": 553489
       },
       {
         "name": "JavaScript",
