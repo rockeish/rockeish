@@ -63,10 +63,20 @@ const FONT = "ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helve
 const MONO = "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace";
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const HTML_ENTITIES = Object.freeze({
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;',
+});
+export const esc = (s) => String(s).replace(/[&<>"']/g, (character) => HTML_ENTITIES[character]);
 // Escape a value destined for a markdown table cell: a literal `|` would end
 // the cell and backticks would break the inline-code span.
-const mdCell = (s) => String(s).replace(/\|/g, '\\|').replace(/`/g, '');
+export const mdCell = (s) => String(s)
+  .replace(/\\/g, '\\\\')
+  .replace(/\|/g, '\\|')
+  .replace(/`/g, '');
 const compact = (n) =>
   n >= 1000 ? (n / 1000 >= 100 ? Math.round(n / 1000) : (n / 1000).toFixed(1).replace(/\.0$/, '')) + 'K' : String(n);
 export function fmtDate(value) {

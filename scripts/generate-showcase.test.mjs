@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
-import { buildReadme, fmtDate, recentlyShipped, renderAll } from './generate-showcase.mjs';
+import { buildReadme, esc, fmtDate, mdCell, recentlyShipped, renderAll } from './generate-showcase.mjs';
 
 const projects = JSON.parse(readFileSync(new URL('../data/projects.json', import.meta.url), 'utf8'));
 const activity = JSON.parse(readFileSync(new URL('../data/activity.json', import.meta.url), 'utf8'));
@@ -21,6 +21,17 @@ test('recentlyShipped escapes a `|` in a version tag so the table stays valid', 
   // Without escaping the stray `|` would create a 4th cell (5 unescaped pipes).
   assert.equal(pipeCount(row), 4, `row should have 4 unescaped pipes, got: ${row}`);
   assert.ok(row.includes('\\|'), 'the literal pipe is backslash-escaped');
+});
+
+test('HTML attribute values escape every delimiter, not only angle brackets', () => {
+  assert.equal(
+    esc('" onclick="alert(1) & <tag> \'quoted\''),
+    '&quot; onclick=&quot;alert(1) &amp; &lt;tag&gt; &#39;quoted&#39;',
+  );
+});
+
+test('markdown cell escaping preserves literal backslashes before pipes', () => {
+  assert.equal(mdCell('one\\two|three`'), 'one\\\\two\\|three');
 });
 
 // Cheap XML well-formedness check: every opened tag must be closed in order.
