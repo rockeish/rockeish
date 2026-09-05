@@ -35,8 +35,8 @@
   <g class="fade" style="animation-delay:0.73s"><text x="362" y="169" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">199 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v5.20.33</tspan></text></g>
   <circle cx="30" cy="204" r="4" fill="#1a7f37" class="blink"/>
   <text x="172" y="209" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1f2328" text-anchor="end">Compliance OS</text>
-  <g class="grow" style="transform-origin:182px 204px;animation-delay:0.37s"><rect x="182" y="193" width="168" height="22" rx="11" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:0.82s"><text x="360" y="209" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">197 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v3.16.10</tspan></text></g>
+  <g class="grow" style="transform-origin:182px 204px;animation-delay:0.37s"><rect x="182" y="193" width="170" height="22" rx="11" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:0.82s"><text x="362" y="209" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#59636e">199 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v3.16.11</tspan></text></g>
   <circle cx="30" cy="244" r="4" fill="#1a7f37" class="blink"/>
   <text x="172" y="249" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1f2328" text-anchor="end">EngiByte</text>
   <g class="grow" style="transform-origin:182px 244px;animation-delay:0.46s"><rect x="182" y="233" width="105" height="22" rx="11" fill="url(#accent)"/></g>
