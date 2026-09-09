@@ -1,11 +1,11 @@
 {
-  "asOf": "2026-09-07",
+  "asOf": "2026-09-09",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
       "lastShipped": "2026-09-07",
-      "recent": 440,
+      "recent": 439,
       "version": "v2.62.428"
     },
     {
@@ -16,9 +16,9 @@
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-09-07",
-      "recent": 213,
-      "version": "v3.17.0"
+      "lastShipped": "2026-09-09",
+      "recent": 215,
+      "version": "v3.18.0"
     },
     {
       "name": "RealInvestorX",
@@ -46,26 +46,26 @@
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-09-06",
-      "recent": 99,
+      "lastShipped": "2026-09-08",
+      "recent": 100,
       "version": "v0.2.6"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-09-06",
-      "recent": 51,
+      "lastShipped": "2026-09-08",
+      "recent": 52,
       "version": null
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-09-06",
-      "recent": 32,
+      "lastShipped": "2026-09-08",
+      "recent": 37,
       "version": "v2.1.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-09-07",
-    "commits": 7925,
+    "asOf": "2026-09-09",
+    "commits": 7933,
     "commitsByRepo": [
       {
         "label": "ParentPod",
@@ -81,11 +81,11 @@
       },
       {
         "label": "Apex",
-        "commits": 871
+        "commits": 872
       },
       {
         "label": "Compliance OS",
-        "commits": 751
+        "commits": 753
       },
       {
         "label": "TheLoop",
@@ -105,17 +105,17 @@
       },
       {
         "label": "Bid Spotter",
-        "commits": 45
+        "commits": 50
       }
     ],
     "appsInProduction": 6,
     "repos": 16,
-    "trackedFiles": 5907,
-    "linesOfSource": 855252,
+    "trackedFiles": 5916,
+    "linesOfSource": 856920,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 564498
+        "lines": 566166
       },
       {
         "name": "JavaScript",
