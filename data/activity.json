@@ -142,5 +142,162 @@
         "lines": 4235
       }
     ]
-  }
+  },
+  "lessons": [
+    {
+      "id": "LL-001",
+      "title": "Prose is a hope; only something that fires is a fix",
+      "text": "A rule that only lives in a document is a hope. Every recurring failure gets a check that fires on its own — a scheduled job, a CI gate, a hook, or a test — and the fix is not done until that check exists."
+    },
+    {
+      "id": "LL-002",
+      "title": "Built is not wired; correctness and activation are separate claims",
+      "text": "Shipping code is not the same as activating it. A guard that is written and tested but never registered protects nothing, so wiring is verified as its own step."
+    },
+    {
+      "id": "LL-003",
+      "title": "Watchdogs enumerate, never sample, and measure their own coverage",
+      "text": "A monitor that samples will eventually report green over the part it did not look at. Checks enumerate their whole inventory from the live system and fail when their own coverage shrinks."
+    },
+    {
+      "id": "LL-004",
+      "title": "A tool that silently does less than asked fails in the unsafe direction",
+      "text": "A command that accepts an option it does not implement reports success while doing less. Unknown flags are errors, and \"could not measure\" is never displayed the way a real number is."
+    },
+    {
+      "id": "LL-005",
+      "title": "Green locally and green in CI are evidence about the build, never the deploy",
+      "text": "\"CI is green\" describes the build, not what users are running. Every release is verified by reading the live surface afterward, and a green pipeline is never the last step."
+    },
+    {
+      "id": "LL-006",
+      "title": "Constant and graceful fallbacks convert failures into silence",
+      "text": "A graceful fallback is a silent failure with better manners. Missing data is reported, never replaced by a plausible default that hides how often the gap occurs."
+    },
+    {
+      "id": "LL-007",
+      "title": "A monitor is only as good as the assertions it still contains",
+      "text": "A health check that returns \"ok\" over an empty list of assertions is worse than none. Monitors are verified for shape and freshness, not just for having run."
+    },
+    {
+      "id": "LL-008",
+      "title": "Copy the value, never the label; a comment's safety claim is testable",
+      "text": "The label on a thing and the value inside it drift apart. Billing, trial length, and configuration are read from the value the system actually enforces, and any comment claiming \"this is safe\" gets a test."
+    },
+    {
+      "id": "LL-009",
+      "title": "Shared-infrastructure failures wear the costume of code bugs",
+      "text": "When many pipelines share one machine or one budget, an outage looks like a code failure. A monitor establishes whether a red result is fixable by any commit before it files work against the code."
+    },
+    {
+      "id": "LL-010",
+      "title": "A fix applied to a list covers that day's list; corrections must copy to twins",
+      "text": "A fix applied to the repositories you remembered protects only those. Fleet-wide changes are applied from a live enumeration and re-checked on a schedule, and a diagnosis on one job is applied to every job with the same shape."
+    },
+    {
+      "id": "LL-011",
+      "title": "Two package managers means two truths; declare dependencies and sync both sides",
+      "text": "When a project installs with one package manager locally and another in production, a class of bug is invisible on one side by construction. Dependencies are declared explicitly and both lockfiles are kept in step by a check, not by discipline."
+    },
+    {
+      "id": "LL-012",
+      "title": "Test the wiring, not only the logic",
+      "text": "A test suite that builds its own inputs can pass while the real caller passes zeros. Tests read what the system actually produces, and a safety gate that has never fired is checked for what it receives."
+    },
+    {
+      "id": "LL-013",
+      "title": "A bug that survives repair was diagnosed at the wrong layer",
+      "text": "If the same bug keeps coming back after a fix, the fix is at the wrong layer. Measure outward from the symptom until a number stops matching instead of repairing what is visible."
+    },
+    {
+      "id": "LL-014",
+      "title": "Irreversible actions get a refusal at the tool boundary, not a rule in prose",
+      "text": "Anything irreversible — deleting production data, deleting a branch with unmerged work, granting an automation new authority — is blocked at the command boundary, not by a policy people are expected to remember."
+    },
+    {
+      "id": "LL-015",
+      "title": "Stage explicit paths; shared scratch state is hostile",
+      "text": "Staging \"everything\" eventually commits a secret. Commits stage named paths, and anything several processes can write to is treated as untrusted."
+    },
+    {
+      "id": "LL-016",
+      "title": "Multi-writer stores need merge and recovery paths tested against the state failures actually produce",
+      "text": "A log that only ever appends must be merged as a log, or a merge will quietly drop the newest line. Sync failure paths are tested against the broken state they really produce, and silent loss is treated as worse than a visible conflict."
+    },
+    {
+      "id": "LL-017",
+      "title": "An approval gate must cover every path to the terminal state",
+      "text": "An approval gate that checks one path lets the other paths through. Anything that publishes in someone's name is re-read on a schedule and reverted if it lacks the approval, whichever route it took."
+    },
+    {
+      "id": "LL-018",
+      "title": "One metric has one owner; delegate to the reconciler, never re-derive",
+      "text": "Two internally consistent systems can disagree at the seam. Every headline metric has exactly one computation that other surfaces call, and each reader is asked which sources it might be missing."
+    },
+    {
+      "id": "LL-019",
+      "title": "Detection without delivery is not detection",
+      "text": "A monitor that fires into a channel nobody reads has not fired. Every signal goes to the one surface its reader actually looks at, with dedupe, and a signal source that stops updating is itself an alert."
+    },
+    {
+      "id": "LL-020",
+      "title": "Pre-committed decisions need a detector like outages do",
+      "text": "A decision rule written in a document slips on the day it matters. Thresholds are evaluated by a scheduled job against live data and surfaced to the decider, not left for someone to remember to check."
+    },
+    {
+      "id": "LL-021",
+      "title": "Count before assuming headroom, and look for the mechanism that already works",
+      "text": "Free quotas are shared across an account, so the headroom is counted, never assumed. Before building a replacement, check whether a working mechanism already exists."
+    },
+    {
+      "id": "LL-022",
+      "title": "Own the artifact, not the platform's interpretation of your exit code",
+      "text": "A release gate must control whether the artifact exists, not merely return a failing status another system may or may not honor. Gates are proven by forcing a failure live and confirming nothing shipped."
+    },
+    {
+      "id": "LL-023",
+      "title": "Empowerment first: an owner item naming a credential records the paths tried without one",
+      "text": "Before asking a person for access, exhaust what the machine already holds — an authenticated CLI counts. A request for credentials records what was tried without them."
+    },
+    {
+      "id": "LL-024",
+      "title": "A detector that cries wolf gets deleted; filter, ratchet, and separate the unresolvable",
+      "text": "A check that produces false alarms trains everyone to ignore it. New checks filter known-safe shapes, freeze existing debt as a baseline that must not grow, and separate \"confirmed\" from \"could not tell\"."
+    },
+    {
+      "id": "LL-025",
+      "title": "Vendor-side change is invisible from inside the repository",
+      "text": "A vendor can retire an identifier your code hardcodes while every test passes. External identifiers live in one place, never as moving aliases, and a scheduled job asks the vendor whether each still exists."
+    },
+    {
+      "id": "LL-026",
+      "title": "Walk the user-type matrix before calling a user-facing change done",
+      "text": "A change tested only as a brand-new user can exclude everyone who already exists. Each user population — new, existing, offline, interrupted, returning — is walked before a change is called done."
+    },
+    {
+      "id": "LL-027",
+      "title": "Verify a security claim against every file the setting can live in",
+      "text": "One-click \"always allow\" answers accumulate into standing permissions nobody remembers granting. Grants are audited across every file they can live in, and destructive operations carry an explicit deny."
+    },
+    {
+      "id": "LL-028",
+      "title": "Preserve raw intake; archive by moving with links that resolve, never by tombstone or alias",
+      "text": "A knowledge base is archived by moving, never by leaving stubs that compete with live notes, and raw material that a pass cannot read is kept and handed forward, never deleted."
+    },
+    {
+      "id": "LL-029",
+      "title": "Fixed-slot schedules starve on a machine that is often off",
+      "text": "A job scheduled for a fixed hour on a machine that may be asleep can miss forever. Scheduled work polls frequently, gates on a success stamp, and writes evidence on every run so a dead job cannot pass as a quiet one."
+    },
+    {
+      "id": "LL-030",
+      "title": "A diagnostic is read-only; a health check that mutates misclassifies work",
+      "text": "A health check that also cleans up will eventually delete work it misjudged. Diagnostics only report; any mutation is a separate, deliberate command."
+    },
+    {
+      "id": "LL-031",
+      "title": "A gate that can never pass is worse than no gate",
+      "text": "A check that has never passed is not protecting anything; it is teaching people to ignore red. Every gate has a green in its history or it is fixed or removed."
+    }
+  ]
 }
