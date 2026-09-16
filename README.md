@@ -84,7 +84,7 @@ Shared standards and repository-specific release gates connect each change to te
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,620; RealInvestorX 1,125; Longevity 1,124; Apex 918; Compliance OS 848; TheLoop 644; Beyond Volatility 591; EngiByte 151; JaLingo 129; Bid Spotter 69. ~8.2K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,621; RealInvestorX 1,125; Longevity 1,124; Apex 918; Compliance OS 848; TheLoop 644; Beyond Volatility 591; EngiByte 151; JaLingo 129; Bid Spotter 69. ~8.2K total, single author." width="100%">
 </picture>
 
 <picture>
@@ -96,15 +96,15 @@ Shared standards and repository-specific release gates connect each change to te
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 445 commits; Longevity 388 commits; Compliance OS 310 commits; RealInvestorX 211 commits; EngiByte 149 commits; Apex 130 commits; JaLingo 129 commits; TheLoop 107 commits; Bid Spotter 56 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 446 commits; Longevity 386 commits; Compliance OS 310 commits; RealInvestorX 211 commits; EngiByte 149 commits; Apex 130 commits; JaLingo 129 commits; TheLoop 107 commits; Bid Spotter 56 commits." width="100%">
 </picture>
 
 <sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 13, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.428` | 445 |
-| **Longevity** | `v2.0.111` | 388 |
+| **ParentPod** | `v2.62.428` | 446 |
+| **Longevity** | `v2.0.111` | 386 |
 | **Compliance OS** | `v3.22.1` | 310 |
 | **RealInvestorX** | `v5.22.2` | 211 |
 | **EngiByte** | `v1.3.1` | 149 |

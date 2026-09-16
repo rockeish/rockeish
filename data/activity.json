@@ -4,14 +4,14 @@
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-09-12",
-      "recent": 445,
+      "lastShipped": "2026-09-13",
+      "recent": 446,
       "version": "v2.62.428"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-09-13",
-      "recent": 388,
+      "recent": 386,
       "version": "v2.0.111"
     },
     {
@@ -51,25 +51,25 @@
       "version": "v1.2.0"
     },
     {
+      "name": "this profile",
+      "lastShipped": "2026-09-13",
+      "recent": 57,
+      "version": null
+    },
+    {
       "name": "Bid Spotter",
       "lastShipped": "2026-09-13",
       "recent": 56,
       "version": "v2.1.0"
-    },
-    {
-      "name": "this profile",
-      "lastShipped": "2026-09-12",
-      "recent": 56,
-      "version": null
     }
   ],
   "metrics": {
     "asOf": "2026-09-13",
-    "commits": 8219,
+    "commits": 8220,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2620
+        "commits": 2621
       },
       {
         "label": "RealInvestorX",
@@ -110,20 +110,20 @@
     ],
     "appsInProduction": 6,
     "repos": 16,
-    "trackedFiles": 6247,
-    "linesOfSource": 894973,
+    "trackedFiles": 6249,
+    "linesOfSource": 895259,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 593990
+        "lines": 594225
       },
       {
         "name": "JavaScript",
-        "lines": 222013
+        "lines": 222048
       },
       {
         "name": "CSS",
-        "lines": 38390
+        "lines": 38406
       },
       {
         "name": "SQL",
