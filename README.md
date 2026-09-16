@@ -52,7 +52,7 @@ By day, I lead reliability-compliance work in the energy sector. Outside that ro
 
 <p align="center"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/orbit.dark.svg">
-  <img src="assets/orbit.light.svg" alt="Portfolio constellation — ParentPod, Longevity, RealInvestorX, Apex, Compliance OS, Bid Spotter, EngiByte, JaLingo, TheLoop and the Beyond Volatility hub connected through shared infrastructure, run by one engineer." width="680">
+  <img src="assets/orbit.light.svg" alt="Portfolio constellation — ParentPod, Longevity, RealInvestorX, Apex, Compliance OS, Bid Spotter, EngiByte, JaLingo, Unwind, TheLoop and the Beyond Volatility hub connected through shared infrastructure, run by one engineer." width="680">
 </picture></p>
 
 <p align="center"><picture>
@@ -127,6 +127,7 @@ Shared standards and repository-specific release gates connect each change to te
 | **[Bid Spotter](https://bidspotter.beyondvolatility.com)** <br><sub>`Live · pilot pending`</sub> | Government work you can answer, ranked daily. | TypeScript · React · Vite · Firebase | [Live ↗](https://bidspotter.beyondvolatility.com) |
 | **[EngiByte](https://engibyte.beyondvolatility.com)** <br><sub>`Live · revived 2026-07-11`</sub> | Scroll less. Know more. | TypeScript · React Native · Expo · Firebase | [Live ↗](https://engibyte.beyondvolatility.com) |
 | **[JaLingo](https://jalingo.beyondvolatility.com)** <br><sub>`Live · founders season`</sub> | Learn Patwa from the people who speak it. | TypeScript · Next.js · React · Firebase | [Live ↗](https://jalingo.beyondvolatility.com) |
+| **[Unwind](https://unwind.beyondvolatility.com)** <br><sub>`Live preview · free`</sub> | Your daily reset. | TypeScript · Next.js · React · Firebase | [Live ↗](https://unwind.beyondvolatility.com) |
 | **[TheLoop](https://theloop.beyondvolatility.com/)** <br><sub>`Controlled beta · live`</sub> | A private chronological feed for people you know. | TypeScript · React · Vite · Firebase | [Live ↗](https://theloop.beyondvolatility.com/) |
 | **[Beyond Volatility](https://beyondvolatility.com)** <br><sub>`Live`</sub> | The hub — the front door to the portfolio. | WordPress · PHP | [Live ↗](https://beyondvolatility.com) |
 

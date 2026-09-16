@@ -111,6 +111,7 @@
       "Bid Spotter",
       "EngiByte",
       "JaLingo",
+      "Unwind",
       "TheLoop"
     ],
     "backends": [
@@ -428,6 +429,29 @@
       "highlights": [
         "Branching conversations with real people rather than flashcards: replies change where a conversation goes, and rudeness costs standing you have to earn back",
         "Community voice recordings qualify only after three independent reviews, an average of four out of five, and moderator review"
+      ]
+    },
+    {
+      "name": "Unwind",
+      "category": "Consumer",
+      "status": "Live preview · free",
+      "tagline": "Your daily reset.",
+      "blurb": "Pick how long you have, from 5 to 60 minutes, and follow a guided timer through a full-body stretching session built around the areas you chose — hips, shoulders, or lower back.",
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "React",
+        "Firebase"
+      ],
+      "platforms": [
+        "Web",
+        "PWA"
+      ],
+      "url": "https://unwind.beyondvolatility.com",
+      "repo": "unwind",
+      "highlights": [
+        "Sessions are assembled to the minutes you actually have rather than fixed to one routine length",
+        "Streaks and a private journal keep the habit visible; installable PWA on Next.js with Firebase Auth and Firestore"
       ]
     },
     {
