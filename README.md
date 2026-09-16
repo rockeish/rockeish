@@ -31,6 +31,8 @@
   &nbsp;·&nbsp;
   <a href="#engineering-practices">Practices</a>
   &nbsp;·&nbsp;
+  <a href="#lessons-learned">Lessons</a>
+  &nbsp;·&nbsp;
   <a href="#connect">Connect</a>
 </p>
 
@@ -168,6 +170,48 @@ Shared standards and repository-specific release gates connect each change to te
 - **Tiered CI** (active / dabble / parked) keeps Actions minutes low; CLI-first deploys through the release gate.
 - **Conflicts are resolved before merge** — semantic conflicts stop for review and a new validation pass.
 - **Accessibility & cross-platform** — semantic markup, keyboard paths, and Capacitor guards for native builds.
+
+## Lessons learned
+
+<sub>What 31 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
+
+- **Prose is a hope; only something that fires is a fix.** A rule that only lives in a document is a hope. Every recurring failure gets a check that fires on its own — a scheduled job, a CI gate, a hook, or a test — and the fix is not done until that check exists.
+- **Built is not wired; correctness and activation are separate claims.** Shipping code is not the same as activating it. A guard that is written and tested but never registered protects nothing, so wiring is verified as its own step.
+- **Watchdogs enumerate, never sample, and measure their own coverage.** A monitor that samples will eventually report green over the part it did not look at. Checks enumerate their whole inventory from the live system and fail when their own coverage shrinks.
+- **A tool that silently does less than asked fails in the unsafe direction.** A command that accepts an option it does not implement reports success while doing less. Unknown flags are errors, and "could not measure" is never displayed the way a real number is.
+- **Green locally and green in CI are evidence about the build, never the deploy.** "CI is green" describes the build, not what users are running. Every release is verified by reading the live surface afterward, and a green pipeline is never the last step.
+- **Constant and graceful fallbacks convert failures into silence.** A graceful fallback is a silent failure with better manners. Missing data is reported, never replaced by a plausible default that hides how often the gap occurs.
+- **A monitor is only as good as the assertions it still contains.** A health check that returns "ok" over an empty list of assertions is worse than none. Monitors are verified for shape and freshness, not just for having run.
+- **Copy the value, never the label; a comment's safety claim is testable.** The label on a thing and the value inside it drift apart. Billing, trial length, and configuration are read from the value the system actually enforces, and any comment claiming "this is safe" gets a test.
+
+<details>
+<summary><b>23 more</b></summary>
+
+- **Shared-infrastructure failures wear the costume of code bugs.** When many pipelines share one machine or one budget, an outage looks like a code failure. A monitor establishes whether a red result is fixable by any commit before it files work against the code.
+- **A fix applied to a list covers that day's list; corrections must copy to twins.** A fix applied to the repositories you remembered protects only those. Fleet-wide changes are applied from a live enumeration and re-checked on a schedule, and a diagnosis on one job is applied to every job with the same shape.
+- **Two package managers means two truths; declare dependencies and sync both sides.** When a project installs with one package manager locally and another in production, a class of bug is invisible on one side by construction. Dependencies are declared explicitly and both lockfiles are kept in step by a check, not by discipline.
+- **Test the wiring, not only the logic.** A test suite that builds its own inputs can pass while the real caller passes zeros. Tests read what the system actually produces, and a safety gate that has never fired is checked for what it receives.
+- **A bug that survives repair was diagnosed at the wrong layer.** If the same bug keeps coming back after a fix, the fix is at the wrong layer. Measure outward from the symptom until a number stops matching instead of repairing what is visible.
+- **Irreversible actions get a refusal at the tool boundary, not a rule in prose.** Anything irreversible — deleting production data, deleting a branch with unmerged work, granting an automation new authority — is blocked at the command boundary, not by a policy people are expected to remember.
+- **Stage explicit paths; shared scratch state is hostile.** Staging "everything" eventually commits a secret. Commits stage named paths, and anything several processes can write to is treated as untrusted.
+- **Multi-writer stores need merge and recovery paths tested against the state failures actually produce.** A log that only ever appends must be merged as a log, or a merge will quietly drop the newest line. Sync failure paths are tested against the broken state they really produce, and silent loss is treated as worse than a visible conflict.
+- **An approval gate must cover every path to the terminal state.** An approval gate that checks one path lets the other paths through. Anything that publishes in someone's name is re-read on a schedule and reverted if it lacks the approval, whichever route it took.
+- **One metric has one owner; delegate to the reconciler, never re-derive.** Two internally consistent systems can disagree at the seam. Every headline metric has exactly one computation that other surfaces call, and each reader is asked which sources it might be missing.
+- **Detection without delivery is not detection.** A monitor that fires into a channel nobody reads has not fired. Every signal goes to the one surface its reader actually looks at, with dedupe, and a signal source that stops updating is itself an alert.
+- **Pre-committed decisions need a detector like outages do.** A decision rule written in a document slips on the day it matters. Thresholds are evaluated by a scheduled job against live data and surfaced to the decider, not left for someone to remember to check.
+- **Count before assuming headroom, and look for the mechanism that already works.** Free quotas are shared across an account, so the headroom is counted, never assumed. Before building a replacement, check whether a working mechanism already exists.
+- **Own the artifact, not the platform's interpretation of your exit code.** A release gate must control whether the artifact exists, not merely return a failing status another system may or may not honor. Gates are proven by forcing a failure live and confirming nothing shipped.
+- **Empowerment first: an owner item naming a credential records the paths tried without one.** Before asking a person for access, exhaust what the machine already holds — an authenticated CLI counts. A request for credentials records what was tried without them.
+- **A detector that cries wolf gets deleted; filter, ratchet, and separate the unresolvable.** A check that produces false alarms trains everyone to ignore it. New checks filter known-safe shapes, freeze existing debt as a baseline that must not grow, and separate "confirmed" from "could not tell".
+- **Vendor-side change is invisible from inside the repository.** A vendor can retire an identifier your code hardcodes while every test passes. External identifiers live in one place, never as moving aliases, and a scheduled job asks the vendor whether each still exists.
+- **Walk the user-type matrix before calling a user-facing change done.** A change tested only as a brand-new user can exclude everyone who already exists. Each user population — new, existing, offline, interrupted, returning — is walked before a change is called done.
+- **Verify a security claim against every file the setting can live in.** One-click "always allow" answers accumulate into standing permissions nobody remembers granting. Grants are audited across every file they can live in, and destructive operations carry an explicit deny.
+- **Preserve raw intake; archive by moving with links that resolve, never by tombstone or alias.** A knowledge base is archived by moving, never by leaving stubs that compete with live notes, and raw material that a pass cannot read is kept and handed forward, never deleted.
+- **Fixed-slot schedules starve on a machine that is often off.** A job scheduled for a fixed hour on a machine that may be asleep can miss forever. Scheduled work polls frequently, gates on a success stamp, and writes evidence on every run so a dead job cannot pass as a quiet one.
+- **A diagnostic is read-only; a health check that mutates misclassifies work.** A health check that also cleans up will eventually delete work it misjudged. Diagnostics only report; any mutation is a separate, deliberate command.
+- **A gate that can never pass is worse than no gate.** A check that has never passed is not protecting anything; it is teaching people to ignore red. Every gate has a green in its history or it is fixed or removed.
+
+</details>
 
 ## Connect
 

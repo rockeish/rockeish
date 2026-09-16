@@ -481,6 +481,24 @@ export function recentlyShipped(act) {
   }).join('\n');
   return `<sub>Still shipping — latest version and commit volume over the last 90 days, as of ${fmtDate(act.asOf)}. Regenerated from git, not hand-edited.</sub>\n\n| Product | Latest | Commits · 90d |\n|---|---|---|\n${rows}`;
 }
+/**
+ * The lessons-learned section. The rows come from the ecosystem's LESSONS.md
+ * through collect-activity (only each lesson's public sentence travels), so
+ * this page states what 8K commits taught without pointing at private code.
+ * Omitted entirely when there are none — never an empty heading.
+ */
+export function lessonsSection(act) {
+  const rows = act?.lessons?.filter((l) => l && l.title && l.text) || [];
+  if (!rows.length) return null;
+  const item = (l) => `- **${mdCell(l.title)}.** ${mdCell(l.text)}`;
+  const shown = 8;
+  const head = rows.slice(0, shown).map(item).join('\n');
+  const rest = rows.slice(shown);
+  const more = rest.length
+    ? `\n\n<details>\n<summary><b>${rest.length} more</b></summary>\n\n${rest.map(item).join('\n')}\n\n</details>`
+    : '';
+  return `<sub>What ${num(rows.length)} rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>\n\n${head}${more}`;
+}
 function wakaSection(w) {
   if (!w?.enabled || !w.username || w.username.startsWith('REPLACE')) return null;
   const q = `username=${encodeURIComponent(w.username)}&layout=compact&langs_count=6&hide_border=true&bg_color=0b1220&title_color=38bdf8&text_color=e6edf3&icon_color=818cf8`;
@@ -546,6 +564,7 @@ export function buildReadme(d, act) {
     stackDetails(d.stack));
 
   add('Practices', 'Engineering practices', d.practices.map((x) => `- ${x}`).join('\n'));
+  add('Lessons', 'Lessons learned', lessonsSection(act));
   add('Connect', 'Connect', connectRow(d));
 
   const nav = centered(S.map((s) => `<a href="#${slug(s.title)}">${s.nav}</a>`).join('\n  &nbsp;·&nbsp;\n  '));

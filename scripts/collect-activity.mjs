@@ -386,6 +386,64 @@ export async function apiStats(repo, packagePath = 'package.json', { retries = 3
   return lastShipped ? { lastShipped, recent, version } : null;
 }
 
+/**
+ * Where the ecosystem's lessons-learned file lives. `~/ai/LESSONS.md` is the
+ * canonical copy on the machine the refresh cron runs on; a cloud or remote
+ * refresh can point `SHOWCASE_LESSONS_FILE` at a checkout.
+ */
+export const lessonsSource = (env = process.env, home = homedir()) =>
+  env.SHOWCASE_LESSONS_FILE || join(home, 'ai', 'LESSONS.md');
+
+/**
+ * The public-safe rows of LESSONS.md: id, title and the `Public:` sentence,
+ * NOTHING ELSE. Rule text, evidence and enforcement details describe private
+ * repositories and stay behind. A lesson whose `Public:` line is `no` (or
+ * missing) is skipped. The same field convention as the incident registry:
+ * `Key: value`, continuation lines indented two spaces.
+ */
+export function parsePublicLessons(text) {
+  const out = [];
+  const blocks = String(text || '').split(/^## (?=LL-\d+ — )/m).slice(1);
+  for (const block of blocks) {
+    const [header, ...rest] = block.split('\n');
+    const head = header.match(/^(LL-\d+) — (.+)$/);
+    if (!head) continue;
+    let pub = null;
+    for (let i = 0; i < rest.length; i += 1) {
+      const m = rest[i].match(/^Public:\s*(.*)$/);
+      if (!m) continue;
+      pub = m[1].trim();
+      for (let j = i + 1; j < rest.length && /^  \S/.test(rest[j]); j += 1) pub += ` ${rest[j].trim()}`;
+      break;
+    }
+    if (!pub || pub.toLowerCase() === 'no') continue;
+    out.push({ id: head[1], title: head[2].trim(), text: pub });
+  }
+  return out;
+}
+
+// Markers that must never reach the public page. `~/` and `/home/` leak the
+// machine; the rest are private names the lessons file keeps private on its own
+// side too. Belt and braces: the source file is audited, and so is this output.
+const PRIVATE_MARKERS = ['~/', '/home/', 'Doppler', 'doppler', 'Krystal', 'Noah', 'Invenergy', 'INC-', '@'];
+
+/**
+ * Read the lessons file, or keep what is already published when it cannot be
+ * read — the same contract as the activity itself: an unreachable source never
+ * wipes the committed rendering. A row carrying a private marker is dropped
+ * here as well, so a slip in the source cannot be published by this generator.
+ */
+export function collectLessons(file, fallback = []) {
+  let text;
+  try {
+    text = readFileSync(file, 'utf8');
+  } catch {
+    return Array.isArray(fallback) ? fallback : [];
+  }
+  return parsePublicLessons(text).filter((l) =>
+    !PRIVATE_MARKERS.some((m) => l.text.includes(m) || l.title.includes(m)));
+}
+
 async function main() {
   const out = [];
   for (const target of targets) {
@@ -414,11 +472,17 @@ async function main() {
   out.sort((a, b) => (b.recent || 0) - (a.recent || 0));
   const asOf = out.reduce((max, r) => (r.lastShipped > max ? r.lastShipped : max), '0000-00-00');
   const metrics = computeMetrics(data.projects, asOf);
-  const payload = { asOf, window: '90d', repos: out, ...(metrics ? { metrics } : {}) };
+  let previous = {};
+  try {
+    previous = JSON.parse(readFileSync(join(ROOT, 'data', 'activity.json'), 'utf8'));
+  } catch { /* first run */ }
+  const lessons = collectLessons(lessonsSource(), previous.lessons);
+  const payload = { asOf, window: '90d', repos: out, ...(metrics ? { metrics } : {}), lessons };
   writeFileSync(join(ROOT, 'data', 'activity.json'), JSON.stringify(payload, null, 2) + '\n');
   console.log(
     `collect-activity: wrote ${out.length} repos (asOf ${asOf})` +
-      (metrics ? `, ${metrics.commits} commits, ${metrics.appsInProduction} apps live.` : '.'),
+      (metrics ? `, ${metrics.commits} commits, ${metrics.appsInProduction} apps live` : '') +
+      `, ${lessons.length} public lessons.`,
   );
 }
 
