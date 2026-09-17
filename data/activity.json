@@ -1,30 +1,30 @@
 {
-  "asOf": "2026-09-13",
+  "asOf": "2026-09-16",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-09-13",
-      "recent": 446,
+      "lastShipped": "2026-09-16",
+      "recent": 449,
       "version": "v2.62.428"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-09-13",
-      "recent": 386,
-      "version": "v2.0.111"
+      "lastShipped": "2026-09-16",
+      "recent": 382,
+      "version": "v2.0.113"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-09-13",
-      "recent": 310,
-      "version": "v3.22.1"
+      "lastShipped": "2026-09-16",
+      "recent": 315,
+      "version": "v3.22.3"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-09-12",
-      "recent": 211,
-      "version": "v5.22.2"
+      "lastShipped": "2026-09-16",
+      "recent": 215,
+      "version": "v5.22.3"
     },
     {
       "name": "EngiByte",
@@ -34,14 +34,14 @@
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-09-13",
-      "recent": 130,
+      "lastShipped": "2026-09-16",
+      "recent": 133,
       "version": "v0.2.6"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-09-12",
-      "recent": 129,
+      "lastShipped": "2026-09-16",
+      "recent": 131,
       "version": "v0.5.0"
     },
     {
@@ -52,40 +52,46 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-09-13",
-      "recent": 57,
+      "lastShipped": "2026-09-16",
+      "recent": 60,
       "version": null
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-09-13",
-      "recent": 56,
+      "lastShipped": "2026-09-16",
+      "recent": 57,
       "version": "v2.1.0"
+    },
+    {
+      "name": "Unwind",
+      "lastShipped": "2026-09-16",
+      "recent": 7,
+      "version": "v1.0.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-09-13",
-    "commits": 8220,
+    "asOf": "2026-09-16",
+    "commits": 8253,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2621
+        "commits": 2624
       },
       {
         "label": "RealInvestorX",
-        "commits": 1125
+        "commits": 1129
       },
       {
         "label": "Longevity",
-        "commits": 1124
+        "commits": 1128
       },
       {
         "label": "Apex",
-        "commits": 918
+        "commits": 921
       },
       {
         "label": "Compliance OS",
-        "commits": 848
+        "commits": 853
       },
       {
         "label": "TheLoop",
@@ -93,7 +99,7 @@
       },
       {
         "label": "Beyond Volatility",
-        "commits": 591
+        "commits": 595
       },
       {
         "label": "EngiByte",
@@ -101,45 +107,49 @@
       },
       {
         "label": "JaLingo",
-        "commits": 129
+        "commits": 131
       },
       {
         "label": "Bid Spotter",
-        "commits": 69
+        "commits": 70
+      },
+      {
+        "label": "Unwind",
+        "commits": 7
       }
     ],
-    "appsInProduction": 6,
-    "repos": 16,
-    "trackedFiles": 6249,
-    "linesOfSource": 895259,
+    "appsInProduction": 7,
+    "repos": 17,
+    "trackedFiles": 6411,
+    "linesOfSource": 910142,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 594225
+        "lines": 606775
       },
       {
         "name": "JavaScript",
-        "lines": 222048
+        "lines": 223298
       },
       {
         "name": "CSS",
-        "lines": 38406
+        "lines": 38590
       },
       {
         "name": "SQL",
-        "lines": 15022
+        "lines": 15310
       },
       {
         "name": "PHP",
-        "lines": 11897
+        "lines": 12280
       },
       {
         "name": "Python",
-        "lines": 9426
+        "lines": 9585
       },
       {
         "name": "Other",
-        "lines": 4235
+        "lines": 4304
       }
     ]
   },
@@ -298,6 +308,31 @@
       "id": "LL-031",
       "title": "A gate that can never pass is worse than no gate",
       "text": "A check that has never passed is not protecting anything; it is teaching people to ignore red. Every gate has a green in its history or it is fixed or removed."
+    },
+    {
+      "id": "LL-032",
+      "title": "A lesson written at one call site is not a fix",
+      "text": "Two tools that talk to the same API should share the code that signs the request, or the second one will meet a quirk the first already learned."
+    },
+    {
+      "id": "LL-033",
+      "title": "\"Shipped\" must mean reached people, not reached a lane",
+      "text": "A build that reached your test track has not shipped. Measure the distance between where a release stopped and where your customers are."
+    },
+    {
+      "id": "LL-034",
+      "title": "A safe ceiling nothing opts into is a bug wearing a feature's clothes",
+      "text": "A safety ceiling that nothing switches on protects nobody. When a config value has both a conservative default and a documented safe maximum, verify in production that something actually requests the maximum — don't assume the default was meant to be temporary just because a comment says so."
+    },
+    {
+      "id": "LL-035",
+      "title": "A percentage cannot say \"broken\" from \"nothing to measure\"",
+      "text": "A conversion rate with no population behind it is not a zero — report what could be measured, what could not, and why, as three different answers, not one misleading percentage."
+    },
+    {
+      "id": "LL-036",
+      "title": "A rule that reads the old document must constrain the new one",
+      "text": "A security rule that only says who may write, while the server later trusts what was written, lets the subject of a decision author its inputs. Write rules constrain the new document, not just the identity making the change."
     }
   ]
 }

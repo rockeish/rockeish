@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 16 repositories, 8.2K commits, 895K lines of source, 6 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 17 repositories, 8.3K commits, 910K lines of source, 7 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -48,7 +48,7 @@ By day, I lead reliability-compliance work in the energy sector. Outside that ro
 
 ## The ecosystem
 
-16 repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery connected by common release controls.
+17 repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery connected by common release controls.
 
 <p align="center"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/orbit.dark.svg">
@@ -82,38 +82,39 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>Portfolio snapshot dated Sep 13, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
+<sub>Portfolio snapshot dated Sep 16, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,621; RealInvestorX 1,125; Longevity 1,124; Apex 918; Compliance OS 848; TheLoop 644; Beyond Volatility 591; EngiByte 151; JaLingo 129; Bid Spotter 69. ~8.2K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,624; RealInvestorX 1,129; Longevity 1,128; Apex 921; Compliance OS 853; TheLoop 644; Beyond Volatility 595; EngiByte 151; JaLingo 131; Bid Spotter 70; Unwind 7. ~8.3K total, single author." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 895K lines of tracked source — TypeScript 66.4%, JavaScript 24.8%, CSS 4.3%, SQL 1.7%, PHP 1.3%, Python 1.1%, Other 0.5%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 910K lines of tracked source — TypeScript 66.7%, JavaScript 24.5%, CSS 4.2%, SQL 1.7%, PHP 1.3%, Python 1.1%, Other 0.5%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 446 commits; Longevity 386 commits; Compliance OS 310 commits; RealInvestorX 211 commits; EngiByte 149 commits; Apex 130 commits; JaLingo 129 commits; TheLoop 107 commits; Bid Spotter 56 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 449 commits; Longevity 382 commits; Compliance OS 315 commits; RealInvestorX 215 commits; EngiByte 149 commits; Apex 133 commits; JaLingo 131 commits; TheLoop 107 commits; Bid Spotter 57 commits; Unwind 7 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 13, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 16, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.428` | 446 |
-| **Longevity** | `v2.0.111` | 386 |
-| **Compliance OS** | `v3.22.1` | 310 |
-| **RealInvestorX** | `v5.22.2` | 211 |
+| **ParentPod** | `v2.62.428` | 449 |
+| **Longevity** | `v2.0.113` | 382 |
+| **Compliance OS** | `v3.22.3` | 315 |
+| **RealInvestorX** | `v5.22.3` | 215 |
 | **EngiByte** | `v1.3.1` | 149 |
-| **Apex** | `v0.2.6` | 130 |
-| **JaLingo** | `v0.5.0` | 129 |
+| **Apex** | `v0.2.6` | 133 |
+| **JaLingo** | `v0.5.0` | 131 |
 | **TheLoop** | `v1.2.0` | 107 |
-| **Bid Spotter** | `v2.1.0` | 56 |
+| **Bid Spotter** | `v2.1.0` | 57 |
+| **Unwind** | `v1.0.0` | 7 |
 
 ## Selected work
 
@@ -174,7 +175,7 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## Lessons learned
 
-<sub>What 31 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
+<sub>What 36 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
 
 - **Prose is a hope; only something that fires is a fix.** A rule that only lives in a document is a hope. Every recurring failure gets a check that fires on its own — a scheduled job, a CI gate, a hook, or a test — and the fix is not done until that check exists.
 - **Built is not wired; correctness and activation are separate claims.** Shipping code is not the same as activating it. A guard that is written and tested but never registered protects nothing, so wiring is verified as its own step.
@@ -186,7 +187,7 @@ Shared standards and repository-specific release gates connect each change to te
 - **Copy the value, never the label; a comment's safety claim is testable.** The label on a thing and the value inside it drift apart. Billing, trial length, and configuration are read from the value the system actually enforces, and any comment claiming "this is safe" gets a test.
 
 <details>
-<summary><b>23 more</b></summary>
+<summary><b>28 more</b></summary>
 
 - **Shared-infrastructure failures wear the costume of code bugs.** When many pipelines share one machine or one budget, an outage looks like a code failure. A monitor establishes whether a red result is fixable by any commit before it files work against the code.
 - **A fix applied to a list covers that day's list; corrections must copy to twins.** A fix applied to the repositories you remembered protects only those. Fleet-wide changes are applied from a live enumeration and re-checked on a schedule, and a diagnosis on one job is applied to every job with the same shape.
@@ -211,6 +212,11 @@ Shared standards and repository-specific release gates connect each change to te
 - **Fixed-slot schedules starve on a machine that is often off.** A job scheduled for a fixed hour on a machine that may be asleep can miss forever. Scheduled work polls frequently, gates on a success stamp, and writes evidence on every run so a dead job cannot pass as a quiet one.
 - **A diagnostic is read-only; a health check that mutates misclassifies work.** A health check that also cleans up will eventually delete work it misjudged. Diagnostics only report; any mutation is a separate, deliberate command.
 - **A gate that can never pass is worse than no gate.** A check that has never passed is not protecting anything; it is teaching people to ignore red. Every gate has a green in its history or it is fixed or removed.
+- **A lesson written at one call site is not a fix.** Two tools that talk to the same API should share the code that signs the request, or the second one will meet a quirk the first already learned.
+- **"Shipped" must mean reached people, not reached a lane.** A build that reached your test track has not shipped. Measure the distance between where a release stopped and where your customers are.
+- **A safe ceiling nothing opts into is a bug wearing a feature's clothes.** A safety ceiling that nothing switches on protects nobody. When a config value has both a conservative default and a documented safe maximum, verify in production that something actually requests the maximum — don't assume the default was meant to be temporary just because a comment says so.
+- **A percentage cannot say "broken" from "nothing to measure".** A conversion rate with no population behind it is not a zero — report what could be measured, what could not, and why, as three different answers, not one misleading percentage.
+- **A rule that reads the old document must constrain the new one.** A security rule that only says who may write, while the server later trusts what was written, lets the subject of a decision author its inputs. Write rules constrain the new document, not just the identity making the change.
 
 </details>
 
