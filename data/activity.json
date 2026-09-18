@@ -1,147 +1,147 @@
 {
-  "asOf": "2026-09-16",
+  "asOf": "2026-09-18",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-09-16",
-      "recent": 449,
-      "version": "v2.62.428"
+      "lastShipped": "2026-09-17",
+      "recent": 465,
+      "version": "v2.62.435"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-09-16",
-      "recent": 382,
-      "version": "v2.0.113"
+      "lastShipped": "2026-09-18",
+      "recent": 377,
+      "version": "v2.0.118"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-09-16",
-      "recent": 315,
-      "version": "v3.22.3"
+      "lastShipped": "2026-09-18",
+      "recent": 333,
+      "version": "v3.26.4"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-09-16",
-      "recent": 215,
-      "version": "v5.22.3"
+      "lastShipped": "2026-09-18",
+      "recent": 226,
+      "version": "v5.22.7"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-09-13",
-      "recent": 149,
+      "lastShipped": "2026-09-17",
+      "recent": 153,
       "version": "v1.3.1"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-09-16",
-      "recent": 133,
+      "lastShipped": "2026-09-17",
+      "recent": 141,
       "version": "v0.2.6"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-09-16",
-      "recent": 131,
+      "lastShipped": "2026-09-17",
+      "recent": 139,
       "version": "v0.5.0"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-09-11",
-      "recent": 107,
+      "lastShipped": "2026-09-17",
+      "recent": 112,
       "version": "v1.2.0"
     },
     {
-      "name": "this profile",
-      "lastShipped": "2026-09-16",
-      "recent": 60,
-      "version": null
-    },
-    {
       "name": "Bid Spotter",
-      "lastShipped": "2026-09-16",
-      "recent": 57,
+      "lastShipped": "2026-09-18",
+      "recent": 65,
       "version": "v2.1.0"
     },
     {
+      "name": "this profile",
+      "lastShipped": "2026-09-17",
+      "recent": 61,
+      "version": null
+    },
+    {
       "name": "Unwind",
-      "lastShipped": "2026-09-16",
-      "recent": 7,
-      "version": "v1.0.0"
+      "lastShipped": "2026-09-17",
+      "recent": 12,
+      "version": "v1.1.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-09-16",
-    "commits": 8253,
+    "asOf": "2026-09-18",
+    "commits": 8354,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2624
+        "commits": 2641
       },
       {
         "label": "RealInvestorX",
-        "commits": 1129
+        "commits": 1140
       },
       {
         "label": "Longevity",
-        "commits": 1128
+        "commits": 1138
       },
       {
         "label": "Apex",
-        "commits": 921
+        "commits": 929
       },
       {
         "label": "Compliance OS",
-        "commits": 853
+        "commits": 871
       },
       {
         "label": "TheLoop",
-        "commits": 644
+        "commits": 649
       },
       {
         "label": "Beyond Volatility",
-        "commits": 595
+        "commits": 602
       },
       {
         "label": "EngiByte",
-        "commits": 151
+        "commits": 155
       },
       {
         "label": "JaLingo",
-        "commits": 131
+        "commits": 139
       },
       {
         "label": "Bid Spotter",
-        "commits": 70
+        "commits": 78
       },
       {
         "label": "Unwind",
-        "commits": 7
+        "commits": 12
       }
     ],
     "appsInProduction": 7,
     "repos": 17,
-    "trackedFiles": 6411,
-    "linesOfSource": 910142,
+    "trackedFiles": 6590,
+    "linesOfSource": 924869,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 606775
+        "lines": 616065
       },
       {
         "name": "JavaScript",
-        "lines": 223298
+        "lines": 228357
       },
       {
         "name": "CSS",
-        "lines": 38590
+        "lines": 38743
       },
       {
         "name": "SQL",
-        "lines": 15310
+        "lines": 15337
       },
       {
         "name": "PHP",
-        "lines": 12280
+        "lines": 12358
       },
       {
         "name": "Python",
@@ -149,7 +149,7 @@
       },
       {
         "name": "Other",
-        "lines": 4304
+        "lines": 4424
       }
     ]
   },
@@ -198,6 +198,11 @@
       "id": "LL-009",
       "title": "Shared-infrastructure failures wear the costume of code bugs",
       "text": "When many pipelines share one machine or one budget, an outage looks like a code failure. A monitor establishes whether a red result is fixable by any commit before it files work against the code."
+    },
+    {
+      "id": "LL-054",
+      "title": "A test double must refuse what the real system refuses",
+      "text": "A stand-in used for testing has to say no wherever the real system says no. If it is more permissive, every test passes and the live system still refuses, which is the hardest kind of gap to see."
     },
     {
       "id": "LL-010",
@@ -310,6 +315,16 @@
       "text": "A check that has never passed is not protecting anything; it is teaching people to ignore red. Every gate has a green in its history or it is fixed or removed."
     },
     {
+      "id": "LL-037",
+      "title": "Removing a control is only safe once you know which mechanism was the control",
+      "text": "\"Remove the guardrail\" names an effect, not a file — list every mechanism producing that effect and split enforcement from detection before deleting one of them."
+    },
+    {
+      "id": "LL-038",
+      "title": "A monitor's silence is a finding; publish the silence, not the last verdict",
+      "text": "A monitor that stops running looks exactly like a calm week; make the age of the data a reported number, and let it outrank the verdict."
+    },
+    {
       "id": "LL-032",
       "title": "A lesson written at one call site is not a fix",
       "text": "Two tools that talk to the same API should share the code that signs the request, or the second one will meet a quirk the first already learned."
@@ -333,6 +348,106 @@
       "id": "LL-036",
       "title": "A rule that reads the old document must constrain the new one",
       "text": "A security rule that only says who may write, while the server later trusts what was written, lets the subject of a decision author its inputs. Write rules constrain the new document, not just the identity making the change."
+    },
+    {
+      "id": "LL-039",
+      "title": "A config value the platform will refuse is not configured",
+      "text": "A config value your tool accepts can still be refused by the program that actually reads it, and a daemon keeps the copy it read at startup."
+    },
+    {
+      "id": "LL-040",
+      "title": "A monitor that can only say \"finding\" or \"silence\" cannot report its own illness",
+      "text": "A check that reports only problems cannot tell you it stopped working. Make it prove it ran, and test it against an example it should fail."
+    },
+    {
+      "id": "LL-041",
+      "title": "Tune the threshold only after you can defend the evidence selector",
+      "text": "Pick what proves the job ran before arguing about how long is too long. A proxy anyone else can touch stops proving anything the moment they do."
+    },
+    {
+      "id": "LL-042",
+      "title": "Scheduled work competes for your interactive quota, and it always loses",
+      "text": "Scheduled automation and your own heavy usage can draw on one budget. The schedule loses, quietly, and its status may still read as success."
+    },
+    {
+      "id": "LL-043",
+      "title": "A platform enforces its own operation model, not the one your comment describes",
+      "text": "A permission protects the operation the platform thinks you performed, not the one the comment above it names. Replacing a stored file can count as creating it, so a rule that restricts updates may leave content wide open — and because the rule and its comment agree with each other, review cannot see it. Settle each boundary by making the request and watching which rule answers."
+    },
+    {
+      "id": "LL-044",
+      "title": "A fixture that disagrees with production about a field's TYPE tests the fixture",
+      "text": "Databases that sort values by type quietly return nothing when a query's value is the wrong type — no error, just an empty result. Tests miss it when their sample data uses the type the code expects rather than the type the database holds. Worse, code syncing server state against local state reads that empty answer as a deletion and discards good data."
+    },
+    {
+      "id": "LL-045",
+      "title": "A counter that increments on ATTEMPT will report a healthy system that delivers nothing",
+      "text": "If you count messages when you try to send them rather than when they arrive, your dashboard stays green while nobody hears from you — and any rule like \"skip the email, we already sent a notification\" starts silencing the one channel that still works. Record what was delivered, make the skip rule depend on it, and when that logic breaks let it send twice rather than stay quiet."
+    },
+    {
+      "id": "LL-046",
+      "title": "An element that captures taps must never need an animation to become visible",
+      "text": "An invisible overlay that still catches taps is among the worst bugs an interface can have: everything looks fine, nothing responds, and people assume the app is broken and leave. Anything covering the screen should be visible the moment it appears; animate only the content inside it."
+    },
+    {
+      "id": "LL-047",
+      "title": "Registering a resource in one place leaves it invisible to the thing that starts it",
+      "text": "A job registered where it is defined but not where it is started never runs, and waiting forever looks exactly like a slow machine."
+    },
+    {
+      "id": "LL-048",
+      "title": "\"any\" is not \"all\", and a fleet health check that ORs reports green until the last member dies",
+      "text": "A health check that asks \"is any of it alive\" will report green until the last one dies. If you meant all of them, count them."
+    },
+    {
+      "id": "LL-049",
+      "title": "Being thorough on the same box as the thing you are waiting for is a way of breaking it",
+      "text": "Running your own thorough checks on the machine that is already busy finishing the job can be the thing that fails it."
+    },
+    {
+      "id": "LL-050",
+      "title": "A liveness check must identify the holder, not its species",
+      "text": "Code that waits for a lock first asks whether whoever holds it is still running. If that check looks for \"a process like the holder\" rather than the exact one, it matches the asker itself, decides the dead holder is alive, and waits forever. Record the holder's process id and ask about that. And if something else is timing you, give up before it does."
+    },
+    {
+      "id": "LL-051",
+      "title": "an id you never check for uniqueness is not an id",
+      "text": "If your records are keyed by a number someone types, check that no two records share one. Checks that look at each record separately can never catch it, and a duplicate can quietly inherit the original's passing grade."
+    },
+    {
+      "id": "LL-052",
+      "title": "A document that records its own supersession contains both answers",
+      "text": "Documents keep their own history, so the old answer and the new one sit in the same sentence. Any tool reading that text has to know which is current, and should say \"I don't know\" rather than quietly using the old one."
+    },
+    {
+      "id": "LL-053",
+      "title": "A default nobody declares is a resource everybody claims",
+      "text": "Tools pick defaults, so every project that does not choose a port or a path takes the same one. It works until two run together, and then the second one can quietly take over the first one's data rather than simply failing. Name the defaults, and have something check that no two projects chose alike."
+    },
+    {
+      "id": "LL-055",
+      "title": "Merged is not deployed; ask production what it is running",
+      "text": "Shipping code to the main branch is not the same as running it. Every backend needs something that deploys on merge and then asks the live system what it is actually running — comparing content, not timestamps, because a redeploy of identical files looks like a change and is not one."
+    },
+    {
+      "id": "LL-056",
+      "title": "A cache on a persistent runner is a tax, not a cache",
+      "text": "A build cache only helps when the machine forgets between runs. On a machine that remembers, it adds a slow upload of files already sitting there — and because that cost lands after the tests pass, the job gets killed at its time limit with a perfectly green log, which looks like flakiness rather than configuration."
+    },
+    {
+      "id": "LL-057",
+      "title": "An edit that parses is not an edit that applied; read the value back",
+      "text": "In configuration files a repeated setting usually means the last one wins, so adding a line above an existing block can quietly change nothing at all — the file still parses and the change still looks right when reviewed. Read the value back after editing, and be careful that the tool you check with is not the one performing the overwrite."
+    },
+    {
+      "id": "LL-058",
+      "title": "A credential fallback hides a dead credential; fail instead",
+      "text": "If a job says it runs as a particular identity, make something in it actually use that identity and fail when it cannot. Tools quietly fall back to whatever login they can find, so a dead credential can sit unnoticed for months behind a wall of successful runs."
+    },
+    {
+      "id": "LL-059",
+      "title": "An empty 2xx is not content; check the body before diagnosing the layer above it",
+      "text": "A 200 with no body is a failure wearing a success code; check what came back before deciding what broke."
     }
   ]
 }
