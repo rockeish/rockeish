@@ -86,7 +86,7 @@ Shared standards and repository-specific release gates connect each change to te
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,641; RealInvestorX 1,140; Longevity 1,138; Apex 929; Compliance OS 871; TheLoop 649; Beyond Volatility 602; EngiByte 155; JaLingo 139; Bid Spotter 78; Unwind 12. ~8.4K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,641; RealInvestorX 1,140; Longevity 1,138; Apex 929; Compliance OS 871; TheLoop 650; Beyond Volatility 602; EngiByte 155; JaLingo 141; Bid Spotter 78; Unwind 12. ~8.4K total, single author." width="100%">
 </picture>
 
 <picture>
@@ -98,21 +98,21 @@ Shared standards and repository-specific release gates connect each change to te
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 465 commits; Longevity 377 commits; Compliance OS 333 commits; RealInvestorX 226 commits; EngiByte 153 commits; Apex 141 commits; JaLingo 139 commits; TheLoop 112 commits; Bid Spotter 65 commits; Unwind 12 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 459 commits; Longevity 374 commits; Compliance OS 332 commits; RealInvestorX 223 commits; EngiByte 152 commits; JaLingo 141 commits; Apex 139 commits; TheLoop 105 commits; Bid Spotter 65 commits; Unwind 12 commits." width="100%">
 </picture>
 
 <sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 18, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.435` | 465 |
-| **Longevity** | `v2.0.118` | 377 |
-| **Compliance OS** | `v3.26.4` | 333 |
-| **RealInvestorX** | `v5.22.7` | 226 |
-| **EngiByte** | `v1.3.1` | 153 |
-| **Apex** | `v0.2.6` | 141 |
-| **JaLingo** | `v0.5.0` | 139 |
-| **TheLoop** | `v1.2.0` | 112 |
+| **ParentPod** | `v2.62.435` | 459 |
+| **Longevity** | `v2.0.118` | 374 |
+| **Compliance OS** | `v3.26.4` | 332 |
+| **RealInvestorX** | `v5.22.7` | 223 |
+| **EngiByte** | `v1.3.1` | 152 |
+| **JaLingo** | `v0.5.0` | 141 |
+| **Apex** | `v0.2.6` | 139 |
+| **TheLoop** | `v1.2.0` | 105 |
 | **Bid Spotter** | `v2.1.0` | 65 |
 | **Unwind** | `v1.1.0` | 12 |
 

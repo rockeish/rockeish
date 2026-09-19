@@ -5,49 +5,49 @@
     {
       "name": "ParentPod",
       "lastShipped": "2026-09-17",
-      "recent": 465,
+      "recent": 459,
       "version": "v2.62.435"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-09-18",
-      "recent": 377,
+      "recent": 374,
       "version": "v2.0.118"
     },
     {
       "name": "Compliance OS",
       "lastShipped": "2026-09-18",
-      "recent": 333,
+      "recent": 332,
       "version": "v3.26.4"
     },
     {
       "name": "RealInvestorX",
       "lastShipped": "2026-09-18",
-      "recent": 226,
+      "recent": 223,
       "version": "v5.22.7"
     },
     {
       "name": "EngiByte",
       "lastShipped": "2026-09-17",
-      "recent": 153,
+      "recent": 152,
       "version": "v1.3.1"
+    },
+    {
+      "name": "JaLingo",
+      "lastShipped": "2026-09-18",
+      "recent": 141,
+      "version": "v0.5.0"
     },
     {
       "name": "Apex",
       "lastShipped": "2026-09-17",
-      "recent": 141,
-      "version": "v0.2.6"
-    },
-    {
-      "name": "JaLingo",
-      "lastShipped": "2026-09-17",
       "recent": 139,
-      "version": "v0.5.0"
+      "version": "v0.2.6"
     },
     {
       "name": "TheLoop",
       "lastShipped": "2026-09-17",
-      "recent": 112,
+      "recent": 105,
       "version": "v1.2.0"
     },
     {
@@ -58,8 +58,8 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-09-17",
-      "recent": 61,
+      "lastShipped": "2026-09-18",
+      "recent": 60,
       "version": null
     },
     {
@@ -71,7 +71,7 @@
   ],
   "metrics": {
     "asOf": "2026-09-18",
-    "commits": 8354,
+    "commits": 8357,
     "commitsByRepo": [
       {
         "label": "ParentPod",
@@ -95,7 +95,7 @@
       },
       {
         "label": "TheLoop",
-        "commits": 649
+        "commits": 650
       },
       {
         "label": "Beyond Volatility",
@@ -107,7 +107,7 @@
       },
       {
         "label": "JaLingo",
-        "commits": 139
+        "commits": 141
       },
       {
         "label": "Bid Spotter",
