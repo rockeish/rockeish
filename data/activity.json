@@ -1,48 +1,48 @@
 {
-  "asOf": "2026-09-18",
+  "asOf": "2026-09-20",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-09-17",
-      "recent": 459,
+      "lastShipped": "2026-09-20",
+      "recent": 464,
       "version": "v2.62.435"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-09-18",
-      "recent": 374,
+      "recent": 373,
       "version": "v2.0.118"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-09-18",
-      "recent": 332,
-      "version": "v3.26.4"
+      "lastShipped": "2026-09-20",
+      "recent": 335,
+      "version": "v3.27.0"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-09-18",
-      "recent": 223,
-      "version": "v5.22.7"
+      "lastShipped": "2026-09-19",
+      "recent": 227,
+      "version": "v5.23.0"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-09-17",
-      "recent": 152,
+      "lastShipped": "2026-09-19",
+      "recent": 154,
       "version": "v1.3.1"
     },
     {
-      "name": "JaLingo",
-      "lastShipped": "2026-09-18",
-      "recent": 141,
-      "version": "v0.5.0"
+      "name": "Apex",
+      "lastShipped": "2026-09-20",
+      "recent": 145,
+      "version": "v0.2.6"
     },
     {
-      "name": "Apex",
-      "lastShipped": "2026-09-17",
-      "recent": 139,
-      "version": "v0.2.6"
+      "name": "JaLingo",
+      "lastShipped": "2026-09-20",
+      "recent": 144,
+      "version": "v0.5.0"
     },
     {
       "name": "TheLoop",
@@ -52,34 +52,34 @@
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-09-18",
-      "recent": 65,
+      "lastShipped": "2026-09-19",
+      "recent": 66,
       "version": "v2.1.0"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-09-18",
-      "recent": 60,
+      "lastShipped": "2026-09-19",
+      "recent": 61,
       "version": null
     },
     {
       "name": "Unwind",
-      "lastShipped": "2026-09-17",
-      "recent": 12,
+      "lastShipped": "2026-09-18",
+      "recent": 13,
       "version": "v1.1.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-09-18",
-    "commits": 8357,
+    "asOf": "2026-09-20",
+    "commits": 8387,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2641
+        "commits": 2647
       },
       {
         "label": "RealInvestorX",
-        "commits": 1140
+        "commits": 1144
       },
       {
         "label": "Longevity",
@@ -87,11 +87,11 @@
       },
       {
         "label": "Apex",
-        "commits": 929
+        "commits": 935
       },
       {
         "label": "Compliance OS",
-        "commits": 871
+        "commits": 875
       },
       {
         "label": "TheLoop",
@@ -99,41 +99,41 @@
       },
       {
         "label": "Beyond Volatility",
-        "commits": 602
+        "commits": 605
       },
       {
         "label": "EngiByte",
-        "commits": 155
+        "commits": 157
       },
       {
         "label": "JaLingo",
-        "commits": 141
+        "commits": 144
       },
       {
         "label": "Bid Spotter",
-        "commits": 78
+        "commits": 79
       },
       {
         "label": "Unwind",
-        "commits": 12
+        "commits": 13
       }
     ],
     "appsInProduction": 7,
-    "repos": 17,
-    "trackedFiles": 6590,
-    "linesOfSource": 924869,
+    "repos": 22,
+    "trackedFiles": 6713,
+    "linesOfSource": 937953,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 616065
+        "lines": 621817
       },
       {
         "name": "JavaScript",
-        "lines": 228357
+        "lines": 234625
       },
       {
         "name": "CSS",
-        "lines": 38743
+        "lines": 38979
       },
       {
         "name": "SQL",
@@ -141,7 +141,7 @@
       },
       {
         "name": "PHP",
-        "lines": 12358
+        "lines": 12368
       },
       {
         "name": "Python",
@@ -149,7 +149,7 @@
       },
       {
         "name": "Other",
-        "lines": 4424
+        "lines": 5242
       }
     ]
   },
@@ -448,6 +448,16 @@
       "id": "LL-059",
       "title": "An empty 2xx is not content; check the body before diagnosing the layer above it",
       "text": "A 200 with no body is a failure wearing a success code; check what came back before deciding what broke."
+    },
+    {
+      "id": "LL-060",
+      "title": "A healthy app endpoint says nothing about its identity provider",
+      "text": "A product can be online while its sign-in provider rejects every user."
+    },
+    {
+      "id": "LL-061",
+      "title": "Credential ignore rules must name the formats people actually download",
+      "text": "Ignore credential files using the extensions vendors actually deliver,"
     }
   ]
 }
