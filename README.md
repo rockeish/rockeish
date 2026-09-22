@@ -86,7 +86,7 @@ Shared standards and repository-specific release gates connect each change to te
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,647; RealInvestorX 1,144; Longevity 1,138; Apex 935; Compliance OS 875; TheLoop 650; Beyond Volatility 605; EngiByte 157; JaLingo 144; Bid Spotter 79; Unwind 13. ~8.4K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,649; RealInvestorX 1,144; Longevity 1,138; Apex 935; Compliance OS 875; TheLoop 650; Beyond Volatility 605; EngiByte 157; JaLingo 144; Bid Spotter 79; Unwind 13. ~8.4K total, single author." width="100%">
 </picture>
 
 <picture>
@@ -98,15 +98,15 @@ Shared standards and repository-specific release gates connect each change to te
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 464 commits; Longevity 373 commits; Compliance OS 335 commits; RealInvestorX 227 commits; EngiByte 154 commits; Apex 145 commits; JaLingo 144 commits; TheLoop 105 commits; Bid Spotter 66 commits; Unwind 13 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 466 commits; Longevity 372 commits; Compliance OS 335 commits; RealInvestorX 227 commits; EngiByte 154 commits; Apex 145 commits; JaLingo 144 commits; TheLoop 105 commits; Bid Spotter 66 commits; Unwind 13 commits." width="100%">
 </picture>
 
 <sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 20, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.435` | 464 |
-| **Longevity** | `v2.0.118` | 373 |
+| **ParentPod** | `v2.62.435` | 466 |
+| **Longevity** | `v2.0.118` | 372 |
 | **Compliance OS** | `v3.27.0` | 335 |
 | **RealInvestorX** | `v5.23.0` | 227 |
 | **EngiByte** | `v1.3.1` | 154 |

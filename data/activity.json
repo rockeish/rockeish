@@ -5,13 +5,13 @@
     {
       "name": "ParentPod",
       "lastShipped": "2026-09-20",
-      "recent": 464,
+      "recent": 466,
       "version": "v2.62.435"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-09-18",
-      "recent": 373,
+      "recent": 372,
       "version": "v2.0.118"
     },
     {
@@ -58,8 +58,8 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-09-19",
-      "recent": 61,
+      "lastShipped": "2026-09-20",
+      "recent": 62,
       "version": null
     },
     {
@@ -71,11 +71,11 @@
   ],
   "metrics": {
     "asOf": "2026-09-20",
-    "commits": 8387,
+    "commits": 8389,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2647
+        "commits": 2649
       },
       {
         "label": "RealInvestorX",
@@ -121,11 +121,11 @@
     "appsInProduction": 7,
     "repos": 22,
     "trackedFiles": 6713,
-    "linesOfSource": 937953,
+    "linesOfSource": 937938,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 621817
+        "lines": 621802
       },
       {
         "name": "JavaScript",
