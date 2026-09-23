@@ -1,101 +1,101 @@
 {
-  "asOf": "2026-09-20",
+  "asOf": "2026-09-23",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-09-20",
-      "recent": 466,
-      "version": "v2.62.435"
+      "lastShipped": "2026-09-23",
+      "recent": 473,
+      "version": "v2.62.436"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-09-18",
-      "recent": 372,
-      "version": "v2.0.118"
+      "lastShipped": "2026-09-23",
+      "recent": 381,
+      "version": "v2.0.120"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-09-20",
-      "recent": 335,
-      "version": "v3.27.0"
+      "lastShipped": "2026-09-23",
+      "recent": 343,
+      "version": "v3.27.2"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-09-19",
-      "recent": 227,
-      "version": "v5.23.0"
+      "lastShipped": "2026-09-23",
+      "recent": 250,
+      "version": "v5.24.2"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-09-19",
-      "recent": 154,
+      "lastShipped": "2026-09-22",
+      "recent": 156,
       "version": "v1.3.1"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-09-20",
-      "recent": 145,
+      "lastShipped": "2026-09-23",
+      "recent": 148,
       "version": "v0.2.6"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-09-20",
-      "recent": 144,
+      "lastShipped": "2026-09-23",
+      "recent": 148,
       "version": "v0.5.0"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-09-17",
-      "recent": 105,
+      "lastShipped": "2026-09-23",
+      "recent": 108,
       "version": "v1.2.0"
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-09-19",
-      "recent": 66,
+      "lastShipped": "2026-09-22",
+      "recent": 69,
       "version": "v2.1.0"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-09-20",
-      "recent": 62,
+      "lastShipped": "2026-09-22",
+      "recent": 63,
       "version": null
     },
     {
       "name": "Unwind",
-      "lastShipped": "2026-09-18",
-      "recent": 13,
+      "lastShipped": "2026-09-22",
+      "recent": 14,
       "version": "v1.1.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-09-20",
-    "commits": 8389,
+    "asOf": "2026-09-23",
+    "commits": 8454,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2649
+        "commits": 2658
       },
       {
         "label": "RealInvestorX",
-        "commits": 1144
+        "commits": 1167
       },
       {
         "label": "Longevity",
-        "commits": 1138
+        "commits": 1147
       },
       {
         "label": "Apex",
-        "commits": 935
+        "commits": 938
       },
       {
         "label": "Compliance OS",
-        "commits": 875
+        "commits": 883
       },
       {
         "label": "TheLoop",
-        "commits": 650
+        "commits": 653
       },
       {
         "label": "Beyond Volatility",
@@ -103,41 +103,41 @@
       },
       {
         "label": "EngiByte",
-        "commits": 157
+        "commits": 159
       },
       {
         "label": "JaLingo",
-        "commits": 144
+        "commits": 148
       },
       {
         "label": "Bid Spotter",
-        "commits": 79
+        "commits": 82
       },
       {
         "label": "Unwind",
-        "commits": 13
+        "commits": 14
       }
     ],
     "appsInProduction": 7,
-    "repos": 22,
-    "trackedFiles": 6713,
-    "linesOfSource": 937938,
+    "repos": 24,
+    "trackedFiles": 6981,
+    "linesOfSource": 953940,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 621802
+        "lines": 632193
       },
       {
         "name": "JavaScript",
-        "lines": 234625
+        "lines": 238701
       },
       {
         "name": "CSS",
-        "lines": 38979
+        "lines": 39133
       },
       {
         "name": "SQL",
-        "lines": 15337
+        "lines": 16158
       },
       {
         "name": "PHP",
@@ -145,11 +145,11 @@
       },
       {
         "name": "Python",
-        "lines": 9585
+        "lines": 10018
       },
       {
         "name": "Other",
-        "lines": 5242
+        "lines": 5369
       }
     ]
   },
@@ -458,6 +458,26 @@
       "id": "LL-061",
       "title": "Credential ignore rules must name the formats people actually download",
       "text": "Ignore credential files using the extensions vendors actually deliver,"
+    },
+    {
+      "id": "LL-062",
+      "title": "A fix written next to one call site is invisible at the next one",
+      "text": "A fix applied by hand at one call site is a patch, not a rule — write the scanner that would have caught the second occurrence in the same file."
+    },
+    {
+      "id": "LL-063",
+      "title": "A credential rotation is not done until the old credential is disabled",
+      "text": "Finishing a credential rotation means disabling the old credential in"
+    },
+    {
+      "id": "LL-064",
+      "title": "A shared runner is a shared resource; capacity is a class of incident, and a split runner splits shared baselines too",
+      "text": "When you move CI off a saturated shared runner, keep every trigger of a workflow that carries pixel-exact baselines on the same environment — or the fix itself becomes a new source of false reds."
+    },
+    {
+      "id": "LL-065",
+      "title": "Every runtime that holds a copy of a secret needs a drift check",
+      "text": "A secret copied into several runtimes can go stale in any one of them;"
     }
   ]
 }
