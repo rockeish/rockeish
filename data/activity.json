@@ -1,155 +1,155 @@
 {
-  "asOf": "2026-09-23",
+  "asOf": "2026-09-24",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-09-23",
+      "lastShipped": "2026-09-24",
       "recent": 473,
-      "version": "v2.62.436"
+      "version": "v2.62.441"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-09-23",
-      "recent": 381,
-      "version": "v2.0.120"
+      "lastShipped": "2026-09-24",
+      "recent": 385,
+      "version": "v2.0.124"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-09-23",
-      "recent": 343,
-      "version": "v3.27.2"
+      "lastShipped": "2026-09-24",
+      "recent": 369,
+      "version": "v3.28.5"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-09-23",
-      "recent": 250,
-      "version": "v5.24.2"
+      "lastShipped": "2026-09-24",
+      "recent": 286,
+      "version": "v5.31.1"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-09-22",
-      "recent": 156,
+      "lastShipped": "2026-09-24",
+      "recent": 165,
       "version": "v1.3.1"
     },
     {
-      "name": "Apex",
-      "lastShipped": "2026-09-23",
-      "recent": 148,
-      "version": "v0.2.6"
-    },
-    {
       "name": "JaLingo",
-      "lastShipped": "2026-09-23",
-      "recent": 148,
+      "lastShipped": "2026-09-24",
+      "recent": 163,
       "version": "v0.5.0"
     },
     {
+      "name": "Apex",
+      "lastShipped": "2026-09-24",
+      "recent": 156,
+      "version": "v0.2.6"
+    },
+    {
       "name": "TheLoop",
-      "lastShipped": "2026-09-23",
-      "recent": 108,
+      "lastShipped": "2026-09-24",
+      "recent": 109,
       "version": "v1.2.0"
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-09-22",
-      "recent": 69,
+      "lastShipped": "2026-09-24",
+      "recent": 74,
       "version": "v2.1.0"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-09-22",
-      "recent": 63,
+      "lastShipped": "2026-09-24",
+      "recent": 65,
       "version": null
     },
     {
       "name": "Unwind",
-      "lastShipped": "2026-09-22",
-      "recent": 14,
+      "lastShipped": "2026-09-24",
+      "recent": 16,
       "version": "v1.1.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-09-23",
-    "commits": 8454,
+    "asOf": "2026-09-24",
+    "commits": 8595,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2658
+        "commits": 2668
       },
       {
         "label": "RealInvestorX",
-        "commits": 1167
+        "commits": 1204
       },
       {
         "label": "Longevity",
-        "commits": 1147
+        "commits": 1157
       },
       {
         "label": "Apex",
-        "commits": 938
+        "commits": 947
       },
       {
         "label": "Compliance OS",
-        "commits": 883
+        "commits": 910
       },
       {
         "label": "TheLoop",
-        "commits": 653
+        "commits": 658
       },
       {
         "label": "Beyond Volatility",
-        "commits": 605
+        "commits": 617
       },
       {
         "label": "EngiByte",
-        "commits": 159
+        "commits": 168
       },
       {
         "label": "JaLingo",
-        "commits": 148
+        "commits": 163
       },
       {
         "label": "Bid Spotter",
-        "commits": 82
+        "commits": 87
       },
       {
         "label": "Unwind",
-        "commits": 14
+        "commits": 16
       }
     ],
     "appsInProduction": 7,
-    "repos": 24,
-    "trackedFiles": 6981,
-    "linesOfSource": 953940,
+    "repos": 18,
+    "trackedFiles": 7403,
+    "linesOfSource": 975618,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 632193
+        "lines": 640113
       },
       {
         "name": "JavaScript",
-        "lines": 238701
+        "lines": 250496
       },
       {
         "name": "CSS",
-        "lines": 39133
+        "lines": 39890
       },
       {
         "name": "SQL",
-        "lines": 16158
+        "lines": 16457
       },
       {
         "name": "PHP",
-        "lines": 12368
+        "lines": 12454
       },
       {
         "name": "Python",
-        "lines": 10018
+        "lines": 10694
       },
       {
         "name": "Other",
-        "lines": 5369
+        "lines": 5514
       }
     ]
   },
@@ -478,6 +478,51 @@
       "id": "LL-065",
       "title": "Every runtime that holds a copy of a secret needs a drift check",
       "text": "A secret copied into several runtimes can go stale in any one of them;"
+    },
+    {
+      "id": "LL-066",
+      "title": "A shared staleness clock attributes drift to whatever changed last, correctly or not",
+      "text": "A monitor that watches several things under one trigger must time each one against its own evidence — otherwise an edit to your neighbor reads as proof that you changed."
+    },
+    {
+      "id": "LL-067",
+      "title": "A lockfile regenerated on one OS can silently drop the binaries another OS builds with",
+      "text": "A lockfile shared by several operating systems is only checked by the one CI runs on; test that it still carries the native pieces the other builds need, or the least frequent build finds out first."
+    },
+    {
+      "id": "LL-068",
+      "title": "Never let an agent print a secret value; assume every command trace and config-read response is live until proven otherwise",
+      "text": "Agents should never print a secret's value, even from an operation labeled read-only — a debug trace or a config probe's raw response can carry live credentials without anyone intending it."
+    },
+    {
+      "id": "LL-069",
+      "title": "A release lane that orders steps differently from CI is a different environment; reproduce its order before shipping",
+      "text": "A release pipeline that runs steps in a different order from CI is a different environment, so reproduce its order before trusting a green CI run."
+    },
+    {
+      "id": "LL-070",
+      "title": "A release step that changes a value must update what checks that value in the same commit",
+      "text": "If a release step changes a value a separate check verifies, update that check's target in the very same commit — otherwise the next unrelated change is the one that gets blamed for the drift."
+    },
+    {
+      "id": "LL-071",
+      "title": "Verify a deploy the way a user fetches it",
+      "text": "Check a deploy the way your users fetch it. A cache in the middle can hand a command-line check the new file and every visitor the old one."
+    },
+    {
+      "id": "LL-072",
+      "title": "Every branch of an update handler ends in a navigation",
+      "text": "An update button that can finish without moving the user to the new version is broken, even when it never throws."
+    },
+    {
+      "id": "LL-073",
+      "title": "A gate's answer is its own exit status, and an empty answer is not green",
+      "text": "Check the gate's own exit code before you merge. A pipe can turn a failed check into a green light, and an empty status list is not a pass."
+    },
+    {
+      "id": "LL-074",
+      "title": "One authority per topic; a retired competitor is deleted, not archived",
+      "text": "Give every topic exactly one home and delete the copies; an archived duplicate still misleads whoever searches for it next."
     }
   ]
 }

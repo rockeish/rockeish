@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 24 repositories, 8.5K commits, 954K lines of source, 7 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 18 repositories, 8.6K commits, 976K lines of source, 7 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -48,7 +48,7 @@ By day, I lead reliability-compliance work in the energy sector. Outside that ro
 
 ## The ecosystem
 
-24 repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery connected by common release controls.
+18 repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery connected by common release controls.
 
 <p align="center"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/orbit.dark.svg">
@@ -82,39 +82,39 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>Portfolio snapshot dated Sep 23, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
+<sub>Portfolio snapshot dated Sep 24, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,658; RealInvestorX 1,167; Longevity 1,147; Apex 938; Compliance OS 883; TheLoop 653; Beyond Volatility 605; EngiByte 159; JaLingo 148; Bid Spotter 82; Unwind 14. ~8.5K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,668; RealInvestorX 1,204; Longevity 1,157; Apex 947; Compliance OS 910; TheLoop 658; Beyond Volatility 617; EngiByte 168; JaLingo 163; Bid Spotter 87; Unwind 16. ~8.6K total, single author." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 954K lines of tracked source — TypeScript 66.3%, JavaScript 25.0%, CSS 4.1%, SQL 1.7%, PHP 1.3%, Python 1.1%, Other 0.6%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 976K lines of tracked source — TypeScript 65.6%, JavaScript 25.7%, CSS 4.1%, SQL 1.7%, PHP 1.3%, Python 1.1%, Other 0.6%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 473 commits; Longevity 381 commits; Compliance OS 343 commits; RealInvestorX 250 commits; EngiByte 156 commits; Apex 148 commits; JaLingo 148 commits; TheLoop 108 commits; Bid Spotter 69 commits; Unwind 14 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 473 commits; Longevity 385 commits; Compliance OS 369 commits; RealInvestorX 286 commits; EngiByte 165 commits; JaLingo 163 commits; Apex 156 commits; TheLoop 109 commits; Bid Spotter 74 commits; Unwind 16 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 23, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 24, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.436` | 473 |
-| **Longevity** | `v2.0.120` | 381 |
-| **Compliance OS** | `v3.27.2` | 343 |
-| **RealInvestorX** | `v5.24.2` | 250 |
-| **EngiByte** | `v1.3.1` | 156 |
-| **Apex** | `v0.2.6` | 148 |
-| **JaLingo** | `v0.5.0` | 148 |
-| **TheLoop** | `v1.2.0` | 108 |
-| **Bid Spotter** | `v2.1.0` | 69 |
-| **Unwind** | `v1.1.0` | 14 |
+| **ParentPod** | `v2.62.441` | 473 |
+| **Longevity** | `v2.0.124` | 385 |
+| **Compliance OS** | `v3.28.5` | 369 |
+| **RealInvestorX** | `v5.31.1` | 286 |
+| **EngiByte** | `v1.3.1` | 165 |
+| **JaLingo** | `v0.5.0` | 163 |
+| **Apex** | `v0.2.6` | 156 |
+| **TheLoop** | `v1.2.0` | 109 |
+| **Bid Spotter** | `v2.1.0` | 74 |
+| **Unwind** | `v1.1.0` | 16 |
 
 ## Selected work
 
@@ -175,7 +175,7 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## Lessons learned
 
-<sub>What 65 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
+<sub>What 74 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
 
 - **Prose is a hope; only something that fires is a fix.** A rule that only lives in a document is a hope. Every recurring failure gets a check that fires on its own — a scheduled job, a CI gate, a hook, or a test — and the fix is not done until that check exists.
 - **Built is not wired; correctness and activation are separate claims.** Shipping code is not the same as activating it. A guard that is written and tested but never registered protects nothing, so wiring is verified as its own step.
@@ -187,7 +187,7 @@ Shared standards and repository-specific release gates connect each change to te
 - **Copy the value, never the label; a comment's safety claim is testable.** The label on a thing and the value inside it drift apart. Billing, trial length, and configuration are read from the value the system actually enforces, and any comment claiming "this is safe" gets a test.
 
 <details>
-<summary><b>57 more</b></summary>
+<summary><b>66 more</b></summary>
 
 - **Shared-infrastructure failures wear the costume of code bugs.** When many pipelines share one machine or one budget, an outage looks like a code failure. A monitor establishes whether a red result is fixable by any commit before it files work against the code.
 - **A test double must refuse what the real system refuses.** A stand-in used for testing has to say no wherever the real system says no. If it is more permissive, every test passes and the live system still refuses, which is the hardest kind of gap to see.
@@ -246,6 +246,15 @@ Shared standards and repository-specific release gates connect each change to te
 - **A credential rotation is not done until the old credential is disabled.** Finishing a credential rotation means disabling the old credential in
 - **A shared runner is a shared resource; capacity is a class of incident, and a split runner splits shared baselines too.** When you move CI off a saturated shared runner, keep every trigger of a workflow that carries pixel-exact baselines on the same environment — or the fix itself becomes a new source of false reds.
 - **Every runtime that holds a copy of a secret needs a drift check.** A secret copied into several runtimes can go stale in any one of them;
+- **A shared staleness clock attributes drift to whatever changed last, correctly or not.** A monitor that watches several things under one trigger must time each one against its own evidence — otherwise an edit to your neighbor reads as proof that you changed.
+- **A lockfile regenerated on one OS can silently drop the binaries another OS builds with.** A lockfile shared by several operating systems is only checked by the one CI runs on; test that it still carries the native pieces the other builds need, or the least frequent build finds out first.
+- **Never let an agent print a secret value; assume every command trace and config-read response is live until proven otherwise.** Agents should never print a secret's value, even from an operation labeled read-only — a debug trace or a config probe's raw response can carry live credentials without anyone intending it.
+- **A release lane that orders steps differently from CI is a different environment; reproduce its order before shipping.** A release pipeline that runs steps in a different order from CI is a different environment, so reproduce its order before trusting a green CI run.
+- **A release step that changes a value must update what checks that value in the same commit.** If a release step changes a value a separate check verifies, update that check's target in the very same commit — otherwise the next unrelated change is the one that gets blamed for the drift.
+- **Verify a deploy the way a user fetches it.** Check a deploy the way your users fetch it. A cache in the middle can hand a command-line check the new file and every visitor the old one.
+- **Every branch of an update handler ends in a navigation.** An update button that can finish without moving the user to the new version is broken, even when it never throws.
+- **A gate's answer is its own exit status, and an empty answer is not green.** Check the gate's own exit code before you merge. A pipe can turn a failed check into a green light, and an empty status list is not a pass.
+- **One authority per topic; a retired competitor is deleted, not archived.** Give every topic exactly one home and delete the copies; an archived duplicate still misleads whoever searches for it next.
 
 </details>
 
