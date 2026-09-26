@@ -1,47 +1,47 @@
 {
-  "asOf": "2026-09-24",
+  "asOf": "2026-09-25",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
       "lastShipped": "2026-09-24",
-      "recent": 473,
+      "recent": 458,
       "version": "v2.62.441"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-09-24",
-      "recent": 385,
+      "recent": 374,
       "version": "v2.0.124"
     },
     {
       "name": "Compliance OS",
       "lastShipped": "2026-09-24",
-      "recent": 369,
+      "recent": 365,
       "version": "v3.28.5"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-09-24",
-      "recent": 286,
-      "version": "v5.31.1"
+      "lastShipped": "2026-09-25",
+      "recent": 280,
+      "version": "v5.31.2"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-09-24",
-      "recent": 165,
+      "lastShipped": "2026-09-25",
+      "recent": 166,
       "version": "v1.3.1"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-09-24",
-      "recent": 163,
+      "lastShipped": "2026-09-25",
+      "recent": 165,
       "version": "v0.5.0"
     },
     {
       "name": "Apex",
       "lastShipped": "2026-09-24",
-      "recent": 156,
+      "recent": 153,
       "version": "v0.2.6"
     },
     {
@@ -58,8 +58,8 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-09-24",
-      "recent": 65,
+      "lastShipped": "2026-09-25",
+      "recent": 66,
       "version": null
     },
     {
@@ -70,8 +70,8 @@
     }
   ],
   "metrics": {
-    "asOf": "2026-09-24",
-    "commits": 8595,
+    "asOf": "2026-09-25",
+    "commits": 8602,
     "commitsByRepo": [
       {
         "label": "ParentPod",
@@ -79,7 +79,7 @@
       },
       {
         "label": "RealInvestorX",
-        "commits": 1204
+        "commits": 1208
       },
       {
         "label": "Longevity",
@@ -103,11 +103,11 @@
       },
       {
         "label": "EngiByte",
-        "commits": 168
+        "commits": 169
       },
       {
         "label": "JaLingo",
-        "commits": 163
+        "commits": 165
       },
       {
         "label": "Bid Spotter",
@@ -120,12 +120,12 @@
     ],
     "appsInProduction": 7,
     "repos": 18,
-    "trackedFiles": 7403,
-    "linesOfSource": 975618,
+    "trackedFiles": 7430,
+    "linesOfSource": 977956,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 640113
+        "lines": 642451
       },
       {
         "name": "JavaScript",
