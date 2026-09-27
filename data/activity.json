@@ -1,53 +1,47 @@
 {
-  "asOf": "2026-09-25",
+  "asOf": "2026-09-27",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-09-24",
-      "recent": 458,
-      "version": "v2.62.441"
+      "lastShipped": "2026-09-27",
+      "recent": 453,
+      "version": "v2.62.443"
+    },
+    {
+      "name": "Compliance OS",
+      "lastShipped": "2026-09-27",
+      "recent": 375,
+      "version": "v3.31.1"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-09-24",
-      "recent": 374,
+      "recent": 359,
       "version": "v2.0.124"
     },
     {
-      "name": "Compliance OS",
-      "lastShipped": "2026-09-24",
-      "recent": 365,
-      "version": "v3.28.5"
-    },
-    {
       "name": "RealInvestorX",
-      "lastShipped": "2026-09-25",
-      "recent": 280,
-      "version": "v5.31.2"
+      "lastShipped": "2026-09-27",
+      "recent": 298,
+      "version": "v5.32.4"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-09-25",
-      "recent": 166,
+      "lastShipped": "2026-09-26",
+      "recent": 160,
       "version": "v1.3.1"
     },
     {
-      "name": "JaLingo",
-      "lastShipped": "2026-09-25",
-      "recent": 165,
-      "version": "v0.5.0"
-    },
-    {
       "name": "Apex",
-      "lastShipped": "2026-09-24",
-      "recent": 153,
+      "lastShipped": "2026-09-26",
+      "recent": 152,
       "version": "v0.2.6"
     },
     {
       "name": "TheLoop",
       "lastShipped": "2026-09-24",
-      "recent": 109,
+      "recent": 107,
       "version": "v1.2.0"
     },
     {
@@ -58,28 +52,34 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-09-25",
-      "recent": 66,
+      "lastShipped": "2026-09-26",
+      "recent": 65,
       "version": null
     },
     {
       "name": "Unwind",
-      "lastShipped": "2026-09-24",
-      "recent": 16,
+      "lastShipped": "2026-09-27",
+      "recent": 18,
       "version": "v1.1.0"
+    },
+    {
+      "name": "JaLingo",
+      "lastShipped": "2026-09-27",
+      "recent": 7,
+      "version": "v0.5.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-09-25",
-    "commits": 8602,
+    "asOf": "2026-09-27",
+    "commits": 8470,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2668
+        "commits": 2670
       },
       {
         "label": "RealInvestorX",
-        "commits": 1208
+        "commits": 1226
       },
       {
         "label": "Longevity",
@@ -87,11 +87,11 @@
       },
       {
         "label": "Apex",
-        "commits": 947
+        "commits": 948
       },
       {
         "label": "Compliance OS",
-        "commits": 910
+        "commits": 922
       },
       {
         "label": "TheLoop",
@@ -99,41 +99,37 @@
       },
       {
         "label": "Beyond Volatility",
-        "commits": 617
+        "commits": 625
       },
       {
         "label": "EngiByte",
-        "commits": 169
-      },
-      {
-        "label": "JaLingo",
-        "commits": 165
+        "commits": 170
       },
       {
         "label": "Bid Spotter",
         "commits": 87
       },
       {
-        "label": "Unwind",
-        "commits": 16
+        "label": "JaLingo",
+        "commits": 7
       }
     ],
     "appsInProduction": 7,
-    "repos": 18,
-    "trackedFiles": 7430,
-    "linesOfSource": 977956,
+    "repos": 23,
+    "trackedFiles": 7186,
+    "linesOfSource": 966956,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 642451
+        "lines": 632342
       },
       {
         "name": "JavaScript",
-        "lines": 250496
+        "lines": 250251
       },
       {
         "name": "CSS",
-        "lines": 39890
+        "lines": 39691
       },
       {
         "name": "SQL",
@@ -145,11 +141,11 @@
       },
       {
         "name": "Python",
-        "lines": 10694
+        "lines": 10261
       },
       {
         "name": "Other",
-        "lines": 5514
+        "lines": 5500
       }
     ]
   },
