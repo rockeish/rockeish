@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 23 repositories, 8.5K commits, 967K lines of source, 7 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 23 repositories, 8.6K commits, 967K lines of source, 7 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -82,11 +82,11 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>Portfolio snapshot dated Sep 27, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
+<sub>Portfolio snapshot dated Sep 28, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,670; RealInvestorX 1,226; Longevity 1,157; Apex 948; Compliance OS 922; TheLoop 658; Beyond Volatility 625; EngiByte 170; Bid Spotter 87; JaLingo 7. ~8.5K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,677; RealInvestorX 1,251; Longevity 1,165; Apex 954; Compliance OS 938; TheLoop 658; Beyond Volatility 625; EngiByte 171; Bid Spotter 89; JaLingo 22. ~8.6K total, single author." width="100%">
 </picture>
 
 <picture>
@@ -98,23 +98,23 @@ Shared standards and repository-specific release gates connect each change to te
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 453 commits; Compliance OS 375 commits; Longevity 359 commits; RealInvestorX 298 commits; EngiByte 160 commits; Apex 152 commits; TheLoop 107 commits; Bid Spotter 74 commits; Unwind 18 commits; JaLingo 7 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 448 commits; Compliance OS 385 commits; Longevity 356 commits; RealInvestorX 317 commits; EngiByte 160 commits; Apex 157 commits; TheLoop 100 commits; Bid Spotter 76 commits; Unwind 23 commits; JaLingo 22 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 27, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 28, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.443` | 453 |
-| **Compliance OS** | `v3.31.1` | 375 |
-| **Longevity** | `v2.0.124` | 359 |
-| **RealInvestorX** | `v5.32.4` | 298 |
+| **ParentPod** | `v2.62.444` | 448 |
+| **Compliance OS** | `v3.32.3` | 385 |
+| **Longevity** | `v2.0.127` | 356 |
+| **RealInvestorX** | `v5.33.2` | 317 |
 | **EngiByte** | `v1.3.1` | 160 |
-| **Apex** | `v0.2.6` | 152 |
-| **TheLoop** | `v1.2.0` | 107 |
-| **Bid Spotter** | `v2.1.0` | 74 |
-| **Unwind** | `v1.1.0` | 18 |
-| **JaLingo** | `v0.5.0` | 7 |
+| **Apex** | `v0.2.6` | 157 |
+| **TheLoop** | `v1.2.0` | 100 |
+| **Bid Spotter** | `v2.1.0` | 76 |
+| **Unwind** | `v1.1.0` | 23 |
+| **JaLingo** | `v0.5.0` | 22 |
 
 ## Selected work
 
