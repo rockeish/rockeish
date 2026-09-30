@@ -82,11 +82,11 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>Portfolio snapshot dated Sep 28, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
+<sub>Portfolio snapshot dated Sep 29, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,677; RealInvestorX 1,251; Longevity 1,165; Apex 954; Compliance OS 938; TheLoop 658; Beyond Volatility 625; EngiByte 171; Bid Spotter 89; JaLingo 22. ~8.6K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,714; RealInvestorX 1,261; Longevity 1,167; Apex 955; Compliance OS 945; TheLoop 658; Beyond Volatility 625; EngiByte 172; Bid Spotter 90; JaLingo 29. ~8.6K total, single author." width="100%">
 </picture>
 
 <picture>
@@ -98,23 +98,23 @@ Shared standards and repository-specific release gates connect each change to te
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 448 commits; Compliance OS 385 commits; Longevity 356 commits; RealInvestorX 317 commits; EngiByte 160 commits; Apex 157 commits; TheLoop 100 commits; Bid Spotter 76 commits; Unwind 23 commits; JaLingo 22 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 469 commits; Compliance OS 392 commits; Longevity 358 commits; RealInvestorX 327 commits; EngiByte 161 commits; Apex 158 commits; TheLoop 100 commits; Bid Spotter 77 commits; Unwind 35 commits; JaLingo 29 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 28, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Sep 29, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.444` | 448 |
-| **Compliance OS** | `v3.32.3` | 385 |
-| **Longevity** | `v2.0.127` | 356 |
-| **RealInvestorX** | `v5.33.2` | 317 |
-| **EngiByte** | `v1.3.1` | 160 |
-| **Apex** | `v0.2.6` | 157 |
+| **ParentPod** | `v2.62.452` | 469 |
+| **Compliance OS** | `v3.33.2` | 392 |
+| **Longevity** | `v2.0.128` | 358 |
+| **RealInvestorX** | `v5.33.7` | 327 |
+| **EngiByte** | `v1.3.1` | 161 |
+| **Apex** | `v0.2.6` | 158 |
 | **TheLoop** | `v1.2.0` | 100 |
-| **Bid Spotter** | `v2.1.0` | 76 |
-| **Unwind** | `v1.1.0` | 23 |
-| **JaLingo** | `v0.5.0` | 22 |
+| **Bid Spotter** | `v2.1.0` | 77 |
+| **Unwind** | `v1.2.0` | 35 |
+| **JaLingo** | `v0.5.0` | 29 |
 
 ## Selected work
 

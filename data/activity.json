@@ -1,41 +1,41 @@
 {
-  "asOf": "2026-09-28",
+  "asOf": "2026-09-29",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-09-28",
-      "recent": 448,
-      "version": "v2.62.444"
+      "lastShipped": "2026-09-29",
+      "recent": 469,
+      "version": "v2.62.452"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-09-28",
-      "recent": 385,
-      "version": "v3.32.3"
+      "lastShipped": "2026-09-29",
+      "recent": 392,
+      "version": "v3.33.2"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-09-28",
-      "recent": 356,
-      "version": "v2.0.127"
+      "lastShipped": "2026-09-29",
+      "recent": 358,
+      "version": "v2.0.128"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-09-28",
-      "recent": 317,
-      "version": "v5.33.2"
+      "lastShipped": "2026-09-29",
+      "recent": 327,
+      "version": "v5.33.7"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-09-28",
-      "recent": 160,
+      "lastShipped": "2026-09-29",
+      "recent": 161,
       "version": "v1.3.1"
     },
     {
       "name": "Apex",
       "lastShipped": "2026-09-28",
-      "recent": 157,
+      "recent": 158,
       "version": "v0.2.6"
     },
     {
@@ -47,51 +47,51 @@
     {
       "name": "Bid Spotter",
       "lastShipped": "2026-09-28",
-      "recent": 76,
+      "recent": 77,
       "version": "v2.1.0"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-09-27",
-      "recent": 66,
+      "lastShipped": "2026-09-28",
+      "recent": 62,
       "version": null
     },
     {
       "name": "Unwind",
-      "lastShipped": "2026-09-28",
-      "recent": 23,
-      "version": "v1.1.0"
+      "lastShipped": "2026-09-29",
+      "recent": 35,
+      "version": "v1.2.0"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-09-28",
-      "recent": 22,
+      "lastShipped": "2026-09-29",
+      "recent": 29,
       "version": "v0.5.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-09-28",
-    "commits": 8550,
+    "asOf": "2026-09-29",
+    "commits": 8616,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2677
+        "commits": 2714
       },
       {
         "label": "RealInvestorX",
-        "commits": 1251
+        "commits": 1261
       },
       {
         "label": "Longevity",
-        "commits": 1165
+        "commits": 1167
       },
       {
         "label": "Apex",
-        "commits": 954
+        "commits": 955
       },
       {
         "label": "Compliance OS",
-        "commits": 938
+        "commits": 945
       },
       {
         "label": "TheLoop",
@@ -103,15 +103,15 @@
       },
       {
         "label": "EngiByte",
-        "commits": 171
+        "commits": 172
       },
       {
         "label": "Bid Spotter",
-        "commits": 89
+        "commits": 90
       },
       {
         "label": "JaLingo",
-        "commits": 22
+        "commits": 29
       }
     ],
     "appsInProduction": 7,
