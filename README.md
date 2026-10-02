@@ -82,11 +82,11 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>Portfolio snapshot dated Oct 1, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
+<sub>Portfolio snapshot dated Oct 2, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,739; RealInvestorX 1,274; Longevity 1,168; Apex 957; Compliance OS 949; TheLoop 663; Beyond Volatility 625; EngiByte 174; Bid Spotter 92; JaLingo 36. ~8.7K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,742; RealInvestorX 1,284; Longevity 1,173; Apex 961; Compliance OS 952; TheLoop 663; Beyond Volatility 628; EngiByte 175; Bid Spotter 96; JaLingo 44. ~8.7K total, single author." width="100%">
 </picture>
 
 <picture>
@@ -98,23 +98,23 @@ Shared standards and repository-specific release gates connect each change to te
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 480 commits; Compliance OS 396 commits; Longevity 357 commits; RealInvestorX 340 commits; EngiByte 163 commits; Apex 160 commits; TheLoop 105 commits; Bid Spotter 79 commits; Unwind 37 commits; JaLingo 36 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 473 commits; Compliance OS 394 commits; Longevity 358 commits; RealInvestorX 348 commits; EngiByte 164 commits; Apex 162 commits; TheLoop 105 commits; Bid Spotter 83 commits; JaLingo 44 commits; Unwind 43 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 1, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 2, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.452` | 480 |
-| **Compliance OS** | `v3.33.2` | 396 |
-| **Longevity** | `v2.0.128` | 357 |
-| **RealInvestorX** | `v5.33.12` | 340 |
-| **EngiByte** | `v1.3.1` | 163 |
-| **Apex** | `v0.2.6` | 160 |
+| **ParentPod** | `v2.62.452` | 473 |
+| **Compliance OS** | `v3.33.2` | 394 |
+| **Longevity** | `v2.0.130` | 358 |
+| **RealInvestorX** | `v5.33.16` | 348 |
+| **EngiByte** | `v1.3.1` | 164 |
+| **Apex** | `v0.2.6` | 162 |
 | **TheLoop** | `v1.2.0` | 105 |
-| **Bid Spotter** | `v2.1.0` | 79 |
-| **Unwind** | `v1.2.0` | 37 |
-| **JaLingo** | `v0.5.0` | 36 |
+| **Bid Spotter** | `v2.1.0` | 83 |
+| **JaLingo** | `v0.5.0` | 44 |
+| **Unwind** | `v1.2.0` | 43 |
 
 ## Selected work
 
@@ -175,7 +175,7 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## Lessons learned
 
-<sub>What 74 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
+<sub>What 81 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
 
 - **Prose is a hope; only something that fires is a fix.** A rule that only lives in a document is a hope. Every recurring failure gets a check that fires on its own — a scheduled job, a CI gate, a hook, or a test — and the fix is not done until that check exists.
 - **Built is not wired; correctness and activation are separate claims.** Shipping code is not the same as activating it. A guard that is written and tested but never registered protects nothing, so wiring is verified as its own step.
@@ -187,7 +187,7 @@ Shared standards and repository-specific release gates connect each change to te
 - **Copy the value, never the label; a comment's safety claim is testable.** The label on a thing and the value inside it drift apart. Billing, trial length, and configuration are read from the value the system actually enforces, and any comment claiming "this is safe" gets a test.
 
 <details>
-<summary><b>66 more</b></summary>
+<summary><b>73 more</b></summary>
 
 - **Shared-infrastructure failures wear the costume of code bugs.** When many pipelines share one machine or one budget, an outage looks like a code failure. A monitor establishes whether a red result is fixable by any commit before it files work against the code.
 - **A test double must refuse what the real system refuses.** A stand-in used for testing has to say no wherever the real system says no. If it is more permissive, every test passes and the live system still refuses, which is the hardest kind of gap to see.
@@ -248,13 +248,20 @@ Shared standards and repository-specific release gates connect each change to te
 - **Every runtime that holds a copy of a secret needs a drift check.** A secret copied into several runtimes can go stale in any one of them;
 - **A shared staleness clock attributes drift to whatever changed last, correctly or not.** A monitor that watches several things under one trigger must time each one against its own evidence — otherwise an edit to your neighbor reads as proof that you changed.
 - **A lockfile regenerated on one OS can silently drop the binaries another OS builds with.** A lockfile shared by several operating systems is only checked by the one CI runs on; test that it still carries the native pieces the other builds need, or the least frequent build finds out first.
-- **Never let an agent print a secret value; assume every command trace and config-read response is live until proven otherwise.** Agents should never print a secret's value, even from an operation labeled read-only — a debug trace or a config probe's raw response can carry live credentials without anyone intending it.
+- **Never let an agent print a secret value; assume every command trace and config-read response is live until proven otherwise.** Agents should never print a secret's value, even from an operation labeled read-only; browser snapshots, debug traces, and config responses can carry live credentials without anyone intending it.
 - **A release lane that orders steps differently from CI is a different environment; reproduce its order before shipping.** A release pipeline that runs steps in a different order from CI is a different environment, so reproduce its order before trusting a green CI run.
 - **A release step that changes a value must update what checks that value in the same commit.** If a release step changes a value a separate check verifies, update that check's target in the very same commit — otherwise the next unrelated change is the one that gets blamed for the drift.
 - **Verify a deploy the way a user fetches it.** Check a deploy the way your users fetch it. A cache in the middle can hand a command-line check the new file and every visitor the old one.
 - **Every branch of an update handler ends in a navigation.** An update button that can finish without moving the user to the new version is broken, even when it never throws.
 - **A gate's answer is its own exit status, and an empty answer is not green.** Check the gate's own exit code before you merge. A pipe can turn a failed check into a green light, and an empty status list is not a pass.
 - **One authority per topic; a retired competitor is deleted, not archived.** Give every topic exactly one home and delete the copies; an archived duplicate still misleads whoever searches for it next.
+- **A promise is not an answer, and a pending list has no window.** Record "I will do it" separately from "it is done", and never let a request leave the open list on a promise. Show an unanswered reply before asking the person to decide again.
+- **A failed sync cannot be followed by a push.** Verify the branch, history and remote commit before a shared sync claims success or starts the work it recorded.
+- **Shared writers need a schedule and a bounded lock wait.** Stagger shared jobs and verify each scheduled run, rather than treating a skipped lock attempt as a successful update.
+- **Browser readback is not safe on a credential dashboard.** Inspect broker state through authenticated API reads, and rotate any credential that appears in a chat or tool transcript.
+- **Keep operational failures separate from admitted commitments.** Preserve operational failures without letting each event create a new commitment; use an explicit admission gate for durable work.
+- **A rotation is not finished until every copy is proven equal.** After rotating a credential, verify by hash that every stored copy matches the new value instead of assuming the sync reached them.
+- **The runtime checkout must be clean main, and something must say so.** Scheduled jobs should run from a checkout that is verified to be on the current main branch, and a monitor should flag any drift.
 
 </details>
 

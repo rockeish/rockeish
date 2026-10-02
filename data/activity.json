@@ -1,41 +1,41 @@
 {
-  "asOf": "2026-10-01",
+  "asOf": "2026-10-02",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-09-30",
-      "recent": 480,
+      "lastShipped": "2026-10-02",
+      "recent": 473,
       "version": "v2.62.452"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-09-30",
-      "recent": 396,
+      "lastShipped": "2026-10-01",
+      "recent": 394,
       "version": "v3.33.2"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-09-30",
-      "recent": 357,
-      "version": "v2.0.128"
+      "lastShipped": "2026-10-02",
+      "recent": 358,
+      "version": "v2.0.130"
     },
     {
       "name": "RealInvestorX",
       "lastShipped": "2026-10-01",
-      "recent": 340,
-      "version": "v5.33.12"
+      "recent": 348,
+      "version": "v5.33.16"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-09-30",
-      "recent": 163,
+      "lastShipped": "2026-10-01",
+      "recent": 164,
       "version": "v1.3.1"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-09-30",
-      "recent": 160,
+      "lastShipped": "2026-10-01",
+      "recent": 162,
       "version": "v0.2.6"
     },
     {
@@ -46,52 +46,52 @@
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-09-30",
-      "recent": 79,
+      "lastShipped": "2026-10-01",
+      "recent": 83,
       "version": "v2.1.0"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-09-29",
+      "lastShipped": "2026-10-01",
       "recent": 63,
       "version": null
     },
     {
-      "name": "Unwind",
-      "lastShipped": "2026-09-30",
-      "recent": 37,
-      "version": "v1.2.0"
+      "name": "JaLingo",
+      "lastShipped": "2026-10-01",
+      "recent": 44,
+      "version": "v0.5.0"
     },
     {
-      "name": "JaLingo",
-      "lastShipped": "2026-09-30",
-      "recent": 36,
-      "version": "v0.5.0"
+      "name": "Unwind",
+      "lastShipped": "2026-10-01",
+      "recent": 43,
+      "version": "v1.2.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-10-01",
-    "commits": 8677,
+    "asOf": "2026-10-02",
+    "commits": 8718,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2739
+        "commits": 2742
       },
       {
         "label": "RealInvestorX",
-        "commits": 1274
+        "commits": 1284
       },
       {
         "label": "Longevity",
-        "commits": 1168
+        "commits": 1173
       },
       {
         "label": "Apex",
-        "commits": 957
+        "commits": 961
       },
       {
         "label": "Compliance OS",
-        "commits": 949
+        "commits": 952
       },
       {
         "label": "TheLoop",
@@ -99,19 +99,19 @@
       },
       {
         "label": "Beyond Volatility",
-        "commits": 625
+        "commits": 628
       },
       {
         "label": "EngiByte",
-        "commits": 174
+        "commits": 175
       },
       {
         "label": "Bid Spotter",
-        "commits": 92
+        "commits": 96
       },
       {
         "label": "JaLingo",
-        "commits": 36
+        "commits": 44
       }
     ],
     "appsInProduction": 7,
@@ -488,7 +488,7 @@
     {
       "id": "LL-068",
       "title": "Never let an agent print a secret value; assume every command trace and config-read response is live until proven otherwise",
-      "text": "Agents should never print a secret's value, even from an operation labeled read-only — a debug trace or a config probe's raw response can carry live credentials without anyone intending it."
+      "text": "Agents should never print a secret's value, even from an operation labeled read-only; browser snapshots, debug traces, and config responses can carry live credentials without anyone intending it."
     },
     {
       "id": "LL-069",
@@ -519,6 +519,41 @@
       "id": "LL-074",
       "title": "One authority per topic; a retired competitor is deleted, not archived",
       "text": "Give every topic exactly one home and delete the copies; an archived duplicate still misleads whoever searches for it next."
+    },
+    {
+      "id": "LL-075",
+      "title": "A promise is not an answer, and a pending list has no window",
+      "text": "Record \"I will do it\" separately from \"it is done\", and never let a request leave the open list on a promise. Show an unanswered reply before asking the person to decide again."
+    },
+    {
+      "id": "LL-076",
+      "title": "A failed sync cannot be followed by a push",
+      "text": "Verify the branch, history and remote commit before a shared sync claims success or starts the work it recorded."
+    },
+    {
+      "id": "LL-077",
+      "title": "Shared writers need a schedule and a bounded lock wait",
+      "text": "Stagger shared jobs and verify each scheduled run, rather than treating a skipped lock attempt as a successful update."
+    },
+    {
+      "id": "LL-078",
+      "title": "Browser readback is not safe on a credential dashboard",
+      "text": "Inspect broker state through authenticated API reads, and rotate any credential that appears in a chat or tool transcript."
+    },
+    {
+      "id": "LL-079",
+      "title": "Keep operational failures separate from admitted commitments",
+      "text": "Preserve operational failures without letting each event create a new commitment; use an explicit admission gate for durable work."
+    },
+    {
+      "id": "LL-080",
+      "title": "A rotation is not finished until every copy is proven equal",
+      "text": "After rotating a credential, verify by hash that every stored copy matches the new value instead of assuming the sync reached them."
+    },
+    {
+      "id": "LL-081",
+      "title": "The runtime checkout must be clean main, and something must say so",
+      "text": "Scheduled jobs should run from a checkout that is verified to be on the current main branch, and a monitor should flag any drift."
     }
   ]
 }
