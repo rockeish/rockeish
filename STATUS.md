@@ -1,6 +1,6 @@
 # Status — rockeish
 
-Last verified: 2026-09-24
+Last verified: 2026-10-02
 Authority: current repository truth
 
 ## Purpose
@@ -23,8 +23,8 @@ generated `README.md` on `origin/main`.
 
 ## Main CI
 
-`main` at `b49fcba` (2026-09-23): two runs both **success** — "Push on main"
-(17:41 UTC) and "Scheduled" (17:53 UTC). GitHub code scanning's default
+`main` at `06bb14a` (2026-10-02, latest local-cron refresh); generator tests 26/26 pass. The last two
+verified GitHub runs on `b49fcba` (2026-09-23) were both **success** — "Push on main" and "Scheduled". GitHub code scanning's default
 CodeQL setup is registered on the repo (no committed workflow file; this is
 GitHub's non-YAML default-setup code scanning, confirmed via
 `gh api repos/rockeish/rockeish/actions/workflows`).
@@ -37,8 +37,14 @@ None.
 
 No open issues found in `~/knowledge/obsidian-vault/MyBrain/90_System/todos/backlog.md`
 naming this repo. The refresh mechanism is a stamp-guarded local cron
-(`chore: refresh showcase ... local cron`, latest at `b49fcba`) that
+(`chore: refresh showcase ... local cron`, latest at `06bb14a`) that
 aggregates data and regenerates content — per `CLAUDE.md`, content must not
 be hand-edited; update the data/generator instead. Next gate: none scheduled;
 this repo is maintained opportunistically alongside sibling-repo changes that
 feed its stats.
+
+## Cross-repo input check (2026-10-02)
+
+The lessons section reads `~/ai/LESSONS.md` (`Public:` lines only) at refresh time. LL-082 to LL-087
+were added to `ai` after the 2026-10-02 refresh, so they reach the profile at the next cron run; no
+manual edit. If a refresh stops picking up new lessons, check `SHOWCASE_LESSONS_FILE` first.
