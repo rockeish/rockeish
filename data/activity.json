@@ -1,18 +1,18 @@
 {
-  "asOf": "2026-10-02",
+  "asOf": "2026-10-03",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
       "lastShipped": "2026-10-02",
-      "recent": 473,
-      "version": "v2.62.452"
+      "recent": 475,
+      "version": "v2.62.456"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-10-01",
-      "recent": 394,
-      "version": "v3.33.2"
+      "lastShipped": "2026-10-02",
+      "recent": 401,
+      "version": "v3.33.3"
     },
     {
       "name": "Longevity",
@@ -28,8 +28,8 @@
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-10-01",
-      "recent": 164,
+      "lastShipped": "2026-10-02",
+      "recent": 166,
       "version": "v1.3.1"
     },
     {
@@ -52,8 +52,8 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-01",
-      "recent": 63,
+      "lastShipped": "2026-10-02",
+      "recent": 65,
       "version": null
     },
     {
@@ -64,18 +64,18 @@
     },
     {
       "name": "Unwind",
-      "lastShipped": "2026-10-01",
+      "lastShipped": "2026-10-03",
       "recent": 43,
       "version": "v1.2.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-10-02",
-    "commits": 8718,
+    "asOf": "2026-10-03",
+    "commits": 8731,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2742
+        "commits": 2746
       },
       {
         "label": "RealInvestorX",
@@ -91,7 +91,7 @@
       },
       {
         "label": "Compliance OS",
-        "commits": 952
+        "commits": 959
       },
       {
         "label": "TheLoop",
@@ -103,7 +103,7 @@
       },
       {
         "label": "EngiByte",
-        "commits": 175
+        "commits": 177
       },
       {
         "label": "Bid Spotter",
@@ -116,16 +116,16 @@
     ],
     "appsInProduction": 7,
     "repos": 34,
-    "trackedFiles": 7186,
-    "linesOfSource": 966956,
+    "trackedFiles": 7285,
+    "linesOfSource": 981979,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 632342
+        "lines": 639514
       },
       {
         "name": "JavaScript",
-        "lines": 250251
+        "lines": 258095
       },
       {
         "name": "CSS",
@@ -145,7 +145,7 @@
       },
       {
         "name": "Other",
-        "lines": 5500
+        "lines": 5507
       }
     ]
   },
@@ -554,6 +554,51 @@
       "id": "LL-081",
       "title": "The runtime checkout must be clean main, and something must say so",
       "text": "Scheduled jobs should run from a checkout that is verified to be on the current main branch, and a monitor should flag any drift."
+    },
+    {
+      "id": "LL-082",
+      "title": "Customers get a stable build; a measurement window freezes the product",
+      "text": "A product that changes every day cannot be measured. Ship customer-facing changes in batches, and freeze everything but core-path repairs while a test is running."
+    },
+    {
+      "id": "LL-083",
+      "title": "Monitor the core path with a real transaction, never a preflight",
+      "text": "A preflight or a health check can be green while the product's main action fails for every user. Monitor the path that matters with a real, synthetic transaction in production."
+    },
+    {
+      "id": "LL-084",
+      "title": "Prove day-1 return before buying traffic",
+      "text": "Paid traffic tells you whether you can buy users, not whether they want the product. Prove that people come back on their own before paying for more of them."
+    },
+    {
+      "id": "LL-085",
+      "title": "One owner metric per product, fixed before spending",
+      "text": "Pick the one number that decides a product before spending money on it, compute it daily with a script, and do not swap it for a friendlier number when it disappoints."
+    },
+    {
+      "id": "LL-086",
+      "title": "A kill rule names a dollar ceiling that trips without a meeting",
+      "text": "A kill rule without a dollar limit gets extended one more week at a time. Write the spend ceiling and the revenue floor into the rule, and pause spend automatically when the ceiling is crossed."
+    },
+    {
+      "id": "LL-087",
+      "title": "Add a platform only with its own core-path monitor and release path",
+      "text": "Every platform you ship on is another product to keep working. Make the core loop solid on one platform first, and add another only when it has its own monitoring and release path."
+    },
+    {
+      "id": "LL-088",
+      "title": "Gate a VM's work on the host resource that kills it",
+      "text": "Watch the resource that actually takes the machine down. A virtual machine with plenty of memory still dies when the disk under it fills."
+    },
+    {
+      "id": "LL-089",
+      "title": "A lifecycle that deletes files must update every guard that tests for them",
+      "text": "When a cleanup deletes files, update every check that looked for them, or something will helpfully recreate what you just removed."
+    },
+    {
+      "id": "LL-090",
+      "title": "A watcher cannot run on the scheduler it watches",
+      "text": "A monitor that runs on the system it watches goes quiet exactly when that system dies. Give the scheduler a heartbeat that something else checks."
     }
   ]
 }

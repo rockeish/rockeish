@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 34 repositories, 8.7K commits, 967K lines of source, 7 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 34 repositories, 8.7K commits, 982K lines of source, 7 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -82,34 +82,34 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>Portfolio snapshot dated Oct 2, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
+<sub>Portfolio snapshot dated Oct 3, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,742; RealInvestorX 1,284; Longevity 1,173; Apex 961; Compliance OS 952; TheLoop 663; Beyond Volatility 628; EngiByte 175; Bid Spotter 96; JaLingo 44. ~8.7K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,746; RealInvestorX 1,284; Longevity 1,173; Apex 961; Compliance OS 959; TheLoop 663; Beyond Volatility 628; EngiByte 177; Bid Spotter 96; JaLingo 44. ~8.7K total, single author." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 967K lines of tracked source — TypeScript 65.4%, JavaScript 25.9%, CSS 4.1%, SQL 1.7%, PHP 1.3%, Python 1.1%, Other 0.6%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 982K lines of tracked source — TypeScript 65.1%, JavaScript 26.3%, CSS 4.0%, SQL 1.7%, PHP 1.3%, Python 1.0%, Other 0.6%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 473 commits; Compliance OS 394 commits; Longevity 358 commits; RealInvestorX 348 commits; EngiByte 164 commits; Apex 162 commits; TheLoop 105 commits; Bid Spotter 83 commits; JaLingo 44 commits; Unwind 43 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 475 commits; Compliance OS 401 commits; Longevity 358 commits; RealInvestorX 348 commits; EngiByte 166 commits; Apex 162 commits; TheLoop 105 commits; Bid Spotter 83 commits; JaLingo 44 commits; Unwind 43 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 2, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 3, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.452` | 473 |
-| **Compliance OS** | `v3.33.2` | 394 |
+| **ParentPod** | `v2.62.456` | 475 |
+| **Compliance OS** | `v3.33.3` | 401 |
 | **Longevity** | `v2.0.130` | 358 |
 | **RealInvestorX** | `v5.33.16` | 348 |
-| **EngiByte** | `v1.3.1` | 164 |
+| **EngiByte** | `v1.3.1` | 166 |
 | **Apex** | `v0.2.6` | 162 |
 | **TheLoop** | `v1.2.0` | 105 |
 | **Bid Spotter** | `v2.1.0` | 83 |
@@ -175,7 +175,7 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## Lessons learned
 
-<sub>What 81 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
+<sub>What 90 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
 
 - **Prose is a hope; only something that fires is a fix.** A rule that only lives in a document is a hope. Every recurring failure gets a check that fires on its own — a scheduled job, a CI gate, a hook, or a test — and the fix is not done until that check exists.
 - **Built is not wired; correctness and activation are separate claims.** Shipping code is not the same as activating it. A guard that is written and tested but never registered protects nothing, so wiring is verified as its own step.
@@ -187,7 +187,7 @@ Shared standards and repository-specific release gates connect each change to te
 - **Copy the value, never the label; a comment's safety claim is testable.** The label on a thing and the value inside it drift apart. Billing, trial length, and configuration are read from the value the system actually enforces, and any comment claiming "this is safe" gets a test.
 
 <details>
-<summary><b>73 more</b></summary>
+<summary><b>82 more</b></summary>
 
 - **Shared-infrastructure failures wear the costume of code bugs.** When many pipelines share one machine or one budget, an outage looks like a code failure. A monitor establishes whether a red result is fixable by any commit before it files work against the code.
 - **A test double must refuse what the real system refuses.** A stand-in used for testing has to say no wherever the real system says no. If it is more permissive, every test passes and the live system still refuses, which is the hardest kind of gap to see.
@@ -262,6 +262,15 @@ Shared standards and repository-specific release gates connect each change to te
 - **Keep operational failures separate from admitted commitments.** Preserve operational failures without letting each event create a new commitment; use an explicit admission gate for durable work.
 - **A rotation is not finished until every copy is proven equal.** After rotating a credential, verify by hash that every stored copy matches the new value instead of assuming the sync reached them.
 - **The runtime checkout must be clean main, and something must say so.** Scheduled jobs should run from a checkout that is verified to be on the current main branch, and a monitor should flag any drift.
+- **Customers get a stable build; a measurement window freezes the product.** A product that changes every day cannot be measured. Ship customer-facing changes in batches, and freeze everything but core-path repairs while a test is running.
+- **Monitor the core path with a real transaction, never a preflight.** A preflight or a health check can be green while the product's main action fails for every user. Monitor the path that matters with a real, synthetic transaction in production.
+- **Prove day-1 return before buying traffic.** Paid traffic tells you whether you can buy users, not whether they want the product. Prove that people come back on their own before paying for more of them.
+- **One owner metric per product, fixed before spending.** Pick the one number that decides a product before spending money on it, compute it daily with a script, and do not swap it for a friendlier number when it disappoints.
+- **A kill rule names a dollar ceiling that trips without a meeting.** A kill rule without a dollar limit gets extended one more week at a time. Write the spend ceiling and the revenue floor into the rule, and pause spend automatically when the ceiling is crossed.
+- **Add a platform only with its own core-path monitor and release path.** Every platform you ship on is another product to keep working. Make the core loop solid on one platform first, and add another only when it has its own monitoring and release path.
+- **Gate a VM's work on the host resource that kills it.** Watch the resource that actually takes the machine down. A virtual machine with plenty of memory still dies when the disk under it fills.
+- **A lifecycle that deletes files must update every guard that tests for them.** When a cleanup deletes files, update every check that looked for them, or something will helpfully recreate what you just removed.
+- **A watcher cannot run on the scheduler it watches.** A monitor that runs on the system it watches goes quiet exactly when that system dies. Give the scheduler a heartbeat that something else checks.
 
 </details>
 
