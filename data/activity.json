@@ -1,151 +1,151 @@
 {
-  "asOf": "2026-10-03",
+  "asOf": "2026-10-04",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-10-02",
-      "recent": 475,
-      "version": "v2.62.456"
+      "lastShipped": "2026-10-04",
+      "recent": 473,
+      "version": "v2.62.458"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-10-02",
-      "recent": 401,
-      "version": "v3.33.3"
+      "lastShipped": "2026-10-04",
+      "recent": 415,
+      "version": "v3.34.0"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-10-02",
-      "recent": 358,
-      "version": "v2.0.130"
+      "lastShipped": "2026-10-04",
+      "recent": 377,
+      "version": "v2.0.137"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-10-01",
-      "recent": 348,
-      "version": "v5.33.16"
-    },
-    {
-      "name": "EngiByte",
-      "lastShipped": "2026-10-02",
-      "recent": 166,
-      "version": "v1.3.1"
+      "lastShipped": "2026-10-04",
+      "recent": 356,
+      "version": "v5.34.0"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-10-01",
-      "recent": 162,
+      "lastShipped": "2026-10-04",
+      "recent": 171,
       "version": "v0.2.6"
     },
     {
+      "name": "EngiByte",
+      "lastShipped": "2026-10-04",
+      "recent": 171,
+      "version": "v1.3.1"
+    },
+    {
       "name": "TheLoop",
-      "lastShipped": "2026-09-30",
-      "recent": 105,
+      "lastShipped": "2026-10-04",
+      "recent": 115,
       "version": "v1.2.0"
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-10-01",
-      "recent": 83,
+      "lastShipped": "2026-10-03",
+      "recent": 88,
       "version": "v2.1.0"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-02",
-      "recent": 65,
+      "lastShipped": "2026-10-03",
+      "recent": 66,
       "version": null
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-01",
-      "recent": 44,
+      "lastShipped": "2026-10-04",
+      "recent": 63,
       "version": "v0.5.0"
     },
     {
       "name": "Unwind",
-      "lastShipped": "2026-10-03",
-      "recent": 43,
+      "lastShipped": "2026-10-04",
+      "recent": 47,
       "version": "v1.2.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-10-03",
-    "commits": 8731,
+    "asOf": "2026-10-04",
+    "commits": 8832,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2746
+        "commits": 2751
       },
       {
         "label": "RealInvestorX",
-        "commits": 1284
+        "commits": 1292
       },
       {
         "label": "Longevity",
-        "commits": 1173
-      },
-      {
-        "label": "Apex",
-        "commits": 961
+        "commits": 1192
       },
       {
         "label": "Compliance OS",
-        "commits": 959
+        "commits": 973
+      },
+      {
+        "label": "Apex",
+        "commits": 970
       },
       {
         "label": "TheLoop",
-        "commits": 663
+        "commits": 673
       },
       {
         "label": "Beyond Volatility",
-        "commits": 628
+        "commits": 635
       },
       {
         "label": "EngiByte",
-        "commits": 177
+        "commits": 182
       },
       {
         "label": "Bid Spotter",
-        "commits": 96
+        "commits": 101
       },
       {
         "label": "JaLingo",
-        "commits": 44
+        "commits": 63
       }
     ],
     "appsInProduction": 7,
-    "repos": 34,
-    "trackedFiles": 7285,
-    "linesOfSource": 981979,
+    "repos": 17,
+    "trackedFiles": 15707,
+    "linesOfSource": 1044475,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 639514
+        "lines": 681594
       },
       {
         "name": "JavaScript",
-        "lines": 258095
+        "lines": 265916
       },
       {
         "name": "CSS",
-        "lines": 39691
-      },
-      {
-        "name": "SQL",
-        "lines": 16457
-      },
-      {
-        "name": "PHP",
-        "lines": 12454
+        "lines": 41959
       },
       {
         "name": "Python",
-        "lines": 10261
+        "lines": 18319
+      },
+      {
+        "name": "SQL",
+        "lines": 17845
+      },
+      {
+        "name": "PHP",
+        "lines": 12684
       },
       {
         "name": "Other",
-        "lines": 5507
+        "lines": 6158
       }
     ]
   },
@@ -599,6 +599,46 @@
       "id": "LL-090",
       "title": "A watcher cannot run on the scheduler it watches",
       "text": "A monitor that runs on the system it watches goes quiet exactly when that system dies. Give the scheduler a heartbeat that something else checks."
+    },
+    {
+      "id": "LL-091",
+      "title": "An admission gate should queue work, not fail it",
+      "text": "A queue that gives up on waiting jobs turns a busy system into a broken one. Keep the safety limits fixed and let the line be long."
+    },
+    {
+      "id": "LL-092",
+      "title": "Merge append-only files as a union; refuse conflicts everywhere else",
+      "text": "When two sides only ever append, a conflict is not a disagreement. Keep both, and save the hard stop for files where it means something."
+    },
+    {
+      "id": "LL-093",
+      "title": "A catch-all that maps every verification error to \"unauthenticated\" hides outages",
+      "text": "An error handler that treats every failure as \"signed out\" turns an outage into a quiet login prompt. Test the signed-in path, not just the front door."
+    },
+    {
+      "id": "LL-094",
+      "title": "Strip control markup at the boundary that publishes, not where it is written",
+      "text": "If a document mixes what readers see with internal switches, the publishing step has to strip the switches. Trusting every writer to put them in the right place eventually shows them to readers."
+    },
+    {
+      "id": "LL-095",
+      "title": "A forwarder is unconfirmed until a message has gone through it",
+      "text": "A forwarding rule is only a claim until a test message has actually come out the other side, so test it on a schedule."
+    },
+    {
+      "id": "LL-096",
+      "title": "A cleanup must name what it may never touch",
+      "text": "A cleanup that decides what is finished by its shape will eventually delete something live, so it needs an explicit list of things it may never touch, plus an alarm when one of them disappears."
+    },
+    {
+      "id": "LL-097",
+      "title": "Meet the intent before writing an owner card",
+      "text": "Before asking a person to do a task, try two different ways to meet its intent yourself; a forgotten password can usually be reset rather than recovered."
+    },
+    {
+      "id": "LL-098",
+      "title": "A platform's default grant is a decision nobody made",
+      "text": "Database functions that run with elevated rights are only as safe as the list of who may call them, and platform defaults often say \"everyone\", so that list has to be set on purpose and checked continuously."
     }
   ]
 }

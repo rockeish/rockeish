@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 34 repositories, 8.7K commits, 982K lines of source, 7 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 17 repositories, 8.8K commits, 1044K lines of source, 7 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -48,7 +48,7 @@ By day, I lead reliability-compliance work in the energy sector. Outside that ro
 
 ## The ecosystem
 
-34 repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery connected by common release controls.
+17 repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery connected by common release controls.
 
 <p align="center"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/orbit.dark.svg">
@@ -82,39 +82,39 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>Portfolio snapshot dated Oct 3, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
+<sub>Portfolio snapshot dated Oct 4, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,746; RealInvestorX 1,284; Longevity 1,173; Apex 961; Compliance OS 959; TheLoop 663; Beyond Volatility 628; EngiByte 177; Bid Spotter 96; JaLingo 44. ~8.7K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,751; RealInvestorX 1,292; Longevity 1,192; Compliance OS 973; Apex 970; TheLoop 673; Beyond Volatility 635; EngiByte 182; Bid Spotter 101; JaLingo 63. ~8.8K total, single author." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 982K lines of tracked source — TypeScript 65.1%, JavaScript 26.3%, CSS 4.0%, SQL 1.7%, PHP 1.3%, Python 1.0%, Other 0.6%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 1044K lines of tracked source — TypeScript 65.3%, JavaScript 25.5%, CSS 4.0%, Python 1.8%, SQL 1.7%, PHP 1.2%, Other 0.6%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 475 commits; Compliance OS 401 commits; Longevity 358 commits; RealInvestorX 348 commits; EngiByte 166 commits; Apex 162 commits; TheLoop 105 commits; Bid Spotter 83 commits; JaLingo 44 commits; Unwind 43 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 473 commits; Compliance OS 415 commits; Longevity 377 commits; RealInvestorX 356 commits; Apex 171 commits; EngiByte 171 commits; TheLoop 115 commits; Bid Spotter 88 commits; JaLingo 63 commits; Unwind 47 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 3, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 4, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.456` | 475 |
-| **Compliance OS** | `v3.33.3` | 401 |
-| **Longevity** | `v2.0.130` | 358 |
-| **RealInvestorX** | `v5.33.16` | 348 |
-| **EngiByte** | `v1.3.1` | 166 |
-| **Apex** | `v0.2.6` | 162 |
-| **TheLoop** | `v1.2.0` | 105 |
-| **Bid Spotter** | `v2.1.0` | 83 |
-| **JaLingo** | `v0.5.0` | 44 |
-| **Unwind** | `v1.2.0` | 43 |
+| **ParentPod** | `v2.62.458` | 473 |
+| **Compliance OS** | `v3.34.0` | 415 |
+| **Longevity** | `v2.0.137` | 377 |
+| **RealInvestorX** | `v5.34.0` | 356 |
+| **Apex** | `v0.2.6` | 171 |
+| **EngiByte** | `v1.3.1` | 171 |
+| **TheLoop** | `v1.2.0` | 115 |
+| **Bid Spotter** | `v2.1.0` | 88 |
+| **JaLingo** | `v0.5.0` | 63 |
+| **Unwind** | `v1.2.0` | 47 |
 
 ## Selected work
 
@@ -175,7 +175,7 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## Lessons learned
 
-<sub>What 90 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
+<sub>What 98 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
 
 - **Prose is a hope; only something that fires is a fix.** A rule that only lives in a document is a hope. Every recurring failure gets a check that fires on its own — a scheduled job, a CI gate, a hook, or a test — and the fix is not done until that check exists.
 - **Built is not wired; correctness and activation are separate claims.** Shipping code is not the same as activating it. A guard that is written and tested but never registered protects nothing, so wiring is verified as its own step.
@@ -187,7 +187,7 @@ Shared standards and repository-specific release gates connect each change to te
 - **Copy the value, never the label; a comment's safety claim is testable.** The label on a thing and the value inside it drift apart. Billing, trial length, and configuration are read from the value the system actually enforces, and any comment claiming "this is safe" gets a test.
 
 <details>
-<summary><b>82 more</b></summary>
+<summary><b>90 more</b></summary>
 
 - **Shared-infrastructure failures wear the costume of code bugs.** When many pipelines share one machine or one budget, an outage looks like a code failure. A monitor establishes whether a red result is fixable by any commit before it files work against the code.
 - **A test double must refuse what the real system refuses.** A stand-in used for testing has to say no wherever the real system says no. If it is more permissive, every test passes and the live system still refuses, which is the hardest kind of gap to see.
@@ -271,6 +271,14 @@ Shared standards and repository-specific release gates connect each change to te
 - **Gate a VM's work on the host resource that kills it.** Watch the resource that actually takes the machine down. A virtual machine with plenty of memory still dies when the disk under it fills.
 - **A lifecycle that deletes files must update every guard that tests for them.** When a cleanup deletes files, update every check that looked for them, or something will helpfully recreate what you just removed.
 - **A watcher cannot run on the scheduler it watches.** A monitor that runs on the system it watches goes quiet exactly when that system dies. Give the scheduler a heartbeat that something else checks.
+- **An admission gate should queue work, not fail it.** A queue that gives up on waiting jobs turns a busy system into a broken one. Keep the safety limits fixed and let the line be long.
+- **Merge append-only files as a union; refuse conflicts everywhere else.** When two sides only ever append, a conflict is not a disagreement. Keep both, and save the hard stop for files where it means something.
+- **A catch-all that maps every verification error to "unauthenticated" hides outages.** An error handler that treats every failure as "signed out" turns an outage into a quiet login prompt. Test the signed-in path, not just the front door.
+- **Strip control markup at the boundary that publishes, not where it is written.** If a document mixes what readers see with internal switches, the publishing step has to strip the switches. Trusting every writer to put them in the right place eventually shows them to readers.
+- **A forwarder is unconfirmed until a message has gone through it.** A forwarding rule is only a claim until a test message has actually come out the other side, so test it on a schedule.
+- **A cleanup must name what it may never touch.** A cleanup that decides what is finished by its shape will eventually delete something live, so it needs an explicit list of things it may never touch, plus an alarm when one of them disappears.
+- **Meet the intent before writing an owner card.** Before asking a person to do a task, try two different ways to meet its intent yourself; a forgotten password can usually be reset rather than recovered.
+- **A platform's default grant is a decision nobody made.** Database functions that run with elevated rights are only as safe as the list of who may call them, and platform defaults often say "everyone", so that list has to be set on purpose and checked continuously.
 
 </details>
 
