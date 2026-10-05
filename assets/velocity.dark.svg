@@ -39,8 +39,8 @@
   <g class="fade" style="animation-delay:0.82s"><text x="478" y="209" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">356 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v5.34.0</tspan></text></g>
   <circle cx="30" cy="244" r="4" fill="#34d399" class="blink"/>
   <text x="172" y="249" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">Apex</text>
-  <g class="grow" style="transform-origin:182px 244px;animation-delay:0.46s"><rect x="182" y="233" width="137" height="22" rx="11" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:0.91s"><text x="329" y="249" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">171 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v0.2.6</tspan></text></g>
+  <g class="grow" style="transform-origin:182px 244px;animation-delay:0.46s"><rect x="182" y="233" width="140" height="22" rx="11" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:0.91s"><text x="332" y="249" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">174 · <tspan font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13">v0.2.6</tspan></text></g>
   <circle cx="30" cy="284" r="4" fill="#34d399" class="blink"/>
   <text x="172" y="289" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">EngiByte</text>
   <g class="grow" style="transform-origin:182px 284px;animation-delay:0.55s"><rect x="182" y="273" width="137" height="22" rx="11" fill="url(#accent)"/></g>

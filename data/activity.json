@@ -29,7 +29,7 @@
     {
       "name": "Apex",
       "lastShipped": "2026-10-04",
-      "recent": 171,
+      "recent": 174,
       "version": "v0.2.6"
     },
     {
@@ -52,8 +52,8 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-03",
-      "recent": 66,
+      "lastShipped": "2026-10-04",
+      "recent": 67,
       "version": null
     },
     {
@@ -71,7 +71,7 @@
   ],
   "metrics": {
     "asOf": "2026-10-04",
-    "commits": 8832,
+    "commits": 8835,
     "commitsByRepo": [
       {
         "label": "ParentPod",
@@ -86,12 +86,12 @@
         "commits": 1192
       },
       {
-        "label": "Compliance OS",
+        "label": "Apex",
         "commits": 973
       },
       {
-        "label": "Apex",
-        "commits": 970
+        "label": "Compliance OS",
+        "commits": 973
       },
       {
         "label": "TheLoop",
@@ -116,36 +116,36 @@
     ],
     "appsInProduction": 7,
     "repos": 17,
-    "trackedFiles": 15707,
-    "linesOfSource": 1044475,
+    "trackedFiles": 15893,
+    "linesOfSource": 1051997,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 681594
+        "lines": 681561
       },
       {
         "name": "JavaScript",
-        "lines": 265916
+        "lines": 266307
       },
       {
         "name": "CSS",
-        "lines": 41959
+        "lines": 43729
       },
       {
         "name": "Python",
-        "lines": 18319
+        "lines": 23035
       },
       {
         "name": "SQL",
-        "lines": 17845
+        "lines": 18369
       },
       {
         "name": "PHP",
-        "lines": 12684
+        "lines": 12710
       },
       {
         "name": "Other",
-        "lines": 6158
+        "lines": 6286
       }
     ]
   },
