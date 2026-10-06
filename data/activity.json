@@ -1,30 +1,36 @@
 {
-  "asOf": "2026-10-04",
+  "asOf": "2026-10-05",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
       "lastShipped": "2026-10-04",
-      "recent": 473,
+      "recent": 470,
       "version": "v2.62.458"
     },
     {
       "name": "Compliance OS",
       "lastShipped": "2026-10-04",
-      "recent": 415,
+      "recent": 413,
       "version": "v3.34.0"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-10-04",
-      "recent": 377,
+      "recent": 372,
       "version": "v2.0.137"
     },
     {
       "name": "RealInvestorX",
       "lastShipped": "2026-10-04",
-      "recent": 356,
+      "recent": 355,
       "version": "v5.34.0"
+    },
+    {
+      "name": "JaLingo",
+      "lastShipped": "2026-10-04",
+      "recent": 232,
+      "version": "v0.5.0"
     },
     {
       "name": "Apex",
@@ -52,15 +58,9 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-04",
-      "recent": 67,
+      "lastShipped": "2026-10-05",
+      "recent": 68,
       "version": null
-    },
-    {
-      "name": "JaLingo",
-      "lastShipped": "2026-10-04",
-      "recent": 63,
-      "version": "v0.5.0"
     },
     {
       "name": "Unwind",
@@ -70,8 +70,8 @@
     }
   ],
   "metrics": {
-    "asOf": "2026-10-04",
-    "commits": 8835,
+    "asOf": "2026-10-05",
+    "commits": 9004,
     "commitsByRepo": [
       {
         "label": "ParentPod",
@@ -102,20 +102,20 @@
         "commits": 635
       },
       {
+        "label": "JaLingo",
+        "commits": 232
+      },
+      {
         "label": "EngiByte",
         "commits": 182
       },
       {
         "label": "Bid Spotter",
         "commits": 101
-      },
-      {
-        "label": "JaLingo",
-        "commits": 63
       }
     ],
     "appsInProduction": 7,
-    "repos": 17,
+    "repos": 20,
     "trackedFiles": 15893,
     "linesOfSource": 1051997,
     "languages": [
