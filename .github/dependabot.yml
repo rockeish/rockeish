@@ -1,0 +1,12 @@
+# Dependabot: weekly, one grouped PR per ecosystem (~/ai/standards/git-workflow.md).
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"
+    groups:
+      all-actions:
+        patterns: ["*"]
