@@ -1,139 +1,139 @@
 {
-  "asOf": "2026-10-05",
+  "asOf": "2026-10-07",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-10-04",
-      "recent": 470,
+      "lastShipped": "2026-10-07",
+      "recent": 480,
       "version": "v2.62.458"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-10-04",
-      "recent": 413,
-      "version": "v3.34.0"
+      "lastShipped": "2026-10-07",
+      "recent": 429,
+      "version": "v3.35.3"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-10-04",
-      "recent": 372,
-      "version": "v2.0.137"
+      "lastShipped": "2026-10-07",
+      "recent": 386,
+      "version": "v2.0.143"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-10-04",
-      "recent": 355,
-      "version": "v5.34.0"
+      "lastShipped": "2026-10-07",
+      "recent": 370,
+      "version": "v5.36.1"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-04",
-      "recent": 232,
+      "lastShipped": "2026-10-07",
+      "recent": 250,
       "version": "v0.5.0"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-10-04",
-      "recent": 174,
+      "lastShipped": "2026-10-07",
+      "recent": 184,
       "version": "v0.2.6"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-10-04",
-      "recent": 171,
+      "lastShipped": "2026-10-07",
+      "recent": 180,
       "version": "v1.3.1"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-10-04",
-      "recent": 115,
+      "lastShipped": "2026-10-07",
+      "recent": 121,
       "version": "v1.2.0"
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-10-03",
-      "recent": 88,
+      "lastShipped": "2026-10-07",
+      "recent": 94,
       "version": "v2.1.0"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-05",
-      "recent": 68,
+      "lastShipped": "2026-10-06",
+      "recent": 70,
       "version": null
     },
     {
       "name": "Unwind",
-      "lastShipped": "2026-10-04",
-      "recent": 47,
+      "lastShipped": "2026-10-07",
+      "recent": 54,
       "version": "v1.2.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-10-05",
-    "commits": 9004,
+    "asOf": "2026-10-07",
+    "commits": 9118,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2751
+        "commits": 2761
       },
       {
         "label": "RealInvestorX",
-        "commits": 1292
+        "commits": 1307
       },
       {
         "label": "Longevity",
-        "commits": 1192
-      },
-      {
-        "label": "Apex",
-        "commits": 973
+        "commits": 1206
       },
       {
         "label": "Compliance OS",
-        "commits": 973
+        "commits": 989
+      },
+      {
+        "label": "Apex",
+        "commits": 983
       },
       {
         "label": "TheLoop",
-        "commits": 673
+        "commits": 679
       },
       {
         "label": "Beyond Volatility",
-        "commits": 635
+        "commits": 645
       },
       {
         "label": "JaLingo",
-        "commits": 232
+        "commits": 250
       },
       {
         "label": "EngiByte",
-        "commits": 182
+        "commits": 191
       },
       {
         "label": "Bid Spotter",
-        "commits": 101
+        "commits": 107
       }
     ],
     "appsInProduction": 7,
-    "repos": 20,
-    "trackedFiles": 15893,
-    "linesOfSource": 1051997,
+    "repos": 23,
+    "trackedFiles": 16646,
+    "linesOfSource": 1061358,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 681561
+        "lines": 679196
       },
       {
         "name": "JavaScript",
-        "lines": 266307
+        "lines": 273741
       },
       {
         "name": "CSS",
-        "lines": 43729
+        "lines": 47142
       },
       {
         "name": "Python",
-        "lines": 23035
+        "lines": 23622
       },
       {
         "name": "SQL",
@@ -141,11 +141,11 @@
       },
       {
         "name": "PHP",
-        "lines": 12710
+        "lines": 12845
       },
       {
         "name": "Other",
-        "lines": 6286
+        "lines": 6443
       }
     ]
   },
@@ -639,6 +639,46 @@
       "id": "LL-098",
       "title": "A platform's default grant is a decision nobody made",
       "text": "Database functions that run with elevated rights are only as safe as the list of who may call them, and platform defaults often say \"everyone\", so that list has to be set on purpose and checked continuously."
+    },
+    {
+      "id": "LL-099",
+      "title": "A trading host's clock is an input; measure it",
+      "text": "Systems that judge data freshness by the local clock need that clock watched too; a few seconds of drift can look exactly like stale data."
+    },
+    {
+      "id": "LL-100",
+      "title": "Fix generated code at its source, never in the copy",
+      "text": "Code generated from a shared source is fixed in that source and re-synced; a check flags any copy that no longer matches its release."
+    },
+    {
+      "id": "LL-101",
+      "title": "Asking a tool for help must never run it",
+      "text": "Asking a release script for help must never run the release; scripts default to a dry run, and a sandboxed test proves every help call is inert."
+    },
+    {
+      "id": "LL-102",
+      "title": "The routes the law requires get a production probe too",
+      "text": "Deleting your account is checked daily in production with a throwaway account, so a broken deletion path pages someone instead of waiting for a user to find it."
+    },
+    {
+      "id": "LL-103",
+      "title": "A cap must hold after the action, not only before it",
+      "text": "A limit that is only compared with where you are now, and not with where the next step takes you, lets a single step jump past it."
+    },
+    {
+      "id": "LL-104",
+      "title": "A suite that reads the clock must also run when the clock is unkind",
+      "text": "A test that only passes at certain hours is a clock check, not a test; run the suite at the bad hour on purpose."
+    },
+    {
+      "id": "LL-105",
+      "title": "Test motion with motion on; animate only what the user caused",
+      "text": "An animation test suite that runs with animations turned off proves nothing about motion. Only animate what the user's own tap caused."
+    },
+    {
+      "id": "LL-106",
+      "title": "Read-only git calls under a kill timeout must not take locks",
+      "text": "A health check that gets killed partway through can leave behind the very lock that then blocks everything else. Make read-only checks lock-free."
     }
   ]
 }
