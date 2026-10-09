@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 20 repositories, 9K commits, 1052K lines of source, 7 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 23 repositories, 8.4K commits, 955K lines of source, 7 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -48,7 +48,7 @@ By day, I lead reliability-compliance work in the energy sector. Outside that ro
 
 ## The ecosystem
 
-20 repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery connected by common release controls.
+23 repositories, one system: a shared hub for distribution, a portfolio of products, two back ends, and native + web delivery connected by common release controls.
 
 <p align="center"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/orbit.dark.svg">
@@ -82,39 +82,38 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>Portfolio snapshot dated Oct 5, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
+<sub>Portfolio snapshot dated Oct 8, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,751; RealInvestorX 1,292; Longevity 1,192; Apex 973; Compliance OS 973; TheLoop 673; Beyond Volatility 635; JaLingo 232; EngiByte 182; Bid Spotter 101. ~9K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,765; RealInvestorX 1,309; Longevity 1,211; Compliance OS 992; Apex 985; TheLoop 679; JaLingo 251; EngiByte 194. ~8.4K total, single author." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 1052K lines of tracked source — TypeScript 64.8%, JavaScript 25.3%, CSS 4.2%, Python 2.2%, SQL 1.7%, PHP 1.2%, Other 0.6%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 955K lines of tracked source — TypeScript 67.1%, JavaScript 26.7%, CSS 2.8%, SQL 1.9%, Other 1.5%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 470 commits; Compliance OS 413 commits; Longevity 372 commits; RealInvestorX 355 commits; JaLingo 232 commits; Apex 174 commits; EngiByte 171 commits; TheLoop 115 commits; Bid Spotter 88 commits; Unwind 47 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 474 commits; Compliance OS 428 commits; Longevity 385 commits; RealInvestorX 369 commits; JaLingo 251 commits; Apex 185 commits; EngiByte 183 commits; TheLoop 121 commits; Unwind 57 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 5, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 8, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.458` | 470 |
-| **Compliance OS** | `v3.34.0` | 413 |
-| **Longevity** | `v2.0.137` | 372 |
-| **RealInvestorX** | `v5.34.0` | 355 |
-| **JaLingo** | `v0.5.0` | 232 |
-| **Apex** | `v0.2.6` | 174 |
-| **EngiByte** | `v1.3.1` | 171 |
-| **TheLoop** | `v1.2.0` | 115 |
-| **Bid Spotter** | `v2.1.0` | 88 |
-| **Unwind** | `v1.2.0` | 47 |
+| **ParentPod** | `v2.62.460` | 474 |
+| **Compliance OS** | `v3.35.4` | 428 |
+| **Longevity** | `v2.0.145` | 385 |
+| **RealInvestorX** | `v5.36.2` | 369 |
+| **JaLingo** | `v0.5.0` | 251 |
+| **Apex** | `v0.2.6` | 185 |
+| **EngiByte** | `v1.3.1` | 183 |
+| **TheLoop** | `v1.2.0` | 121 |
+| **Unwind** | `v1.2.0` | 57 |
 
 ## Selected work
 
@@ -175,7 +174,7 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## Lessons learned
 
-<sub>What 98 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
+<sub>What 112 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
 
 - **Prose is a hope; only something that fires is a fix.** A rule that only lives in a document is a hope. Every recurring failure gets a check that fires on its own — a scheduled job, a CI gate, a hook, or a test — and the fix is not done until that check exists.
 - **Built is not wired; correctness and activation are separate claims.** Shipping code is not the same as activating it. A guard that is written and tested but never registered protects nothing, so wiring is verified as its own step.
@@ -187,7 +186,7 @@ Shared standards and repository-specific release gates connect each change to te
 - **Copy the value, never the label; a comment's safety claim is testable.** The label on a thing and the value inside it drift apart. Billing, trial length, and configuration are read from the value the system actually enforces, and any comment claiming "this is safe" gets a test.
 
 <details>
-<summary><b>90 more</b></summary>
+<summary><b>104 more</b></summary>
 
 - **Shared-infrastructure failures wear the costume of code bugs.** When many pipelines share one machine or one budget, an outage looks like a code failure. A monitor establishes whether a red result is fixable by any commit before it files work against the code.
 - **A test double must refuse what the real system refuses.** A stand-in used for testing has to say no wherever the real system says no. If it is more permissive, every test passes and the live system still refuses, which is the hardest kind of gap to see.
@@ -279,6 +278,20 @@ Shared standards and repository-specific release gates connect each change to te
 - **A cleanup must name what it may never touch.** A cleanup that decides what is finished by its shape will eventually delete something live, so it needs an explicit list of things it may never touch, plus an alarm when one of them disappears.
 - **Meet the intent before writing an owner card.** Before asking a person to do a task, try two different ways to meet its intent yourself; a forgotten password can usually be reset rather than recovered.
 - **A platform's default grant is a decision nobody made.** Database functions that run with elevated rights are only as safe as the list of who may call them, and platform defaults often say "everyone", so that list has to be set on purpose and checked continuously.
+- **A trading host's clock is an input; measure it.** Systems that judge data freshness by the local clock need that clock watched too; a few seconds of drift can look exactly like stale data.
+- **Fix generated code at its source, never in the copy.** Code generated from a shared source is fixed in that source and re-synced; a check flags any copy that no longer matches its release.
+- **Asking a tool for help must never run it.** Asking a release script for help must never run the release; scripts default to a dry run, and a sandboxed test proves every help call is inert.
+- **The routes the law requires get a production probe too.** Deleting your account is checked daily in production with a throwaway account, so a broken deletion path pages someone instead of waiting for a user to find it.
+- **A cap must hold after the action, not only before it.** A limit that is only compared with where you are now, and not with where the next step takes you, lets a single step jump past it.
+- **A suite that reads the clock must also run when the clock is unkind.** A test that only passes at certain hours is a clock check, not a test; run the suite at the bad hour on purpose.
+- **Test motion with motion on; animate only what the user caused.** An animation test suite that runs with animations turned off proves nothing about motion. Only animate what the user's own tap caused.
+- **Read-only git calls under a kill timeout must not take locks.** A health check that gets killed partway through can leave behind the very lock that then blocks everything else. Make read-only checks lock-free.
+- **Check a repository's integrity before writing to it.** Automated writers sharing a git repository should check its integrity before each write. Repair automatically only what cannot lose data, and stop everything else until a person looks.
+- **Never pass a secret on a command line.** Never put a secret on a command line. Every user on the machine can read process arguments, so pass secrets through the environment or a file instead.
+- **A default release command must never reach production.** The everyday release command should only ever ship to testers. Shipping to real users should take a separate, deliberate step that promotes the exact build that was already tested.
+- **Audit traffic shares the CI runner's IP; a 403 challenge is not a regression.** If your test runner and your audit tooling leave the network from the same address, a bot shield will eventually block them both at once. Teach the test suite to tell "the host is blocking me" apart from "the site is broken."
+- **A watchdog on a log's mtime proves the job ran, not that it worked.** A backup monitor should alert on the last success, not on the last activity, or it will stay green through repeated failures.
+- **Live state with one copy is an incident waiting; back up databases with the database.** Copy a live database with its own backup tool and verify the copy, because a plain file copy of a database in use can be silently corrupt.
 
 </details>
 

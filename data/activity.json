@@ -1,151 +1,129 @@
 {
-  "asOf": "2026-10-05",
+  "asOf": "2026-10-08",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-10-04",
-      "recent": 470,
-      "version": "v2.62.458"
+      "lastShipped": "2026-10-08",
+      "recent": 474,
+      "version": "v2.62.460"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-10-04",
-      "recent": 413,
-      "version": "v3.34.0"
+      "lastShipped": "2026-10-08",
+      "recent": 428,
+      "version": "v3.35.4"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-10-04",
-      "recent": 372,
-      "version": "v2.0.137"
+      "lastShipped": "2026-10-08",
+      "recent": 385,
+      "version": "v2.0.145"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-10-04",
-      "recent": 355,
-      "version": "v5.34.0"
+      "lastShipped": "2026-10-08",
+      "recent": 369,
+      "version": "v5.36.2"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-04",
-      "recent": 232,
+      "lastShipped": "2026-10-08",
+      "recent": 251,
       "version": "v0.5.0"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-10-04",
-      "recent": 174,
+      "lastShipped": "2026-10-08",
+      "recent": 185,
       "version": "v0.2.6"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-10-04",
-      "recent": 171,
+      "lastShipped": "2026-10-08",
+      "recent": 183,
       "version": "v1.3.1"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-10-04",
-      "recent": 115,
+      "lastShipped": "2026-10-07",
+      "recent": 121,
       "version": "v1.2.0"
     },
     {
-      "name": "Bid Spotter",
-      "lastShipped": "2026-10-03",
-      "recent": 88,
-      "version": "v2.1.0"
-    },
-    {
       "name": "this profile",
-      "lastShipped": "2026-10-05",
-      "recent": 68,
+      "lastShipped": "2026-10-08",
+      "recent": 71,
       "version": null
     },
     {
       "name": "Unwind",
-      "lastShipped": "2026-10-04",
-      "recent": 47,
+      "lastShipped": "2026-10-08",
+      "recent": 57,
       "version": "v1.2.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-10-05",
-    "commits": 9004,
+    "asOf": "2026-10-08",
+    "commits": 8386,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2751
+        "commits": 2765
       },
       {
         "label": "RealInvestorX",
-        "commits": 1292
+        "commits": 1309
       },
       {
         "label": "Longevity",
-        "commits": 1192
-      },
-      {
-        "label": "Apex",
-        "commits": 973
+        "commits": 1211
       },
       {
         "label": "Compliance OS",
-        "commits": 973
+        "commits": 992
+      },
+      {
+        "label": "Apex",
+        "commits": 985
       },
       {
         "label": "TheLoop",
-        "commits": 673
-      },
-      {
-        "label": "Beyond Volatility",
-        "commits": 635
+        "commits": 679
       },
       {
         "label": "JaLingo",
-        "commits": 232
+        "commits": 251
       },
       {
         "label": "EngiByte",
-        "commits": 182
-      },
-      {
-        "label": "Bid Spotter",
-        "commits": 101
+        "commits": 194
       }
     ],
     "appsInProduction": 7,
-    "repos": 20,
-    "trackedFiles": 15893,
-    "linesOfSource": 1051997,
+    "repos": 23,
+    "trackedFiles": 15257,
+    "linesOfSource": 954934,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 681561
+        "lines": 640631
       },
       {
         "name": "JavaScript",
-        "lines": 266307
+        "lines": 255174
       },
       {
         "name": "CSS",
-        "lines": 43729
-      },
-      {
-        "name": "Python",
-        "lines": 23035
+        "lines": 26430
       },
       {
         "name": "SQL",
         "lines": 18369
       },
       {
-        "name": "PHP",
-        "lines": 12710
-      },
-      {
         "name": "Other",
-        "lines": 6286
+        "lines": 14330
       }
     ]
   },
@@ -639,6 +617,76 @@
       "id": "LL-098",
       "title": "A platform's default grant is a decision nobody made",
       "text": "Database functions that run with elevated rights are only as safe as the list of who may call them, and platform defaults often say \"everyone\", so that list has to be set on purpose and checked continuously."
+    },
+    {
+      "id": "LL-099",
+      "title": "A trading host's clock is an input; measure it",
+      "text": "Systems that judge data freshness by the local clock need that clock watched too; a few seconds of drift can look exactly like stale data."
+    },
+    {
+      "id": "LL-100",
+      "title": "Fix generated code at its source, never in the copy",
+      "text": "Code generated from a shared source is fixed in that source and re-synced; a check flags any copy that no longer matches its release."
+    },
+    {
+      "id": "LL-101",
+      "title": "Asking a tool for help must never run it",
+      "text": "Asking a release script for help must never run the release; scripts default to a dry run, and a sandboxed test proves every help call is inert."
+    },
+    {
+      "id": "LL-102",
+      "title": "The routes the law requires get a production probe too",
+      "text": "Deleting your account is checked daily in production with a throwaway account, so a broken deletion path pages someone instead of waiting for a user to find it."
+    },
+    {
+      "id": "LL-103",
+      "title": "A cap must hold after the action, not only before it",
+      "text": "A limit that is only compared with where you are now, and not with where the next step takes you, lets a single step jump past it."
+    },
+    {
+      "id": "LL-104",
+      "title": "A suite that reads the clock must also run when the clock is unkind",
+      "text": "A test that only passes at certain hours is a clock check, not a test; run the suite at the bad hour on purpose."
+    },
+    {
+      "id": "LL-105",
+      "title": "Test motion with motion on; animate only what the user caused",
+      "text": "An animation test suite that runs with animations turned off proves nothing about motion. Only animate what the user's own tap caused."
+    },
+    {
+      "id": "LL-106",
+      "title": "Read-only git calls under a kill timeout must not take locks",
+      "text": "A health check that gets killed partway through can leave behind the very lock that then blocks everything else. Make read-only checks lock-free."
+    },
+    {
+      "id": "LL-107",
+      "title": "Check a repository's integrity before writing to it",
+      "text": "Automated writers sharing a git repository should check its integrity before each write. Repair automatically only what cannot lose data, and stop everything else until a person looks."
+    },
+    {
+      "id": "LL-108",
+      "title": "Never pass a secret on a command line",
+      "text": "Never put a secret on a command line. Every user on the machine can read process arguments, so pass secrets through the environment or a file instead."
+    },
+    {
+      "id": "LL-109",
+      "title": "A default release command must never reach production",
+      "text": "The everyday release command should only ever ship to testers. Shipping to real users should take a separate, deliberate step that promotes the exact build that was already tested."
+    },
+    {
+      "id": "LL-110",
+      "title": "Audit traffic shares the CI runner's IP; a 403 challenge is not a regression",
+      "text": "If your test runner and your audit tooling leave the network from the same address, a bot shield will eventually block them both at once. Teach the test suite to tell \"the host is blocking me\" apart from \"the site is broken.\""
+    },
+    {
+      "id": "LL-111",
+      "title": "A watchdog on a log's mtime proves the job ran, not that it worked",
+      "text": "A backup monitor should alert on the last success, not on the last activity, or it will stay green through repeated failures."
+    },
+    {
+      "id": "LL-112",
+      "title": "Live state with one copy is an incident waiting; back up databases with the database",
+      "text": "Copy a live database with its own backup tool and verify the copy, because a plain file copy of a database in use can be silently corrupt."
     }
   ]
 }
