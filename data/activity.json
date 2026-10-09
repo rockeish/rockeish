@@ -1,47 +1,47 @@
 {
-  "asOf": "2026-10-07",
+  "asOf": "2026-10-08",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-10-07",
-      "recent": 480,
-      "version": "v2.62.458"
+      "lastShipped": "2026-10-08",
+      "recent": 474,
+      "version": "v2.62.460"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-10-07",
-      "recent": 429,
-      "version": "v3.35.3"
+      "lastShipped": "2026-10-08",
+      "recent": 428,
+      "version": "v3.35.4"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-10-07",
-      "recent": 386,
-      "version": "v2.0.143"
+      "lastShipped": "2026-10-08",
+      "recent": 385,
+      "version": "v2.0.145"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-10-07",
-      "recent": 370,
-      "version": "v5.36.1"
+      "lastShipped": "2026-10-08",
+      "recent": 369,
+      "version": "v5.36.2"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-07",
-      "recent": 250,
+      "lastShipped": "2026-10-08",
+      "recent": 251,
       "version": "v0.5.0"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-10-07",
-      "recent": 184,
+      "lastShipped": "2026-10-08",
+      "recent": 185,
       "version": "v0.2.6"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-10-07",
-      "recent": 180,
+      "lastShipped": "2026-10-08",
+      "recent": 183,
       "version": "v1.3.1"
     },
     {
@@ -51,101 +51,79 @@
       "version": "v1.2.0"
     },
     {
-      "name": "Bid Spotter",
-      "lastShipped": "2026-10-07",
-      "recent": 94,
-      "version": "v2.1.0"
-    },
-    {
       "name": "this profile",
-      "lastShipped": "2026-10-06",
-      "recent": 70,
+      "lastShipped": "2026-10-08",
+      "recent": 71,
       "version": null
     },
     {
       "name": "Unwind",
-      "lastShipped": "2026-10-07",
-      "recent": 54,
+      "lastShipped": "2026-10-08",
+      "recent": 57,
       "version": "v1.2.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-10-07",
-    "commits": 9118,
+    "asOf": "2026-10-08",
+    "commits": 8386,
     "commitsByRepo": [
       {
         "label": "ParentPod",
-        "commits": 2761
+        "commits": 2765
       },
       {
         "label": "RealInvestorX",
-        "commits": 1307
+        "commits": 1309
       },
       {
         "label": "Longevity",
-        "commits": 1206
+        "commits": 1211
       },
       {
         "label": "Compliance OS",
-        "commits": 989
+        "commits": 992
       },
       {
         "label": "Apex",
-        "commits": 983
+        "commits": 985
       },
       {
         "label": "TheLoop",
         "commits": 679
       },
       {
-        "label": "Beyond Volatility",
-        "commits": 645
-      },
-      {
         "label": "JaLingo",
-        "commits": 250
+        "commits": 251
       },
       {
         "label": "EngiByte",
-        "commits": 191
-      },
-      {
-        "label": "Bid Spotter",
-        "commits": 107
+        "commits": 194
       }
     ],
     "appsInProduction": 7,
     "repos": 23,
-    "trackedFiles": 16646,
-    "linesOfSource": 1061358,
+    "trackedFiles": 15257,
+    "linesOfSource": 954934,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 679196
+        "lines": 640631
       },
       {
         "name": "JavaScript",
-        "lines": 273741
+        "lines": 255174
       },
       {
         "name": "CSS",
-        "lines": 47142
-      },
-      {
-        "name": "Python",
-        "lines": 23622
+        "lines": 26430
       },
       {
         "name": "SQL",
         "lines": 18369
       },
       {
-        "name": "PHP",
-        "lines": 12845
-      },
-      {
         "name": "Other",
-        "lines": 6443
+        "lines": 14330
       }
     ]
   },
@@ -679,6 +657,36 @@
       "id": "LL-106",
       "title": "Read-only git calls under a kill timeout must not take locks",
       "text": "A health check that gets killed partway through can leave behind the very lock that then blocks everything else. Make read-only checks lock-free."
+    },
+    {
+      "id": "LL-107",
+      "title": "Check a repository's integrity before writing to it",
+      "text": "Automated writers sharing a git repository should check its integrity before each write. Repair automatically only what cannot lose data, and stop everything else until a person looks."
+    },
+    {
+      "id": "LL-108",
+      "title": "Never pass a secret on a command line",
+      "text": "Never put a secret on a command line. Every user on the machine can read process arguments, so pass secrets through the environment or a file instead."
+    },
+    {
+      "id": "LL-109",
+      "title": "A default release command must never reach production",
+      "text": "The everyday release command should only ever ship to testers. Shipping to real users should take a separate, deliberate step that promotes the exact build that was already tested."
+    },
+    {
+      "id": "LL-110",
+      "title": "Audit traffic shares the CI runner's IP; a 403 challenge is not a regression",
+      "text": "If your test runner and your audit tooling leave the network from the same address, a bot shield will eventually block them both at once. Teach the test suite to tell \"the host is blocking me\" apart from \"the site is broken.\""
+    },
+    {
+      "id": "LL-111",
+      "title": "A watchdog on a log's mtime proves the job ran, not that it worked",
+      "text": "A backup monitor should alert on the last success, not on the last activity, or it will stay green through repeated failures."
+    },
+    {
+      "id": "LL-112",
+      "title": "Live state with one copy is an incident waiting; back up databases with the database",
+      "text": "Copy a live database with its own backup tool and verify the copy, because a plain file copy of a database in use can be silently corrupt."
     }
   ]
 }

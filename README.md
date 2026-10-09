@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 23 repositories, 9.1K commits, 1061K lines of source, 7 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 23 repositories, 8.4K commits, 955K lines of source, 7 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -82,39 +82,38 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>Portfolio snapshot dated Oct 7, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
+<sub>Portfolio snapshot dated Oct 8, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,761; RealInvestorX 1,307; Longevity 1,206; Compliance OS 989; Apex 983; TheLoop 679; Beyond Volatility 645; JaLingo 250; EngiByte 191; Bid Spotter 107. ~9.1K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,765; RealInvestorX 1,309; Longevity 1,211; Compliance OS 992; Apex 985; TheLoop 679; JaLingo 251; EngiByte 194. ~8.4K total, single author." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 1061K lines of tracked source — TypeScript 64.0%, JavaScript 25.8%, CSS 4.4%, Python 2.2%, SQL 1.7%, PHP 1.2%, Other 0.6%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 955K lines of tracked source — TypeScript 67.1%, JavaScript 26.7%, CSS 2.8%, SQL 1.9%, Other 1.5%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 480 commits; Compliance OS 429 commits; Longevity 386 commits; RealInvestorX 370 commits; JaLingo 250 commits; Apex 184 commits; EngiByte 180 commits; TheLoop 121 commits; Bid Spotter 94 commits; Unwind 54 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 474 commits; Compliance OS 428 commits; Longevity 385 commits; RealInvestorX 369 commits; JaLingo 251 commits; Apex 185 commits; EngiByte 183 commits; TheLoop 121 commits; Unwind 57 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 7, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 8, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.458` | 480 |
-| **Compliance OS** | `v3.35.3` | 429 |
-| **Longevity** | `v2.0.143` | 386 |
-| **RealInvestorX** | `v5.36.1` | 370 |
-| **JaLingo** | `v0.5.0` | 250 |
-| **Apex** | `v0.2.6` | 184 |
-| **EngiByte** | `v1.3.1` | 180 |
+| **ParentPod** | `v2.62.460` | 474 |
+| **Compliance OS** | `v3.35.4` | 428 |
+| **Longevity** | `v2.0.145` | 385 |
+| **RealInvestorX** | `v5.36.2` | 369 |
+| **JaLingo** | `v0.5.0` | 251 |
+| **Apex** | `v0.2.6` | 185 |
+| **EngiByte** | `v1.3.1` | 183 |
 | **TheLoop** | `v1.2.0` | 121 |
-| **Bid Spotter** | `v2.1.0` | 94 |
-| **Unwind** | `v1.2.0` | 54 |
+| **Unwind** | `v1.2.0` | 57 |
 
 ## Selected work
 
@@ -175,7 +174,7 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## Lessons learned
 
-<sub>What 106 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
+<sub>What 112 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
 
 - **Prose is a hope; only something that fires is a fix.** A rule that only lives in a document is a hope. Every recurring failure gets a check that fires on its own — a scheduled job, a CI gate, a hook, or a test — and the fix is not done until that check exists.
 - **Built is not wired; correctness and activation are separate claims.** Shipping code is not the same as activating it. A guard that is written and tested but never registered protects nothing, so wiring is verified as its own step.
@@ -187,7 +186,7 @@ Shared standards and repository-specific release gates connect each change to te
 - **Copy the value, never the label; a comment's safety claim is testable.** The label on a thing and the value inside it drift apart. Billing, trial length, and configuration are read from the value the system actually enforces, and any comment claiming "this is safe" gets a test.
 
 <details>
-<summary><b>98 more</b></summary>
+<summary><b>104 more</b></summary>
 
 - **Shared-infrastructure failures wear the costume of code bugs.** When many pipelines share one machine or one budget, an outage looks like a code failure. A monitor establishes whether a red result is fixable by any commit before it files work against the code.
 - **A test double must refuse what the real system refuses.** A stand-in used for testing has to say no wherever the real system says no. If it is more permissive, every test passes and the live system still refuses, which is the hardest kind of gap to see.
@@ -287,6 +286,12 @@ Shared standards and repository-specific release gates connect each change to te
 - **A suite that reads the clock must also run when the clock is unkind.** A test that only passes at certain hours is a clock check, not a test; run the suite at the bad hour on purpose.
 - **Test motion with motion on; animate only what the user caused.** An animation test suite that runs with animations turned off proves nothing about motion. Only animate what the user's own tap caused.
 - **Read-only git calls under a kill timeout must not take locks.** A health check that gets killed partway through can leave behind the very lock that then blocks everything else. Make read-only checks lock-free.
+- **Check a repository's integrity before writing to it.** Automated writers sharing a git repository should check its integrity before each write. Repair automatically only what cannot lose data, and stop everything else until a person looks.
+- **Never pass a secret on a command line.** Never put a secret on a command line. Every user on the machine can read process arguments, so pass secrets through the environment or a file instead.
+- **A default release command must never reach production.** The everyday release command should only ever ship to testers. Shipping to real users should take a separate, deliberate step that promotes the exact build that was already tested.
+- **Audit traffic shares the CI runner's IP; a 403 challenge is not a regression.** If your test runner and your audit tooling leave the network from the same address, a bot shield will eventually block them both at once. Teach the test suite to tell "the host is blocking me" apart from "the site is broken."
+- **A watchdog on a log's mtime proves the job ran, not that it worked.** A backup monitor should alert on the last success, not on the last activity, or it will stay green through repeated failures.
+- **Live state with one copy is an incident waiting; back up databases with the database.** Copy a live database with its own backup tool and verify the copy, because a plain file copy of a database in use can be silently corrupt.
 
 </details>
 
