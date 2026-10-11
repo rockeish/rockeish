@@ -11,6 +11,7 @@ import {
   chooseSource,
   chooseVersion,
   collectLessons,
+  countCheckouts,
   groupLanguages,
   lessonsSource,
   localStats,
@@ -293,4 +294,17 @@ test('collectLessons keeps the published rows when the source cannot be read', (
 test('lessonsSource honors an explicit file and defaults to the control plane copy', () => {
   assert.equal(lessonsSource({ SHOWCASE_LESSONS_FILE: '/srv/LESSONS.md' }, '/ignored'), '/srv/LESSONS.md');
   assert.equal(lessonsSource({}, '/home/rock'), join('/home/rock', 'ai', 'LESSONS.md'));
+});
+
+test('countCheckouts counts real clones and ignores linked worktrees', () => {
+  const root = mkdtempSync(join(tmpdir(), 'repos-'));
+  try {
+    mkdirSync(join(root, 'a', '.git'), { recursive: true });
+    mkdirSync(join(root, 'b-wt'), { recursive: true });
+    writeFileSync(join(root, 'b-wt', '.git'), 'gitdir: /elsewhere');
+    mkdirSync(join(root, 'plain'));
+    assert.equal(countCheckouts(root), 1);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
 });

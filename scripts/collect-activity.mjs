@@ -27,7 +27,7 @@
  */
 
 import { execFileSync } from 'child_process';
-import { existsSync, readdirSync, readFileSync, writeFileSync } from 'fs';
+import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { homedir } from 'os';
@@ -282,10 +282,12 @@ function computeMetrics(projects, asOf) {
  * says every number is computed, so it could drift silently the way the commit
  * total and the line count already had. Counted, it cannot.
  */
-function countCheckouts() {
+// A linked worktree has a `.git` FILE, not a directory; counting it made the
+// figure depend on which worktrees one host happened to have open (D1-003).
+export function countCheckouts(reposRoot = REPOS_ROOT) {
   try {
-    return readdirSync(REPOS_ROOT, { withFileTypes: true })
-      .filter((entry) => entry.isDirectory() && existsSync(join(REPOS_ROOT, entry.name, '.git')))
+    return readdirSync(reposRoot, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory() && statSync(join(reposRoot, entry.name, '.git'), { throwIfNoEntry: false })?.isDirectory())
       .length;
   } catch {
     return null; // no ~/repos here — the declared figure, with its own asOf, stands
