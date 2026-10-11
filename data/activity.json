@@ -1,47 +1,47 @@
 {
-  "asOf": "2026-10-09",
+  "asOf": "2026-10-11",
   "window": "90d",
   "repos": [
     {
       "name": "ParentPod",
       "lastShipped": "2026-10-09",
-      "recent": 470,
+      "recent": 466,
       "version": "v2.62.460"
     },
     {
       "name": "Compliance OS",
       "lastShipped": "2026-10-09",
-      "recent": 429,
+      "recent": 427,
       "version": "v3.35.6"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-10-09",
-      "recent": 376,
+      "recent": 368,
       "version": "v2.0.147"
     },
     {
       "name": "RealInvestorX",
       "lastShipped": "2026-10-09",
-      "recent": 345,
+      "recent": 339,
       "version": "v5.36.3"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-08",
-      "recent": 252,
+      "lastShipped": "2026-10-10",
+      "recent": 253,
       "version": "v0.5.0"
     },
     {
       "name": "Apex",
       "lastShipped": "2026-10-08",
-      "recent": 182,
+      "recent": 181,
       "version": "v0.2.6"
     },
     {
       "name": "EngiByte",
       "lastShipped": "2026-10-09",
-      "recent": 175,
+      "recent": 168,
       "version": "v1.3.1"
     },
     {
@@ -58,20 +58,20 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-09",
-      "recent": 69,
+      "lastShipped": "2026-10-10",
+      "recent": 70,
       "version": null
     },
     {
       "name": "Unwind",
-      "lastShipped": "2026-10-09",
-      "recent": 62,
+      "lastShipped": "2026-10-11",
+      "recent": null,
       "version": "v1.2.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-10-09",
-    "commits": 9190,
+    "asOf": "2026-10-11",
+    "commits": 9197,
     "commitsByRepo": [
       {
         "label": "ParentPod",
@@ -99,11 +99,11 @@
       },
       {
         "label": "Beyond Volatility",
-        "commits": 659
+        "commits": 665
       },
       {
         "label": "JaLingo",
-        "commits": 252
+        "commits": 253
       },
       {
         "label": "EngiByte",
