@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { chmodSync, copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -15,8 +15,12 @@ function fixture(t, projects, previous) {
   copyFileSync(new URL('./repository-registry.mjs', import.meta.url), join(dir, 'scripts/repository-registry.mjs'));
   const registryFile = join(dir, 'registry.json');
   writeFileSync(registryFile, JSON.stringify({ schema: 1, products: [
-    { repo: 'rockeish/demo' }, { repo: 'rockeish/paused' }, { repo: 'rockeish/hub' },
+    { repo: 'rockeish/public-demo', dir: 'demo' }, { repo: 'rockeish/paused' }, { repo: 'rockeish/hub' },
   ] }));
+  mkdirSync(join(dir, 'bin'));
+  const gh = join(dir, 'bin', 'gh');
+  writeFileSync(gh, '#!/bin/sh\nprintf \'%s\' \'[{"nameWithOwner":"rockeish/public-demo","isArchived":false},{"nameWithOwner":"rockeish/paused","isArchived":false},{"nameWithOwner":"rockeish/hub","isArchived":false}]\'\n');
+  chmodSync(gh, 0o755);
   writeFileSync(join(dir, 'data/projects.json'), JSON.stringify({ projects }));
   const activityFile = join(dir, 'data/activity.json');
   writeFileSync(activityFile, previous);
@@ -24,6 +28,7 @@ function fixture(t, projects, previous) {
     ...process.env,
     SHOWCASE_REPOS_ROOT: join(dir, 'repos'),
     SHOWCASE_REGISTRY_FILE: registryFile,
+    PATH: `${join(dir, 'bin')}:${process.env.PATH}`,
     SHOWCASE_LESSONS_FILE: join(dir, 'missing-lessons.md'),
     SHOWCASE_TOKEN: '',
     GITHUB_TOKEN: '',
@@ -88,12 +93,12 @@ test('collector computes public headline metrics from reachable shipped history 
     asOf: shippedDate,
     commits: 3,
     commitsByRepo: [
-      { label: 'Demo', commits: 1 }, { label: 'Paused', commits: 1 }, { label: 'Hub', commits: 1 },
+      { label: 'Demo', commits: 1 }, { label: 'Paused', commits: 1 }, { label: 'Other repositories', commits: 1 },
     ],
     appsInProduction: 1,
     repos: 3,
-    measuredRepos: 3,
-    metricScope: 'listed project checkouts',
+    historyCoverage: { scope: 'owned non-archived repositories', expected: 3,
+      inventoryDigest: result.repoCount.digest, commitsMeasured: 3, sourceMeasured: 3 },
     trackedFiles: 8,
     linesOfSource: 6,
     languages: [

@@ -27,11 +27,11 @@
  */
 
 import { execFileSync } from 'child_process';
-import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from 'fs';
+import { existsSync, readdirSync, readFileSync, realpathSync, statSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { homedir } from 'os';
-import { repositoryCount, requireCheckoutRoot } from './repository-registry.mjs';
+import { repositoryInventory, requireCheckoutRoot } from './repository-registry.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -177,7 +177,7 @@ function countSource(base) {
     try {
       contents = readFileSync(join(base, file));
     } catch {
-      continue; // a symlink or a file removed since `ls-files` ran
+      return null; // An unreadable authored file makes this repo's source unknown.
     }
     let lines = 0;
     for (let at = contents.indexOf(10); at !== -1; at = contents.indexOf(10, at + 1)) lines += 1;
@@ -221,16 +221,19 @@ export function chooseVersion(tagVersion, packageVersion) {
  * deliberately not counted, and neither is the hub site — the public profile
  * must never overstate, so the rule stays conservative and mechanical.
  */
-function computeMetrics(projects, asOf, repoCount) {
+function computeMetrics(projects, asOf, inventory) {
   const commitsByRepo = [];
   const linesByLanguage = {};
   let commits = 0;
   let trackedFiles = 0;
-  for (const project of projects) {
-    const repo = project.localRepo || project.repo;
-    if (!repo) continue;
-    const base = join(REPOS_ROOT, repo);
+  let commitsMeasured = 0;
+  let sourceMeasured = 0;
+  let otherCommits = 0;
+  for (const member of inventory.repositories) {
+    const base = join(REPOS_ROOT, member.dir);
+    const project = projects.find((p) => p.repo && `rockeish/${p.repo}`.toLowerCase() === member.repo);
     try {
+      if (realpathSync(base).split('/').includes('ai-runtime')) continue;
       const count = Number(
         execFileSync('git', ['-C', base, 'rev-list', '--count', localRef(base)], {
           encoding: 'utf8',
@@ -238,19 +241,23 @@ function computeMetrics(projects, asOf, repoCount) {
       );
       if (!Number.isFinite(count) || count === 0) continue;
       commits += count;
-      commitsByRepo.push({ label: project.name, commits: count });
+      commitsMeasured += 1;
+      if (project) commitsByRepo.push({ label: project.name, commits: count });
+      else otherCommits += count; // Never publish private inventory identities.
     } catch {
       // A repo that is not checked out locally simply does not contribute.
       continue;
     }
     const source = countSource(base);
     if (!source) continue;
+    sourceMeasured += 1;
     trackedFiles += source.files;
     for (const [language, lines] of Object.entries(source.byLanguage)) {
       linesByLanguage[language] = (linesByLanguage[language] || 0) + lines;
     }
   }
-  if (!commitsByRepo.length) return null;
+  if (!commitsMeasured) return null;
+  if (otherCommits) commitsByRepo.push({ label: 'Other repositories', commits: otherCommits });
   commitsByRepo.sort((a, b) => b.commits - a.commits);
   const languages = groupLanguages(linesByLanguage);
   const linesOfSource = languages.reduce((sum, language) => sum + language.lines, 0);
@@ -267,22 +274,18 @@ function computeMetrics(projects, asOf, repoCount) {
     commits,
     commitsByRepo,
     appsInProduction,
-    repos: repoCount.count,
-    measuredRepos: commitsByRepo.length,
-    metricScope: 'listed project checkouts',
-    // Omitted rather than zeroed when nothing could be counted: the generator
-    // then falls back to the declared figures, which carry their own older
-    // `asOf`, so a stale number can never present itself as today's.
-    ...(linesOfSource ? { trackedFiles, linesOfSource, languages } : {}),
+    repos: inventory.receipt.count,
+    historyCoverage: { scope: 'owned non-archived repositories',
+      expected: inventory.receipt.count, inventoryDigest: inventory.receipt.digest,
+      commitsMeasured, sourceMeasured },
+    // Explicit measured values replace declared totals even when source is empty.
+    trackedFiles: sourceMeasured ? trackedFiles : null,
+    linesOfSource: sourceMeasured ? linesOfSource : null, languages,
   };
 }
 
 /**
- * How many repositories the portfolio actually is.
- *
- * The hero's "14 repos" was the last hand-typed figure under a caption that
- * says every number is computed, so it could drift silently the way the commit
- * total and the line count already had. Counted, it cannot.
+ * Diagnostic clone count only. GitHub inventory owns the headline count.
  */
 // A linked worktree has a `.git` FILE, not a directory; counting it made the
 // figure depend on which worktrees one host happened to have open (D1-003).
@@ -449,7 +452,7 @@ export function collectLessons(file, fallback = []) {
 }
 
 async function main() {
-  const repoCount = repositoryCount();
+  const inventory = repositoryInventory();
   requireCheckoutRoot();
   const out = [];
   for (const target of targets) {
@@ -476,14 +479,14 @@ async function main() {
 
   out.sort((a, b) => (b.recent || 0) - (a.recent || 0));
   const asOf = out.reduce((max, r) => (r.lastShipped > max ? r.lastShipped : max), '0000-00-00');
-  const metrics = computeMetrics(data.projects, asOf, repoCount);
+  const metrics = computeMetrics(data.projects, asOf, inventory);
   if (!metrics) throw new Error('Project metrics unavailable; refusing profile refresh');
   let previous = {};
   try {
     previous = JSON.parse(readFileSync(join(ROOT, 'data', 'activity.json'), 'utf8'));
   } catch { /* first run */ }
   const lessons = collectLessons(lessonsSource(), previous.lessons);
-  const payload = { asOf, window: '90d', repoCount, repos: out, metrics, lessons };
+  const payload = { asOf, window: '90d', repoCount: inventory.receipt, repos: out, metrics, lessons };
   writeFileSync(join(ROOT, 'data', 'activity.json'), JSON.stringify(payload, null, 2) + '\n');
   console.log(
     `collect-activity: wrote ${out.length} repos (asOf ${asOf})` +

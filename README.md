@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 23 repositories, 9.2K commits, 1071K lines of source, 7 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 23 repositories, 11.6K measured commits, 1485K measured lines of source, 7 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -82,39 +82,38 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>Portfolio snapshot dated Oct 11, 2026. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>
+<sub>History snapshot dated Oct 12, 2026. Repository count covers all non-archived repositories owned on GitHub, including infrastructure. Count observed 2026-10-12T05:55:37.386Z. Commits cover 22 of 23 repositories; source lines cover 22 of 23. Unavailable history is outside these measured subtotals.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — ParentPod 2,769; RealInvestorX 1,314; Longevity 1,216; Compliance OS 997; Apex 985; TheLoop 685; Beyond Volatility 665; JaLingo 253; EngiByte 200; Bid Spotter 113. ~9.2K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — Other repositories 4,023; ParentPod 2,773; RealInvestorX 1,324; Longevity 1,217; Apex 1,001; TheLoop 698; JaLingo 255; EngiByte 209; Bid Spotter 113. ~11.6K total, single author." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 1071K lines of tracked source — TypeScript 64.2%, JavaScript 25.6%, CSS 4.4%, Python 2.2%, SQL 1.7%, PHP 1.2%, Other 0.6%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 1485K lines of tracked source — TypeScript 51.7%, JavaScript 25.8%, Python 14.7%, CSS 4.4%, PHP 1.5%, SQL 1.3%, Other 0.6%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 466 commits; Compliance OS 427 commits; Longevity 368 commits; RealInvestorX 339 commits; JaLingo 253 commits; Apex 181 commits; EngiByte 168 commits; TheLoop 122 commits; Bid Spotter 100 commits; Unwind — commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 466 commits; Compliance OS 428 commits; Longevity 365 commits; RealInvestorX 349 commits; JaLingo 255 commits; Apex 197 commits; EngiByte 177 commits; TheLoop 135 commits; Bid Spotter 100 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 11, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 12, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.460` | 466 |
-| **Compliance OS** | `v3.35.6` | 427 |
-| **Longevity** | `v2.0.147` | 368 |
-| **RealInvestorX** | `v5.36.3` | 339 |
-| **JaLingo** | `v0.5.0` | 253 |
-| **Apex** | `v0.2.6` | 181 |
-| **EngiByte** | `v1.3.1` | 168 |
-| **TheLoop** | `v1.2.0` | 122 |
+| **ParentPod** | `v2.62.461` | 466 |
+| **Compliance OS** | `v3.35.6` | 428 |
+| **Longevity** | `v2.0.147` | 365 |
+| **RealInvestorX** | `v5.36.6` | 349 |
+| **JaLingo** | `v0.5.0` | 255 |
+| **Apex** | `v0.2.8` | 197 |
+| **EngiByte** | `v1.3.1` | 177 |
+| **TheLoop** | `v1.2.1` | 135 |
 | **Bid Spotter** | `v2.1.0` | 100 |
-| **Unwind** | `v1.2.0` | — |
 
 ## Selected work
 
@@ -175,7 +174,7 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## Lessons learned
 
-<sub>What 112 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
+<sub>What 114 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
 
 - **Prose is a hope; only something that fires is a fix.** A rule that only lives in a document is a hope. Every recurring failure gets a check that fires on its own — a scheduled job, a CI gate, a hook, or a test — and the fix is not done until that check exists.
 - **Built is not wired; correctness and activation are separate claims.** Shipping code is not the same as activating it. A guard that is written and tested but never registered protects nothing, so wiring is verified as its own step.
@@ -187,7 +186,7 @@ Shared standards and repository-specific release gates connect each change to te
 - **Copy the value, never the label; a comment's safety claim is testable.** The label on a thing and the value inside it drift apart. Billing, trial length, and configuration are read from the value the system actually enforces, and any comment claiming "this is safe" gets a test.
 
 <details>
-<summary><b>104 more</b></summary>
+<summary><b>106 more</b></summary>
 
 - **Shared-infrastructure failures wear the costume of code bugs.** When many pipelines share one machine or one budget, an outage looks like a code failure. A monitor establishes whether a red result is fixable by any commit before it files work against the code.
 - **A test double must refuse what the real system refuses.** A stand-in used for testing has to say no wherever the real system says no. If it is more permissive, every test passes and the live system still refuses, which is the hardest kind of gap to see.
@@ -259,7 +258,7 @@ Shared standards and repository-specific release gates connect each change to te
 - **A failed sync cannot be followed by a push.** Verify the branch, history and remote commit before a shared sync claims success or starts the work it recorded.
 - **Shared writers need a schedule and a bounded lock wait.** Stagger shared jobs and verify each scheduled run, rather than treating a skipped lock attempt as a successful update.
 - **Browser readback is not safe on a credential dashboard.** Inspect broker state through authenticated API reads, and rotate any credential that appears in a chat or tool transcript.
-- **Keep operational failures separate from admitted commitments.** Preserve operational failures without letting each event create a new commitment; use an explicit admission gate for durable work.
+- **Keep operational failures separate from admitted commitments.** Preserve operational failures without letting each event create a new commitment; cancellation requires evidence that the specific run is obsolete.
 - **A rotation is not finished until every copy is proven equal.** After rotating a credential, verify by hash that every stored copy matches the new value instead of assuming the sync reached them.
 - **The runtime checkout must be clean main, and something must say so.** Scheduled jobs should run from a checkout that is verified to be on the current main branch, and a monitor should flag any drift.
 - **Customers get a stable build; a measurement window freezes the product.** A product that changes every day cannot be measured. Ship customer-facing changes in batches, and freeze everything but core-path repairs while a test is running.
@@ -293,6 +292,8 @@ Shared standards and repository-specific release gates connect each change to te
 - **Audit traffic shares the CI runner's IP; a 403 challenge is not a regression.** If your test runner and your audit tooling leave the network from the same address, a bot shield will eventually block them both at once. Teach the test suite to tell "the host is blocking me" apart from "the site is broken."
 - **A watchdog on a log's mtime proves the job ran, not that it worked.** A backup monitor should alert on the last success, not on the last activity, or it will stay green through repeated failures.
 - **Live state with one copy is an incident waiting; back up databases with the database.** Copy a live database with its own backup tool and verify the copy, because a plain file copy of a database in use can be silently corrupt.
+- **A sticky alarm needs a recorded way to close it.** An alert that refuses to forget a past failure should still let you record why it happened, or people learn to ignore it.
+- **Check the hold list before opening a PR; a preview workflow that edits auth config is hold-relevant.** Merging a change can trigger deploy automation, so check whether a project is on hold before touching it.
 
 </details>
 
