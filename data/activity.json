@@ -4,7 +4,7 @@
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-10-12T06:51:32.680Z",
+    "asOf": "2026-10-12T17:41:03.016Z",
     "count": 23,
     "complete": true,
     "enumerationLimit": 1000,
@@ -19,8 +19,8 @@
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-10-11",
-      "recent": 466,
+      "lastShipped": "2026-10-12",
+      "recent": 468,
       "version": "v2.62.461"
     },
     {
@@ -38,31 +38,31 @@
     {
       "name": "RealInvestorX",
       "lastShipped": "2026-10-12",
-      "recent": 351,
-      "version": "v5.36.7"
+      "recent": 353,
+      "version": "v5.36.8"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-11",
-      "recent": 255,
+      "lastShipped": "2026-10-12",
+      "recent": 258,
       "version": "v0.5.0"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-10-11",
-      "recent": 197,
+      "lastShipped": "2026-10-12",
+      "recent": 201,
       "version": "v0.2.8"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-10-11",
-      "recent": 177,
+      "lastShipped": "2026-10-12",
+      "recent": 180,
       "version": "v1.3.1"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-10-11",
-      "recent": 135,
+      "lastShipped": "2026-10-12",
+      "recent": 136,
       "version": "v1.2.1"
     },
     {
@@ -74,31 +74,31 @@
     {
       "name": "this profile",
       "lastShipped": "2026-10-12",
-      "recent": 74,
+      "recent": 75,
       "version": null
     },
     {
       "name": "Unwind",
       "lastShipped": "2026-10-12",
-      "recent": 68,
+      "recent": 70,
       "version": "v1.2.0"
     }
   ],
   "metrics": {
     "asOf": "2026-10-12",
-    "commits": 11619,
+    "commits": 11652,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4027
+        "commits": 4044
       },
       {
         "label": "ParentPod",
-        "commits": 2773
+        "commits": 2776
       },
       {
         "label": "RealInvestorX",
-        "commits": 1326
+        "commits": 1328
       },
       {
         "label": "Longevity",
@@ -106,19 +106,19 @@
       },
       {
         "label": "Apex",
-        "commits": 1001
+        "commits": 1005
       },
       {
         "label": "TheLoop",
-        "commits": 698
+        "commits": 699
       },
       {
         "label": "JaLingo",
-        "commits": 255
+        "commits": 258
       },
       {
         "label": "EngiByte",
-        "commits": 209
+        "commits": 212
       },
       {
         "label": "Bid Spotter",
@@ -131,32 +131,32 @@
       "scope": "owned non-archived repositories",
       "expected": 23,
       "inventoryDigest": "a1a9e334da9daca6123f164d3c4b3c81eda2c4cb38c9d1e4cfda2d0d397e974d",
-      "revisionDigest": "26e7d667bc3385b90de406afecb00c4db7ba921e56d7b6febc34f5aae05b9e27",
+      "revisionDigest": "ebdefbcdec748c23106166528b1247285e6c76cddae5086f7a04fc138f64b95f",
       "commitsMeasured": 22,
       "sourceMeasured": 22
     },
-    "trackedFiles": 21755,
-    "linesOfSource": 1488664,
+    "trackedFiles": 21865,
+    "linesOfSource": 1495717,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 769368
+        "lines": 772051
       },
       {
         "name": "JavaScript",
-        "lines": 384174
+        "lines": 387667
       },
       {
         "name": "Python",
-        "lines": 219206
+        "lines": 219642
       },
       {
         "name": "CSS",
-        "lines": 65301
+        "lines": 65421
       },
       {
         "name": "PHP",
-        "lines": 22785
+        "lines": 23000
       },
       {
         "name": "SQL",
@@ -164,7 +164,7 @@
       },
       {
         "name": "Other",
-        "lines": 8526
+        "lines": 8632
       }
     ]
   },
