@@ -98,7 +98,8 @@ test('collector computes public headline metrics from reachable shipped history 
     appsInProduction: 1,
     repos: 3,
     historyCoverage: { scope: 'owned non-archived repositories', expected: 3,
-      inventoryDigest: result.repoCount.digest, commitsMeasured: 3, sourceMeasured: 3 },
+      inventoryDigest: result.repoCount.digest, revisionDigest: result.metrics.historyCoverage.revisionDigest,
+      commitsMeasured: 3, sourceMeasured: 3 },
     trackedFiles: 8,
     linesOfSource: 6,
     languages: [

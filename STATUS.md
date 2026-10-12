@@ -14,13 +14,15 @@ fingerprints enter public activity data. Private inventory names stay private.
 Collection and generation refuse unavailable, malformed, duplicate, foreign,
 bound-exhausted or incomplete input before changing published output. Generation
 also verifies the current membership fingerprint against the collection receipt.
-Commits and source lines use the same owned set, with separate measured-versus-
+Commits and source lines read the same pinned committed tree within the owned
+set, with separate measured-versus-
 expected coverage. Missing history is excluded from those labeled subtotals;
 unreadable source is Unknown and never replaced by a declared total.
 
-Local evidence: all 46 Node contracts pass, including actual CLI controls for
+Local evidence: all 47 Node contracts pass, including actual CLI controls for
 23 owned repositories versus 21 product-registry rows, partial history,
-private-input refusal and changed membership with an unchanged count. The real
+private-input refusal, changed membership with an unchanged count, and a
+checkout branch/dirty-file control that retains the committed source total. The real
 inventory read returned 23 owned repositories; history covered 22 of 23.
 Local receipts validate source and isolated generated output; hosted and live
 evidence are separate from those receipts.

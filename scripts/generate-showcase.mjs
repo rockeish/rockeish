@@ -326,8 +326,8 @@ function commitsSvg(d, t) {
   const gridBottom = top + rows.length * (rowH + rowGap) - rowGap + 5;
   const grid = [0.25, 0.5, 0.75, 1].map((f) =>
     `<line x1="${(barX + barMax * f).toFixed(1)}" y1="${top}" x2="${(barX + barMax * f).toFixed(1)}" y2="${gridBottom}" stroke="${t.line}" stroke-dasharray="2 6" opacity="0.6"/>`).join('\n  ');
-  let s = `<text x="28" y="42" font-family="${FONT}" font-size="17" fill="${t.muted}">Measured commits — public projects and other repositories</text>
-  <text x="${W - 28}" y="42" font-family="${FONT}" font-size="15" fill="${t.muted}" text-anchor="end">~${compact(d.metrics.commits)} total · single author</text>
+  let s = `<text x="28" y="42" font-family="${FONT}" font-size="17" fill="${t.muted}">Measured commits</text>
+  <text x="${W - 28}" y="42" font-family="${FONT}" font-size="15" fill="${t.muted}" text-anchor="end">~${compact(d.metrics.commits)} measured total</text>
   ${grid}`;
   rows.forEach((r, i) => {
     const y = top + i * (rowH + rowGap);
@@ -528,7 +528,7 @@ function connectRow(d) {
 export function buildReadme(d, act) {
   const m = d.metrics;
   const langTotal = m.languages.reduce((n, l) => n + l.lines, 0);
-  const commitsAlt = `Commits per repository — ${m.commitsByRepo.map((r) => `${r.label} ${num(r.commits)}`).join('; ')}. ~${compact(m.commits)} total, single author.`;
+  const commitsAlt = `Commits per repository — ${m.commitsByRepo.map((r) => `${r.label} ${num(r.commits)}`).join('; ')}. ~${compact(m.commits)} measured total.`;
   const languagesAlt = `Language mix across ${compact(langTotal)} lines of tracked source — ${m.languages.map((l) => `${l.name} ${((l.lines / langTotal) * 100).toFixed(1)}%`).join(', ')}.`;
   const orbitAlt = `Portfolio constellation — ${d.architecture.apps.join(', ')} and the Beyond Volatility hub connected through shared infrastructure, run by one engineer.`;
   const velocityRows = act?.repos?.filter((r) => r.name !== 'this profile') || [];

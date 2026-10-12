@@ -31,6 +31,7 @@ import { existsSync, readdirSync, readFileSync, realpathSync, statSync, writeFil
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { homedir } from 'os';
+import { createHash } from 'node:crypto';
 import { repositoryInventory, requireCheckoutRoot } from './repository-registry.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -146,42 +147,60 @@ export function groupLanguages(totals, threshold = 0.01) {
 }
 
 /**
- * Count tracked, authored source in one checkout. Returns null when the repo
- * cannot be read, so a missing checkout contributes nothing rather than a zero.
- *
- * This reads the working tree rather than `origin/main` the way the commit
- * counts do. Commit counts had to be pinned because an unmerged branch moved
- * one repo's 90-day figure by 4.5%; a branch moves the line total by a few
- * hundred lines in 700K, and reading blobs out of a tree for every file would
- * cost far more than that error is worth.
+ * Count authored blobs at the same pinned commit as the history count.
+ * Batch reads keep checkout branches, dirty files and missing worktree files
+ * out of public totals. An unavailable committed blob makes coverage Unknown.
  */
-function countSource(base) {
+function countSource(base, commit) {
   let files = 0;
   const byLanguage = {};
   let tracked;
   try {
-    tracked = execFileSync('git', ['-C', base, 'ls-files', '-z'], {
+    tracked = execFileSync('git', ['-C', base, 'ls-tree', '-r', '-z', commit], {
       encoding: 'utf8',
       maxBuffer: 64 * 1024 * 1024,
     }).split('\0');
   } catch {
     return null;
   }
-  for (const file of tracked) {
-    if (!file) continue;
+  const authored = [];
+  for (const entry of tracked) {
+    if (!entry) continue;
+    const match = /^(\d+) (\w+) ([a-f0-9]{40,64})\t([\s\S]+)$/.exec(entry);
+    if (!match) return null;
+    const [, mode, type, oid, file] = match;
+    if (type !== 'blob' || !['100644', '100755'].includes(mode)) continue;
     if (NOT_AUTHORED_HERE.some((segment) => file.includes(segment))) continue;
     files += 1;
     const language = sourceLanguage(file);
     if (!language) continue;
-    let contents;
+    authored.push({ oid, language });
+  }
+  if (authored.length) {
+    let batch;
     try {
-      contents = readFileSync(join(base, file));
-    } catch {
-      return null; // An unreadable authored file makes this repo's source unknown.
+      batch = execFileSync('git', ['-C', base, 'cat-file', '--batch'], {
+        input: authored.map(({ oid }) => oid).join('\n') + '\n',
+        maxBuffer: 64 * 1024 * 1024, timeout: 30000,
+        stdio: ['pipe', 'pipe', 'pipe'],
+      });
+    } catch { return null; }
+    let offset = 0;
+    for (const { oid, language } of authored) {
+      const end = batch.indexOf(10, offset);
+      if (end < 0) return null;
+      const header = /^([a-f0-9]{40,64}) blob (\d+)$/.exec(batch.subarray(offset, end).toString());
+      if (!header || header[1] !== oid) return null;
+      const size = Number(header[2]);
+      const start = end + 1;
+      if (!Number.isSafeInteger(size) || start + size >= batch.length || batch[start + size] !== 10) return null;
+      const contents = batch.subarray(start, start + size);
+      let lines = 0;
+      for (let at = contents.indexOf(10); at !== -1; at = contents.indexOf(10, at + 1)) lines += 1;
+      byLanguage[language] = (byLanguage[language] || 0) + lines;
+      offset = start + size + 1;
     }
-    let lines = 0;
-    for (let at = contents.indexOf(10); at !== -1; at = contents.indexOf(10, at + 1)) lines += 1;
-    byLanguage[language] = (byLanguage[language] || 0) + lines;
+    if (offset !== batch.length) return null;
   }
   return { files, byLanguage };
 }
@@ -229,26 +248,32 @@ function computeMetrics(projects, asOf, inventory) {
   let commitsMeasured = 0;
   let sourceMeasured = 0;
   let otherCommits = 0;
+  const revisions = [];
   for (const member of inventory.repositories) {
     const base = join(REPOS_ROOT, member.dir);
     const project = projects.find((p) => p.repo && `rockeish/${p.repo}`.toLowerCase() === member.repo);
+    let commit;
     try {
       if (realpathSync(base).split('/').includes('ai-runtime')) continue;
+      commit = execFileSync('git', ['-C', base, 'rev-parse', '--verify', `${localRef(base)}^{commit}`], {
+        encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'],
+      }).trim();
       const count = Number(
-        execFileSync('git', ['-C', base, 'rev-list', '--count', localRef(base)], {
+        execFileSync('git', ['-C', base, 'rev-list', '--count', commit], {
           encoding: 'utf8',
         }).trim(),
       );
       if (!Number.isFinite(count) || count === 0) continue;
       commits += count;
       commitsMeasured += 1;
+      revisions.push([member.repo, commit]);
       if (project) commitsByRepo.push({ label: project.name, commits: count });
       else otherCommits += count; // Never publish private inventory identities.
     } catch {
       // A repo that is not checked out locally simply does not contribute.
       continue;
     }
-    const source = countSource(base);
+    const source = countSource(base, commit);
     if (!source) continue;
     sourceMeasured += 1;
     trackedFiles += source.files;
@@ -277,6 +302,7 @@ function computeMetrics(projects, asOf, inventory) {
     repos: inventory.receipt.count,
     historyCoverage: { scope: 'owned non-archived repositories',
       expected: inventory.receipt.count, inventoryDigest: inventory.receipt.digest,
+      revisionDigest: createHash('sha256').update(JSON.stringify(revisions.sort())).digest('hex'),
       commitsMeasured, sourceMeasured },
     // Explicit measured values replace declared totals even when source is empty.
     trackedFiles: sourceMeasured ? trackedFiles : null,

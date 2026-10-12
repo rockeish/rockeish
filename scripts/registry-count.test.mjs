@@ -46,6 +46,7 @@ function fixture(t) {
     git('init', '--initial-branch=main');
     writeFileSync(join(base, 'app.js'), 'export const demo = true;\n');
     git('add', 'app.js'); git('commit', '-m', 'Fixture');
+    return { base, git };
   } };
 }
 
@@ -61,6 +62,7 @@ test('complete GitHub count exceeds product registry and counts the same history
   assert.deepEqual(activity.metrics.historyCoverage, {
     scope: 'owned non-archived repositories', expected: 23,
     inventoryDigest: activity.repoCount.digest, commitsMeasured: 3, sourceMeasured: 3,
+    revisionDigest: activity.metrics.historyCoverage.revisionDigest,
   });
   assert.equal(activity.repoCount.count, 23);
   assert.equal(activity.repoCount.source, 'github');
@@ -151,7 +153,12 @@ test('archived repositories are excluded and input ordering does not change the 
 
 test('unreadable authored source remains Unknown instead of a declared or zero total', (t) => {
   const f = fixture(t); f.seedRegistry(); f.repo('demo');
-  rmSync(join(f.dir, 'repos/demo/app.js'));
+  const realGit = execFileSync('which', ['git'], { encoding: 'utf8' }).trim();
+  const git = join(f.dir, 'bin/git');
+  writeFileSync(git, `#!${process.execPath}\nimport { spawnSync } from 'node:child_process';\n`
+    + `if (process.argv.includes('cat-file')) process.stdout.write('unavailable blob\\n');\n`
+    + `else { const r = spawnSync(${JSON.stringify(realGit)}, process.argv.slice(2), { stdio: 'inherit' }); process.exit(r.status ?? 1); }\n`);
+  chmodSync(git, 0o755);
   assert.equal(f.run('collect-activity.mjs').status, 0);
   const activity = JSON.parse(readFileSync(join(f.dir, 'data/activity.json')));
   assert.equal(activity.metrics.historyCoverage.commitsMeasured, 1);
@@ -171,4 +178,21 @@ test('history coverage cannot silently claim a different inventory denominator',
   const before = readFileSync(join(f.dir, 'README.md'));
   assert.notEqual(f.run('generate-showcase.mjs').status, 0);
   assert.deepEqual(readFileSync(join(f.dir, 'README.md')), before);
+});
+
+test('history and authored blobs stay pinned when the checkout branch and working files change', (t) => {
+  const f = fixture(t); f.seedRegistry(); const repo = f.repo('demo');
+  repo.git('update-ref', 'refs/remotes/origin/main', 'HEAD');
+  assert.equal(f.run('collect-activity.mjs').status, 0);
+  const before = JSON.parse(readFileSync(join(f.dir, 'data/activity.json'))).metrics;
+  repo.git('checkout', '-b', 'unshipped-fixture');
+  writeFileSync(join(repo.base, 'app.js'), 'unshipped();\n'.repeat(50));
+  repo.git('add', 'app.js'); repo.git('commit', '-m', 'Unshipped fixture');
+  writeFileSync(join(repo.base, 'app.js'), 'dirty();\n'.repeat(90));
+  assert.equal(f.run('collect-activity.mjs').status, 0);
+  const after = JSON.parse(readFileSync(join(f.dir, 'data/activity.json'))).metrics;
+  assert.equal(after.commits, 1);
+  assert.equal(after.linesOfSource, 1);
+  assert.equal(after.historyCoverage.revisionDigest, before.historyCoverage.revisionDigest);
+  assert.deepEqual(after, before);
 });

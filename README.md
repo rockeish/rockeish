@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 23 repositories, 11.6K measured commits, 1485K measured lines of source, 7 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 23 repositories, 11.6K measured commits, 1487K measured lines of source, 7 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -82,16 +82,16 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>History snapshot dated Oct 12, 2026. Repository count covers all non-archived repositories owned on GitHub, including infrastructure. Count observed 2026-10-12T05:55:37.386Z. Commits cover 22 of 23 repositories; source lines cover 22 of 23. Unavailable history is outside these measured subtotals.</sub>
+<sub>History snapshot dated Oct 12, 2026. Repository count covers all non-archived repositories owned on GitHub, including infrastructure. Count observed 2026-10-12T06:07:47.731Z. Commits cover 22 of 23 repositories; source lines cover 22 of 23. Unavailable history is outside these measured subtotals.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — Other repositories 4,023; ParentPod 2,773; RealInvestorX 1,324; Longevity 1,217; Apex 1,001; TheLoop 698; JaLingo 255; EngiByte 209; Bid Spotter 113. ~11.6K total, single author." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — Other repositories 4,023; ParentPod 2,773; RealInvestorX 1,324; Longevity 1,217; Apex 1,001; TheLoop 698; JaLingo 255; EngiByte 209; Bid Spotter 113. ~11.6K measured total." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 1485K lines of tracked source — TypeScript 51.7%, JavaScript 25.8%, Python 14.7%, CSS 4.4%, PHP 1.5%, SQL 1.3%, Other 0.6%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 1487K lines of tracked source — TypeScript 51.7%, JavaScript 25.8%, Python 14.7%, CSS 4.4%, PHP 1.5%, SQL 1.3%, Other 0.6%." width="100%">
 </picture>
 
 ## Recently shipped

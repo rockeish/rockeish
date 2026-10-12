@@ -4,7 +4,7 @@
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-10-12T05:55:37.386Z",
+    "asOf": "2026-10-12T06:07:47.731Z",
     "count": 23,
     "complete": true,
     "enumerationLimit": 1000,
@@ -125,15 +125,16 @@
       "scope": "owned non-archived repositories",
       "expected": 23,
       "inventoryDigest": "a1a9e334da9daca6123f164d3c4b3c81eda2c4cb38c9d1e4cfda2d0d397e974d",
+      "revisionDigest": "65baed4818e608838b9e337c03b02397cb1a61dc0b8943a9992bdb0075e870bc",
       "commitsMeasured": 22,
       "sourceMeasured": 22
     },
-    "trackedFiles": 21735,
-    "linesOfSource": 1485367,
+    "trackedFiles": 21745,
+    "linesOfSource": 1487191,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 767499
+        "lines": 769323
       },
       {
         "name": "JavaScript",

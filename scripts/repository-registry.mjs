@@ -107,6 +107,7 @@ export function requireCountReceipt(activity, expected) {
       || activity?.metrics?.repos !== receipt.count
       || coverage?.scope !== 'owned non-archived repositories'
       || coverage.expected !== receipt.count || coverage.inventoryDigest !== receipt.digest
+      || !/^[a-f0-9]{64}$/.test(coverage.revisionDigest || '')
       || !Number.isInteger(coverage.commitsMeasured) || coverage.commitsMeasured < 1
       || coverage.commitsMeasured > receipt.count
       || !Number.isInteger(coverage.sourceMeasured) || coverage.sourceMeasured < 0
