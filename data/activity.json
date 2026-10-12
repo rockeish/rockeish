@@ -4,7 +4,7 @@
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-10-12T06:07:47.731Z",
+    "asOf": "2026-10-12T06:51:32.680Z",
     "count": 23,
     "complete": true,
     "enumerationLimit": 1000,
@@ -25,9 +25,9 @@
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-10-11",
-      "recent": 428,
-      "version": "v3.35.6"
+      "lastShipped": "2026-10-12",
+      "recent": 430,
+      "version": "v3.35.7"
     },
     {
       "name": "Longevity",
@@ -38,8 +38,8 @@
     {
       "name": "RealInvestorX",
       "lastShipped": "2026-10-12",
-      "recent": 349,
-      "version": "v5.36.6"
+      "recent": 351,
+      "version": "v5.36.7"
     },
     {
       "name": "JaLingo",
@@ -73,18 +73,24 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-11",
-      "recent": 73,
+      "lastShipped": "2026-10-12",
+      "recent": 74,
       "version": null
+    },
+    {
+      "name": "Unwind",
+      "lastShipped": "2026-10-12",
+      "recent": 68,
+      "version": "v1.2.0"
     }
   ],
   "metrics": {
     "asOf": "2026-10-12",
-    "commits": 11613,
+    "commits": 11619,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4023
+        "commits": 4027
       },
       {
         "label": "ParentPod",
@@ -92,7 +98,7 @@
       },
       {
         "label": "RealInvestorX",
-        "commits": 1324
+        "commits": 1326
       },
       {
         "label": "Longevity",
@@ -125,28 +131,28 @@
       "scope": "owned non-archived repositories",
       "expected": 23,
       "inventoryDigest": "a1a9e334da9daca6123f164d3c4b3c81eda2c4cb38c9d1e4cfda2d0d397e974d",
-      "revisionDigest": "65baed4818e608838b9e337c03b02397cb1a61dc0b8943a9992bdb0075e870bc",
+      "revisionDigest": "26e7d667bc3385b90de406afecb00c4db7ba921e56d7b6febc34f5aae05b9e27",
       "commitsMeasured": 22,
       "sourceMeasured": 22
     },
-    "trackedFiles": 21745,
-    "linesOfSource": 1487191,
+    "trackedFiles": 21755,
+    "linesOfSource": 1488664,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 769323
+        "lines": 769368
       },
       {
         "name": "JavaScript",
-        "lines": 383004
+        "lines": 384174
       },
       {
         "name": "Python",
-        "lines": 218951
+        "lines": 219206
       },
       {
         "name": "CSS",
-        "lines": 65298
+        "lines": 65301
       },
       {
         "name": "PHP",
