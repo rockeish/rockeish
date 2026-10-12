@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { chmodSync, copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -12,12 +12,23 @@ function fixture(t, projects, previous) {
   t.after(() => rmSync(dir, { recursive: true, force: true }));
   for (const name of ['scripts', 'data', 'repos']) mkdirSync(join(dir, name));
   copyFileSync(new URL('./collect-activity.mjs', import.meta.url), join(dir, 'scripts/collect-activity.mjs'));
+  copyFileSync(new URL('./repository-registry.mjs', import.meta.url), join(dir, 'scripts/repository-registry.mjs'));
+  const registryFile = join(dir, 'registry.json');
+  writeFileSync(registryFile, JSON.stringify({ schema: 1, products: [
+    { repo: 'rockeish/public-demo', dir: 'demo' }, { repo: 'rockeish/paused' }, { repo: 'rockeish/hub' },
+  ] }));
+  mkdirSync(join(dir, 'bin'));
+  const gh = join(dir, 'bin', 'gh');
+  writeFileSync(gh, '#!/bin/sh\nprintf \'%s\' \'[{"nameWithOwner":"rockeish/public-demo","isArchived":false},{"nameWithOwner":"rockeish/paused","isArchived":false},{"nameWithOwner":"rockeish/hub","isArchived":false}]\'\n');
+  chmodSync(gh, 0o755);
   writeFileSync(join(dir, 'data/projects.json'), JSON.stringify({ projects }));
   const activityFile = join(dir, 'data/activity.json');
   writeFileSync(activityFile, previous);
   const env = {
     ...process.env,
     SHOWCASE_REPOS_ROOT: join(dir, 'repos'),
+    SHOWCASE_REGISTRY_FILE: registryFile,
+    PATH: `${join(dir, 'bin')}:${process.env.PATH}`,
     SHOWCASE_LESSONS_FILE: join(dir, 'missing-lessons.md'),
     SHOWCASE_TOKEN: '',
     GITHUB_TOKEN: '',
@@ -82,10 +93,13 @@ test('collector computes public headline metrics from reachable shipped history 
     asOf: shippedDate,
     commits: 3,
     commitsByRepo: [
-      { label: 'Demo', commits: 1 }, { label: 'Paused', commits: 1 }, { label: 'Hub', commits: 1 },
+      { label: 'Demo', commits: 1 }, { label: 'Paused', commits: 1 }, { label: 'Other repositories', commits: 1 },
     ],
     appsInProduction: 1,
     repos: 3,
+    historyCoverage: { scope: 'owned non-archived repositories', expected: 3,
+      inventoryDigest: result.repoCount.digest, revisionDigest: result.metrics.historyCoverage.revisionDigest,
+      commitsMeasured: 3, sourceMeasured: 3 },
     trackedFiles: 8,
     linesOfSource: 6,
     languages: [
@@ -102,6 +116,6 @@ test('collector computes public headline metrics from reachable shipped history 
 test('collector preserves the published activity byte-for-byte when no repository is reachable', (t) => {
   const previous = '{\n  "asOf": "2026-01-01", "repos": [], "metrics": {"commits": 42}\n}\n';
   const f = fixture(t, [{ name: 'Missing', repo: 'missing', status: 'LIVE' }], previous);
-  assert.match(f.run(), /no repos reachable/);
+  assert.throws(() => f.run(), /no repos reachable/);
   assert.equal(readFileSync(f.activityFile, 'utf8'), previous);
 });

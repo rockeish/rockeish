@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { buildReadme, esc, fmtDate, lessonsSection, mdCell, recentlyShipped, renderAll } from './generate-showcase.mjs';
 
 const projects = JSON.parse(readFileSync(new URL('../data/projects.json', import.meta.url), 'utf8'));
@@ -102,11 +102,13 @@ test('the profile refreshes from the local schedule, not a GitHub Action', () =>
   // 2026-07-18 by a local cron using this machine's `gh` auth. The README says
   // so; this asserts the repo still matches the README, so re-adding a workflow
   // has to be a deliberate act that also updates the disclosure.
-  assert.equal(
-    existsSync(new URL('../.github/workflows', import.meta.url)),
-    false,
-    'no .github/workflows — the refresh is a local cron (~/scripts/refresh-showcase-scheduled)',
-  );
+  const dir = new URL('../.github/workflows/', import.meta.url);
+  for (const file of existsSync(dir) ? readdirSync(dir) : []) {
+    const source = readFileSync(new URL(file, dir), 'utf8');
+    assert.doesNotMatch(source, /^\s*schedule:/m, `${file}: refresh stays with the local schedule`);
+    assert.doesNotMatch(source, /\bnode\s+scripts\/(?:collect-activity|generate-showcase)\.mjs\b/,
+      `${file}: CI may verify contracts, but must not publish a profile refresh`);
+  }
 });
 
 test('lessonsSection renders the public sentences, folds the long tail, and is omitted when empty', () => {

@@ -1,54 +1,69 @@
 {
-  "asOf": "2026-10-11",
+  "asOf": "2026-10-12",
   "window": "90d",
+  "repoCount": {
+    "source": "github",
+    "method": "gh-repo-list",
+    "asOf": "2026-10-12T06:07:47.731Z",
+    "count": 23,
+    "complete": true,
+    "enumerationLimit": 1000,
+    "digest": "a1a9e334da9daca6123f164d3c4b3c81eda2c4cb38c9d1e4cfda2d0d397e974d",
+    "productRegistry": {
+      "source": "local-product-registry",
+      "schema": 1,
+      "count": 21,
+      "digest": "8d90bcc83cb260c18f4daac40f7b0b317d5a944de00a2ec00274295617ae4cc2"
+    }
+  },
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-10-09",
+      "lastShipped": "2026-10-11",
       "recent": 466,
-      "version": "v2.62.460"
+      "version": "v2.62.461"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-10-09",
-      "recent": 427,
+      "lastShipped": "2026-10-11",
+      "recent": 428,
       "version": "v3.35.6"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-10-09",
-      "recent": 368,
+      "lastShipped": "2026-10-11",
+      "recent": 365,
       "version": "v2.0.147"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-10-09",
-      "recent": 339,
-      "version": "v5.36.3"
+      "lastShipped": "2026-10-12",
+      "recent": 349,
+      "version": "v5.36.6"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-10",
-      "recent": 253,
+      "lastShipped": "2026-10-11",
+      "recent": 255,
       "version": "v0.5.0"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-10-08",
-      "recent": 181,
-      "version": "v0.2.6"
+      "lastShipped": "2026-10-11",
+      "recent": 197,
+      "version": "v0.2.8"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-10-09",
-      "recent": 168,
+      "lastShipped": "2026-10-11",
+      "recent": 177,
       "version": "v1.3.1"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-10-09",
-      "recent": 122,
-      "version": "v1.2.0"
+      "lastShipped": "2026-10-11",
+      "recent": 135,
+      "version": "v1.2.1"
     },
     {
       "name": "Bid Spotter",
@@ -58,56 +73,46 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-10",
-      "recent": 70,
-      "version": null
-    },
-    {
-      "name": "Unwind",
       "lastShipped": "2026-10-11",
-      "recent": null,
-      "version": "v1.2.0"
+      "recent": 73,
+      "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-10-11",
-    "commits": 9197,
+    "asOf": "2026-10-12",
+    "commits": 11613,
     "commitsByRepo": [
       {
+        "label": "Other repositories",
+        "commits": 4023
+      },
+      {
         "label": "ParentPod",
-        "commits": 2769
+        "commits": 2773
       },
       {
         "label": "RealInvestorX",
-        "commits": 1314
+        "commits": 1324
       },
       {
         "label": "Longevity",
-        "commits": 1216
-      },
-      {
-        "label": "Compliance OS",
-        "commits": 997
+        "commits": 1217
       },
       {
         "label": "Apex",
-        "commits": 985
+        "commits": 1001
       },
       {
         "label": "TheLoop",
-        "commits": 685
-      },
-      {
-        "label": "Beyond Volatility",
-        "commits": 665
+        "commits": 698
       },
       {
         "label": "JaLingo",
-        "commits": 253
+        "commits": 255
       },
       {
         "label": "EngiByte",
-        "commits": 200
+        "commits": 209
       },
       {
         "label": "Bid Spotter",
@@ -116,36 +121,44 @@
     ],
     "appsInProduction": 7,
     "repos": 23,
-    "trackedFiles": 16706,
-    "linesOfSource": 1071465,
+    "historyCoverage": {
+      "scope": "owned non-archived repositories",
+      "expected": 23,
+      "inventoryDigest": "a1a9e334da9daca6123f164d3c4b3c81eda2c4cb38c9d1e4cfda2d0d397e974d",
+      "revisionDigest": "65baed4818e608838b9e337c03b02397cb1a61dc0b8943a9992bdb0075e870bc",
+      "commitsMeasured": 22,
+      "sourceMeasured": 22
+    },
+    "trackedFiles": 21745,
+    "linesOfSource": 1487191,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 687779
+        "lines": 769323
       },
       {
         "name": "JavaScript",
-        "lines": 274646
-      },
-      {
-        "name": "CSS",
-        "lines": 47154
+        "lines": 383004
       },
       {
         "name": "Python",
-        "lines": 24106
+        "lines": 218951
       },
       {
-        "name": "SQL",
-        "lines": 18428
+        "name": "CSS",
+        "lines": 65298
       },
       {
         "name": "PHP",
-        "lines": 12904
+        "lines": 22785
+      },
+      {
+        "name": "SQL",
+        "lines": 19304
       },
       {
         "name": "Other",
-        "lines": 6448
+        "lines": 8526
       }
     ]
   },
@@ -543,7 +556,7 @@
     {
       "id": "LL-079",
       "title": "Keep operational failures separate from admitted commitments",
-      "text": "Preserve operational failures without letting each event create a new commitment; use an explicit admission gate for durable work."
+      "text": "Preserve operational failures without letting each event create a new commitment; cancellation requires evidence that the specific run is obsolete."
     },
     {
       "id": "LL-080",
@@ -709,6 +722,16 @@
       "id": "LL-112",
       "title": "Live state with one copy is an incident waiting; back up databases with the database",
       "text": "Copy a live database with its own backup tool and verify the copy, because a plain file copy of a database in use can be silently corrupt."
+    },
+    {
+      "id": "LL-113",
+      "title": "A sticky alarm needs a recorded way to close it",
+      "text": "An alert that refuses to forget a past failure should still let you record why it happened, or people learn to ignore it."
+    },
+    {
+      "id": "LL-114",
+      "title": "Check the hold list before opening a PR; a preview workflow that edits auth config is hold-relevant",
+      "text": "Merging a change can trigger deploy automation, so check whether a project is on hold before touching it."
     }
   ]
 }

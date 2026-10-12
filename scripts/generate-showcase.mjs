@@ -29,6 +29,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { repositoryInventory, requireCheckoutRoot, requireCountReceipt } from './repository-registry.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -78,7 +79,8 @@ export const mdCell = (s) => String(s)
   .replace(/\|/g, '\\|')
   .replace(/`/g, '');
 const compact = (n) =>
-  n >= 1000 ? (n / 1000 >= 100 ? Math.round(n / 1000) : (n / 1000).toFixed(1).replace(/\.0$/, '')) + 'K' : String(n);
+  typeof n !== 'number' || !Number.isFinite(n) ? 'Unknown'
+    : n >= 1000 ? (n / 1000 >= 100 ? Math.round(n / 1000) : (n / 1000).toFixed(1).replace(/\.0$/, '')) + 'K' : String(n);
 export function fmtDate(value) {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(value ?? ''));
   if (!match) throw new Error(`Invalid ISO date: ${value}`);
@@ -156,7 +158,9 @@ function svgDoc(w, h, inner, label, t) {
 function heroSvg(d, t) {
   const m = d.metrics;
   const stats = [
-    [String(m.repos), 'repos'], [compact(m.commits), 'commits'], [compact(m.linesOfSource), 'lines'],
+    [String(m.repos), 'repos'],
+    [compact(m.commits), m.historyCoverage ? `commits ${m.historyCoverage.commitsMeasured}/${m.repos}` : 'commits'],
+    [compact(m.linesOfSource), m.historyCoverage ? `lines ${m.historyCoverage.sourceMeasured}/${m.repos}` : 'lines'],
     [String(m.appsInProduction), 'live apps'], [String(m.engineers), 'engineer'],
   ];
   const W = 720, x0 = 40, cell = (W - x0 - 40) / stats.length;
@@ -322,8 +326,8 @@ function commitsSvg(d, t) {
   const gridBottom = top + rows.length * (rowH + rowGap) - rowGap + 5;
   const grid = [0.25, 0.5, 0.75, 1].map((f) =>
     `<line x1="${(barX + barMax * f).toFixed(1)}" y1="${top}" x2="${(barX + barMax * f).toFixed(1)}" y2="${gridBottom}" stroke="${t.line}" stroke-dasharray="2 6" opacity="0.6"/>`).join('\n  ');
-  let s = `<text x="28" y="42" font-family="${FONT}" font-size="17" fill="${t.muted}">Commits per repository — top ${rows.length} of ${d.metrics.repos} repos</text>
-  <text x="${W - 28}" y="42" font-family="${FONT}" font-size="15" fill="${t.muted}" text-anchor="end">~${compact(d.metrics.commits)} total · single author</text>
+  let s = `<text x="28" y="42" font-family="${FONT}" font-size="17" fill="${t.muted}">Measured commits</text>
+  <text x="${W - 28}" y="42" font-family="${FONT}" font-size="15" fill="${t.muted}" text-anchor="end">~${compact(d.metrics.commits)} measured total</text>
   ${grid}`;
   rows.forEach((r, i) => {
     const y = top + i * (rowH + rowGap);
@@ -524,7 +528,7 @@ function connectRow(d) {
 export function buildReadme(d, act) {
   const m = d.metrics;
   const langTotal = m.languages.reduce((n, l) => n + l.lines, 0);
-  const commitsAlt = `Commits per repository — ${m.commitsByRepo.map((r) => `${r.label} ${num(r.commits)}`).join('; ')}. ~${compact(m.commits)} total, single author.`;
+  const commitsAlt = `Commits per repository — ${m.commitsByRepo.map((r) => `${r.label} ${num(r.commits)}`).join('; ')}. ~${compact(m.commits)} measured total.`;
   const languagesAlt = `Language mix across ${compact(langTotal)} lines of tracked source — ${m.languages.map((l) => `${l.name} ${((l.lines / langTotal) * 100).toFixed(1)}%`).join(', ')}.`;
   const orbitAlt = `Portfolio constellation — ${d.architecture.apps.join(', ')} and the Beyond Volatility hub connected through shared infrastructure, run by one engineer.`;
   const velocityRows = act?.repos?.filter((r) => r.name !== 'this profile') || [];
@@ -549,7 +553,7 @@ export function buildReadme(d, act) {
     `**Shared engineering standards:** ${d.platform.standards.map((s) => `\`${s}\``).join(' · ')} — maintained centrally and applied according to each repository's stack and risk profile.`);
 
   add('By the numbers', 'By the numbers',
-    `<sub>Portfolio snapshot dated ${fmtDate(m.asOf)}. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>`,
+    `<sub>History snapshot dated ${fmtDate(m.asOf)}. Repository count covers all non-archived repositories owned on GitHub, including infrastructure.${act?.repoCount ? ` Count observed ${esc(act.repoCount.asOf)}.` : ''} Commits cover ${m.historyCoverage?.commitsMeasured ?? m.commitsByRepo.length} of ${m.repos} repositories; source lines cover ${m.historyCoverage?.sourceMeasured ?? m.commitsByRepo.length} of ${m.repos}. Unavailable history is outside these measured subtotals.</sub>`,
     picture('commits', commitsAlt, '100%'),
     picture('languages', languagesAlt, '100%'));
 
@@ -569,7 +573,7 @@ export function buildReadme(d, act) {
 
   const nav = centered(S.map((s) => `<a href="#${slug(s.title)}">${s.nav}</a>`).join('\n  &nbsp;·&nbsp;\n  '));
   const header = [
-    picture('hero', `${d.profile.name} — ${d.profile.role}. ${m.repos} repositories, ${compact(m.commits)} commits, ${compact(m.linesOfSource)} lines of source, ${m.appsInProduction} apps in production, ${m.engineers} engineer.`, '100%'),
+    picture('hero', `${d.profile.name} — ${d.profile.role}. ${m.repos} repositories, ${compact(m.commits)} measured commits, ${compact(m.linesOfSource)} measured lines of source, ${m.appsInProduction} apps in production, ${m.engineers} engineer.`, '100%'),
     centered(HERO_BADGES.map(badge).join('\n  ')),
     nav,
   ];
@@ -584,6 +588,9 @@ export function buildReadme(d, act) {
 // ---------------------------------------------------------------------------
 
 function main() {
+  const { receipt } = repositoryInventory();
+  requireCheckoutRoot();
+  requireCountReceipt(activity, receipt);
   mkdirSync(join(ROOT, 'assets'), { recursive: true });
   const written = [];
   for (const [name, themes] of Object.entries(renderAll())) {
