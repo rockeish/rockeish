@@ -29,6 +29,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { repositoryCount, requireCheckoutRoot, requireCountReceipt } from './repository-registry.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -156,7 +157,7 @@ function svgDoc(w, h, inner, label, t) {
 function heroSvg(d, t) {
   const m = d.metrics;
   const stats = [
-    [String(m.repos), 'repos'], [compact(m.commits), 'commits'], [compact(m.linesOfSource), 'lines'],
+    [String(m.repos), 'repos'], [compact(m.commits), 'project commits'], [compact(m.linesOfSource), 'project lines'],
     [String(m.appsInProduction), 'live apps'], [String(m.engineers), 'engineer'],
   ];
   const W = 720, x0 = 40, cell = (W - x0 - 40) / stats.length;
@@ -549,7 +550,7 @@ export function buildReadme(d, act) {
     `**Shared engineering standards:** ${d.platform.standards.map((s) => `\`${s}\``).join(' · ')} — maintained centrally and applied according to each repository's stack and risk profile.`);
 
   add('By the numbers', 'By the numbers',
-    `<sub>Portfolio snapshot dated ${fmtDate(m.asOf)}. These figures are computed from the git history and tracked source tree; the visible date prevents an old snapshot from presenting as live telemetry.</sub>`,
+    `<sub>Portfolio snapshot dated ${fmtDate(m.asOf)}. Repository count covers the owned-repository registry, including infrastructure. Commits and lines cover ${m.measuredRepos ?? m.commitsByRepo.length} measured project checkouts. These figures are computed from git history and tracked source; the visible date prevents an old snapshot from presenting as live telemetry.</sub>`,
     picture('commits', commitsAlt, '100%'),
     picture('languages', languagesAlt, '100%'));
 
@@ -584,6 +585,9 @@ export function buildReadme(d, act) {
 // ---------------------------------------------------------------------------
 
 function main() {
+  const count = repositoryCount();
+  requireCheckoutRoot();
+  requireCountReceipt(activity, count);
   mkdirSync(join(ROOT, 'assets'), { recursive: true });
   const written = [];
   for (const [name, themes] of Object.entries(renderAll())) {

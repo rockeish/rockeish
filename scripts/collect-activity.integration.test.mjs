@@ -12,12 +12,18 @@ function fixture(t, projects, previous) {
   t.after(() => rmSync(dir, { recursive: true, force: true }));
   for (const name of ['scripts', 'data', 'repos']) mkdirSync(join(dir, name));
   copyFileSync(new URL('./collect-activity.mjs', import.meta.url), join(dir, 'scripts/collect-activity.mjs'));
+  copyFileSync(new URL('./repository-registry.mjs', import.meta.url), join(dir, 'scripts/repository-registry.mjs'));
+  const registryFile = join(dir, 'registry.json');
+  writeFileSync(registryFile, JSON.stringify({ schema: 1, products: [
+    { repo: 'rockeish/demo' }, { repo: 'rockeish/paused' }, { repo: 'rockeish/hub' },
+  ] }));
   writeFileSync(join(dir, 'data/projects.json'), JSON.stringify({ projects }));
   const activityFile = join(dir, 'data/activity.json');
   writeFileSync(activityFile, previous);
   const env = {
     ...process.env,
     SHOWCASE_REPOS_ROOT: join(dir, 'repos'),
+    SHOWCASE_REGISTRY_FILE: registryFile,
     SHOWCASE_LESSONS_FILE: join(dir, 'missing-lessons.md'),
     SHOWCASE_TOKEN: '',
     GITHUB_TOKEN: '',
@@ -86,6 +92,8 @@ test('collector computes public headline metrics from reachable shipped history 
     ],
     appsInProduction: 1,
     repos: 3,
+    measuredRepos: 3,
+    metricScope: 'listed project checkouts',
     trackedFiles: 8,
     linesOfSource: 6,
     languages: [
@@ -102,6 +110,6 @@ test('collector computes public headline metrics from reachable shipped history 
 test('collector preserves the published activity byte-for-byte when no repository is reachable', (t) => {
   const previous = '{\n  "asOf": "2026-01-01", "repos": [], "metrics": {"commits": 42}\n}\n';
   const f = fixture(t, [{ name: 'Missing', repo: 'missing', status: 'LIVE' }], previous);
-  assert.match(f.run(), /no repos reachable/);
+  assert.throws(() => f.run(), /no repos reachable/);
   assert.equal(readFileSync(f.activityFile, 'utf8'), previous);
 });

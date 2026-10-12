@@ -31,6 +31,7 @@ import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from '
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { homedir } from 'os';
+import { repositoryCount, requireCheckoutRoot } from './repository-registry.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -220,7 +221,7 @@ export function chooseVersion(tagVersion, packageVersion) {
  * deliberately not counted, and neither is the hub site — the public profile
  * must never overstate, so the rule stays conservative and mechanical.
  */
-function computeMetrics(projects, asOf) {
+function computeMetrics(projects, asOf, repoCount) {
   const commitsByRepo = [];
   const linesByLanguage = {};
   let commits = 0;
@@ -253,7 +254,6 @@ function computeMetrics(projects, asOf) {
   commitsByRepo.sort((a, b) => b.commits - a.commits);
   const languages = groupLanguages(linesByLanguage);
   const linesOfSource = languages.reduce((sum, language) => sum + language.lines, 0);
-  const checkouts = countCheckouts();
 
   // Requires `repo`, not `localRepo`: the hub site is a production web property
   // but it is not an app, and it only has a local checkout. Counting it would
@@ -267,7 +267,9 @@ function computeMetrics(projects, asOf) {
     commits,
     commitsByRepo,
     appsInProduction,
-    ...(checkouts ? { repos: checkouts } : {}),
+    repos: repoCount.count,
+    measuredRepos: commitsByRepo.length,
+    metricScope: 'listed project checkouts',
     // Omitted rather than zeroed when nothing could be counted: the generator
     // then falls back to the declared figures, which carry their own older
     // `asOf`, so a stale number can never present itself as today's.
@@ -447,6 +449,8 @@ export function collectLessons(file, fallback = []) {
 }
 
 async function main() {
+  const repoCount = repositoryCount();
+  requireCheckoutRoot();
   const out = [];
   for (const target of targets) {
     // Isolate per-target failures: a transient API error on one repo must not
@@ -467,19 +471,19 @@ async function main() {
   }
 
   if (!out.length) {
-    console.log('collect-activity: no repos reachable — leaving existing activity.json untouched.');
-    return;
+    throw new Error('collect-activity: no repos reachable — leaving existing activity.json untouched.');
   }
 
   out.sort((a, b) => (b.recent || 0) - (a.recent || 0));
   const asOf = out.reduce((max, r) => (r.lastShipped > max ? r.lastShipped : max), '0000-00-00');
-  const metrics = computeMetrics(data.projects, asOf);
+  const metrics = computeMetrics(data.projects, asOf, repoCount);
+  if (!metrics) throw new Error('Project metrics unavailable; refusing profile refresh');
   let previous = {};
   try {
     previous = JSON.parse(readFileSync(join(ROOT, 'data', 'activity.json'), 'utf8'));
   } catch { /* first run */ }
   const lessons = collectLessons(lessonsSource(), previous.lessons);
-  const payload = { asOf, window: '90d', repos: out, ...(metrics ? { metrics } : {}), lessons };
+  const payload = { asOf, window: '90d', repoCount, repos: out, metrics, lessons };
   writeFileSync(join(ROOT, 'data', 'activity.json'), JSON.stringify(payload, null, 2) + '\n');
   console.log(
     `collect-activity: wrote ${out.length} repos (asOf ${asOf})` +
