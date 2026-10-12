@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 23 repositories, 11.6K measured commits, 1489K measured lines of source, 7 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 23 repositories, 11.7K measured commits, 1496K measured lines of source, 7 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -82,39 +82,39 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>History snapshot dated Oct 12, 2026. Repository count covers all non-archived repositories owned on GitHub, including infrastructure. Count observed 2026-10-12T06:51:32.680Z. Commits cover 22 of 23 repositories; source lines cover 22 of 23. Unavailable history is outside these measured subtotals.</sub>
+<sub>History snapshot dated Oct 12, 2026. Repository count covers all non-archived repositories owned on GitHub, including infrastructure. Count observed 2026-10-12T17:41:03.016Z. Commits cover 22 of 23 repositories; source lines cover 22 of 23. Unavailable history is outside these measured subtotals.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — Other repositories 4,027; ParentPod 2,773; RealInvestorX 1,326; Longevity 1,217; Apex 1,001; TheLoop 698; JaLingo 255; EngiByte 209; Bid Spotter 113. ~11.6K measured total." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — Other repositories 4,044; ParentPod 2,776; RealInvestorX 1,328; Longevity 1,217; Apex 1,005; TheLoop 699; JaLingo 258; EngiByte 212; Bid Spotter 113. ~11.7K measured total." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 1489K lines of tracked source — TypeScript 51.7%, JavaScript 25.8%, Python 14.7%, CSS 4.4%, PHP 1.5%, SQL 1.3%, Other 0.6%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 1496K lines of tracked source — TypeScript 51.6%, JavaScript 25.9%, Python 14.7%, CSS 4.4%, PHP 1.5%, SQL 1.3%, Other 0.6%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 466 commits; Compliance OS 430 commits; Longevity 365 commits; RealInvestorX 351 commits; JaLingo 255 commits; Apex 197 commits; EngiByte 177 commits; TheLoop 135 commits; Bid Spotter 100 commits; Unwind 68 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 468 commits; Compliance OS 430 commits; Longevity 365 commits; RealInvestorX 353 commits; JaLingo 258 commits; Apex 201 commits; EngiByte 180 commits; TheLoop 136 commits; Bid Spotter 100 commits; Unwind 70 commits." width="100%">
 </picture>
 
 <sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 12, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.461` | 466 |
+| **ParentPod** | `v2.62.461` | 468 |
 | **Compliance OS** | `v3.35.7` | 430 |
 | **Longevity** | `v2.0.147` | 365 |
-| **RealInvestorX** | `v5.36.7` | 351 |
-| **JaLingo** | `v0.5.0` | 255 |
-| **Apex** | `v0.2.8` | 197 |
-| **EngiByte** | `v1.3.1` | 177 |
-| **TheLoop** | `v1.2.1` | 135 |
+| **RealInvestorX** | `v5.36.8` | 353 |
+| **JaLingo** | `v0.5.0` | 258 |
+| **Apex** | `v0.2.8` | 201 |
+| **EngiByte** | `v1.3.1` | 180 |
+| **TheLoop** | `v1.2.1` | 136 |
 | **Bid Spotter** | `v2.1.0` | 100 |
-| **Unwind** | `v1.2.0` | 68 |
+| **Unwind** | `v1.2.0` | 70 |
 
 ## Selected work
 
