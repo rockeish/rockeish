@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-10-12",
+  "asOf": "2026-10-13",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-10-12T17:41:03.016Z",
+    "asOf": "2026-10-13T23:41:03.706Z",
     "count": 23,
     "complete": true,
     "enumerationLimit": 1000,
@@ -19,14 +19,14 @@
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-10-12",
-      "recent": 468,
-      "version": "v2.62.461"
+      "lastShipped": "2026-10-13",
+      "recent": 471,
+      "version": "v2.62.464"
     },
     {
       "name": "Compliance OS",
       "lastShipped": "2026-10-12",
-      "recent": 430,
+      "recent": 431,
       "version": "v3.35.7"
     },
     {
@@ -37,68 +37,68 @@
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-10-12",
-      "recent": 353,
-      "version": "v5.36.8"
+      "lastShipped": "2026-10-13",
+      "recent": 363,
+      "version": "v5.36.14"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-12",
-      "recent": 258,
+      "lastShipped": "2026-10-13",
+      "recent": 262,
       "version": "v0.5.0"
     },
     {
       "name": "Apex",
       "lastShipped": "2026-10-12",
-      "recent": 201,
+      "recent": 202,
       "version": "v0.2.8"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-10-12",
-      "recent": 180,
+      "lastShipped": "2026-10-13",
+      "recent": 182,
       "version": "v1.3.1"
     },
     {
       "name": "TheLoop",
       "lastShipped": "2026-10-12",
-      "recent": 136,
-      "version": "v1.2.1"
+      "recent": 139,
+      "version": "v1.2.2"
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-10-09",
-      "recent": 100,
+      "lastShipped": "2026-10-12",
+      "recent": 104,
       "version": "v2.1.0"
     },
     {
       "name": "this profile",
       "lastShipped": "2026-10-12",
-      "recent": 75,
+      "recent": 76,
       "version": null
     },
     {
       "name": "Unwind",
-      "lastShipped": "2026-10-12",
-      "recent": 70,
+      "lastShipped": "2026-10-13",
+      "recent": 74,
       "version": "v1.2.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-10-12",
-    "commits": 11652,
+    "asOf": "2026-10-13",
+    "commits": 11767,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4044
+        "commits": 4131
       },
       {
         "label": "ParentPod",
-        "commits": 2776
+        "commits": 2780
       },
       {
         "label": "RealInvestorX",
-        "commits": 1328
+        "commits": 1338
       },
       {
         "label": "Longevity",
@@ -106,23 +106,23 @@
       },
       {
         "label": "Apex",
-        "commits": 1005
+        "commits": 1006
       },
       {
         "label": "TheLoop",
-        "commits": 699
+        "commits": 702
       },
       {
         "label": "JaLingo",
-        "commits": 258
+        "commits": 262
       },
       {
         "label": "EngiByte",
-        "commits": 212
+        "commits": 214
       },
       {
         "label": "Bid Spotter",
-        "commits": 113
+        "commits": 117
       }
     ],
     "appsInProduction": 7,
@@ -131,40 +131,40 @@
       "scope": "owned non-archived repositories",
       "expected": 23,
       "inventoryDigest": "a1a9e334da9daca6123f164d3c4b3c81eda2c4cb38c9d1e4cfda2d0d397e974d",
-      "revisionDigest": "ebdefbcdec748c23106166528b1247285e6c76cddae5086f7a04fc138f64b95f",
+      "revisionDigest": "6bd15c15ae000be3799788d1a5beda3ee3a1a7dcc257da36279988a56f339391",
       "commitsMeasured": 22,
       "sourceMeasured": 22
     },
-    "trackedFiles": 21865,
-    "linesOfSource": 1495717,
+    "trackedFiles": 22042,
+    "linesOfSource": 1512464,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 772051
+        "lines": 777134
       },
       {
         "name": "JavaScript",
-        "lines": 387667
+        "lines": 391370
       },
       {
         "name": "Python",
-        "lines": 219642
+        "lines": 227221
       },
       {
         "name": "CSS",
-        "lines": 65421
+        "lines": 65490
       },
       {
         "name": "PHP",
-        "lines": 23000
+        "lines": 23002
       },
       {
         "name": "SQL",
-        "lines": 19304
+        "lines": 19536
       },
       {
         "name": "Other",
-        "lines": 8632
+        "lines": 8711
       }
     ]
   },
@@ -738,6 +738,46 @@
       "id": "LL-114",
       "title": "Check the hold list before opening a PR; a preview workflow that edits auth config is hold-relevant",
       "text": "Merging a change can trigger deploy automation, so check whether a project is on hold before touching it."
+    },
+    {
+      "id": "LL-115",
+      "title": "Built is unfinished until the deployed revision is verified",
+      "text": "Treat a release as complete only when production proves it is running."
+    },
+    {
+      "id": "LL-116",
+      "title": "Authentication must not share its only quota with automation",
+      "text": "Authentication needs capacity that routine automation cannot exhaust."
+    },
+    {
+      "id": "LL-117",
+      "title": "Idle capacity with ready work is a defect",
+      "text": "Ready work should keep moving without asking the owner to restart it."
+    },
+    {
+      "id": "LL-118",
+      "title": "Reserve GitHub API capacity before dispatching or polling",
+      "text": "Keep a capacity reserve so background automation cannot block login."
+    },
+    {
+      "id": "LL-119",
+      "title": "A keepalive must recover from a stop, not only from a boot",
+      "text": "Keepalives must restart a service after any stop, not only after a reboot."
+    },
+    {
+      "id": "LL-120",
+      "title": "Owner ranking and pauses must govern executable selection",
+      "text": "Encode the owner's order and pause at the actual dispatch boundary."
+    },
+    {
+      "id": "LL-121",
+      "title": "A completed process is not a completed research result",
+      "text": "Report failed work as failed work, and distinguish budget holds from bills."
+    },
+    {
+      "id": "LL-122",
+      "title": "Preserve explicit owner completion references without readmitting work",
+      "text": "Keep requested completion history visible without making it new work."
     }
   ]
 }
