@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-10-13",
+  "asOf": "2026-10-14",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-10-13T23:41:03.706Z",
+    "asOf": "2026-10-15T05:41:02.563Z",
     "count": 23,
     "complete": true,
     "enumerationLimit": 1000,
@@ -19,32 +19,32 @@
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-10-13",
+      "lastShipped": "2026-10-14",
       "recent": 471,
       "version": "v2.62.464"
     },
     {
       "name": "Compliance OS",
       "lastShipped": "2026-10-12",
-      "recent": 431,
+      "recent": 429,
       "version": "v3.35.7"
+    },
+    {
+      "name": "RealInvestorX",
+      "lastShipped": "2026-10-14",
+      "recent": 369,
+      "version": "v5.37.1"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-10-11",
-      "recent": 365,
+      "recent": 361,
       "version": "v2.0.147"
     },
     {
-      "name": "RealInvestorX",
-      "lastShipped": "2026-10-13",
-      "recent": 363,
-      "version": "v5.36.14"
-    },
-    {
       "name": "JaLingo",
-      "lastShipped": "2026-10-13",
-      "recent": 262,
+      "lastShipped": "2026-10-14",
+      "recent": 263,
       "version": "v0.5.0"
     },
     {
@@ -73,32 +73,32 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-12",
-      "recent": 76,
+      "lastShipped": "2026-10-13",
+      "recent": 77,
       "version": null
     },
     {
       "name": "Unwind",
-      "lastShipped": "2026-10-13",
+      "lastShipped": "2026-10-14",
       "recent": 74,
       "version": "v1.2.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-10-13",
-    "commits": 11767,
+    "asOf": "2026-10-14",
+    "commits": 11807,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4131
+        "commits": 4161
       },
       {
         "label": "ParentPod",
-        "commits": 2780
+        "commits": 2783
       },
       {
         "label": "RealInvestorX",
-        "commits": 1338
+        "commits": 1344
       },
       {
         "label": "Longevity",
@@ -114,7 +114,7 @@
       },
       {
         "label": "JaLingo",
-        "commits": 262
+        "commits": 263
       },
       {
         "label": "EngiByte",
@@ -131,32 +131,32 @@
       "scope": "owned non-archived repositories",
       "expected": 23,
       "inventoryDigest": "a1a9e334da9daca6123f164d3c4b3c81eda2c4cb38c9d1e4cfda2d0d397e974d",
-      "revisionDigest": "6bd15c15ae000be3799788d1a5beda3ee3a1a7dcc257da36279988a56f339391",
+      "revisionDigest": "31cb293eebb3f16e8dbe17b89b4d5cf2b1c4f67dbd62a355c3cda631508ca6b2",
       "commitsMeasured": 22,
       "sourceMeasured": 22
     },
-    "trackedFiles": 22042,
-    "linesOfSource": 1512464,
+    "trackedFiles": 22084,
+    "linesOfSource": 1515964,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 777134
+        "lines": 777136
       },
       {
         "name": "JavaScript",
-        "lines": 391370
+        "lines": 393210
       },
       {
         "name": "Python",
-        "lines": 227221
+        "lines": 228351
       },
       {
         "name": "CSS",
-        "lines": 65490
+        "lines": 65797
       },
       {
         "name": "PHP",
-        "lines": 23002
+        "lines": 23223
       },
       {
         "name": "SQL",
@@ -778,6 +778,26 @@
       "id": "LL-122",
       "title": "Preserve explicit owner completion references without readmitting work",
       "text": "Keep requested completion history visible without making it new work."
+    },
+    {
+      "id": "LL-123",
+      "title": "Current net claims require aligned marks and verified cost coverage",
+      "text": "Verify timestamps and cost coverage before calling performance current or net."
+    },
+    {
+      "id": "LL-124",
+      "title": "Prove which layer failed before hardening the one that looks broken",
+      "text": "Find the layer that actually failed before hardening the one that looks broken."
+    },
+    {
+      "id": "LL-125",
+      "title": "A fresh projection requires a current and correctly bound source",
+      "text": "Fresh dashboards need correctly bound sources, currencies and periods."
+    },
+    {
+      "id": "LL-126",
+      "title": "Bind optional monitoring to the installed caller shape",
+      "text": "Verify the installed caller and its own evidence together."
     }
   ]
 }
