@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-10-14",
+  "asOf": "2026-10-16",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-10-15T05:41:02.563Z",
+    "asOf": "2026-10-16T11:41:03.038Z",
     "count": 23,
     "complete": true,
     "enumerationLimit": 1000,
@@ -19,26 +19,26 @@
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-10-14",
-      "recent": 471,
+      "lastShipped": "2026-10-15",
+      "recent": 456,
       "version": "v2.62.464"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-10-12",
-      "recent": 429,
-      "version": "v3.35.7"
+      "lastShipped": "2026-10-15",
+      "recent": 419,
+      "version": "v3.35.8"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-10-14",
-      "recent": 369,
-      "version": "v5.37.1"
+      "lastShipped": "2026-10-16",
+      "recent": 359,
+      "version": "v5.37.2"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-10-11",
-      "recent": 361,
+      "recent": 344,
       "version": "v2.0.147"
     },
     {
@@ -49,19 +49,19 @@
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-10-12",
-      "recent": 202,
+      "lastShipped": "2026-10-15",
+      "recent": 201,
       "version": "v0.2.8"
     },
     {
       "name": "EngiByte",
       "lastShipped": "2026-10-13",
-      "recent": 182,
+      "recent": 175,
       "version": "v1.3.1"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-10-12",
+      "lastShipped": "2026-10-16",
       "recent": 139,
       "version": "v1.2.2"
     },
@@ -73,32 +73,32 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-13",
-      "recent": 77,
+      "lastShipped": "2026-10-15",
+      "recent": 78,
       "version": null
     },
     {
       "name": "Unwind",
-      "lastShipped": "2026-10-14",
-      "recent": 74,
+      "lastShipped": "2026-10-16",
+      "recent": 75,
       "version": "v1.2.0"
     }
   ],
   "metrics": {
-    "asOf": "2026-10-14",
-    "commits": 11807,
+    "asOf": "2026-10-16",
+    "commits": 11848,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4161
+        "commits": 4195
       },
       {
         "label": "ParentPod",
-        "commits": 2783
+        "commits": 2784
       },
       {
         "label": "RealInvestorX",
-        "commits": 1344
+        "commits": 1347
       },
       {
         "label": "Longevity",
@@ -106,11 +106,11 @@
       },
       {
         "label": "Apex",
-        "commits": 1006
+        "commits": 1007
       },
       {
         "label": "TheLoop",
-        "commits": 702
+        "commits": 704
       },
       {
         "label": "JaLingo",
@@ -131,32 +131,32 @@
       "scope": "owned non-archived repositories",
       "expected": 23,
       "inventoryDigest": "a1a9e334da9daca6123f164d3c4b3c81eda2c4cb38c9d1e4cfda2d0d397e974d",
-      "revisionDigest": "31cb293eebb3f16e8dbe17b89b4d5cf2b1c4f67dbd62a355c3cda631508ca6b2",
+      "revisionDigest": "e5ee583e19e7d656ecb4caeb25f5fff3be059bed76a9067e31ea939c2d6bf341",
       "commitsMeasured": 22,
       "sourceMeasured": 22
     },
-    "trackedFiles": 22084,
-    "linesOfSource": 1515964,
+    "trackedFiles": 22135,
+    "linesOfSource": 1519784,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 777136
+        "lines": 777192
       },
       {
         "name": "JavaScript",
-        "lines": 393210
+        "lines": 395229
       },
       {
         "name": "Python",
-        "lines": 228351
+        "lines": 228846
       },
       {
         "name": "CSS",
-        "lines": 65797
+        "lines": 66704
       },
       {
         "name": "PHP",
-        "lines": 23223
+        "lines": 23566
       },
       {
         "name": "SQL",
@@ -798,6 +798,16 @@
       "id": "LL-126",
       "title": "Bind optional monitoring to the installed caller shape",
       "text": "Verify the installed caller and its own evidence together."
+    },
+    {
+      "id": "LL-127",
+      "title": "A tool allow-list is not a tool limit",
+      "text": "Limit what an automated agent can do, not just what it is asked to do."
+    },
+    {
+      "id": "LL-128",
+      "title": "A scanner that cannot read its target must fail, not report zero",
+      "text": "A check that read nothing must say so instead of reporting all clear."
     }
   ]
 }

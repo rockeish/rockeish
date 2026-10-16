@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 23 repositories, 11.8K measured commits, 1516K measured lines of source, 7 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 23 repositories, 11.8K measured commits, 1520K measured lines of source, 7 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -82,39 +82,39 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>History snapshot dated Oct 14, 2026. Repository count covers all non-archived repositories owned on GitHub, including infrastructure. Count observed 2026-10-15T05:41:02.563Z. Commits cover 22 of 23 repositories; source lines cover 22 of 23. Unavailable history is outside these measured subtotals.</sub>
+<sub>History snapshot dated Oct 16, 2026. Repository count covers all non-archived repositories owned on GitHub, including infrastructure. Count observed 2026-10-16T11:41:03.038Z. Commits cover 22 of 23 repositories; source lines cover 22 of 23. Unavailable history is outside these measured subtotals.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — Other repositories 4,161; ParentPod 2,783; RealInvestorX 1,344; Longevity 1,217; Apex 1,006; TheLoop 702; JaLingo 263; EngiByte 214; Bid Spotter 117. ~11.8K measured total." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — Other repositories 4,195; ParentPod 2,784; RealInvestorX 1,347; Longevity 1,217; Apex 1,007; TheLoop 704; JaLingo 263; EngiByte 214; Bid Spotter 117. ~11.8K measured total." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 1516K lines of tracked source — TypeScript 51.3%, JavaScript 25.9%, Python 15.1%, CSS 4.3%, PHP 1.5%, SQL 1.3%, Other 0.6%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 1520K lines of tracked source — TypeScript 51.1%, JavaScript 26.0%, Python 15.1%, CSS 4.4%, PHP 1.6%, SQL 1.3%, Other 0.6%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 471 commits; Compliance OS 429 commits; RealInvestorX 369 commits; Longevity 361 commits; JaLingo 263 commits; Apex 202 commits; EngiByte 182 commits; TheLoop 139 commits; Bid Spotter 104 commits; Unwind 74 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 456 commits; Compliance OS 419 commits; RealInvestorX 359 commits; Longevity 344 commits; JaLingo 263 commits; Apex 201 commits; EngiByte 175 commits; TheLoop 139 commits; Bid Spotter 104 commits; Unwind 75 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 14, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 16, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.464` | 471 |
-| **Compliance OS** | `v3.35.7` | 429 |
-| **RealInvestorX** | `v5.37.1` | 369 |
-| **Longevity** | `v2.0.147` | 361 |
+| **ParentPod** | `v2.62.464` | 456 |
+| **Compliance OS** | `v3.35.8` | 419 |
+| **RealInvestorX** | `v5.37.2` | 359 |
+| **Longevity** | `v2.0.147` | 344 |
 | **JaLingo** | `v0.5.0` | 263 |
-| **Apex** | `v0.2.8` | 202 |
-| **EngiByte** | `v1.3.1` | 182 |
+| **Apex** | `v0.2.8` | 201 |
+| **EngiByte** | `v1.3.1` | 175 |
 | **TheLoop** | `v1.2.2` | 139 |
 | **Bid Spotter** | `v2.1.0` | 104 |
-| **Unwind** | `v1.2.0` | 74 |
+| **Unwind** | `v1.2.0` | 75 |
 
 ## Selected work
 
@@ -175,7 +175,7 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## Lessons learned
 
-<sub>What 126 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
+<sub>What 128 rules the incident record paid for. Each one comes from a real failure in this portfolio, has a check that fires on recurrence, and is maintained in the same file that governs every release — regenerated here, not hand-edited.</sub>
 
 - **Prose is a hope; only something that fires is a fix.** A rule that only lives in a document is a hope. Every recurring failure gets a check that fires on its own — a scheduled job, a CI gate, a hook, or a test — and the fix is not done until that check exists.
 - **Built is not wired; correctness and activation are separate claims.** Shipping code is not the same as activating it. A guard that is written and tested but never registered protects nothing, so wiring is verified as its own step.
@@ -187,7 +187,7 @@ Shared standards and repository-specific release gates connect each change to te
 - **Copy the value, never the label; a comment's safety claim is testable.** The label on a thing and the value inside it drift apart. Billing, trial length, and configuration are read from the value the system actually enforces, and any comment claiming "this is safe" gets a test.
 
 <details>
-<summary><b>118 more</b></summary>
+<summary><b>120 more</b></summary>
 
 - **Shared-infrastructure failures wear the costume of code bugs.** When many pipelines share one machine or one budget, an outage looks like a code failure. A monitor establishes whether a red result is fixable by any commit before it files work against the code.
 - **A test double must refuse what the real system refuses.** A stand-in used for testing has to say no wherever the real system says no. If it is more permissive, every test passes and the live system still refuses, which is the hardest kind of gap to see.
@@ -307,6 +307,8 @@ Shared standards and repository-specific release gates connect each change to te
 - **Prove which layer failed before hardening the one that looks broken.** Find the layer that actually failed before hardening the one that looks broken.
 - **A fresh projection requires a current and correctly bound source.** Fresh dashboards need correctly bound sources, currencies and periods.
 - **Bind optional monitoring to the installed caller shape.** Verify the installed caller and its own evidence together.
+- **A tool allow-list is not a tool limit.** Limit what an automated agent can do, not just what it is asked to do.
+- **A scanner that cannot read its target must fail, not report zero.** A check that read nothing must say so instead of reporting all clear.
 
 </details>
 
