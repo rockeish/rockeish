@@ -1,68 +1,68 @@
 {
-  "asOf": "2026-10-17",
+  "asOf": "2026-10-18",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-10-17T17:41:03.528Z",
-    "count": 24,
+    "asOf": "2026-10-18T23:41:02.880Z",
+    "count": 26,
     "complete": true,
     "enumerationLimit": 1000,
-    "digest": "45a06ee00881041fa82d5b2d53796141f463da70673c6a160120ef6fb8904580",
+    "digest": "f821455fad7f97e9a22fac4a7bfea5aac689865aba28d4c818e1872e7be94a94",
     "productRegistry": {
       "source": "local-product-registry",
       "schema": 1,
       "count": 21,
-      "digest": "75801f9228ccb8f0deedf9208bbe565d52c9501f19b4f2975e300af9f1a86907"
+      "digest": "38a973f27e8bdc745d463c3b16e1111db47073291a9f4c8e542b2bf322e4e513"
     }
   },
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-10-17",
-      "recent": 451,
-      "version": "v2.62.464"
+      "lastShipped": "2026-10-18",
+      "recent": 458,
+      "version": "v2.62.466"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-10-16",
-      "recent": 420,
+      "lastShipped": "2026-10-18",
+      "recent": 422,
       "version": "v3.35.8"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-10-17",
-      "recent": 366,
-      "version": "v5.39.0"
+      "lastShipped": "2026-10-18",
+      "recent": 377,
+      "version": "v5.42.1"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-10-17",
-      "recent": 344,
-      "version": "v2.0.148"
+      "lastShipped": "2026-10-18",
+      "recent": 354,
+      "version": "v2.0.152"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-17",
-      "recent": 270,
+      "lastShipped": "2026-10-18",
+      "recent": 283,
       "version": "v0.5.0"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-10-15",
-      "recent": 201,
+      "lastShipped": "2026-10-17",
+      "recent": 203,
       "version": "v0.2.8"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-10-13",
-      "recent": 171,
+      "lastShipped": "2026-10-18",
+      "recent": 179,
       "version": "v1.3.1"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-10-17",
-      "recent": 140,
+      "lastShipped": "2026-10-18",
+      "recent": 148,
       "version": "v1.2.2"
     },
     {
@@ -72,53 +72,53 @@
       "version": "v2.1.0"
     },
     {
-      "name": "this profile",
-      "lastShipped": "2026-10-16",
-      "recent": 78,
-      "version": null
+      "name": "Unwind",
+      "lastShipped": "2026-10-18",
+      "recent": 93,
+      "version": "v1.2.0"
     },
     {
-      "name": "Unwind",
-      "lastShipped": "2026-10-17",
-      "recent": null,
-      "version": "v1.2.0"
+      "name": "this profile",
+      "lastShipped": "2026-10-18",
+      "recent": 80,
+      "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-10-17",
-    "commits": 11941,
+    "asOf": "2026-10-18",
+    "commits": 12100,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4263
+        "commits": 4362
       },
       {
         "label": "ParentPod",
-        "commits": 2788
+        "commits": 2795
       },
       {
         "label": "RealInvestorX",
-        "commits": 1354
+        "commits": 1365
       },
       {
         "label": "Longevity",
-        "commits": 1220
+        "commits": 1230
       },
       {
         "label": "Apex",
-        "commits": 1007
+        "commits": 1009
       },
       {
         "label": "TheLoop",
-        "commits": 705
+        "commits": 713
       },
       {
         "label": "JaLingo",
-        "commits": 270
+        "commits": 283
       },
       {
         "label": "EngiByte",
-        "commits": 214
+        "commits": 223
       },
       {
         "label": "Bid Spotter",
@@ -126,45 +126,45 @@
       }
     ],
     "appsInProduction": 7,
-    "repos": 24,
+    "repos": 26,
     "historyCoverage": {
       "scope": "owned non-archived repositories",
-      "expected": 24,
-      "inventoryDigest": "45a06ee00881041fa82d5b2d53796141f463da70673c6a160120ef6fb8904580",
-      "revisionDigest": "37ca1ac60f5853b5934fced96f3b62cf5e0553b3be769ff4e78a923f4a121c71",
-      "commitsMeasured": 23,
-      "sourceMeasured": 23
+      "expected": 26,
+      "inventoryDigest": "f821455fad7f97e9a22fac4a7bfea5aac689865aba28d4c818e1872e7be94a94",
+      "revisionDigest": "9040072b7e0135a4d911d35b32d4223eedb8e378294df06e2f497d3cdbddd7c0",
+      "commitsMeasured": 25,
+      "sourceMeasured": 25
     },
-    "trackedFiles": 23094,
-    "linesOfSource": 1534626,
+    "trackedFiles": 23550,
+    "linesOfSource": 1569058,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 783579
+        "lines": 804139
       },
       {
         "name": "JavaScript",
-        "lines": 399572
+        "lines": 408101
       },
       {
         "name": "Python",
-        "lines": 231233
+        "lines": 234559
       },
       {
         "name": "CSS",
-        "lines": 67896
+        "lines": 69457
       },
       {
         "name": "PHP",
-        "lines": 23941
+        "lines": 24221
       },
       {
         "name": "SQL",
-        "lines": 19536
+        "lines": 19687
       },
       {
         "name": "Other",
-        "lines": 8869
+        "lines": 8894
       }
     ]
   },
@@ -813,6 +813,11 @@
       "id": "LL-129",
       "title": "Creating a hosting record for a live domain can switch its DNS at once",
       "text": "Creating a hosting record for a live domain can switch its DNS immediately, so stage new sites on a temporary subdomain first."
+    },
+    {
+      "id": "LL-130",
+      "title": "A size or behavior gate must build with production-shaped configuration",
+      "text": "Build checks must run with production-shaped configuration, or they measure a different app than users get."
     }
   ]
 }
