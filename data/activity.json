@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-10-18",
+  "asOf": "2026-10-20",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-10-18T23:41:02.880Z",
+    "asOf": "2026-10-20T05:41:03.387Z",
     "count": 26,
     "complete": true,
     "enumerationLimit": 1000,
@@ -37,14 +37,14 @@
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-10-18",
-      "recent": 354,
-      "version": "v2.0.152"
+      "lastShipped": "2026-10-19",
+      "recent": 359,
+      "version": "v2.0.154"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-18",
-      "recent": 283,
+      "lastShipped": "2026-10-19",
+      "recent": 294,
       "version": "v0.5.0"
     },
     {
@@ -56,13 +56,13 @@
     {
       "name": "EngiByte",
       "lastShipped": "2026-10-18",
-      "recent": 179,
+      "recent": 182,
       "version": "v1.3.1"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-10-18",
-      "recent": 148,
+      "lastShipped": "2026-10-19",
+      "recent": 149,
       "version": "v1.2.2"
     },
     {
@@ -73,24 +73,24 @@
     },
     {
       "name": "Unwind",
-      "lastShipped": "2026-10-18",
-      "recent": 93,
+      "lastShipped": "2026-10-20",
+      "recent": 107,
       "version": "v1.2.0"
     },
     {
       "name": "this profile",
       "lastShipped": "2026-10-18",
-      "recent": 80,
+      "recent": 81,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-10-18",
-    "commits": 12100,
+    "asOf": "2026-10-20",
+    "commits": 12158,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4362
+        "commits": 4399
       },
       {
         "label": "ParentPod",
@@ -102,7 +102,7 @@
       },
       {
         "label": "Longevity",
-        "commits": 1230
+        "commits": 1235
       },
       {
         "label": "Apex",
@@ -110,15 +110,15 @@
       },
       {
         "label": "TheLoop",
-        "commits": 713
+        "commits": 714
       },
       {
         "label": "JaLingo",
-        "commits": 283
+        "commits": 294
       },
       {
         "label": "EngiByte",
-        "commits": 223
+        "commits": 227
       },
       {
         "label": "Bid Spotter",
@@ -131,28 +131,28 @@
       "scope": "owned non-archived repositories",
       "expected": 26,
       "inventoryDigest": "f821455fad7f97e9a22fac4a7bfea5aac689865aba28d4c818e1872e7be94a94",
-      "revisionDigest": "9040072b7e0135a4d911d35b32d4223eedb8e378294df06e2f497d3cdbddd7c0",
+      "revisionDigest": "762e54c0ebbd77154f27217285ac16d736c47259d9ea3ac1bbc656c3582bd7a8",
       "commitsMeasured": 25,
       "sourceMeasured": 25
     },
-    "trackedFiles": 23550,
-    "linesOfSource": 1569058,
+    "trackedFiles": 23751,
+    "linesOfSource": 1574644,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 804139
+        "lines": 807139
       },
       {
         "name": "JavaScript",
-        "lines": 408101
+        "lines": 408540
       },
       {
         "name": "Python",
-        "lines": 234559
+        "lines": 236600
       },
       {
         "name": "CSS",
-        "lines": 69457
+        "lines": 69463
       },
       {
         "name": "PHP",
@@ -164,7 +164,7 @@
       },
       {
         "name": "Other",
-        "lines": 8894
+        "lines": 8994
       }
     ]
   },
@@ -818,6 +818,16 @@
       "id": "LL-130",
       "title": "A size or behavior gate must build with production-shaped configuration",
       "text": "Build checks must run with production-shaped configuration, or they measure a different app than users get."
+    },
+    {
+      "id": "LL-131",
+      "title": "A timing gate must tell a regression from the load on its own runner",
+      "text": "A speed check on shared hardware must separate a real slowdown from a busy machine, or it blocks good changes."
+    },
+    {
+      "id": "LL-132",
+      "title": "Owner actions batch by sitting; secrets move in one paste",
+      "text": "Batch the work you hand a busy person by where their hands will be, not by project, and turn every copy-paste of a secret into one guided script."
     }
   ]
 }
