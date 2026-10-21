@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 26 repositories, 12.2K measured commits, 1575K measured lines of source, 7 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 26 repositories, 12.2K measured commits, 1578K measured lines of source, 7 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -82,39 +82,39 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>History snapshot dated Oct 20, 2026. Repository count covers all non-archived repositories owned on GitHub, including infrastructure. Count observed 2026-10-20T05:41:03.387Z. Commits cover 25 of 26 repositories; source lines cover 25 of 26. Unavailable history is outside these measured subtotals.</sub>
+<sub>History snapshot dated Oct 20, 2026. Repository count covers all non-archived repositories owned on GitHub, including infrastructure. Count observed 2026-10-21T11:41:03.040Z. Commits cover 25 of 26 repositories; source lines cover 25 of 26. Unavailable history is outside these measured subtotals.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — Other repositories 4,399; ParentPod 2,795; RealInvestorX 1,365; Longevity 1,235; Apex 1,009; TheLoop 714; JaLingo 294; EngiByte 227; Bid Spotter 120. ~12.2K measured total." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — Other repositories 4,427; ParentPod 2,796; RealInvestorX 1,367; Longevity 1,235; Apex 1,010; TheLoop 715; JaLingo 299; EngiByte 228; Bid Spotter 121. ~12.2K measured total." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 1575K lines of tracked source — TypeScript 51.3%, JavaScript 25.9%, Python 15.0%, CSS 4.4%, PHP 1.5%, SQL 1.3%, Other 0.6%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 1578K lines of tracked source — TypeScript 51.1%, JavaScript 26.0%, Python 15.1%, CSS 4.4%, PHP 1.5%, SQL 1.2%, Other 0.6%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 458 commits; Compliance OS 422 commits; RealInvestorX 377 commits; Longevity 359 commits; JaLingo 294 commits; Apex 203 commits; EngiByte 182 commits; TheLoop 149 commits; Bid Spotter 107 commits; Unwind 107 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — ParentPod 457 commits; Compliance OS 424 commits; RealInvestorX 379 commits; Longevity 357 commits; JaLingo 299 commits; Apex 204 commits; EngiByte 183 commits; TheLoop 150 commits; Unwind 109 commits; Bid Spotter 108 commits." width="100%">
 </picture>
 
 <sub>Still shipping — latest version and commit volume over the last 90 days, as of Oct 20, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **ParentPod** | `v2.62.466` | 458 |
-| **Compliance OS** | `v3.35.8` | 422 |
-| **RealInvestorX** | `v5.42.1` | 377 |
-| **Longevity** | `v2.0.154` | 359 |
-| **JaLingo** | `v0.5.0` | 294 |
-| **Apex** | `v0.2.8` | 203 |
-| **EngiByte** | `v1.3.1` | 182 |
-| **TheLoop** | `v1.2.2` | 149 |
-| **Bid Spotter** | `v2.1.0` | 107 |
-| **Unwind** | `v1.2.0` | 107 |
+| **ParentPod** | `v2.62.466` | 457 |
+| **Compliance OS** | `v3.35.9` | 424 |
+| **RealInvestorX** | `v5.42.2` | 379 |
+| **Longevity** | `v2.0.154` | 357 |
+| **JaLingo** | `v0.5.0` | 299 |
+| **Apex** | `v0.2.8` | 204 |
+| **EngiByte** | `v1.3.1` | 183 |
+| **TheLoop** | `v1.2.2` | 150 |
+| **Unwind** | `v1.2.0` | 109 |
+| **Bid Spotter** | `v2.1.0` | 108 |
 
 ## Selected work
 
