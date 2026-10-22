@@ -93,8 +93,8 @@
     "_note": "Fallback only. collect-activity.mjs recomputes asOf, commits, commitsByRepo, appsInProduction, trackedFiles, linesOfSource and languages from the checkouts on every refresh and the generator prefers those. These literals are what the page shows when NO checkout is reachable, and they carry their own asOf so an old snapshot can never present itself as today's. Refresh them by copying the computed block, never by estimating."
   },
   "currently": [
-    "Operating **ParentPod** across web, iOS, and Android while improving the caregiver onboarding path.",
-    "**Longevity** turns one short daily log into a read on today's energy, comparisons drawn from your own history, and the long view.",
+    "Building **ReliefFlow**, a mobile-first daily stretching reset that scales from a five-minute desk break to a full hour.",
+    "Operating **ParentPod** across web, iOS, and Android, and **Longevity**, which turns one short daily log into a read on today's energy and the long view.",
     "Maintaining the shared delivery system: isolated worktrees, automated tests, security gates, deployment checks, and documentation freshness."
   ],
   "architecture": {
@@ -111,7 +111,7 @@
       "Bid Spotter",
       "EngiByte",
       "JaLingo",
-      "Unwind",
+      "ReliefFlow",
       "TheLoop"
     ],
     "backends": [
@@ -240,7 +240,7 @@
     {
       "name": "ParentPod",
       "category": "Consumer",
-      "status": "Flagship · live",
+      "status": "Live",
       "tagline": "A shared baby tracker for the whole care team.",
       "blurb": "Co-parents, grandparents, and caregivers share one timeline for feeds, sleep, diapers, medicine, growth, and handoffs.",
       "stack": [
@@ -299,7 +299,7 @@
     {
       "name": "RealInvestorX",
       "category": "Data & analysis",
-      "status": "Maintenance mode",
+      "status": "Live",
       "tagline": "Real-estate deal review with explicit assumptions.",
       "blurb": "Import, review, and compare property cash flow and return assumptions, backed by Postgres and pgvector.",
       "stack": [
@@ -322,7 +322,7 @@
     {
       "name": "Apex",
       "category": "Data & analysis",
-      "status": "Maintenance mode",
+      "status": "Live · personal tool",
       "tagline": "Personal-finance & FIRE planning.",
       "blurb": "Import, categorize, and chart cash flow and net worth — with Monte Carlo retirement simulations.",
       "stack": [
@@ -432,9 +432,9 @@
       ]
     },
     {
-      "name": "Unwind",
+      "name": "ReliefFlow",
       "category": "Consumer",
-      "status": "Live preview · free",
+      "status": "Live",
       "tagline": "Your daily reset.",
       "blurb": "Pick how long you have, from 5 to 60 minutes, and follow a guided timer through a full-body stretching session built around the areas you chose — hips, shoulders, or lower back.",
       "stack": [
@@ -447,8 +447,8 @@
         "Web",
         "PWA"
       ],
-      "url": "https://unwind.beyondvolatility.com",
-      "repo": "unwind",
+      "url": "https://reliefflow.beyondvolatility.com",
+      "repo": "reliefflow",
       "highlights": [
         "Sessions are assembled to the minutes you actually have rather than fixed to one routine length",
         "Streaks and a private journal keep the habit visible; installable PWA on Next.js with Firebase Auth and Firestore"
@@ -457,7 +457,7 @@
     {
       "name": "TheLoop",
       "category": "Consumer",
-      "status": "Controlled beta · live",
+      "status": "Live · maintained",
       "tagline": "A private chronological feed for people you know.",
       "blurb": "Create a circle, share text updates in order, and message people directly without a recommendation feed.",
       "stack": [
