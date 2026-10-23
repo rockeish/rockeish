@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-10-22",
+  "asOf": "2026-10-23",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-10-22T17:41:03.671Z",
+    "asOf": "2026-10-23T23:41:02.947Z",
     "count": 26,
     "complete": true,
     "enumerationLimit": 1000,
@@ -19,114 +19,114 @@
   "repos": [
     {
       "name": "ParentPod",
-      "lastShipped": "2026-10-22",
+      "lastShipped": "2026-10-23",
       "recent": 448,
       "version": "v2.62.466"
     },
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-10-22",
-      "recent": 429,
-      "version": "v3.36.1"
+      "lastShipped": "2026-10-23",
+      "recent": 437,
+      "version": "v3.37.1"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-10-22",
-      "recent": 386,
-      "version": "v5.43.1"
+      "lastShipped": "2026-10-23",
+      "recent": 390,
+      "version": "v5.43.5"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-22",
-      "recent": 357,
+      "lastShipped": "2026-10-23",
+      "recent": 363,
       "version": "v0.5.0"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-10-22",
-      "recent": 341,
-      "version": "v2.0.157"
+      "lastShipped": "2026-10-23",
+      "recent": 340,
+      "version": "v2.0.159"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-10-22",
-      "recent": 204,
+      "lastShipped": "2026-10-23",
+      "recent": 203,
       "version": "v0.2.8"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-10-22",
-      "recent": 176,
+      "lastShipped": "2026-10-23",
+      "recent": 177,
       "version": "v1.3.1"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-10-22",
-      "recent": 155,
+      "lastShipped": "2026-10-23",
+      "recent": 156,
       "version": "v1.2.2"
     },
     {
       "name": "ReliefFlow",
-      "lastShipped": "2026-10-22",
-      "recent": 114,
+      "lastShipped": "2026-10-23",
+      "recent": 122,
       "version": "v1.2.0"
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-10-22",
-      "recent": 109,
+      "lastShipped": "2026-10-23",
+      "recent": 113,
       "version": "v2.1.0"
     },
     {
       "name": "this profile",
       "lastShipped": "2026-10-22",
-      "recent": 82,
+      "recent": 83,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-10-22",
-    "commits": 12334,
+    "asOf": "2026-10-23",
+    "commits": 12435,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4364
+        "commits": 4420
       },
       {
         "label": "ParentPod",
-        "commits": 2797
+        "commits": 2801
       },
       {
         "label": "RealInvestorX",
-        "commits": 1374
+        "commits": 1384
       },
       {
         "label": "Longevity",
-        "commits": 1242
+        "commits": 1246
       },
       {
         "label": "Apex",
-        "commits": 1012
+        "commits": 1014
       },
       {
         "label": "TheLoop",
-        "commits": 720
+        "commits": 722
       },
       {
         "label": "JaLingo",
-        "commits": 357
+        "commits": 363
       },
       {
         "label": "EngiByte",
-        "commits": 232
+        "commits": 237
       },
       {
         "label": "Bid Spotter",
-        "commits": 122
+        "commits": 126
       },
       {
         "label": "ReliefFlow",
-        "commits": 114
+        "commits": 122
       }
     ],
     "appsInProduction": 9,
@@ -135,40 +135,40 @@
       "scope": "owned non-archived repositories",
       "expected": 26,
       "inventoryDigest": "f821455fad7f97e9a22fac4a7bfea5aac689865aba28d4c818e1872e7be94a94",
-      "revisionDigest": "fb38bd201e61c06b6e5ed0e0fa5dce93556697b8e95b2779e8777945b149d3f4",
+      "revisionDigest": "20cdc4704babc3d3a9f50877a83fbc19c89f472dd58dd6469cbef1e1d2f6b2cc",
       "commitsMeasured": 25,
       "sourceMeasured": 25
     },
-    "trackedFiles": 25271,
-    "linesOfSource": 1766742,
+    "trackedFiles": 25361,
+    "linesOfSource": 1774473,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 978068
+        "lines": 981529
       },
       {
         "name": "JavaScript",
-        "lines": 415898
+        "lines": 417493
       },
       {
         "name": "Python",
-        "lines": 248677
+        "lines": 250467
       },
       {
         "name": "CSS",
-        "lines": 69659
+        "lines": 69668
       },
       {
         "name": "PHP",
-        "lines": 24221
+        "lines": 24509
       },
       {
         "name": "SQL",
-        "lines": 19792
+        "lines": 20320
       },
       {
         "name": "Other",
-        "lines": 10427
+        "lines": 10487
       }
     ]
   },
@@ -832,6 +832,16 @@
       "id": "LL-132",
       "title": "Owner actions batch by sitting; secrets move in one paste",
       "text": "Batch the work you hand a busy person by where their hands will be, not by project, and turn every copy-paste of a secret into one guided script."
+    },
+    {
+      "id": "LL-134",
+      "title": "A headless agent's sandbox must cover every path its instructions read",
+      "text": "Unattended agents need their sandbox to cover what their own instructions ask them to read, and a fleet where every run fails needs one alarm, not a hundred retries."
+    },
+    {
+      "id": "LL-135",
+      "title": "Machine telemetry never lands as commits on a shared main",
+      "text": "Frequently changing machine data belongs on a side channel, not in the commit history people and CI depend on."
     }
   ]
 }
