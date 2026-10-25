@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-10-23",
+  "asOf": "2026-10-25",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-10-23T23:41:02.947Z",
+    "asOf": "2026-10-25T05:41:03.446Z",
     "count": 26,
     "complete": true,
     "enumerationLimit": 1000,
@@ -18,115 +18,115 @@
   },
   "repos": [
     {
-      "name": "ParentPod",
-      "lastShipped": "2026-10-23",
-      "recent": 448,
-      "version": "v2.62.466"
+      "name": "Compliance OS",
+      "lastShipped": "2026-10-25",
+      "recent": 451,
+      "version": "v3.39.1"
     },
     {
-      "name": "Compliance OS",
-      "lastShipped": "2026-10-23",
-      "recent": 437,
-      "version": "v3.37.1"
+      "name": "ParentPod",
+      "lastShipped": "2026-10-24",
+      "recent": 450,
+      "version": "v2.62.467"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-10-23",
-      "recent": 390,
-      "version": "v5.43.5"
+      "lastShipped": "2026-10-24",
+      "recent": 400,
+      "version": "v5.43.10"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-23",
-      "recent": 363,
+      "lastShipped": "2026-10-24",
+      "recent": 375,
       "version": "v0.5.0"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-10-23",
-      "recent": 340,
-      "version": "v2.0.159"
+      "lastShipped": "2026-10-24",
+      "recent": 345,
+      "version": "v2.0.162"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-10-23",
-      "recent": 203,
+      "lastShipped": "2026-10-24",
+      "recent": 205,
       "version": "v0.2.8"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-10-23",
-      "recent": 177,
+      "lastShipped": "2026-10-24",
+      "recent": 174,
       "version": "v1.3.1"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-10-23",
-      "recent": 156,
+      "lastShipped": "2026-10-24",
+      "recent": 153,
       "version": "v1.2.2"
     },
     {
       "name": "ReliefFlow",
-      "lastShipped": "2026-10-23",
-      "recent": 122,
+      "lastShipped": "2026-10-24",
+      "recent": 124,
       "version": "v1.2.0"
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-10-23",
-      "recent": 113,
+      "lastShipped": "2026-10-24",
+      "recent": 114,
       "version": "v2.1.0"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-22",
-      "recent": 83,
+      "lastShipped": "2026-10-23",
+      "recent": 84,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-10-23",
-    "commits": 12435,
+    "asOf": "2026-10-25",
+    "commits": 12550,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4420
+        "commits": 4490
       },
       {
         "label": "ParentPod",
-        "commits": 2801
+        "commits": 2807
       },
       {
         "label": "RealInvestorX",
-        "commits": 1384
+        "commits": 1394
       },
       {
         "label": "Longevity",
-        "commits": 1246
+        "commits": 1255
       },
       {
         "label": "Apex",
-        "commits": 1014
+        "commits": 1017
       },
       {
         "label": "TheLoop",
-        "commits": 722
+        "commits": 723
       },
       {
         "label": "JaLingo",
-        "commits": 363
+        "commits": 375
       },
       {
         "label": "EngiByte",
-        "commits": 237
+        "commits": 238
       },
       {
         "label": "Bid Spotter",
-        "commits": 126
+        "commits": 127
       },
       {
         "label": "ReliefFlow",
-        "commits": 122
+        "commits": 124
       }
     ],
     "appsInProduction": 9,
@@ -135,40 +135,40 @@
       "scope": "owned non-archived repositories",
       "expected": 26,
       "inventoryDigest": "f821455fad7f97e9a22fac4a7bfea5aac689865aba28d4c818e1872e7be94a94",
-      "revisionDigest": "20cdc4704babc3d3a9f50877a83fbc19c89f472dd58dd6469cbef1e1d2f6b2cc",
+      "revisionDigest": "73e790fd154054995ac8cf3619d61d251c634163122b86d6e1caf02e2f502162",
       "commitsMeasured": 25,
       "sourceMeasured": 25
     },
-    "trackedFiles": 25361,
-    "linesOfSource": 1774473,
+    "trackedFiles": 25577,
+    "linesOfSource": 1793144,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 981529
+        "lines": 985510
       },
       {
         "name": "JavaScript",
-        "lines": 417493
+        "lines": 420644
       },
       {
         "name": "Python",
-        "lines": 250467
+        "lines": 260982
       },
       {
         "name": "CSS",
-        "lines": 69668
+        "lines": 70376
       },
       {
         "name": "PHP",
-        "lines": 24509
+        "lines": 24511
       },
       {
         "name": "SQL",
-        "lines": 20320
+        "lines": 20568
       },
       {
         "name": "Other",
-        "lines": 10487
+        "lines": 10553
       }
     ]
   },
@@ -681,7 +681,7 @@
     {
       "id": "LL-102",
       "title": "The routes the law requires get a production probe too",
-      "text": "Deleting your account is checked daily in production with a throwaway account, so a broken deletion path pages someone instead of waiting for a user to find it."
+      "text": "Deleting your account is checked every week in production, in every app, with a throwaway account, so a broken deletion path reaches the team instead of waiting for a user to find it."
     },
     {
       "id": "LL-103",
@@ -842,6 +842,26 @@
       "id": "LL-135",
       "title": "Machine telemetry never lands as commits on a shared main",
       "text": "Frequently changing machine data belongs on a side channel, not in the commit history people and CI depend on."
+    },
+    {
+      "id": "LL-136",
+      "title": "A sandbox exit path is only as reliable as the command shape that reaches it",
+      "text": "A restricted tool that only works when called a certain way must say so out loud when it is called another way, or its users will read the failure as an outage."
+    },
+    {
+      "id": "LL-137",
+      "title": "Estimate a deadline from the measured duration of the slowest step, not from effort",
+      "text": "Quote a finish time from how long each step has actually taken, not from how long the work feels like it should take."
+    },
+    {
+      "id": "LL-138",
+      "title": "A review flag is a claim that nothing is owed; check that claim mechanically",
+      "text": "Don't ask someone to review work while your own notes say their last round of feedback is still open."
+    },
+    {
+      "id": "LL-139",
+      "title": "A failed inventory read makes one repository unknown, not every queue empty",
+      "text": "When one queue cannot be read, keep its uncertainty visible and let independently verified work continue within the same safety limits."
     }
   ]
 }
