@@ -4,7 +4,7 @@
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-10-25T05:41:03.446Z",
+    "asOf": "2026-10-26T11:41:03.100Z",
     "count": 26,
     "complete": true,
     "enumerationLimit": 1000,
@@ -12,63 +12,63 @@
     "productRegistry": {
       "source": "local-product-registry",
       "schema": 1,
-      "count": 21,
-      "digest": "ee98dbcacdb72f3c8b4a3cf0be0306059e17f60fa6b38b68772b656841aa872f"
+      "count": 23,
+      "digest": "dbe4a071ed61064f9f6a867ec9fc46305045881cf7d8e1f8bc01589a6fbbda52"
     }
   },
   "repos": [
     {
-      "name": "Compliance OS",
-      "lastShipped": "2026-10-25",
-      "recent": 451,
-      "version": "v3.39.1"
-    },
-    {
       "name": "ParentPod",
       "lastShipped": "2026-10-24",
-      "recent": 450,
+      "recent": 439,
       "version": "v2.62.467"
+    },
+    {
+      "name": "Compliance OS",
+      "lastShipped": "2026-10-25",
+      "recent": 439,
+      "version": "v3.39.2"
     },
     {
       "name": "RealInvestorX",
       "lastShipped": "2026-10-24",
-      "recent": 400,
+      "recent": 394,
       "version": "v5.43.10"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-24",
-      "recent": 375,
+      "lastShipped": "2026-10-25",
+      "recent": 378,
       "version": "v0.5.0"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-10-24",
-      "recent": 345,
-      "version": "v2.0.162"
+      "lastShipped": "2026-10-25",
+      "recent": 328,
+      "version": "v2.0.163"
     },
     {
       "name": "Apex",
       "lastShipped": "2026-10-24",
-      "recent": 205,
+      "recent": 198,
       "version": "v0.2.8"
     },
     {
       "name": "EngiByte",
       "lastShipped": "2026-10-24",
-      "recent": 174,
+      "recent": 169,
       "version": "v1.3.1"
     },
     {
       "name": "TheLoop",
       "lastShipped": "2026-10-24",
-      "recent": 153,
+      "recent": 140,
       "version": "v1.2.2"
     },
     {
       "name": "ReliefFlow",
-      "lastShipped": "2026-10-24",
-      "recent": 124,
+      "lastShipped": "2026-10-25",
+      "recent": 126,
       "version": "v1.2.0"
     },
     {
@@ -79,18 +79,18 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-23",
-      "recent": 84,
+      "lastShipped": "2026-10-25",
+      "recent": 83,
       "version": null
     }
   ],
   "metrics": {
     "asOf": "2026-10-25",
-    "commits": 12550,
+    "commits": 12595,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4490
+        "commits": 4528
       },
       {
         "label": "ParentPod",
@@ -102,7 +102,7 @@
       },
       {
         "label": "Longevity",
-        "commits": 1255
+        "commits": 1257
       },
       {
         "label": "Apex",
@@ -114,7 +114,7 @@
       },
       {
         "label": "JaLingo",
-        "commits": 375
+        "commits": 378
       },
       {
         "label": "EngiByte",
@@ -126,7 +126,7 @@
       },
       {
         "label": "ReliefFlow",
-        "commits": 124
+        "commits": 126
       }
     ],
     "appsInProduction": 9,
@@ -135,28 +135,28 @@
       "scope": "owned non-archived repositories",
       "expected": 26,
       "inventoryDigest": "f821455fad7f97e9a22fac4a7bfea5aac689865aba28d4c818e1872e7be94a94",
-      "revisionDigest": "73e790fd154054995ac8cf3619d61d251c634163122b86d6e1caf02e2f502162",
+      "revisionDigest": "1fef0026299301d51c0ce71ea1a22d881938cb0a2628618d0a5bfb336ac81933",
       "commitsMeasured": 25,
       "sourceMeasured": 25
     },
-    "trackedFiles": 25577,
-    "linesOfSource": 1793144,
+    "trackedFiles": 25618,
+    "linesOfSource": 1799890,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 985510
+        "lines": 985700
       },
       {
         "name": "JavaScript",
-        "lines": 420644
+        "lines": 421915
       },
       {
         "name": "Python",
-        "lines": 260982
+        "lines": 266209
       },
       {
         "name": "CSS",
-        "lines": 70376
+        "lines": 70401
       },
       {
         "name": "PHP",
@@ -168,7 +168,7 @@
       },
       {
         "name": "Other",
-        "lines": 10553
+        "lines": 10586
       }
     ]
   },
@@ -862,6 +862,16 @@
       "id": "LL-139",
       "title": "A failed inventory read makes one repository unknown, not every queue empty",
       "text": "When one queue cannot be read, keep its uncertainty visible and let independently verified work continue within the same safety limits."
+    },
+    {
+      "id": "LL-140",
+      "title": "A box that can hang must record what it was doing before it hangs",
+      "text": "Record what a machine is doing every minute, so the next freeze can be explained instead of only rebooted."
+    },
+    {
+      "id": "LL-141",
+      "title": "Parent-bound signatures require preserved Git history",
+      "text": "Unchanged content does not preserve a signature that also names its history."
     }
   ]
 }
