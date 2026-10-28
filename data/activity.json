@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-10-27",
+  "asOf": "2026-10-28",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-10-27T17:41:04.470Z",
+    "asOf": "2026-10-28T23:41:03.204Z",
     "count": 26,
     "complete": true,
     "enumerationLimit": 1000,
@@ -19,44 +19,44 @@
   "repos": [
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-10-25",
-      "recent": 437,
+      "lastShipped": "2026-10-28",
+      "recent": 434,
       "version": "v3.39.2"
     },
     {
       "name": "ParentPod",
-      "lastShipped": "2026-10-24",
-      "recent": 434,
+      "lastShipped": "2026-10-28",
+      "recent": 431,
       "version": "v2.62.467"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-10-24",
-      "recent": 391,
-      "version": "v5.43.10"
+      "lastShipped": "2026-10-28",
+      "recent": 398,
+      "version": "v5.44.2"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-27",
-      "recent": 384,
+      "lastShipped": "2026-10-28",
+      "recent": 389,
       "version": "v0.5.1"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-10-25",
-      "recent": 320,
-      "version": "v2.0.163"
+      "lastShipped": "2026-10-28",
+      "recent": 323,
+      "version": "v2.0.165"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-10-26",
-      "recent": 197,
+      "lastShipped": "2026-10-28",
+      "recent": 198,
       "version": "v0.2.8"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-10-27",
-      "recent": 173,
+      "lastShipped": "2026-10-28",
+      "recent": 172,
       "version": "v1.3.1"
     },
     {
@@ -67,8 +67,8 @@
     },
     {
       "name": "ReliefFlow",
-      "lastShipped": "2026-10-25",
-      "recent": 126,
+      "lastShipped": "2026-10-28",
+      "recent": 129,
       "version": "v1.2.0"
     },
     {
@@ -79,34 +79,34 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-26",
-      "recent": 84,
+      "lastShipped": "2026-10-27",
+      "recent": 85,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-10-27",
-    "commits": 12626,
+    "asOf": "2026-10-28",
+    "commits": 12691,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4542
+        "commits": 4582
       },
       {
         "label": "ParentPod",
-        "commits": 2807
+        "commits": 2810
       },
       {
         "label": "RealInvestorX",
-        "commits": 1394
+        "commits": 1401
       },
       {
         "label": "Longevity",
-        "commits": 1257
+        "commits": 1261
       },
       {
         "label": "Apex",
-        "commits": 1018
+        "commits": 1019
       },
       {
         "label": "TheLoop",
@@ -114,19 +114,19 @@
       },
       {
         "label": "JaLingo",
-        "commits": 384
+        "commits": 389
       },
       {
         "label": "EngiByte",
-        "commits": 247
+        "commits": 249
+      },
+      {
+        "label": "ReliefFlow",
+        "commits": 129
       },
       {
         "label": "Bid Spotter",
         "commits": 127
-      },
-      {
-        "label": "ReliefFlow",
-        "commits": 126
       }
     ],
     "appsInProduction": 9,
@@ -135,32 +135,32 @@
       "scope": "owned non-archived repositories",
       "expected": 26,
       "inventoryDigest": "f821455fad7f97e9a22fac4a7bfea5aac689865aba28d4c818e1872e7be94a94",
-      "revisionDigest": "8c870c571c96e75e9ee63f129e34a86d8490536536ce11a20520af6fe39fd175",
+      "revisionDigest": "f5397507230d8b8a746a77b59092e847e021a1f6133a3ec9e48c4f5772daa4b5",
       "commitsMeasured": 25,
       "sourceMeasured": 25
     },
-    "trackedFiles": 30075,
-    "linesOfSource": 1807638,
+    "trackedFiles": 30119,
+    "linesOfSource": 1811405,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 987133
+        "lines": 988376
       },
       {
         "name": "JavaScript",
-        "lines": 423645
+        "lines": 424805
       },
       {
         "name": "Python",
-        "lines": 270501
+        "lines": 271161
       },
       {
         "name": "CSS",
-        "lines": 70545
+        "lines": 71247
       },
       {
         "name": "PHP",
-        "lines": 24547
+        "lines": 24531
       },
       {
         "name": "SQL",
@@ -168,7 +168,7 @@
       },
       {
         "name": "Other",
-        "lines": 10635
+        "lines": 10653
       }
     ]
   },
@@ -872,6 +872,21 @@
       "id": "LL-141",
       "title": "Parent-bound signatures require preserved Git history",
       "text": "Unchanged content does not preserve a signature that also names its history."
+    },
+    {
+      "id": "LL-142",
+      "title": "A shared writer must supply its own configuration",
+      "text": "A shared notifier should fetch its own settings, so a job running in the wrong context cannot silently drop its message."
+    },
+    {
+      "id": "LL-143",
+      "title": "A fail-closed action must not take the read path down with it",
+      "text": "When a job refuses to act for safety reasons, it should still report what it sees, so the dashboard never shows stale numbers as current."
+    },
+    {
+      "id": "LL-144",
+      "title": "A reconnect or restart must not re-read the world",
+      "text": "A dashboard that rereads its whole history on every reconnect will eventually exhaust its quota; read a window, not the archive."
     }
   ]
 }
