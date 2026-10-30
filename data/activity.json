@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-10-28",
+  "asOf": "2026-10-30",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-10-28T23:41:03.204Z",
+    "asOf": "2026-10-30T05:41:03.097Z",
     "count": 26,
     "complete": true,
     "enumerationLimit": 1000,
@@ -19,86 +19,86 @@
   "repos": [
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-10-28",
-      "recent": 434,
-      "version": "v3.39.2"
+      "lastShipped": "2026-10-30",
+      "recent": 438,
+      "version": "v3.40.1"
     },
     {
       "name": "ParentPod",
-      "lastShipped": "2026-10-28",
-      "recent": 431,
+      "lastShipped": "2026-10-29",
+      "recent": 430,
       "version": "v2.62.467"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-10-28",
-      "recent": 398,
-      "version": "v5.44.2"
+      "lastShipped": "2026-10-29",
+      "recent": 404,
+      "version": "v5.44.5"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-28",
-      "recent": 389,
+      "lastShipped": "2026-10-29",
+      "recent": 391,
       "version": "v0.5.1"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-10-28",
-      "recent": 323,
+      "recent": 314,
       "version": "v2.0.165"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-10-28",
-      "recent": 198,
+      "lastShipped": "2026-10-29",
+      "recent": 200,
       "version": "v0.2.8"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-10-28",
-      "recent": 172,
+      "lastShipped": "2026-10-29",
+      "recent": 176,
       "version": "v1.3.1"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-10-26",
-      "recent": 139,
+      "lastShipped": "2026-10-29",
+      "recent": 142,
       "version": "v1.2.2"
     },
     {
       "name": "ReliefFlow",
-      "lastShipped": "2026-10-28",
-      "recent": 129,
+      "lastShipped": "2026-10-29",
+      "recent": 130,
       "version": "v1.2.0"
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-10-24",
-      "recent": 114,
+      "lastShipped": "2026-10-29",
+      "recent": 117,
       "version": "v2.1.0"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-27",
-      "recent": 85,
+      "lastShipped": "2026-10-28",
+      "recent": 86,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-10-28",
-    "commits": 12691,
+    "asOf": "2026-10-30",
+    "commits": 12763,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4582
+        "commits": 4629
       },
       {
         "label": "ParentPod",
-        "commits": 2810
+        "commits": 2812
       },
       {
         "label": "RealInvestorX",
-        "commits": 1401
+        "commits": 1407
       },
       {
         "label": "Longevity",
@@ -106,27 +106,27 @@
       },
       {
         "label": "Apex",
-        "commits": 1019
+        "commits": 1021
       },
       {
         "label": "TheLoop",
-        "commits": 724
+        "commits": 727
       },
       {
         "label": "JaLingo",
-        "commits": 389
+        "commits": 391
       },
       {
         "label": "EngiByte",
-        "commits": 249
+        "commits": 255
       },
       {
         "label": "ReliefFlow",
-        "commits": 129
+        "commits": 130
       },
       {
         "label": "Bid Spotter",
-        "commits": 127
+        "commits": 130
       }
     ],
     "appsInProduction": 9,
@@ -135,32 +135,32 @@
       "scope": "owned non-archived repositories",
       "expected": 26,
       "inventoryDigest": "f821455fad7f97e9a22fac4a7bfea5aac689865aba28d4c818e1872e7be94a94",
-      "revisionDigest": "f5397507230d8b8a746a77b59092e847e021a1f6133a3ec9e48c4f5772daa4b5",
+      "revisionDigest": "f4d466ef7f01c7e864712a1cf77a31935b75ae1654ec92ba9550420b00f26756",
       "commitsMeasured": 25,
       "sourceMeasured": 25
     },
-    "trackedFiles": 30119,
-    "linesOfSource": 1811405,
+    "trackedFiles": 30199,
+    "linesOfSource": 1819400,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 988376
+        "lines": 991476
       },
       {
         "name": "JavaScript",
-        "lines": 424805
+        "lines": 427997
       },
       {
         "name": "Python",
-        "lines": 271161
+        "lines": 272331
       },
       {
         "name": "CSS",
-        "lines": 71247
+        "lines": 71746
       },
       {
         "name": "PHP",
-        "lines": 24531
+        "lines": 24536
       },
       {
         "name": "SQL",
@@ -168,7 +168,7 @@
       },
       {
         "name": "Other",
-        "lines": 10653
+        "lines": 10682
       }
     ]
   },
@@ -887,6 +887,11 @@
       "id": "LL-144",
       "title": "A reconnect or restart must not re-read the world",
       "text": "A dashboard that rereads its whole history on every reconnect will eventually exhaust its quota; read a window, not the archive."
+    },
+    {
+      "id": "LL-145",
+      "title": "A safety latch must name the condition that releases it",
+      "text": "A safety lock that only a person can release becomes an outage after the first unattended restart; teach it what proves the danger has passed."
     }
   ]
 }
