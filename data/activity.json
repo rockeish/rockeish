@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-10-30",
+  "asOf": "2026-10-31",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-10-30T05:41:03.097Z",
+    "asOf": "2026-10-31T11:41:03.147Z",
     "count": 26,
     "complete": true,
     "enumerationLimit": 1000,
@@ -20,113 +20,113 @@
     {
       "name": "Compliance OS",
       "lastShipped": "2026-10-30",
-      "recent": 438,
-      "version": "v3.40.1"
+      "recent": 436,
+      "version": "v3.41.0"
     },
     {
       "name": "ParentPod",
-      "lastShipped": "2026-10-29",
-      "recent": 430,
-      "version": "v2.62.467"
+      "lastShipped": "2026-10-31",
+      "recent": 417,
+      "version": "v2.62.468"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-10-29",
-      "recent": 404,
-      "version": "v5.44.5"
+      "lastShipped": "2026-10-31",
+      "recent": 408,
+      "version": "v5.45.2"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-29",
-      "recent": 391,
+      "lastShipped": "2026-10-31",
+      "recent": 395,
       "version": "v0.5.1"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-10-28",
-      "recent": 314,
-      "version": "v2.0.165"
+      "lastShipped": "2026-10-31",
+      "recent": 318,
+      "version": "v2.0.168"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-10-29",
-      "recent": 200,
+      "lastShipped": "2026-10-30",
+      "recent": 201,
       "version": "v0.2.8"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-10-29",
-      "recent": 176,
+      "lastShipped": "2026-10-31",
+      "recent": 184,
       "version": "v1.3.1"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-10-29",
-      "recent": 142,
-      "version": "v1.2.2"
+      "lastShipped": "2026-10-31",
+      "recent": 148,
+      "version": "v1.2.3"
     },
     {
       "name": "ReliefFlow",
-      "lastShipped": "2026-10-29",
-      "recent": 130,
-      "version": "v1.2.0"
+      "lastShipped": "2026-10-31",
+      "recent": 140,
+      "version": "v1.2.1"
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-10-29",
-      "recent": 117,
+      "lastShipped": "2026-10-30",
+      "recent": 119,
       "version": "v2.1.0"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-28",
+      "lastShipped": "2026-10-30",
       "recent": 86,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-10-30",
-    "commits": 12763,
+    "asOf": "2026-10-31",
+    "commits": 12895,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4629
+        "commits": 4712
       },
       {
         "label": "ParentPod",
-        "commits": 2812
+        "commits": 2814
       },
       {
         "label": "RealInvestorX",
-        "commits": 1407
+        "commits": 1415
       },
       {
         "label": "Longevity",
-        "commits": 1261
+        "commits": 1266
       },
       {
         "label": "Apex",
-        "commits": 1021
+        "commits": 1023
       },
       {
         "label": "TheLoop",
-        "commits": 727
+        "commits": 733
       },
       {
         "label": "JaLingo",
-        "commits": 391
+        "commits": 395
       },
       {
         "label": "EngiByte",
-        "commits": 255
+        "commits": 265
       },
       {
         "label": "ReliefFlow",
-        "commits": 130
+        "commits": 140
       },
       {
         "label": "Bid Spotter",
-        "commits": 130
+        "commits": 132
       }
     ],
     "appsInProduction": 9,
@@ -135,32 +135,32 @@
       "scope": "owned non-archived repositories",
       "expected": 26,
       "inventoryDigest": "f821455fad7f97e9a22fac4a7bfea5aac689865aba28d4c818e1872e7be94a94",
-      "revisionDigest": "f4d466ef7f01c7e864712a1cf77a31935b75ae1654ec92ba9550420b00f26756",
+      "revisionDigest": "736d9721d4afd7fac15ef94104021404dfac230edea19ce19725ae24ac83cf24",
       "commitsMeasured": 25,
       "sourceMeasured": 25
     },
-    "trackedFiles": 30199,
-    "linesOfSource": 1819400,
+    "trackedFiles": 30739,
+    "linesOfSource": 1844128,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 991476
+        "lines": 993142
       },
       {
         "name": "JavaScript",
-        "lines": 427997
+        "lines": 441628
       },
       {
         "name": "Python",
-        "lines": 272331
+        "lines": 280993
       },
       {
         "name": "CSS",
-        "lines": 71746
+        "lines": 72557
       },
       {
         "name": "PHP",
-        "lines": 24536
+        "lines": 24243
       },
       {
         "name": "SQL",
@@ -168,7 +168,7 @@
       },
       {
         "name": "Other",
-        "lines": 10682
+        "lines": 10933
       }
     ]
   },
@@ -892,6 +892,31 @@
       "id": "LL-145",
       "title": "A safety latch must name the condition that releases it",
       "text": "A safety lock that only a person can release becomes an outage after the first unattended restart; teach it what proves the danger has passed."
+    },
+    {
+      "id": "LL-146",
+      "title": "A vendor safety flag is a claim until a test proves it fires",
+      "text": "A vendor's safety setting is only a claim until a test shows it stops the failure; where it cannot be proven, enforce the stop yourself."
+    },
+    {
+      "id": "LL-147",
+      "title": "A minifier can rewrite modern CSS into an invalid form",
+      "text": "Build tools can rewrite modern CSS into forms browsers reject, so check the behavior of the built page, not just the source."
+    },
+    {
+      "id": "LL-148",
+      "title": "Never truncate the only copy of a one-time token, and give every parked state an exit",
+      "text": "Keep the only copy of a one-time credential intact before reading it, and give every stuck state a tested way out."
+    },
+    {
+      "id": "LL-149",
+      "title": "An approver must not share a credential with the author",
+      "text": "A review gate only means something when the approver cannot be the author, so approval comes from a separate identity."
+    },
+    {
+      "id": "LL-150",
+      "title": "A generated mirror must not be gated by human review clocks or diffed whole",
+      "text": "Generated files should be judged by when they were last generated, and change detection should look only at the parts people edit."
     }
   ]
 }
