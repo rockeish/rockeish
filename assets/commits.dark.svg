@@ -20,39 +20,39 @@
   </style>
   <rect x="0.5" y="0.5" width="719" height="475" rx="18" fill="#0b1220" stroke="#243149"/>
   <text x="28" y="42" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" fill="#8b97a8">Measured commits</text>
-  <text x="692" y="42" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8" text-anchor="end">~12.8K measured total</text>
+  <text x="692" y="42" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8" text-anchor="end">~12.9K measured total</text>
   <line x1="295.0" y1="68" x2="295.0" y2="454" stroke="#243149" stroke-dasharray="2 6" opacity="0.6"/>
   <line x1="408.0" y1="68" x2="408.0" y2="454" stroke="#243149" stroke-dasharray="2 6" opacity="0.6"/>
   <line x1="521.0" y1="68" x2="521.0" y2="454" stroke="#243149" stroke-dasharray="2 6" opacity="0.6"/>
   <line x1="634.0" y1="68" x2="634.0" y2="454" stroke="#243149" stroke-dasharray="2 6" opacity="0.6"/>
   <text x="172" y="89" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">Other repositories</text>
   <g class="grow" style="transform-origin:182px 84px;animation-delay:0.10s"><rect x="182" y="73" width="452" height="22" rx="5" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:0.55s"><text x="644" y="89" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">4,629</text></g>
+  <g class="fade" style="animation-delay:0.55s"><text x="644" y="89" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">4,712</text></g>
   <text x="172" y="128" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">ParentPod</text>
-  <g class="grow" style="transform-origin:182px 123px;animation-delay:0.18s"><rect x="182" y="112" width="275" height="22" rx="5" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:0.63s"><text x="467" y="128" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">2,812</text></g>
+  <g class="grow" style="transform-origin:182px 123px;animation-delay:0.18s"><rect x="182" y="112" width="270" height="22" rx="5" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:0.63s"><text x="462" y="128" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">2,814</text></g>
   <text x="172" y="167" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">RealInvestorX</text>
-  <g class="grow" style="transform-origin:182px 162px;animation-delay:0.26s"><rect x="182" y="151" width="137" height="22" rx="5" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:0.71s"><text x="329" y="167" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">1,407</text></g>
+  <g class="grow" style="transform-origin:182px 162px;animation-delay:0.26s"><rect x="182" y="151" width="136" height="22" rx="5" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:0.71s"><text x="328" y="167" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">1,415</text></g>
   <text x="172" y="206" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">Longevity</text>
-  <g class="grow" style="transform-origin:182px 201px;animation-delay:0.34s"><rect x="182" y="190" width="123" height="22" rx="5" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:0.79s"><text x="315" y="206" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">1,261</text></g>
+  <g class="grow" style="transform-origin:182px 201px;animation-delay:0.34s"><rect x="182" y="190" width="121" height="22" rx="5" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:0.79s"><text x="313" y="206" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">1,266</text></g>
   <text x="172" y="245" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">Apex</text>
-  <g class="grow" style="transform-origin:182px 240px;animation-delay:0.42s"><rect x="182" y="229" width="100" height="22" rx="5" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:0.87s"><text x="292" y="245" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">1,021</text></g>
+  <g class="grow" style="transform-origin:182px 240px;animation-delay:0.42s"><rect x="182" y="229" width="98" height="22" rx="5" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:0.87s"><text x="290" y="245" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">1,023</text></g>
   <text x="172" y="284" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">TheLoop</text>
-  <g class="grow" style="transform-origin:182px 279px;animation-delay:0.50s"><rect x="182" y="268" width="71" height="22" rx="5" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:0.95s"><text x="263" y="284" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">727</text></g>
+  <g class="grow" style="transform-origin:182px 279px;animation-delay:0.50s"><rect x="182" y="268" width="70" height="22" rx="5" fill="url(#accent)"/></g>
+  <g class="fade" style="animation-delay:0.95s"><text x="262" y="284" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">733</text></g>
   <text x="172" y="323" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">JaLingo</text>
   <g class="grow" style="transform-origin:182px 318px;animation-delay:0.58s"><rect x="182" y="307" width="38" height="22" rx="5" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:1.03s"><text x="230" y="323" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">391</text></g>
+  <g class="fade" style="animation-delay:1.03s"><text x="230" y="323" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">395</text></g>
   <text x="172" y="362" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">EngiByte</text>
   <g class="grow" style="transform-origin:182px 357px;animation-delay:0.66s"><rect x="182" y="346" width="25" height="22" rx="5" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:1.11s"><text x="217" y="362" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">255</text></g>
+  <g class="fade" style="animation-delay:1.11s"><text x="217" y="362" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">265</text></g>
   <text x="172" y="401" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">ReliefFlow</text>
   <g class="grow" style="transform-origin:182px 396px;animation-delay:0.74s"><rect x="182" y="385" width="13" height="22" rx="5" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:1.19s"><text x="205" y="401" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">130</text></g>
+  <g class="fade" style="animation-delay:1.19s"><text x="205" y="401" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">140</text></g>
   <text x="172" y="440" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#e6edf3" text-anchor="end">Bid Spotter</text>
   <g class="grow" style="transform-origin:182px 435px;animation-delay:0.82s"><rect x="182" y="424" width="13" height="22" rx="5" fill="url(#accent)"/></g>
-  <g class="fade" style="animation-delay:1.27s"><text x="205" y="440" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">130</text></g>
+  <g class="fade" style="animation-delay:1.27s"><text x="205" y="440" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8">132</text></g>
 </svg>
