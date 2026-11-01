@@ -1,63 +1,69 @@
 {
-  "asOf": "2026-10-31",
+  "asOf": "2026-11-01",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-10-31T11:41:03.147Z",
-    "count": 26,
+    "asOf": "2026-11-01T12:41:03.444Z",
+    "count": 27,
     "complete": true,
     "enumerationLimit": 1000,
-    "digest": "f821455fad7f97e9a22fac4a7bfea5aac689865aba28d4c818e1872e7be94a94",
+    "digest": "7d47aa75c2e4a25597417a3ea717884b80d2449f0a9e1094a52878615c7bd3e2",
     "productRegistry": {
       "source": "local-product-registry",
       "schema": 1,
       "count": 23,
-      "digest": "dbe4a071ed61064f9f6a867ec9fc46305045881cf7d8e1f8bc01589a6fbbda52"
+      "digest": "a2a763f1ceb8d8b4d8d1c2ec9da15662993ea274c8bf71a023d6b975328111a2"
     }
   },
   "repos": [
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-10-30",
-      "recent": 436,
-      "version": "v3.41.0"
+      "lastShipped": "2026-11-01",
+      "recent": 440,
+      "version": "v3.42.1"
+    },
+    {
+      "name": "RealInvestorX",
+      "lastShipped": "2026-11-01",
+      "recent": 410,
+      "version": "v5.45.3"
     },
     {
       "name": "ParentPod",
       "lastShipped": "2026-10-31",
-      "recent": 417,
-      "version": "v2.62.468"
-    },
-    {
-      "name": "RealInvestorX",
-      "lastShipped": "2026-10-31",
-      "recent": 408,
-      "version": "v5.45.2"
+      "recent": 403,
+      "version": "v2.62.469"
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-10-31",
-      "recent": 395,
+      "lastShipped": "2026-11-01",
+      "recent": 402,
       "version": "v0.5.1"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-10-31",
-      "recent": 318,
-      "version": "v2.0.168"
+      "lastShipped": "2026-11-01",
+      "recent": 338,
+      "version": "v2.0.176"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-10-30",
-      "recent": 201,
+      "lastShipped": "2026-10-31",
+      "recent": 206,
       "version": "v0.2.8"
     },
     {
       "name": "EngiByte",
       "lastShipped": "2026-10-31",
-      "recent": 184,
+      "recent": 190,
       "version": "v1.3.1"
+    },
+    {
+      "name": "ReliefFlow",
+      "lastShipped": "2026-11-01",
+      "recent": 151,
+      "version": "v1.2.1"
     },
     {
       "name": "TheLoop",
@@ -66,47 +72,41 @@
       "version": "v1.2.3"
     },
     {
-      "name": "ReliefFlow",
-      "lastShipped": "2026-10-31",
-      "recent": 140,
-      "version": "v1.2.1"
-    },
-    {
       "name": "Bid Spotter",
-      "lastShipped": "2026-10-30",
-      "recent": 119,
+      "lastShipped": "2026-11-01",
+      "recent": 121,
       "version": "v2.1.0"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-10-30",
-      "recent": 86,
+      "lastShipped": "2026-10-31",
+      "recent": 87,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-10-31",
-    "commits": 12895,
+    "asOf": "2026-11-01",
+    "commits": 12999,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4712
+        "commits": 4762
       },
       {
         "label": "ParentPod",
-        "commits": 2814
+        "commits": 2815
       },
       {
         "label": "RealInvestorX",
-        "commits": 1415
+        "commits": 1417
       },
       {
         "label": "Longevity",
-        "commits": 1266
+        "commits": 1286
       },
       {
         "label": "Apex",
-        "commits": 1023
+        "commits": 1028
       },
       {
         "label": "TheLoop",
@@ -114,53 +114,53 @@
       },
       {
         "label": "JaLingo",
-        "commits": 395
+        "commits": 402
       },
       {
         "label": "EngiByte",
-        "commits": 265
+        "commits": 271
       },
       {
         "label": "ReliefFlow",
-        "commits": 140
+        "commits": 151
       },
       {
         "label": "Bid Spotter",
-        "commits": 132
+        "commits": 134
       }
     ],
     "appsInProduction": 9,
-    "repos": 26,
+    "repos": 27,
     "historyCoverage": {
       "scope": "owned non-archived repositories",
-      "expected": 26,
-      "inventoryDigest": "f821455fad7f97e9a22fac4a7bfea5aac689865aba28d4c818e1872e7be94a94",
-      "revisionDigest": "736d9721d4afd7fac15ef94104021404dfac230edea19ce19725ae24ac83cf24",
+      "expected": 27,
+      "inventoryDigest": "7d47aa75c2e4a25597417a3ea717884b80d2449f0a9e1094a52878615c7bd3e2",
+      "revisionDigest": "1c8be3ffad77e91bdc8d3990c557069b8fca31d3ff34936158911251eef1d769",
       "commitsMeasured": 25,
       "sourceMeasured": 25
     },
-    "trackedFiles": 30739,
-    "linesOfSource": 1844128,
+    "trackedFiles": 31019,
+    "linesOfSource": 1879693,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 993142
+        "lines": 1016328
       },
       {
         "name": "JavaScript",
-        "lines": 441628
+        "lines": 451018
       },
       {
         "name": "Python",
-        "lines": 280993
+        "lines": 282393
       },
       {
         "name": "CSS",
-        "lines": 72557
+        "lines": 73511
       },
       {
         "name": "PHP",
-        "lines": 24243
+        "lines": 24819
       },
       {
         "name": "SQL",
@@ -168,7 +168,7 @@
       },
       {
         "name": "Other",
-        "lines": 10933
+        "lines": 10992
       }
     ]
   },
@@ -917,6 +917,21 @@
       "id": "LL-150",
       "title": "A generated mirror must not be gated by human review clocks or diffed whole",
       "text": "Generated files should be judged by when they were last generated, and change detection should look only at the parts people edit."
+    },
+    {
+      "id": "LL-151",
+      "title": "Adding a custom domain includes the auth provider's allowed-domains list",
+      "text": "Adding a custom domain also means adding it to the sign-in provider's allowed-domains list."
+    },
+    {
+      "id": "LL-152",
+      "title": "A writer enforces the strictest gate its output must pass, and a refusal keeps its reason",
+      "text": "A writer should check its output against the strictest gate downstream, and a refused sync should keep and surface its reason."
+    },
+    {
+      "id": "LL-153",
+      "title": "A fail-closed guard needs an accepted state for reviewed configuration",
+      "text": "A strict safety check should accept a narrowly defined reviewed state, or legitimate changes halt it indefinitely."
     }
   ]
 }
