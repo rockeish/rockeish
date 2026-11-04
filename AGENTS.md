@@ -1,6 +1,6 @@
 # Agent contract — rockeish
 
-Load ~/ai/CORE.md first, then run context-compiler bundle for rockeish and the task topics.
+Follow `~/ai/AGENTS.md` (lean mode, decision lean-mode-20261103). Read `~/ai/standards/` only when a task needs it.
 
 - STATUS.md owns current verified repository truth.
 - PLAN.md contains only the current assigned task packet.
