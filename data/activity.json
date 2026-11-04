@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-11-01",
+  "asOf": "2026-11-03",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-11-03T06:41:02.749Z",
+    "asOf": "2026-11-04T12:41:03.017Z",
     "count": 27,
     "complete": true,
     "enumerationLimit": 1000,
@@ -12,121 +12,121 @@
     "productRegistry": {
       "source": "local-product-registry",
       "schema": 1,
-      "count": 23,
-      "digest": "a2a763f1ceb8d8b4d8d1c2ec9da15662993ea274c8bf71a023d6b975328111a2"
+      "count": 24,
+      "digest": "ff9a3351aeb9c444d1c9fd81a5b0fb8706de9b883df8ff54ae3339e135af808c"
     }
   },
   "repos": [
     {
       "name": "Compliance OS",
-      "lastShipped": "2026-11-01",
-      "recent": 445,
+      "lastShipped": "2026-11-03",
+      "recent": 450,
       "version": "v3.42.2"
     },
     {
-      "name": "RealInvestorX",
-      "lastShipped": "2026-11-01",
-      "recent": 412,
-      "version": "v5.45.4"
-    },
-    {
       "name": "JaLingo",
-      "lastShipped": "2026-11-01",
-      "recent": 405,
+      "lastShipped": "2026-11-03",
+      "recent": 440,
       "version": "v0.5.1"
     },
     {
+      "name": "RealInvestorX",
+      "lastShipped": "2026-11-03",
+      "recent": 421,
+      "version": "v5.45.5"
+    },
+    {
       "name": "ParentPod",
-      "lastShipped": "2026-11-01",
-      "recent": 396,
+      "lastShipped": "2026-11-03",
+      "recent": 399,
       "version": "v2.62.469"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-11-01",
-      "recent": 342,
+      "lastShipped": "2026-11-03",
+      "recent": 353,
       "version": "v2.0.178"
     },
     {
-      "name": "Apex",
-      "lastShipped": "2026-11-01",
-      "recent": 210,
-      "version": "v0.2.8"
-    },
-    {
       "name": "EngiByte",
-      "lastShipped": "2026-10-31",
-      "recent": 190,
+      "lastShipped": "2026-11-03",
+      "recent": 338,
       "version": "v1.3.1"
     },
     {
+      "name": "Apex",
+      "lastShipped": "2026-11-03",
+      "recent": 211,
+      "version": "v0.2.8"
+    },
+    {
       "name": "ReliefFlow",
-      "lastShipped": "2026-11-01",
-      "recent": 153,
+      "lastShipped": "2026-11-03",
+      "recent": 157,
       "version": "v1.2.1"
     },
     {
       "name": "TheLoop",
-      "lastShipped": "2026-11-01",
+      "lastShipped": "2026-11-03",
       "recent": 152,
       "version": "v1.2.3"
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-11-01",
-      "recent": 122,
+      "lastShipped": "2026-11-03",
+      "recent": 132,
       "version": "v2.1.0"
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-11-01",
-      "recent": 87,
+      "lastShipped": "2026-11-03",
+      "recent": 89,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-11-01",
-    "commits": 13050,
+    "asOf": "2026-11-03",
+    "commits": 13418,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4791
+        "commits": 4923
       },
       {
         "label": "ParentPod",
-        "commits": 2817
+        "commits": 2825
       },
       {
         "label": "RealInvestorX",
-        "commits": 1419
+        "commits": 1428
       },
       {
         "label": "Longevity",
-        "commits": 1290
+        "commits": 1303
       },
       {
         "label": "Apex",
-        "commits": 1032
+        "commits": 1033
       },
       {
         "label": "TheLoop",
-        "commits": 737
+        "commits": 745
       },
       {
         "label": "JaLingo",
-        "commits": 405
+        "commits": 440
       },
       {
         "label": "EngiByte",
-        "commits": 271
+        "commits": 419
       },
       {
         "label": "ReliefFlow",
-        "commits": 153
+        "commits": 157
       },
       {
         "label": "Bid Spotter",
-        "commits": 135
+        "commits": 145
       }
     ],
     "appsInProduction": 9,
@@ -135,32 +135,32 @@
       "scope": "owned non-archived repositories",
       "expected": 27,
       "inventoryDigest": "7d47aa75c2e4a25597417a3ea717884b80d2449f0a9e1094a52878615c7bd3e2",
-      "revisionDigest": "19ff7569439bbefe44c67d3df21acfac42e500055f60268670542f71665dbbf4",
-      "commitsMeasured": 25,
-      "sourceMeasured": 25
+      "revisionDigest": "635490402474fda6f6eee0d79e2e88ebc22739962888632a4ce5bcc6c5901499",
+      "commitsMeasured": 26,
+      "sourceMeasured": 26
     },
-    "trackedFiles": 30871,
-    "linesOfSource": 1882492,
+    "trackedFiles": 31266,
+    "linesOfSource": 1912403,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 1017966
+        "lines": 1021715
       },
       {
         "name": "JavaScript",
-        "lines": 451268
+        "lines": 475418
       },
       {
         "name": "Python",
-        "lines": 283211
+        "lines": 283802
       },
       {
         "name": "CSS",
-        "lines": 73601
+        "lines": 74995
       },
       {
         "name": "PHP",
-        "lines": 24819
+        "lines": 24820
       },
       {
         "name": "SQL",
@@ -168,7 +168,7 @@
       },
       {
         "name": "Other",
-        "lines": 10995
+        "lines": 11021
       }
     ]
   },
@@ -937,6 +937,11 @@
       "id": "LL-154",
       "title": "Customers see a calm message; the raw error goes to the event pipeline",
       "text": "Users should see a calm, specific error message while the technical error is reported to the team that fixes it."
+    },
+    {
+      "id": "LL-155",
+      "title": "Never fix disk pressure with an experimental storage mode",
+      "text": "Fixing a full disk by switching on an experimental storage mode can cost the whole disk; fix the growth instead."
     }
   ]
 }
