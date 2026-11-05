@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-11-03",
+  "asOf": "2026-11-04",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-11-04T12:41:03.017Z",
+    "asOf": "2026-11-05T18:41:02.888Z",
     "count": 27,
     "complete": true,
     "enumerationLimit": 1000,
@@ -25,20 +25,20 @@
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-11-03",
-      "recent": 440,
+      "lastShipped": "2026-11-04",
+      "recent": 443,
       "version": "v0.5.1"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-11-03",
-      "recent": 421,
-      "version": "v5.45.5"
+      "lastShipped": "2026-11-04",
+      "recent": 425,
+      "version": "v5.45.7"
     },
     {
       "name": "ParentPod",
-      "lastShipped": "2026-11-03",
-      "recent": 399,
+      "lastShipped": "2026-11-04",
+      "recent": 400,
       "version": "v2.62.469"
     },
     {
@@ -79,26 +79,26 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-11-03",
-      "recent": 89,
+      "lastShipped": "2026-11-04",
+      "recent": 90,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-11-03",
-    "commits": 13418,
+    "asOf": "2026-11-04",
+    "commits": 13460,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4923
+        "commits": 4957
       },
       {
         "label": "ParentPod",
-        "commits": 2825
+        "commits": 2826
       },
       {
         "label": "RealInvestorX",
-        "commits": 1428
+        "commits": 1432
       },
       {
         "label": "Longevity",
@@ -114,7 +114,7 @@
       },
       {
         "label": "JaLingo",
-        "commits": 440
+        "commits": 443
       },
       {
         "label": "EngiByte",
@@ -135,32 +135,32 @@
       "scope": "owned non-archived repositories",
       "expected": 27,
       "inventoryDigest": "7d47aa75c2e4a25597417a3ea717884b80d2449f0a9e1094a52878615c7bd3e2",
-      "revisionDigest": "635490402474fda6f6eee0d79e2e88ebc22739962888632a4ce5bcc6c5901499",
+      "revisionDigest": "2dacebf24921bb580ecce87b5348125b768c5a6b1d26b4fe55db817f4e1756e0",
       "commitsMeasured": 26,
       "sourceMeasured": 26
     },
-    "trackedFiles": 31266,
-    "linesOfSource": 1912403,
+    "trackedFiles": 31555,
+    "linesOfSource": 1914309,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 1021715
+        "lines": 1022107
       },
       {
         "name": "JavaScript",
-        "lines": 475418
+        "lines": 476297
       },
       {
         "name": "Python",
-        "lines": 283802
+        "lines": 284104
       },
       {
         "name": "CSS",
-        "lines": 74995
+        "lines": 75199
       },
       {
         "name": "PHP",
-        "lines": 24820
+        "lines": 24853
       },
       {
         "name": "SQL",
@@ -168,7 +168,7 @@
       },
       {
         "name": "Other",
-        "lines": 11021
+        "lines": 11117
       }
     ]
   },
