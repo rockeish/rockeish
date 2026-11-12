@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
-import { buildReadme, esc, fmtDate, lessonsSection, mdCell, recentlyShipped, renderAll } from './generate-showcase.mjs';
+import { buildReadme, esc, fmtDate, mdCell, recentlyShipped, renderAll } from './generate-showcase.mjs';
 
 const projects = JSON.parse(readFileSync(new URL('../data/projects.json', import.meta.url), 'utf8'));
 const activity = JSON.parse(readFileSync(new URL('../data/activity.json', import.meta.url), 'utf8'));
@@ -111,28 +111,16 @@ test('the profile refreshes from the local schedule, not a GitHub Action', () =>
   }
 });
 
-test('lessonsSection renders the public sentences, folds the long tail, and is omitted when empty', () => {
-  assert.equal(lessonsSection({ lessons: [] }), null);
-  assert.equal(lessonsSection(null), null);
-  const lessons = Array.from({ length: 10 }, (_, i) => ({
-    id: `LL-${String(i + 1).padStart(3, '0')}`,
-    title: `Rule ${i + 1}`,
-    text: `Sentence ${i + 1}.`,
-  }));
-  const md = lessonsSection({ lessons });
-  assert.ok(md.includes('- **Rule 1.** Sentence 1.'), 'first lesson rendered as a bullet');
-  assert.ok(md.includes('<summary><b>2 more</b></summary>'), 'rows past the fold are collapsed');
-  assert.ok(md.includes('- **Rule 10.** Sentence 10.'), 'folded rows still render');
-  const withPipe = lessonsSection({ lessons: [{ id: 'LL-001', title: 'a|b', text: 'c`d' }] });
-  assert.ok(withPipe.includes('a\\|b'), 'title delimiters are escaped');
-});
-
-test('the generated Lessons learned section never carries a private marker', () => {
+test('the generated public page carries no machine path, email address or collected free text', () => {
   const readme = buildReadme(projects, activity);
-  const section = readme.split('## Lessons learned')[1]?.split('\n## ')[0] || '';
-  assert.ok(section.length > 0, 'the public page carries the lessons section');
-  for (const marker of ['~/', '/home/', 'Doppler', 'INC-', 'Krystal', 'Noah', 'Invenergy']) {
-    assert.ok(!section.includes(marker), `lessons section must not contain: ${marker}`);
+  const published = [readme, JSON.stringify(activity), ...Object.values(renderAll()).flatMap((themes) => Object.values(themes))];
+  for (const text of published) {
+    assert.doesNotMatch(text, /~\/|\/home\/|\/srv\/|[A-Za-z]:\\/, 'no machine path');
+    assert.doesNotMatch(text, /[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z]{2,}/, 'no email address');
   }
-  assert.ok(readme.includes('href="#lessons-learned"'), 'the nav links to the section');
+  assert.ok(!readme.includes('## Lessons learned'), 'no lessons section is published');
+  assert.deepEqual(Object.keys(activity).sort(), ['asOf', 'metrics', 'repoCount', 'repos', 'window'], 'activity.json holds numbers only');
+  for (const row of activity.repos) {
+    assert.deepEqual(Object.keys(row).sort(), ['lastShipped', 'name', 'recent', 'version']);
+  }
 });

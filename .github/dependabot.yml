@@ -1,4 +1,4 @@
-# Dependabot: weekly, one grouped PR per ecosystem (~/ai/standards/git-workflow.md).
+# Dependabot: weekly, one grouped PR for GitHub Actions.
 version: 2
 updates:
   - package-ecosystem: "github-actions"

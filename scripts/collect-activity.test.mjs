@@ -10,12 +10,10 @@ import {
   chooseRef,
   chooseSource,
   chooseVersion,
-  collectLessons,
   countCheckouts,
   groupLanguages,
-  lessonsSource,
   localStats,
-  parsePublicLessons,
+  publicVersion,
   repositoryRoot,
   sourceLanguage,
 } from './collect-activity.mjs';
@@ -39,7 +37,7 @@ test('repositoryRoot accepts an explicit checkout inventory for mixed hosts', ()
     repositoryRoot({ SHOWCASE_REPOS_ROOT: '/srv/portfolio' }, '/ignored/home'),
     '/srv/portfolio',
   );
-  assert.equal(repositoryRoot({}, '/home/rock'), join('/home/rock', 'repos'));
+  assert.equal(repositoryRoot({}, '/home/user'), join('/home/user', 'repos'));
 });
 
 test('chooseVersion prefers newer package metadata over a stale release tag', () => {
@@ -231,69 +229,11 @@ test('chooseRef counts from the remote default branch, not whatever is checked o
   assert.equal(chooseRef(undefined), 'HEAD');
 });
 
-// ---------------------------------------------------------------------------
-// Lessons learned — only each lesson's public sentence travels to the page
-// ---------------------------------------------------------------------------
-
-const LESSONS_FIXTURE = `# Lessons
-
-## LL-001 — Prose is a hope
-Class: detection
-Rule: Every incident gets a detector. Mentions ~/ai/scripts/incident-audit.
-Evidence: INC-001, INC-011
-Enforced-by: \`~/ai/scripts/incident-audit\`
-Public: A rule that only lives in a document is a hope. Every recurring failure
-  gets a check that fires on its own.
-
-## LL-002 — Quiet one
-Class: c
-Rule: r
-Evidence: INC-002
-Enforced-by: NONE
-Public: no
-
-## LL-003 — Leaky one
-Class: c
-Rule: r
-Evidence: INC-003
-Enforced-by: NONE
-Public: Something that names ~/ai/LESSONS.md by path.
-`;
-
-test('parsePublicLessons keeps only the public sentence, joined across continuation lines', () => {
-  const rows = parsePublicLessons(LESSONS_FIXTURE);
-  assert.deepEqual(rows.map((r) => r.id), ['LL-001', 'LL-003']);
-  assert.equal(rows[0].title, 'Prose is a hope');
-  assert.equal(
-    rows[0].text,
-    'A rule that only lives in a document is a hope. Every recurring failure gets a check that fires on its own.',
-  );
-  for (const row of rows) {
-    assert.deepEqual(Object.keys(row).sort(), ['id', 'text', 'title'], 'no private field travels');
+test('publicVersion publishes plain version numbers and drops any other tag text', () => {
+  for (const ok of ['v0.5.1', 'v2.62.469', '1.2', 'v3', 'v1.0.0-beta.1']) assert.equal(publicVersion(ok), ok);
+  for (const bad of ['mobile-v2.62.367', 'release/internal-name', 'archive/main-20261004', '', null, undefined]) {
+    assert.equal(publicVersion(bad), null);
   }
-});
-
-test('collectLessons drops a row carrying a private marker and reads the file it is given', () => {
-  const dir = mkdtempSync(join(tmpdir(), 'lessons-'));
-  try {
-    const file = join(dir, 'LESSONS.md');
-    writeFileSync(file, LESSONS_FIXTURE);
-    const rows = collectLessons(file, [{ id: 'LL-999', title: 'stale', text: 'stale' }]);
-    assert.deepEqual(rows.map((r) => r.id), ['LL-001'], 'LL-003 leaks a path and is dropped');
-  } finally {
-    rmSync(dir, { recursive: true, force: true });
-  }
-});
-
-test('collectLessons keeps the published rows when the source cannot be read', () => {
-  const fallback = [{ id: 'LL-001', title: 'kept', text: 'kept' }];
-  assert.deepEqual(collectLessons('/nonexistent/LESSONS.md', fallback), fallback);
-  assert.deepEqual(collectLessons('/nonexistent/LESSONS.md', undefined), []);
-});
-
-test('lessonsSource honors an explicit file and defaults to the control plane copy', () => {
-  assert.equal(lessonsSource({ SHOWCASE_LESSONS_FILE: '/srv/LESSONS.md' }, '/ignored'), '/srv/LESSONS.md');
-  assert.equal(lessonsSource({}, '/home/rock'), join('/home/rock', 'ai', 'LESSONS.md'));
 });
 
 test('countCheckouts counts real clones and ignores linked worktrees', () => {
