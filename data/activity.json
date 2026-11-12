@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-11-10",
+  "asOf": "2026-11-11",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-11-10T18:41:02.722Z",
+    "asOf": "2026-11-12T00:41:03.245Z",
     "count": 27,
     "complete": true,
     "enumerationLimit": 1000,
@@ -19,8 +19,8 @@
   "repos": [
     {
       "name": "JaLingo",
-      "lastShipped": "2026-11-09",
-      "recent": 463,
+      "lastShipped": "2026-11-11",
+      "recent": 466,
       "version": "v0.5.1"
     },
     {
@@ -61,8 +61,8 @@
     },
     {
       "name": "ReliefFlow",
-      "lastShipped": "2026-11-10",
-      "recent": 191,
+      "lastShipped": "2026-11-11",
+      "recent": 213,
       "version": "v1.2.1"
     },
     {
@@ -79,18 +79,18 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-11-09",
-      "recent": 91,
+      "lastShipped": "2026-11-11",
+      "recent": 94,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-11-10",
-    "commits": 13760,
+    "asOf": "2026-11-11",
+    "commits": 13827,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 5132
+        "commits": 5174
       },
       {
         "label": "ParentPod",
@@ -114,7 +114,7 @@
       },
       {
         "label": "JaLingo",
-        "commits": 463
+        "commits": 466
       },
       {
         "label": "EngiByte",
@@ -122,7 +122,7 @@
       },
       {
         "label": "ReliefFlow",
-        "commits": 191
+        "commits": 213
       },
       {
         "label": "Bid Spotter",
@@ -135,28 +135,28 @@
       "scope": "owned non-archived repositories",
       "expected": 27,
       "inventoryDigest": "58eb14cba77587eccdde996f007362cdb225916344e93a95540801650a684e61",
-      "revisionDigest": "74dc1147837e87ff190f181981d66000798c37d95f40e3fe345fe6fc1b41f1b9",
+      "revisionDigest": "5e6058b92938ffa246a5c2f77e709acfcb532270dd9a094acc9ed0b801fc1719",
       "commitsMeasured": 26,
       "sourceMeasured": 26
     },
-    "trackedFiles": 33110,
-    "linesOfSource": 1963165,
+    "trackedFiles": 33317,
+    "linesOfSource": 1973633,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 1045155
+        "lines": 1047761
       },
       {
         "name": "JavaScript",
-        "lines": 497345
+        "lines": 503917
       },
       {
         "name": "Python",
-        "lines": 287182
+        "lines": 287473
       },
       {
         "name": "CSS",
-        "lines": 76436
+        "lines": 77435
       },
       {
         "name": "PHP",
