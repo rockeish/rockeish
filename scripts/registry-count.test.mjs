@@ -26,7 +26,7 @@ function fixture(t) {
     + `process.stdout.write(readFileSync(process.env.FIXTURE_GH_INVENTORY));\n`);
   chmodSync(gh, 0o755);
   const env = { ...process.env, SHOWCASE_REGISTRY_FILE: registry,
-    SHOWCASE_REPOS_ROOT: join(dir, 'repos'), SHOWCASE_LESSONS_FILE: join(dir, 'absent'),
+    SHOWCASE_REPOS_ROOT: join(dir, 'repos'),
     PATH: `${join(dir, 'bin')}:${process.env.PATH}`, FIXTURE_GH_INVENTORY: inventory,
     SHOWCASE_TOKEN: '', GITHUB_TOKEN: '', GIT_CONFIG_GLOBAL: '/dev/null', GIT_CONFIG_NOSYSTEM: '1' };
   const run = (script) => spawnSync(process.execPath, [join(dir, 'scripts', script)], { env, encoding: 'utf8' });

@@ -210,6 +210,15 @@ function numericVersionParts(value) {
   return match ? match[1].split('.').map(Number) : null;
 }
 
+/**
+ * A version label is the only string that travels from another repository to
+ * the public page. Publish it only when it is a plain version number; any other
+ * tag text is dropped.
+ */
+export function publicVersion(value) {
+  return /^v?\d+(?:\.\d+){0,3}(?:[-+][0-9A-Za-z.-]{1,20})?$/.test(String(value ?? '')) ? value : null;
+}
+
 export function chooseVersion(tagVersion, packageVersion) {
   const tagParts = numericVersionParts(tagVersion);
   const packageParts = numericVersionParts(packageVersion);
@@ -369,7 +378,7 @@ export function localStats(repo, packagePath = 'package.json', reposRoot = REPOS
       const packageData = JSON.parse(packageJson);
       if (packageData.version) packageVersion = `v${packageData.version}`;
     } catch { /* package metadata is optional */ }
-    const version = chooseVersion(tagVersion, packageVersion);
+    const version = publicVersion(chooseVersion(tagVersion, packageVersion));
     return { lastShipped, recent, version };
   } catch {
     return null;
@@ -396,7 +405,7 @@ export async function apiStats(repo, packagePath = 'package.json', { retries = 3
       if (packageData.version) packageVersion = `v${packageData.version}`;
     }
   } catch { /* package metadata is optional */ }
-  const version = chooseVersion(tagVersion, packageVersion);
+  const version = publicVersion(chooseVersion(tagVersion, packageVersion));
   let recent = null;
   // GitHub stats endpoints return 202 with an EMPTY body while computing on a
   // cold cache, then 200 once the cache is warm. Asking once and giving up left
@@ -417,64 +426,6 @@ export async function apiStats(repo, packagePath = 'package.json', { retries = 3
     } catch { /* stats not ready yet */ }
   }
   return lastShipped ? { lastShipped, recent, version } : null;
-}
-
-/**
- * Where the ecosystem's lessons-learned file lives. `~/ai/LESSONS.md` is the
- * canonical copy on the machine the refresh cron runs on; a cloud or remote
- * refresh can point `SHOWCASE_LESSONS_FILE` at a checkout.
- */
-export const lessonsSource = (env = process.env, home = homedir()) =>
-  env.SHOWCASE_LESSONS_FILE || join(home, 'ai', 'LESSONS.md');
-
-/**
- * The public-safe rows of LESSONS.md: id, title and the `Public:` sentence,
- * NOTHING ELSE. Rule text, evidence and enforcement details describe private
- * repositories and stay behind. A lesson whose `Public:` line is `no` (or
- * missing) is skipped. The same field convention as the incident registry:
- * `Key: value`, continuation lines indented two spaces.
- */
-export function parsePublicLessons(text) {
-  const out = [];
-  const blocks = String(text || '').split(/^## (?=LL-\d+ — )/m).slice(1);
-  for (const block of blocks) {
-    const [header, ...rest] = block.split('\n');
-    const head = header.match(/^(LL-\d+) — (.+)$/);
-    if (!head) continue;
-    let pub = null;
-    for (let i = 0; i < rest.length; i += 1) {
-      const m = rest[i].match(/^Public:\s*(.*)$/);
-      if (!m) continue;
-      pub = m[1].trim();
-      for (let j = i + 1; j < rest.length && /^  \S/.test(rest[j]); j += 1) pub += ` ${rest[j].trim()}`;
-      break;
-    }
-    if (!pub || pub.toLowerCase() === 'no') continue;
-    out.push({ id: head[1], title: head[2].trim(), text: pub });
-  }
-  return out;
-}
-
-// Markers that must never reach the public page. `~/` and `/home/` leak the
-// machine; the rest are private names the lessons file keeps private on its own
-// side too. Belt and braces: the source file is audited, and so is this output.
-const PRIVATE_MARKERS = ['~/', '/home/', 'Doppler', 'doppler', 'Krystal', 'Noah', 'Invenergy', 'INC-', '@'];
-
-/**
- * Read the lessons file, or keep what is already published when it cannot be
- * read — the same contract as the activity itself: an unreachable source never
- * wipes the committed rendering. A row carrying a private marker is dropped
- * here as well, so a slip in the source cannot be published by this generator.
- */
-export function collectLessons(file, fallback = []) {
-  let text;
-  try {
-    text = readFileSync(file, 'utf8');
-  } catch {
-    return Array.isArray(fallback) ? fallback : [];
-  }
-  return parsePublicLessons(text).filter((l) =>
-    !PRIVATE_MARKERS.some((m) => l.text.includes(m) || l.title.includes(m)));
 }
 
 async function main() {
@@ -507,17 +458,11 @@ async function main() {
   const asOf = out.reduce((max, r) => (r.lastShipped > max ? r.lastShipped : max), '0000-00-00');
   const metrics = computeMetrics(data.projects, asOf, inventory);
   if (!metrics) throw new Error('Project metrics unavailable; refusing profile refresh');
-  let previous = {};
-  try {
-    previous = JSON.parse(readFileSync(join(ROOT, 'data', 'activity.json'), 'utf8'));
-  } catch { /* first run */ }
-  const lessons = collectLessons(lessonsSource(), previous.lessons);
-  const payload = { asOf, window: '90d', repoCount: inventory.receipt, repos: out, metrics, lessons };
+  const payload = { asOf, window: '90d', repoCount: inventory.receipt, repos: out, metrics };
   writeFileSync(join(ROOT, 'data', 'activity.json'), JSON.stringify(payload, null, 2) + '\n');
   console.log(
     `collect-activity: wrote ${out.length} repos (asOf ${asOf})` +
-      (metrics ? `, ${metrics.commits} commits, ${metrics.appsInProduction} apps live` : '') +
-      `, ${lessons.length} public lessons.`,
+      (metrics ? `, ${metrics.commits} commits, ${metrics.appsInProduction} apps live` : '') + '.',
   );
 }
 

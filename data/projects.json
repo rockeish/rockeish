@@ -1,6 +1,6 @@
 {
   "_comment": "Single source of truth for the auto-generated README + SVG infographics. Edit this file and the generator, not the rendered output. Public-safe only: no surname, employer name, secrets, private URLs, revenue, or internal strategy.",
-  "_statusSource": "Reconcile project status wording against ~/ai/standards/architecture.md and newer dated readiness/audit evidence in the owning repository before publishing. Newer direct evidence wins, but the architecture record must then be updated; never restate private rationale here.",
+  "_statusSource": "Reconcile project status wording against current, dated readiness evidence in the owning repository before publishing. Never restate private rationale here.",
   "profile": {
     "name": "Rock",
     "role": "Reliability & systems engineer · full-stack builder",
@@ -182,15 +182,14 @@
       "typescript",
       "react",
       "security",
-      "git-workflow",
-      "startup"
+      "git-workflow"
     ]
   },
   "practices": [
     "**Typed contracts and boundary validation** are required for new or changed external inputs.",
     "**Test the behavior and the failure path** — a bugfix starts with a failing test that reproduces it.",
     "**Secrets stay out of source control** — builds and deploys receive them through environment configuration or managed secret stores; only public client configuration ships.",
-    "**Authorization belongs server-side** — Firestore rules and Supabase RLS protect current privileged paths; known legacy gaps remain explicitly gated.",
+    "**Authorization belongs server-side** — Firestore rules and Supabase RLS protect current privileged paths.",
     "**Tiered CI** (active / dabble / parked) keeps Actions minutes low; CLI-first deploys through the release gate.",
     "**Conflicts are resolved before merge** — semantic conflicts stop for review and a new validation pass.",
     "**Accessibility & cross-platform** — semantic markup, keyboard paths, and Capacitor guards for native builds."

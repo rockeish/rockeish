@@ -29,7 +29,6 @@ function fixture(t, projects, previous) {
     SHOWCASE_REPOS_ROOT: join(dir, 'repos'),
     SHOWCASE_REGISTRY_FILE: registryFile,
     PATH: `${join(dir, 'bin')}:${process.env.PATH}`,
-    SHOWCASE_LESSONS_FILE: join(dir, 'missing-lessons.md'),
     SHOWCASE_TOKEN: '',
     GITHUB_TOKEN: '',
     GIT_CONFIG_GLOBAL: '/dev/null',
@@ -110,7 +109,7 @@ test('collector computes public headline metrics from reachable shipped history 
   assert.deepEqual(result.repos.map(({ name, recent }) => ({ name, recent })), [
     { name: 'Demo', recent: 1 }, { name: 'Paused', recent: 1 },
   ]);
-  assert.deepEqual(result.lessons, previous.lessons);
+  assert.equal('lessons' in result, false, 'free text from an earlier payload is not carried forward');
 });
 
 test('collector preserves the published activity byte-for-byte when no repository is reachable', (t) => {
