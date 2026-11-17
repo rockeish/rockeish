@@ -1,19 +1,19 @@
 {
-  "asOf": "2026-11-15",
+  "asOf": "2026-11-16",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-11-15T18:41:02.930Z",
-    "count": 26,
+    "asOf": "2026-11-17T00:41:02.964Z",
+    "count": 24,
     "complete": true,
     "enumerationLimit": 1000,
-    "digest": "0e38da44f8b5d15194dd1df8e05d4e579da9941ca8dd621d4d44bce3bbc4ee23",
+    "digest": "4c71689b15e4df38d38ffc11fb898d494030c67b2c0ae9f5683559af962db0ee",
     "productRegistry": {
       "source": "local-product-registry",
       "schema": 1,
       "count": 26,
-      "digest": "a5268d84aa78d120b6d98dabda0852d6f7a80e572eedf97012f5057ed0e26a11"
+      "digest": "c7ff710adb75661ee13ad3c3c818427f04baf486c56258a61f6e94500e87f915"
     }
   },
   "repos": [
@@ -38,31 +38,31 @@
     {
       "name": "ParentPod",
       "lastShipped": "2026-11-15",
-      "recent": 391,
+      "recent": 392,
       "version": "v2.62.473"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-11-15",
-      "recent": 363,
+      "recent": 355,
       "version": "v2.0.191"
     },
     {
       "name": "EngiByte",
       "lastShipped": "2026-11-15",
-      "recent": 349,
+      "recent": 350,
       "version": "v1.3.1"
     },
     {
       "name": "ReliefFlow",
-      "lastShipped": "2026-11-14",
-      "recent": 225,
+      "lastShipped": "2026-11-16",
+      "recent": 232,
       "version": "v1.2.1"
     },
     {
       "name": "Apex",
       "lastShipped": "2026-11-14",
-      "recent": 214,
+      "recent": 212,
       "version": "v0.2.8"
     },
     {
@@ -79,22 +79,22 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-11-14",
+      "lastShipped": "2026-11-15",
       "recent": 93,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-11-15",
-    "commits": 13556,
+    "asOf": "2026-11-16",
+    "commits": 13517,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4794
+        "commits": 4746
       },
       {
         "label": "ParentPod",
-        "commits": 2851
+        "commits": 2852
       },
       {
         "label": "RealInvestorX",
@@ -118,11 +118,11 @@
       },
       {
         "label": "EngiByte",
-        "commits": 441
+        "commits": 442
       },
       {
         "label": "ReliefFlow",
-        "commits": 225
+        "commits": 232
       },
       {
         "label": "Bid Spotter",
@@ -130,33 +130,33 @@
       }
     ],
     "appsInProduction": 9,
-    "repos": 26,
+    "repos": 24,
     "historyCoverage": {
       "scope": "owned non-archived repositories",
-      "expected": 26,
-      "inventoryDigest": "0e38da44f8b5d15194dd1df8e05d4e579da9941ca8dd621d4d44bce3bbc4ee23",
-      "revisionDigest": "2ea3835337779a9d4a72af56de55c717ab1d089047d95947231b377aaad4f17b",
-      "commitsMeasured": 25,
-      "sourceMeasured": 25
+      "expected": 24,
+      "inventoryDigest": "4c71689b15e4df38d38ffc11fb898d494030c67b2c0ae9f5683559af962db0ee",
+      "revisionDigest": "4bae4f3235d755849d185f5e7d0ca378d11e654172a6f2eceeabe0931abb3ee2",
+      "commitsMeasured": 23,
+      "sourceMeasured": 23
     },
-    "trackedFiles": 33488,
-    "linesOfSource": 1916346,
+    "trackedFiles": 33428,
+    "linesOfSource": 1915430,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 1058386
+        "lines": 1057809
       },
       {
         "name": "JavaScript",
-        "lines": 451167
+        "lines": 451150
       },
       {
         "name": "Python",
-        "lines": 270947
+        "lines": 270586
       },
       {
         "name": "CSS",
-        "lines": 77786
+        "lines": 77825
       },
       {
         "name": "PHP",
