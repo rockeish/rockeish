@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-11-16",
+  "asOf": "2026-11-17",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-11-17T00:41:02.964Z",
+    "asOf": "2026-11-18T06:41:02.463Z",
     "count": 24,
     "complete": true,
     "enumerationLimit": 1000,
@@ -13,7 +13,7 @@
       "source": "local-product-registry",
       "schema": 1,
       "count": 26,
-      "digest": "c7ff710adb75661ee13ad3c3c818427f04baf486c56258a61f6e94500e87f915"
+      "digest": "246d7bdf50aed0d59ad0eb69d72e5f604a474636a0e79ca545e9be91c7c6dfa2"
     }
   },
   "repos": [
@@ -25,21 +25,21 @@
     },
     {
       "name": "JaLingo",
-      "lastShipped": "2026-11-14",
+      "lastShipped": "2026-11-17",
       "recent": 447,
       "version": "v0.5.1"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-11-15",
-      "recent": 440,
+      "lastShipped": "2026-11-17",
+      "recent": 442,
       "version": "v5.48.1"
     },
     {
       "name": "ParentPod",
-      "lastShipped": "2026-11-15",
-      "recent": 392,
-      "version": "v2.62.473"
+      "lastShipped": "2026-11-17",
+      "recent": 395,
+      "version": "v2.62.474"
     },
     {
       "name": "Longevity",
@@ -49,20 +49,20 @@
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-11-15",
-      "recent": 350,
+      "lastShipped": "2026-11-17",
+      "recent": 354,
       "version": "v1.3.1"
     },
     {
       "name": "ReliefFlow",
-      "lastShipped": "2026-11-16",
-      "recent": 232,
-      "version": "v1.2.1"
+      "lastShipped": "2026-11-17",
+      "recent": 244,
+      "version": "v2.0.0"
     },
     {
       "name": "Apex",
       "lastShipped": "2026-11-14",
-      "recent": 212,
+      "recent": 211,
       "version": "v0.2.8"
     },
     {
@@ -79,26 +79,26 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-11-15",
+      "lastShipped": "2026-11-16",
       "recent": 93,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-11-16",
-    "commits": 13517,
+    "asOf": "2026-11-17",
+    "commits": 13551,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4746
+        "commits": 4758
       },
       {
         "label": "ParentPod",
-        "commits": 2852
+        "commits": 2855
       },
       {
         "label": "RealInvestorX",
-        "commits": 1457
+        "commits": 1459
       },
       {
         "label": "Longevity",
@@ -114,15 +114,15 @@
       },
       {
         "label": "JaLingo",
-        "commits": 475
+        "commits": 476
       },
       {
         "label": "EngiByte",
-        "commits": 442
+        "commits": 446
       },
       {
         "label": "ReliefFlow",
-        "commits": 232
+        "commits": 244
       },
       {
         "label": "Bid Spotter",
@@ -135,32 +135,32 @@
       "scope": "owned non-archived repositories",
       "expected": 24,
       "inventoryDigest": "4c71689b15e4df38d38ffc11fb898d494030c67b2c0ae9f5683559af962db0ee",
-      "revisionDigest": "4bae4f3235d755849d185f5e7d0ca378d11e654172a6f2eceeabe0931abb3ee2",
+      "revisionDigest": "99780f966bbc52b51c604a4da553c704767545063737c92a940f7fa4bc959782",
       "commitsMeasured": 23,
       "sourceMeasured": 23
     },
-    "trackedFiles": 33428,
-    "linesOfSource": 1915430,
+    "trackedFiles": 33467,
+    "linesOfSource": 1919339,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 1057809
+        "lines": 1060160
       },
       {
         "name": "JavaScript",
-        "lines": 451150
+        "lines": 452191
       },
       {
         "name": "Python",
-        "lines": 270586
+        "lines": 270902
       },
       {
         "name": "CSS",
-        "lines": 77825
+        "lines": 78013
       },
       {
         "name": "PHP",
-        "lines": 25435
+        "lines": 25446
       },
       {
         "name": "SQL",
@@ -168,7 +168,7 @@
       },
       {
         "name": "Other",
-        "lines": 11720
+        "lines": 11722
       }
     ]
   }
