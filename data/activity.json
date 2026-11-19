@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-11-17",
+  "asOf": "2026-11-19",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-11-18T06:41:02.463Z",
+    "asOf": "2026-11-19T12:41:03.119Z",
     "count": 24,
     "complete": true,
     "enumerationLimit": 1000,
@@ -26,7 +26,7 @@
     {
       "name": "JaLingo",
       "lastShipped": "2026-11-17",
-      "recent": 447,
+      "recent": 443,
       "version": "v0.5.1"
     },
     {
@@ -38,25 +38,25 @@
     {
       "name": "ParentPod",
       "lastShipped": "2026-11-17",
-      "recent": 395,
+      "recent": 386,
       "version": "v2.62.474"
     },
     {
       "name": "Longevity",
       "lastShipped": "2026-11-15",
-      "recent": 355,
+      "recent": 351,
       "version": "v2.0.191"
     },
     {
       "name": "EngiByte",
       "lastShipped": "2026-11-17",
-      "recent": 354,
+      "recent": 351,
       "version": "v1.3.1"
     },
     {
       "name": "ReliefFlow",
-      "lastShipped": "2026-11-17",
-      "recent": 244,
+      "lastShipped": "2026-11-19",
+      "recent": 278,
       "version": "v2.0.0"
     },
     {
@@ -79,18 +79,18 @@
     },
     {
       "name": "this profile",
-      "lastShipped": "2026-11-16",
-      "recent": 93,
+      "lastShipped": "2026-11-18",
+      "recent": 94,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-11-17",
-    "commits": 13551,
+    "asOf": "2026-11-19",
+    "commits": 13591,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4758
+        "commits": 4764
       },
       {
         "label": "ParentPod",
@@ -122,7 +122,7 @@
       },
       {
         "label": "ReliefFlow",
-        "commits": 244
+        "commits": 278
       },
       {
         "label": "Bid Spotter",
@@ -135,32 +135,32 @@
       "scope": "owned non-archived repositories",
       "expected": 24,
       "inventoryDigest": "4c71689b15e4df38d38ffc11fb898d494030c67b2c0ae9f5683559af962db0ee",
-      "revisionDigest": "99780f966bbc52b51c604a4da553c704767545063737c92a940f7fa4bc959782",
+      "revisionDigest": "76a24519e95eb86eae47dec3e4307abe5870ac13053c6c901eb167fe64a3293f",
       "commitsMeasured": 23,
       "sourceMeasured": 23
     },
-    "trackedFiles": 33467,
-    "linesOfSource": 1919339,
+    "trackedFiles": 33601,
+    "linesOfSource": 1923941,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 1060160
+        "lines": 1063493
       },
       {
         "name": "JavaScript",
-        "lines": 452191
+        "lines": 452985
       },
       {
         "name": "Python",
-        "lines": 270902
+        "lines": 270928
       },
       {
         "name": "CSS",
-        "lines": 78013
+        "lines": 78484
       },
       {
         "name": "PHP",
-        "lines": 25446
+        "lines": 25424
       },
       {
         "name": "SQL",
