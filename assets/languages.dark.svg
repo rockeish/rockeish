@@ -20,10 +20,10 @@
   </style>
   <rect x="0.5" y="0.5" width="719" height="217" rx="18" fill="#0b1220" stroke="#243149"/>
   <text x="28" y="40" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" fill="#8b97a8">Language mix</text>
-  <text x="692" y="40" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8" text-anchor="end">1934K lines of tracked source</text>
-  <g class="grow" style="transform-origin:28.0px 62px;animation-delay:0.10s"><rect x="28.0" y="62" width="367.6" height="34" rx="6" fill="#3178c6"/></g>
-  <g class="grow" style="transform-origin:395.6px 62px;animation-delay:0.60s"><rect x="395.6" y="62" width="156.3" height="34"  fill="#e6c84f"/></g>
-  <g class="grow" style="transform-origin:551.9px 62px;animation-delay:0.81s"><rect x="551.9" y="62" width="93.2" height="34"  fill="#1b2942"/></g>
+  <text x="692" y="40" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#8b97a8" text-anchor="end">1936K lines of tracked source</text>
+  <g class="grow" style="transform-origin:28.0px 62px;animation-delay:0.10s"><rect x="28.0" y="62" width="367.7" height="34" rx="6" fill="#3178c6"/></g>
+  <g class="grow" style="transform-origin:395.7px 62px;animation-delay:0.60s"><rect x="395.7" y="62" width="156.2" height="34"  fill="#e6c84f"/></g>
+  <g class="grow" style="transform-origin:551.9px 62px;animation-delay:0.81s"><rect x="551.9" y="62" width="93.1" height="34"  fill="#1b2942"/></g>
   <g class="grow" style="transform-origin:645.0px 62px;animation-delay:0.94s"><rect x="645.0" y="62" width="27.1" height="34"  fill="#38bdf8"/></g>
   <g class="grow" style="transform-origin:672.1px 62px;animation-delay:0.97s"><rect x="672.1" y="62" width="8.7" height="34"  fill="#818cf8"/></g>
   <g class="grow" style="transform-origin:680.8px 62px;animation-delay:0.98s"><rect x="680.8" y="62" width="7.2" height="34"  fill="#22c55e"/></g>
