@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 24 repositories, 14.1K measured commits, 1987K measured lines of source, 9 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 24 repositories, 14.2K measured commits, 1997K measured lines of source, 9 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -70,49 +70,49 @@ Shared standards and repository-specific release gates connect each change to te
 | Command | What it does |
 |---|---|
 | `/ship` | release gate — version, build, test, deploy, verify, update docs |
-| `/sync` | rebase main and resolve mechanical conflicts with validation |
-| `/audit` | security, dependency, dead-code, a11y & perf sweep |
-| `/new-project` | scaffold a repo with baseline standards, CI, security checks, and documentation |
-| `/update-brain` | maintain the knowledge base and reconcile the task hub |
-| `/improve` | turn repeatable workflows into maintained tooling and checks |
+| `/git-sync` | rebase main and resolve mechanical conflicts with validation |
+| `/repo-audit` | security, dependency, dead-code, a11y & perf sweep |
+| `/new-app` | scaffold a repo with baseline standards, CI, security checks, and documentation |
+| `/brain-maintenance` | maintain the knowledge base and reconcile the task hub |
+| `/retro` | turn repeatable workflows into maintained tooling and checks |
 
 **Shared engineering standards:** `architecture` · `coding-standards` · `typescript` · `react` · `security` · `git-workflow` — maintained centrally and applied according to each repository's stack and risk profile.
 
 ## By the numbers
 
-<sub>History snapshot dated Nov 25, 2026. Repository count covers all non-archived repositories owned on GitHub, including infrastructure. Count observed 2026-11-25T18:41:02.953Z. Commits cover 23 of 24 repositories; source lines cover 23 of 24. Unavailable history is outside these measured subtotals.</sub>
+<sub>History snapshot dated Nov 26, 2026. Repository count covers all non-archived repositories owned on GitHub, including infrastructure. Count observed 2026-11-26T19:50:25.675Z. Commits cover 23 of 24 repositories; source lines cover 23 of 24. Unavailable history is outside these measured subtotals.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — Other repositories 4,873; ParentPod 2,876; RealInvestorX 1,512; Longevity 1,396; Apex 1,088; TheLoop 764; JaLingo 527; EngiByte 477; ReliefFlow 404; Bid Spotter 164. ~14.1K measured total." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — Other repositories 4,911; ParentPod 2,881; RealInvestorX 1,522; Longevity 1,419; Apex 1,103; TheLoop 765; JaLingo 532; EngiByte 489; ReliefFlow 410; Bid Spotter 165. ~14.2K measured total." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 1987K lines of tracked source — TypeScript 55.3%, JavaScript 23.7%, Python 14.0%, CSS 4.1%, PHP 1.3%, SQL 1.1%, Other 0.6%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 1997K lines of tracked source — TypeScript 55.3%, JavaScript 23.7%, Python 14.0%, CSS 4.0%, PHP 1.3%, SQL 1.1%, Other 0.6%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — JaLingo 463 commits; RealInvestorX 453 commits; Compliance OS 436 commits; ReliefFlow 404 commits; EngiByte 367 commits; ParentPod 339 commits; Longevity 328 commits; Apex 230 commits; Bid Spotter 151 commits; TheLoop 140 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — JaLingo 466 commits; RealInvestorX 454 commits; Compliance OS 436 commits; ReliefFlow 410 commits; EngiByte 373 commits; Longevity 337 commits; ParentPod 324 commits; Apex 244 commits; Bid Spotter 152 commits; TheLoop 139 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Nov 25, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Nov 26, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **JaLingo** | `v0.5.1` | 463 |
-| **RealInvestorX** | `v5.50.1` | 453 |
+| **JaLingo** | `v0.5.1` | 466 |
+| **RealInvestorX** | `v5.50.3` | 454 |
 | **Compliance OS** | `v3.43.3` | 436 |
-| **ReliefFlow** | `v2.0.0` | 404 |
-| **EngiByte** | `v1.3.3` | 367 |
-| **ParentPod** | `v2.62.484` | 339 |
-| **Longevity** | `v2.0.211` | 328 |
-| **Apex** | `v0.2.8` | 230 |
-| **Bid Spotter** | `v2.1.0` | 151 |
-| **TheLoop** | `v1.2.3` | 140 |
+| **ReliefFlow** | `v2.0.0` | 410 |
+| **EngiByte** | `v1.3.4` | 373 |
+| **Longevity** | `v2.0.219` | 337 |
+| **ParentPod** | `v2.62.485` | 324 |
+| **Apex** | `v0.2.8` | 244 |
+| **Bid Spotter** | `v2.1.0` | 152 |
+| **TheLoop** | `v1.2.3` | 139 |
 
 ## Selected work
 
@@ -122,7 +122,7 @@ Shared standards and repository-specific release gates connect each change to te
 | **[Longevity](https://longevity.beyondvolatility.com/)** <br><sub>`Live`</sub> | See what your days are doing to your energy. | TypeScript · Next.js · React · Capacitor · Firebase | [Live ↗](https://longevity.beyondvolatility.com/) |
 | **[RealInvestorX](https://realinvestorx.beyondvolatility.com/)** <br><sub>`Live`</sub> | Real-estate deal review with explicit assumptions. | TypeScript · React · Express · Turborepo · Supabase | [Live ↗](https://realinvestorx.beyondvolatility.com/) |
 | **[Apex](https://apex.beyondvolatility.com/)** <br><sub>`Live · personal tool`</sub> | Personal-finance & FIRE planning. | TypeScript · React · Vite · Supabase | [Live ↗](https://apex.beyondvolatility.com/) |
-| **[Compliance OS](https://compliance.beyondvolatility.com/)** <br><sub>`Parked · maintained`</sub> | Controls & audit-evidence platform. | TypeScript · React · Firebase | [Live ↗](https://compliance.beyondvolatility.com/) |
+| **[Compliance OS](https://compliance.beyondvolatility.com/)** <br><sub>`Parked`</sub> | Controls & audit-evidence platform. | TypeScript · React · Firebase | [Live ↗](https://compliance.beyondvolatility.com/) |
 | **[Bid Spotter](https://bidspotter.beyondvolatility.com)** <br><sub>`Live · pilot pending`</sub> | Government work you can answer, ranked daily. | TypeScript · React · Vite · Firebase | [Live ↗](https://bidspotter.beyondvolatility.com) |
 | **[EngiByte](https://engibyte.beyondvolatility.com)** <br><sub>`Live · revived 2026-07-11`</sub> | Scroll less. Know more. | TypeScript · React Native · Expo · Firebase | [Live ↗](https://engibyte.beyondvolatility.com) |
 | **[JaLingo](https://jalingo.beyondvolatility.com)** <br><sub>`Live · founders season`</sub> | Learn Patwa from the people who speak it. | TypeScript · Next.js · React · Firebase | [Live ↗](https://jalingo.beyondvolatility.com) |

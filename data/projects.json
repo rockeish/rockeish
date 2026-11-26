@@ -156,23 +156,23 @@
         "does": "release gate — version, build, test, deploy, verify, update docs"
       },
       {
-        "name": "sync",
+        "name": "git-sync",
         "does": "rebase main and resolve mechanical conflicts with validation"
       },
       {
-        "name": "audit",
+        "name": "repo-audit",
         "does": "security, dependency, dead-code, a11y & perf sweep"
       },
       {
-        "name": "new-project",
+        "name": "new-app",
         "does": "scaffold a repo with baseline standards, CI, security checks, and documentation"
       },
       {
-        "name": "update-brain",
+        "name": "brain-maintenance",
         "does": "maintain the knowledge base and reconcile the task hub"
       },
       {
-        "name": "improve",
+        "name": "retro",
         "does": "turn repeatable workflows into maintained tooling and checks"
       }
     ],
@@ -342,7 +342,7 @@
     {
       "name": "Compliance OS",
       "category": "Platform",
-      "status": "Parked · maintained",
+      "status": "Parked",
       "tagline": "Controls & audit-evidence platform.",
       "blurb": "Map NERC requirements to controls, evidence, gaps, and role-based review workflows.",
       "stack": [
