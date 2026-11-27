@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero.dark.svg">
-  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 24 repositories, 14.2K measured commits, 1997K measured lines of source, 9 apps in production, 1 engineer." width="100%">
+  <img src="assets/hero.light.svg" alt="Rock — Reliability &amp; systems engineer · full-stack builder. 24 repositories, 14.2K measured commits, 1996K measured lines of source, 9 apps in production, 1 engineer." width="100%">
 </picture>
 
 <p align="center">
@@ -80,39 +80,39 @@ Shared standards and repository-specific release gates connect each change to te
 
 ## By the numbers
 
-<sub>History snapshot dated Nov 26, 2026. Repository count covers all non-archived repositories owned on GitHub, including infrastructure. Count observed 2026-11-26T19:50:25.675Z. Commits cover 23 of 24 repositories; source lines cover 23 of 24. Unavailable history is outside these measured subtotals.</sub>
+<sub>History snapshot dated Nov 27, 2026. Repository count covers all non-archived repositories owned on GitHub, including infrastructure. Count observed 2026-11-27T00:41:03.456Z. Commits cover 23 of 24 repositories; source lines cover 23 of 24. Unavailable history is outside these measured subtotals.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commits.dark.svg">
-  <img src="assets/commits.light.svg" alt="Commits per repository — Other repositories 4,911; ParentPod 2,881; RealInvestorX 1,522; Longevity 1,419; Apex 1,103; TheLoop 765; JaLingo 532; EngiByte 489; ReliefFlow 410; Bid Spotter 165. ~14.2K measured total." width="100%">
+  <img src="assets/commits.light.svg" alt="Commits per repository — Other repositories 4,928; ParentPod 2,883; RealInvestorX 1,528; Longevity 1,421; Apex 1,104; TheLoop 768; JaLingo 534; EngiByte 492; ReliefFlow 411; Bid Spotter 167. ~14.2K measured total." width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages.dark.svg">
-  <img src="assets/languages.light.svg" alt="Language mix across 1997K lines of tracked source — TypeScript 55.3%, JavaScript 23.7%, Python 14.0%, CSS 4.0%, PHP 1.3%, SQL 1.1%, Other 0.6%." width="100%">
+  <img src="assets/languages.light.svg" alt="Language mix across 1996K lines of tracked source — TypeScript 55.3%, JavaScript 23.7%, Python 13.9%, CSS 4.0%, PHP 1.3%, SQL 1.1%, Other 0.6%." width="100%">
 </picture>
 
 ## Recently shipped
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/velocity.dark.svg">
-  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — JaLingo 466 commits; RealInvestorX 454 commits; Compliance OS 436 commits; ReliefFlow 410 commits; EngiByte 373 commits; Longevity 337 commits; ParentPod 324 commits; Apex 244 commits; Bid Spotter 152 commits; TheLoop 139 commits." width="100%">
+  <img src="assets/velocity.light.svg" alt="Shipping cadence over the trailing 90 days — JaLingo 468 commits; RealInvestorX 460 commits; Compliance OS 437 commits; ReliefFlow 411 commits; EngiByte 376 commits; Longevity 339 commits; ParentPod 326 commits; Apex 245 commits; Bid Spotter 154 commits; TheLoop 142 commits." width="100%">
 </picture>
 
-<sub>Still shipping — latest version and commit volume over the last 90 days, as of Nov 26, 2026. Regenerated from git, not hand-edited.</sub>
+<sub>Still shipping — latest version and commit volume over the last 90 days, as of Nov 27, 2026. Regenerated from git, not hand-edited.</sub>
 
 | Product | Latest | Commits · 90d |
 |---|---|---|
-| **JaLingo** | `v0.5.1` | 466 |
-| **RealInvestorX** | `v5.50.3` | 454 |
-| **Compliance OS** | `v3.43.3` | 436 |
-| **ReliefFlow** | `v2.0.0` | 410 |
-| **EngiByte** | `v1.3.4` | 373 |
-| **Longevity** | `v2.0.219` | 337 |
-| **ParentPod** | `v2.62.485` | 324 |
-| **Apex** | `v0.2.8` | 244 |
-| **Bid Spotter** | `v2.1.0` | 152 |
-| **TheLoop** | `v1.2.3` | 139 |
+| **JaLingo** | `v0.5.1` | 468 |
+| **RealInvestorX** | `v5.51.2` | 460 |
+| **Compliance OS** | `v3.43.3` | 437 |
+| **ReliefFlow** | `v2.0.0` | 411 |
+| **EngiByte** | `v1.3.4` | 376 |
+| **Longevity** | `v2.0.219` | 339 |
+| **ParentPod** | `v2.62.485` | 326 |
+| **Apex** | `v0.2.8` | 245 |
+| **Bid Spotter** | `v2.1.0` | 154 |
+| **TheLoop** | `v1.2.3` | 142 |
 
 ## Selected work
 
