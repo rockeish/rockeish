@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-11-27",
+  "asOf": "2026-11-28",
   "window": "90d",
   "repoCount": {
     "source": "github",
     "method": "gh-repo-list",
-    "asOf": "2026-11-27T00:41:03.456Z",
+    "asOf": "2026-11-28T06:41:02.824Z",
     "count": 24,
     "complete": true,
     "enumerationLimit": 1000,
@@ -13,21 +13,21 @@
       "source": "local-product-registry",
       "schema": 1,
       "count": 26,
-      "digest": "f7b82fa27719e01692489b5e79fdad34ec0b18ec40d98c015fc2a5b9c3343519"
+      "digest": "626e3d4b76163b4bd2d0cab6bc2e5b3e1c02d4cfb0e13f2b879bf32b1df05083"
     }
   },
   "repos": [
     {
       "name": "JaLingo",
-      "lastShipped": "2026-11-26",
-      "recent": 468,
+      "lastShipped": "2026-11-27",
+      "recent": 475,
       "version": "v0.5.1"
     },
     {
       "name": "RealInvestorX",
-      "lastShipped": "2026-11-27",
-      "recent": 460,
-      "version": "v5.51.2"
+      "lastShipped": "2026-11-28",
+      "recent": 461,
+      "version": "v5.51.3"
     },
     {
       "name": "Compliance OS",
@@ -37,96 +37,96 @@
     },
     {
       "name": "ReliefFlow",
-      "lastShipped": "2026-11-26",
-      "recent": 411,
+      "lastShipped": "2026-11-27",
+      "recent": 413,
       "version": "v2.0.0"
     },
     {
       "name": "EngiByte",
-      "lastShipped": "2026-11-26",
-      "recent": 376,
+      "lastShipped": "2026-11-27",
+      "recent": 378,
       "version": "v1.3.4"
     },
     {
       "name": "Longevity",
-      "lastShipped": "2026-11-26",
-      "recent": 339,
-      "version": "v2.0.219"
+      "lastShipped": "2026-11-27",
+      "recent": 340,
+      "version": "v2.0.220"
     },
     {
       "name": "ParentPod",
-      "lastShipped": "2026-11-26",
-      "recent": 326,
+      "lastShipped": "2026-11-27",
+      "recent": 323,
       "version": "v2.62.485"
     },
     {
       "name": "Apex",
-      "lastShipped": "2026-11-26",
-      "recent": 245,
+      "lastShipped": "2026-11-27",
+      "recent": 247,
       "version": "v0.2.8"
     },
     {
       "name": "Bid Spotter",
-      "lastShipped": "2026-11-26",
-      "recent": 154,
+      "lastShipped": "2026-11-27",
+      "recent": 161,
       "version": "v2.1.0"
     },
     {
       "name": "TheLoop",
       "lastShipped": "2026-11-26",
-      "recent": 142,
+      "recent": 143,
       "version": "v1.2.3"
     },
     {
       "name": "this profile",
       "lastShipped": "2026-11-26",
-      "recent": 92,
+      "recent": 93,
       "version": null
     }
   ],
   "metrics": {
-    "asOf": "2026-11-27",
-    "commits": 14236,
+    "asOf": "2026-11-28",
+    "commits": 14291,
     "commitsByRepo": [
       {
         "label": "Other repositories",
-        "commits": 4928
+        "commits": 4956
       },
       {
         "label": "ParentPod",
-        "commits": 2883
+        "commits": 2884
       },
       {
         "label": "RealInvestorX",
-        "commits": 1528
+        "commits": 1530
       },
       {
         "label": "Longevity",
-        "commits": 1421
+        "commits": 1423
       },
       {
         "label": "Apex",
-        "commits": 1104
+        "commits": 1107
       },
       {
         "label": "TheLoop",
-        "commits": 768
+        "commits": 769
       },
       {
         "label": "JaLingo",
-        "commits": 534
+        "commits": 541
       },
       {
         "label": "EngiByte",
-        "commits": 492
+        "commits": 494
       },
       {
         "label": "ReliefFlow",
-        "commits": 411
+        "commits": 413
       },
       {
         "label": "Bid Spotter",
-        "commits": 167
+        "commits": 174
       }
     ],
     "appsInProduction": 9,
@@ -135,28 +135,28 @@
       "scope": "owned non-archived repositories",
       "expected": 24,
       "inventoryDigest": "4c71689b15e4df38d38ffc11fb898d494030c67b2c0ae9f5683559af962db0ee",
-      "revisionDigest": "5087fde013d2e54e167ccb1f4f88b086b3e17028b408e82a233e04798bb3391e",
+      "revisionDigest": "a249e8ff6d4244662f1e8fe902da2516114193dc8921c86bd624a4023cdf9841",
       "commitsMeasured": 23,
       "sourceMeasured": 23
     },
-    "trackedFiles": 38715,
-    "linesOfSource": 1996201,
+    "trackedFiles": 38786,
+    "linesOfSource": 2001706,
     "languages": [
       {
         "name": "TypeScript",
-        "lines": 1104819
+        "lines": 1108661
       },
       {
         "name": "JavaScript",
-        "lines": 473617
+        "lines": 473501
       },
       {
         "name": "Python",
-        "lines": 278226
+        "lines": 279573
       },
       {
         "name": "CSS",
-        "lines": 80846
+        "lines": 81040
       },
       {
         "name": "PHP",
@@ -168,7 +168,7 @@
       },
       {
         "name": "Other",
-        "lines": 11990
+        "lines": 12228
       }
     ]
   }
